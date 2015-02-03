@@ -1,0 +1,9 @@
+grammar org.joclal.BrowserAutomation with org.eclipse.xtext.common.Terminals
+
+generate browserAutomation "http://www.joclal.org/BrowserAutomation"
+
+Model:
+	greetings+=Greeting*;
+	
+Greeting:
+	'Hello' name=ID '!';
