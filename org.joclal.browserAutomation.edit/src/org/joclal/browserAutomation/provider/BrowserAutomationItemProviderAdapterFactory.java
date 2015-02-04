@@ -187,6 +187,29 @@ public class BrowserAutomationItemProviderAdapterFactory extends BrowserAutomati
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.joclal.browserAutomation.DomID} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DomIDItemProvider domIDItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.joclal.browserAutomation.DomID}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDomIDAdapter() {
+		if (domIDItemProvider == null) {
+			domIDItemProvider = new DomIDItemProvider(this);
+		}
+
+		return domIDItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.joclal.browserAutomation.Fill} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -394,6 +417,52 @@ public class BrowserAutomationItemProviderAdapterFactory extends BrowserAutomati
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.joclal.browserAutomation.Subroutine} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SubroutineItemProvider subroutineItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.joclal.browserAutomation.Subroutine}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSubroutineAdapter() {
+		if (subroutineItemProvider == null) {
+			subroutineItemProvider = new SubroutineItemProvider(this);
+		}
+
+		return subroutineItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.joclal.browserAutomation.SubroutineCall} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SubroutineCallItemProvider subroutineCallItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.joclal.browserAutomation.SubroutineCall}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSubroutineCallAdapter() {
+		if (subroutineCallItemProvider == null) {
+			subroutineCallItemProvider = new SubroutineCallItemProvider(this);
+		}
+
+		return subroutineCallItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -497,6 +566,7 @@ public class BrowserAutomationItemProviderAdapterFactory extends BrowserAutomati
 		if (gotoItemProvider != null) gotoItemProvider.dispose();
 		if (clickOnItemProvider != null) clickOnItemProvider.dispose();
 		if (selectorItemProvider != null) selectorItemProvider.dispose();
+		if (domIDItemProvider != null) domIDItemProvider.dispose();
 		if (fillItemProvider != null) fillItemProvider.dispose();
 		if (checkItemProvider != null) checkItemProvider.dispose();
 		if (uncheckItemProvider != null) uncheckItemProvider.dispose();
@@ -506,6 +576,8 @@ public class BrowserAutomationItemProviderAdapterFactory extends BrowserAutomati
 		if (doWhileItemProvider != null) doWhileItemProvider.dispose();
 		if (booleanExpItemProvider != null) booleanExpItemProvider.dispose();
 		if (ifThenItemProvider != null) ifThenItemProvider.dispose();
+		if (subroutineItemProvider != null) subroutineItemProvider.dispose();
+		if (subroutineCallItemProvider != null) subroutineCallItemProvider.dispose();
 	}
 
 }

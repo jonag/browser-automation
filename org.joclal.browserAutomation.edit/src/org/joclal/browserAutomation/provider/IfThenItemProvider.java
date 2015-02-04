@@ -31,7 +31,7 @@ import org.joclal.browserAutomation.IfThen;
  * <!-- end-user-doc -->
  * @generated
  */
-public class IfThenItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class IfThenItemProvider extends ActionItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -186,6 +186,21 @@ public class IfThenItemProvider extends ItemProviderAdapter implements IEditingD
 
 		newChildDescriptors.add
 			(createChildParameter
+				(BrowserAutomationPackage.Literals.IF_THEN__THEN_ACTIONS,
+				 BrowserAutomationFactory.eINSTANCE.createDoWhile()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(BrowserAutomationPackage.Literals.IF_THEN__THEN_ACTIONS,
+				 BrowserAutomationFactory.eINSTANCE.createIfThen()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(BrowserAutomationPackage.Literals.IF_THEN__THEN_ACTIONS,
+				 BrowserAutomationFactory.eINSTANCE.createSubroutineCall()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(BrowserAutomationPackage.Literals.IF_THEN__ELSE_ACTIONS,
 				 BrowserAutomationFactory.eINSTANCE.createAction()));
 
@@ -218,6 +233,21 @@ public class IfThenItemProvider extends ItemProviderAdapter implements IEditingD
 			(createChildParameter
 				(BrowserAutomationPackage.Literals.IF_THEN__ELSE_ACTIONS,
 				 BrowserAutomationFactory.eINSTANCE.createLet()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(BrowserAutomationPackage.Literals.IF_THEN__ELSE_ACTIONS,
+				 BrowserAutomationFactory.eINSTANCE.createDoWhile()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(BrowserAutomationPackage.Literals.IF_THEN__ELSE_ACTIONS,
+				 BrowserAutomationFactory.eINSTANCE.createIfThen()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(BrowserAutomationPackage.Literals.IF_THEN__ELSE_ACTIONS,
+				 BrowserAutomationFactory.eINSTANCE.createSubroutineCall()));
 	}
 
 	/**
@@ -241,17 +271,6 @@ public class IfThenItemProvider extends ItemProviderAdapter implements IEditingD
 				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
 		}
 		return super.getCreateChildText(owner, feature, child, selection);
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return BrowserAutomationEditPlugin.INSTANCE;
 	}
 
 }

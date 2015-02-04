@@ -3,6 +3,7 @@ grammar org.joclal.BrowserAutomation with org.eclipse.xtext.common.Terminals
 generate browserAutomation "http://www.joclal.org/BrowserAutomation"
 
 Model:
+	subroutines+=Subroutine*
 	'browser' browser=Browser ';'
 	firstGoTo=Goto
 	actions+=Action*
@@ -13,7 +14,7 @@ enum Browser:
 ;
 
 Action:
-	Goto | ClickOn | Fill | Check | Uncheck | Let
+	Goto | ClickOn | Fill | Check | Uncheck | Let | DoWhile | IfThen | SubroutineCall
 ;
 
 Goto:
@@ -25,7 +26,11 @@ ClickOn:
 ;
 
 Selector:
-	'select(' id=STRING ')'
+	'select(' sel=DomID ')'
+;
+
+DomID:
+	name=STRING (',' next=DomID)?
 ;
 
 Fill:
@@ -53,9 +58,9 @@ Value:
 ;
 
 DoWhile:
-	'Do {' 
+	'Do' '{' 
 		actions+=Action* 
-	'} While (' 
+	'}' 'While' '(' 
 		condition=BooleanExp 
 	')' 
 ;
@@ -69,13 +74,21 @@ enum Operator:
 ;
 
 IfThen:
-	'If (' 
+	'If' '(' 
 		condition=BooleanExp
-	') Then {'
+	')' 'Then' '{'
 		thenActions+=Action*
-	'}'
-	('Else {'
+	'}' ('Else' '{'
 		elseActions+=Action*
 	'}')?
 ;
 
+Subroutine:
+	'Def' name=ID '{'
+		(actions+=Action)*
+	'}'
+;
+
+SubroutineCall:
+	'Call' subroutine=[Subroutine] ';'
+;

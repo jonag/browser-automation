@@ -103,6 +103,7 @@ public class ModelItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
+			childrenFeatures.add(BrowserAutomationPackage.Literals.MODEL__SUBROUTINES);
 			childrenFeatures.add(BrowserAutomationPackage.Literals.MODEL__FIRST_GO_TO);
 			childrenFeatures.add(BrowserAutomationPackage.Literals.MODEL__ACTIONS);
 		}
@@ -164,6 +165,7 @@ public class ModelItemProvider
 			case BrowserAutomationPackage.MODEL__BROWSER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
+			case BrowserAutomationPackage.MODEL__SUBROUTINES:
 			case BrowserAutomationPackage.MODEL__FIRST_GO_TO:
 			case BrowserAutomationPackage.MODEL__ACTIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
@@ -182,6 +184,11 @@ public class ModelItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(BrowserAutomationPackage.Literals.MODEL__SUBROUTINES,
+				 BrowserAutomationFactory.eINSTANCE.createSubroutine()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -222,6 +229,21 @@ public class ModelItemProvider
 			(createChildParameter
 				(BrowserAutomationPackage.Literals.MODEL__ACTIONS,
 				 BrowserAutomationFactory.eINSTANCE.createLet()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(BrowserAutomationPackage.Literals.MODEL__ACTIONS,
+				 BrowserAutomationFactory.eINSTANCE.createDoWhile()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(BrowserAutomationPackage.Literals.MODEL__ACTIONS,
+				 BrowserAutomationFactory.eINSTANCE.createIfThen()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(BrowserAutomationPackage.Literals.MODEL__ACTIONS,
+				 BrowserAutomationFactory.eINSTANCE.createSubroutineCall()));
 	}
 
 	/**

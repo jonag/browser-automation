@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link org.joclal.browserAutomation.Model#getSubroutines <em>Subroutines</em>}</li>
  *   <li>{@link org.joclal.browserAutomation.Model#getBrowser <em>Browser</em>}</li>
  *   <li>{@link org.joclal.browserAutomation.Model#getFirstGoTo <em>First Go To</em>}</li>
  *   <li>{@link org.joclal.browserAutomation.Model#getActions <em>Actions</em>}</li>
@@ -26,6 +27,22 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Model extends EObject
 {
+  /**
+	 * Returns the value of the '<em><b>Subroutines</b></em>' containment reference list.
+	 * The list contents are of type {@link org.joclal.browserAutomation.Subroutine}.
+	 * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Subroutines</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+	 * @return the value of the '<em>Subroutines</em>' containment reference list.
+	 * @see org.joclal.browserAutomation.BrowserAutomationPackage#getModel_Subroutines()
+	 * @model containment="true"
+	 * @generated
+	 */
+  EList<Subroutine> getSubroutines();
+
   /**
 	 * Returns the value of the '<em><b>Browser</b></em>' attribute.
 	 * The literals are from the enumeration {@link org.joclal.browserAutomation.Browser}.

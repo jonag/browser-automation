@@ -13,7 +13,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -37,7 +36,7 @@ import org.joclal.browserAutomation.DoWhile;
  *
  * @generated
  */
-public class DoWhileImpl extends MinimalEObjectImpl.Container implements DoWhile
+public class DoWhileImpl extends ActionImpl implements DoWhile
 {
   /**
 	 * The cached value of the '{@link #getActions() <em>Actions</em>}' containment reference list.

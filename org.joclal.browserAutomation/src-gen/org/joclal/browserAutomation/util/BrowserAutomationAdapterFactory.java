@@ -91,6 +91,10 @@ public class BrowserAutomationAdapterFactory extends AdapterFactoryImpl
 				return createSelectorAdapter();
 			}
 			@Override
+			public Adapter caseDomID(DomID object) {
+				return createDomIDAdapter();
+			}
+			@Override
 			public Adapter caseFill(Fill object) {
 				return createFillAdapter();
 			}
@@ -125,6 +129,14 @@ public class BrowserAutomationAdapterFactory extends AdapterFactoryImpl
 			@Override
 			public Adapter caseIfThen(IfThen object) {
 				return createIfThenAdapter();
+			}
+			@Override
+			public Adapter caseSubroutine(Subroutine object) {
+				return createSubroutineAdapter();
+			}
+			@Override
+			public Adapter caseSubroutineCall(SubroutineCall object) {
+				return createSubroutineCallAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -218,6 +230,21 @@ public class BrowserAutomationAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
   public Adapter createSelectorAdapter()
+  {
+		return null;
+	}
+
+  /**
+	 * Creates a new adapter for an object of class '{@link org.joclal.browserAutomation.DomID <em>Dom ID</em>}'.
+	 * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.joclal.browserAutomation.DomID
+	 * @generated
+	 */
+  public Adapter createDomIDAdapter()
   {
 		return null;
 	}
@@ -353,6 +380,36 @@ public class BrowserAutomationAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
   public Adapter createIfThenAdapter()
+  {
+		return null;
+	}
+
+  /**
+	 * Creates a new adapter for an object of class '{@link org.joclal.browserAutomation.Subroutine <em>Subroutine</em>}'.
+	 * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.joclal.browserAutomation.Subroutine
+	 * @generated
+	 */
+  public Adapter createSubroutineAdapter()
+  {
+		return null;
+	}
+
+  /**
+	 * Creates a new adapter for an object of class '{@link org.joclal.browserAutomation.SubroutineCall <em>Subroutine Call</em>}'.
+	 * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.joclal.browserAutomation.SubroutineCall
+	 * @generated
+	 */
+  public Adapter createSubroutineCallAdapter()
   {
 		return null;
 	}

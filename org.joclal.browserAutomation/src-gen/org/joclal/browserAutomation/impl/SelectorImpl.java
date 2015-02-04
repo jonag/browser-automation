@@ -3,13 +3,16 @@
 package org.joclal.browserAutomation.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.joclal.browserAutomation.BrowserAutomationPackage;
+import org.joclal.browserAutomation.DomID;
 import org.joclal.browserAutomation.Selector;
 
 /**
@@ -19,7 +22,7 @@ import org.joclal.browserAutomation.Selector;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.joclal.browserAutomation.impl.SelectorImpl#getId <em>Id</em>}</li>
+ *   <li>{@link org.joclal.browserAutomation.impl.SelectorImpl#getSel <em>Sel</em>}</li>
  * </ul>
  * </p>
  *
@@ -28,24 +31,14 @@ import org.joclal.browserAutomation.Selector;
 public class SelectorImpl extends MinimalEObjectImpl.Container implements Selector
 {
   /**
-	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * The cached value of the '{@link #getSel() <em>Sel</em>}' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getId()
+	 * @see #getSel()
 	 * @generated
 	 * @ordered
 	 */
-  protected static final String ID_EDEFAULT = null;
-
-  /**
-	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-  protected String id = ID_EDEFAULT;
+  protected DomID sel;
 
   /**
 	 * <!-- begin-user-doc -->
@@ -73,9 +66,9 @@ public class SelectorImpl extends MinimalEObjectImpl.Container implements Select
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public String getId()
+  public DomID getSel()
   {
-		return id;
+		return sel;
 	}
 
   /**
@@ -83,12 +76,50 @@ public class SelectorImpl extends MinimalEObjectImpl.Container implements Select
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public void setId(String newId)
+  public NotificationChain basicSetSel(DomID newSel, NotificationChain msgs)
   {
-		String oldId = id;
-		id = newId;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.SELECTOR__ID, oldId, id));
+		DomID oldSel = sel;
+		sel = newSel;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.SELECTOR__SEL, oldSel, newSel);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public void setSel(DomID newSel)
+  {
+		if (newSel != sel) {
+			NotificationChain msgs = null;
+			if (sel != null)
+				msgs = ((InternalEObject)sel).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BrowserAutomationPackage.SELECTOR__SEL, null, msgs);
+			if (newSel != null)
+				msgs = ((InternalEObject)newSel).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BrowserAutomationPackage.SELECTOR__SEL, null, msgs);
+			msgs = basicSetSel(newSel, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.SELECTOR__SEL, newSel, newSel));
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+		switch (featureID) {
+			case BrowserAutomationPackage.SELECTOR__SEL:
+				return basicSetSel(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
   /**
@@ -100,8 +131,8 @@ public class SelectorImpl extends MinimalEObjectImpl.Container implements Select
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case BrowserAutomationPackage.SELECTOR__ID:
-				return getId();
+			case BrowserAutomationPackage.SELECTOR__SEL:
+				return getSel();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -115,8 +146,8 @@ public class SelectorImpl extends MinimalEObjectImpl.Container implements Select
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case BrowserAutomationPackage.SELECTOR__ID:
-				setId((String)newValue);
+			case BrowserAutomationPackage.SELECTOR__SEL:
+				setSel((DomID)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -131,8 +162,8 @@ public class SelectorImpl extends MinimalEObjectImpl.Container implements Select
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case BrowserAutomationPackage.SELECTOR__ID:
-				setId(ID_EDEFAULT);
+			case BrowserAutomationPackage.SELECTOR__SEL:
+				setSel((DomID)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -147,27 +178,10 @@ public class SelectorImpl extends MinimalEObjectImpl.Container implements Select
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case BrowserAutomationPackage.SELECTOR__ID:
-				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+			case BrowserAutomationPackage.SELECTOR__SEL:
+				return sel != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  @Override
-  public String toString()
-  {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (id: ");
-		result.append(id);
-		result.append(')');
-		return result.toString();
 	}
 
 } //SelectorImpl

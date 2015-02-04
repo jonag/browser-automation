@@ -23,6 +23,7 @@ import org.joclal.browserAutomation.Browser;
 import org.joclal.browserAutomation.BrowserAutomationPackage;
 import org.joclal.browserAutomation.Goto;
 import org.joclal.browserAutomation.Model;
+import org.joclal.browserAutomation.Subroutine;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,6 +32,7 @@ import org.joclal.browserAutomation.Model;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.joclal.browserAutomation.impl.ModelImpl#getSubroutines <em>Subroutines</em>}</li>
  *   <li>{@link org.joclal.browserAutomation.impl.ModelImpl#getBrowser <em>Browser</em>}</li>
  *   <li>{@link org.joclal.browserAutomation.impl.ModelImpl#getFirstGoTo <em>First Go To</em>}</li>
  *   <li>{@link org.joclal.browserAutomation.impl.ModelImpl#getActions <em>Actions</em>}</li>
@@ -41,6 +43,16 @@ import org.joclal.browserAutomation.Model;
  */
 public class ModelImpl extends MinimalEObjectImpl.Container implements Model
 {
+  /**
+	 * The cached value of the '{@link #getSubroutines() <em>Subroutines</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @see #getSubroutines()
+	 * @generated
+	 * @ordered
+	 */
+  protected EList<Subroutine> subroutines;
+
   /**
 	 * The default value of the '{@link #getBrowser() <em>Browser</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -100,6 +112,19 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   protected EClass eStaticClass()
   {
 		return BrowserAutomationPackage.Literals.MODEL;
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public EList<Subroutine> getSubroutines()
+  {
+		if (subroutines == null) {
+			subroutines = new EObjectContainmentEList<Subroutine>(Subroutine.class, this, BrowserAutomationPackage.MODEL__SUBROUTINES);
+		}
+		return subroutines;
 	}
 
   /**
@@ -193,6 +218,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
+			case BrowserAutomationPackage.MODEL__SUBROUTINES:
+				return ((InternalEList<?>)getSubroutines()).basicRemove(otherEnd, msgs);
 			case BrowserAutomationPackage.MODEL__FIRST_GO_TO:
 				return basicSetFirstGoTo(null, msgs);
 			case BrowserAutomationPackage.MODEL__ACTIONS:
@@ -210,6 +237,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
+			case BrowserAutomationPackage.MODEL__SUBROUTINES:
+				return getSubroutines();
 			case BrowserAutomationPackage.MODEL__BROWSER:
 				return getBrowser();
 			case BrowserAutomationPackage.MODEL__FIRST_GO_TO:
@@ -230,6 +259,10 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
+			case BrowserAutomationPackage.MODEL__SUBROUTINES:
+				getSubroutines().clear();
+				getSubroutines().addAll((Collection<? extends Subroutine>)newValue);
+				return;
 			case BrowserAutomationPackage.MODEL__BROWSER:
 				setBrowser((Browser)newValue);
 				return;
@@ -253,6 +286,9 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   public void eUnset(int featureID)
   {
 		switch (featureID) {
+			case BrowserAutomationPackage.MODEL__SUBROUTINES:
+				getSubroutines().clear();
+				return;
 			case BrowserAutomationPackage.MODEL__BROWSER:
 				setBrowser(BROWSER_EDEFAULT);
 				return;
@@ -275,6 +311,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
+			case BrowserAutomationPackage.MODEL__SUBROUTINES:
+				return subroutines != null && !subroutines.isEmpty();
 			case BrowserAutomationPackage.MODEL__BROWSER:
 				return browser != BROWSER_EDEFAULT;
 			case BrowserAutomationPackage.MODEL__FIRST_GO_TO:

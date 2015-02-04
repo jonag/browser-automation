@@ -18,6 +18,7 @@ import org.joclal.browserAutomation.BrowserAutomationPackage;
 import org.joclal.browserAutomation.Check;
 import org.joclal.browserAutomation.ClickOn;
 import org.joclal.browserAutomation.DoWhile;
+import org.joclal.browserAutomation.DomID;
 import org.joclal.browserAutomation.Fill;
 import org.joclal.browserAutomation.Goto;
 import org.joclal.browserAutomation.IfThen;
@@ -26,6 +27,8 @@ import org.joclal.browserAutomation.LetValue;
 import org.joclal.browserAutomation.Model;
 import org.joclal.browserAutomation.Operator;
 import org.joclal.browserAutomation.Selector;
+import org.joclal.browserAutomation.Subroutine;
+import org.joclal.browserAutomation.SubroutineCall;
 import org.joclal.browserAutomation.Uncheck;
 import org.joclal.browserAutomation.Value;
 
@@ -71,6 +74,13 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
 	 * @generated
 	 */
   private EClass selectorEClass = null;
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  private EClass domIDEClass = null;
 
   /**
 	 * <!-- begin-user-doc -->
@@ -134,6 +144,20 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
 	 * @generated
 	 */
   private EClass ifThenEClass = null;
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  private EClass subroutineEClass = null;
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  private EClass subroutineCallEClass = null;
 
   /**
 	 * <!-- begin-user-doc -->
@@ -227,9 +251,19 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
    * <!-- end-user-doc -->
 	 * @generated
 	 */
+  public EReference getModel_Subroutines()
+  {
+		return (EReference)modelEClass.getEStructuralFeatures().get(0);
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
   public EAttribute getModel_Browser()
   {
-		return (EAttribute)modelEClass.getEStructuralFeatures().get(0);
+		return (EAttribute)modelEClass.getEStructuralFeatures().get(1);
 	}
 
   /**
@@ -239,7 +273,7 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
 	 */
   public EReference getModel_FirstGoTo()
   {
-		return (EReference)modelEClass.getEStructuralFeatures().get(1);
+		return (EReference)modelEClass.getEStructuralFeatures().get(2);
 	}
 
   /**
@@ -249,7 +283,7 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
 	 */
   public EReference getModel_Actions()
   {
-		return (EReference)modelEClass.getEStructuralFeatures().get(2);
+		return (EReference)modelEClass.getEStructuralFeatures().get(3);
 	}
 
   /**
@@ -317,9 +351,39 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EAttribute getSelector_Id()
+  public EReference getSelector_Sel()
   {
-		return (EAttribute)selectorEClass.getEStructuralFeatures().get(0);
+		return (EReference)selectorEClass.getEStructuralFeatures().get(0);
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public EClass getDomID()
+  {
+		return domIDEClass;
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public EAttribute getDomID_Name()
+  {
+		return (EAttribute)domIDEClass.getEStructuralFeatures().get(0);
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public EReference getDomID_Next()
+  {
+		return (EReference)domIDEClass.getEStructuralFeatures().get(1);
 	}
 
   /**
@@ -607,6 +671,56 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
    * <!-- end-user-doc -->
 	 * @generated
 	 */
+  public EClass getSubroutine()
+  {
+		return subroutineEClass;
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public EAttribute getSubroutine_Name()
+  {
+		return (EAttribute)subroutineEClass.getEStructuralFeatures().get(0);
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public EReference getSubroutine_Actions()
+  {
+		return (EReference)subroutineEClass.getEStructuralFeatures().get(1);
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public EClass getSubroutineCall()
+  {
+		return subroutineCallEClass;
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public EReference getSubroutineCall_Subroutine()
+  {
+		return (EReference)subroutineCallEClass.getEStructuralFeatures().get(0);
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
   public EEnum getBrowser()
   {
 		return browserEEnum;
@@ -653,6 +767,7 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
 
 		// Create classes and their features
 		modelEClass = createEClass(MODEL);
+		createEReference(modelEClass, MODEL__SUBROUTINES);
 		createEAttribute(modelEClass, MODEL__BROWSER);
 		createEReference(modelEClass, MODEL__FIRST_GO_TO);
 		createEReference(modelEClass, MODEL__ACTIONS);
@@ -666,7 +781,11 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
 		createEReference(clickOnEClass, CLICK_ON__SELECTOR);
 
 		selectorEClass = createEClass(SELECTOR);
-		createEAttribute(selectorEClass, SELECTOR__ID);
+		createEReference(selectorEClass, SELECTOR__SEL);
+
+		domIDEClass = createEClass(DOM_ID);
+		createEAttribute(domIDEClass, DOM_ID__NAME);
+		createEReference(domIDEClass, DOM_ID__NEXT);
 
 		fillEClass = createEClass(FILL);
 		createEReference(fillEClass, FILL__FIELD);
@@ -704,6 +823,13 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
 		createEReference(ifThenEClass, IF_THEN__CONDITION);
 		createEReference(ifThenEClass, IF_THEN__THEN_ACTIONS);
 		createEReference(ifThenEClass, IF_THEN__ELSE_ACTIONS);
+
+		subroutineEClass = createEClass(SUBROUTINE);
+		createEAttribute(subroutineEClass, SUBROUTINE__NAME);
+		createEReference(subroutineEClass, SUBROUTINE__ACTIONS);
+
+		subroutineCallEClass = createEClass(SUBROUTINE_CALL);
+		createEReference(subroutineCallEClass, SUBROUTINE_CALL__SUBROUTINE);
 
 		// Create enums
 		browserEEnum = createEEnum(BROWSER);
@@ -745,9 +871,13 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
 		checkEClass.getESuperTypes().add(this.getAction());
 		uncheckEClass.getESuperTypes().add(this.getAction());
 		letEClass.getESuperTypes().add(this.getAction());
+		doWhileEClass.getESuperTypes().add(this.getAction());
+		ifThenEClass.getESuperTypes().add(this.getAction());
+		subroutineCallEClass.getESuperTypes().add(this.getAction());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(modelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getModel_Subroutines(), this.getSubroutine(), null, "subroutines", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getModel_Browser(), this.getBrowser(), "browser", null, 0, 1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getModel_FirstGoTo(), this.getGoto(), null, "firstGoTo", null, 0, 1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getModel_Actions(), this.getAction(), null, "actions", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -761,7 +891,11 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
 		initEReference(getClickOn_Selector(), this.getSelector(), null, "selector", null, 0, 1, ClickOn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(selectorEClass, Selector.class, "Selector", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getSelector_Id(), ecorePackage.getEString(), "id", null, 0, 1, Selector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSelector_Sel(), this.getDomID(), null, "sel", null, 0, 1, Selector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(domIDEClass, DomID.class, "DomID", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDomID_Name(), ecorePackage.getEString(), "name", null, 0, 1, DomID.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDomID_Next(), this.getDomID(), null, "next", null, 0, 1, DomID.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(fillEClass, Fill.class, "Fill", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getFill_Field(), this.getSelector(), null, "field", null, 0, 1, Fill.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -799,6 +933,13 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
 		initEReference(getIfThen_Condition(), this.getBooleanExp(), null, "condition", null, 0, 1, IfThen.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getIfThen_ThenActions(), this.getAction(), null, "thenActions", null, 0, -1, IfThen.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getIfThen_ElseActions(), this.getAction(), null, "elseActions", null, 0, -1, IfThen.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(subroutineEClass, Subroutine.class, "Subroutine", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getSubroutine_Name(), ecorePackage.getEString(), "name", null, 0, 1, Subroutine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSubroutine_Actions(), this.getAction(), null, "actions", null, 0, -1, Subroutine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(subroutineCallEClass, SubroutineCall.class, "SubroutineCall", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSubroutineCall_Subroutine(), this.getSubroutine(), null, "subroutine", null, 0, 1, SubroutineCall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(browserEEnum, Browser.class, "Browser");

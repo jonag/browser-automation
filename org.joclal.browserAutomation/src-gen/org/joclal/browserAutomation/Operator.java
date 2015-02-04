@@ -27,7 +27,7 @@ public enum Operator implements Enumerator
 	 * @generated
 	 * @ordered
 	 */
-  EQUALS(0, "equals", "="),
+  EQUALS(0, "equals", "=="),
 
   /**
 	 * The '<em><b>Gt</b></em>' literal object.
@@ -78,7 +78,7 @@ public enum Operator implements Enumerator
    * </p>
    * <!-- end-user-doc -->
 	 * @see #EQUALS
-	 * @model name="equals" literal="="
+	 * @model name="equals" literal="=="
 	 * @generated
 	 * @ordered
 	 */

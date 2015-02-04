@@ -22,6 +22,7 @@
       <genEnumLiterals ecoreEnumLiteral="BrowserAutomation.ecore#//Operator/lte"/>
     </genEnums>
     <genClasses ecoreClass="BrowserAutomation.ecore#//Model">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//Model/subroutines"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserAutomation.ecore#//Model/browser"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//Model/firstGoTo"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//Model/actions"/>
@@ -34,7 +35,11 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//ClickOn/selector"/>
     </genClasses>
     <genClasses ecoreClass="BrowserAutomation.ecore#//Selector">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserAutomation.ecore#//Selector/id"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//Selector/sel"/>
+    </genClasses>
+    <genClasses ecoreClass="BrowserAutomation.ecore#//DomID">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserAutomation.ecore#//DomID/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//DomID/next"/>
     </genClasses>
     <genClasses ecoreClass="BrowserAutomation.ecore#//Fill">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//Fill/field"/>
@@ -72,6 +77,13 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//IfThen/condition"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//IfThen/thenActions"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//IfThen/elseActions"/>
+    </genClasses>
+    <genClasses ecoreClass="BrowserAutomation.ecore#//Subroutine">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserAutomation.ecore#//Subroutine/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//Subroutine/actions"/>
+    </genClasses>
+    <genClasses ecoreClass="BrowserAutomation.ecore#//SubroutineCall">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//SubroutineCall/subroutine"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

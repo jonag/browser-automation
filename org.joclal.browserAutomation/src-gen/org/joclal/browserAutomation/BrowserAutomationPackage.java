@@ -68,13 +68,22 @@ public interface BrowserAutomationPackage extends EPackage
   int MODEL = 0;
 
   /**
+	 * The feature id for the '<em><b>Subroutines</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int MODEL__SUBROUTINES = 0;
+
+  /**
 	 * The feature id for the '<em><b>Browser</b></em>' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int MODEL__BROWSER = 0;
+  int MODEL__BROWSER = 1;
 
   /**
 	 * The feature id for the '<em><b>First Go To</b></em>' containment reference.
@@ -83,7 +92,7 @@ public interface BrowserAutomationPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MODEL__FIRST_GO_TO = 1;
+  int MODEL__FIRST_GO_TO = 2;
 
   /**
 	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
@@ -92,7 +101,7 @@ public interface BrowserAutomationPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MODEL__ACTIONS = 2;
+  int MODEL__ACTIONS = 3;
 
   /**
 	 * The number of structural features of the '<em>Model</em>' class.
@@ -101,7 +110,7 @@ public interface BrowserAutomationPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MODEL_FEATURE_COUNT = 3;
+  int MODEL_FEATURE_COUNT = 4;
 
   /**
 	 * The meta object id for the '{@link org.joclal.browserAutomation.impl.ActionImpl <em>Action</em>}' class.
@@ -189,13 +198,13 @@ public interface BrowserAutomationPackage extends EPackage
   int SELECTOR = 4;
 
   /**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * The feature id for the '<em><b>Sel</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int SELECTOR__ID = 0;
+  int SELECTOR__SEL = 0;
 
   /**
 	 * The number of structural features of the '<em>Selector</em>' class.
@@ -207,6 +216,43 @@ public interface BrowserAutomationPackage extends EPackage
   int SELECTOR_FEATURE_COUNT = 1;
 
   /**
+	 * The meta object id for the '{@link org.joclal.browserAutomation.impl.DomIDImpl <em>Dom ID</em>}' class.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @see org.joclal.browserAutomation.impl.DomIDImpl
+	 * @see org.joclal.browserAutomation.impl.BrowserAutomationPackageImpl#getDomID()
+	 * @generated
+	 */
+  int DOM_ID = 5;
+
+  /**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int DOM_ID__NAME = 0;
+
+  /**
+	 * The feature id for the '<em><b>Next</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int DOM_ID__NEXT = 1;
+
+  /**
+	 * The number of structural features of the '<em>Dom ID</em>' class.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int DOM_ID_FEATURE_COUNT = 2;
+
+  /**
 	 * The meta object id for the '{@link org.joclal.browserAutomation.impl.FillImpl <em>Fill</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -214,7 +260,7 @@ public interface BrowserAutomationPackage extends EPackage
 	 * @see org.joclal.browserAutomation.impl.BrowserAutomationPackageImpl#getFill()
 	 * @generated
 	 */
-  int FILL = 5;
+  int FILL = 6;
 
   /**
 	 * The feature id for the '<em><b>Field</b></em>' containment reference.
@@ -251,7 +297,7 @@ public interface BrowserAutomationPackage extends EPackage
 	 * @see org.joclal.browserAutomation.impl.BrowserAutomationPackageImpl#getCheck()
 	 * @generated
 	 */
-  int CHECK = 6;
+  int CHECK = 7;
 
   /**
 	 * The feature id for the '<em><b>Checkbox</b></em>' containment reference.
@@ -279,7 +325,7 @@ public interface BrowserAutomationPackage extends EPackage
 	 * @see org.joclal.browserAutomation.impl.BrowserAutomationPackageImpl#getUncheck()
 	 * @generated
 	 */
-  int UNCHECK = 7;
+  int UNCHECK = 8;
 
   /**
 	 * The feature id for the '<em><b>Checkbox</b></em>' containment reference.
@@ -307,7 +353,7 @@ public interface BrowserAutomationPackage extends EPackage
 	 * @see org.joclal.browserAutomation.impl.BrowserAutomationPackageImpl#getLet()
 	 * @generated
 	 */
-  int LET = 8;
+  int LET = 9;
 
   /**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -344,7 +390,7 @@ public interface BrowserAutomationPackage extends EPackage
 	 * @see org.joclal.browserAutomation.impl.BrowserAutomationPackageImpl#getLetValue()
 	 * @generated
 	 */
-  int LET_VALUE = 9;
+  int LET_VALUE = 10;
 
   /**
 	 * The feature id for the '<em><b>Selector</b></em>' containment reference.
@@ -381,7 +427,7 @@ public interface BrowserAutomationPackage extends EPackage
 	 * @see org.joclal.browserAutomation.impl.BrowserAutomationPackageImpl#getValue()
 	 * @generated
 	 */
-  int VALUE = 10;
+  int VALUE = 11;
 
   /**
 	 * The feature id for the '<em><b>String</b></em>' attribute.
@@ -427,7 +473,7 @@ public interface BrowserAutomationPackage extends EPackage
 	 * @see org.joclal.browserAutomation.impl.BrowserAutomationPackageImpl#getDoWhile()
 	 * @generated
 	 */
-  int DO_WHILE = 11;
+  int DO_WHILE = 12;
 
   /**
 	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
@@ -436,7 +482,7 @@ public interface BrowserAutomationPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int DO_WHILE__ACTIONS = 0;
+  int DO_WHILE__ACTIONS = ACTION_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Condition</b></em>' containment reference.
@@ -445,7 +491,7 @@ public interface BrowserAutomationPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int DO_WHILE__CONDITION = 1;
+  int DO_WHILE__CONDITION = ACTION_FEATURE_COUNT + 1;
 
   /**
 	 * The number of structural features of the '<em>Do While</em>' class.
@@ -454,7 +500,7 @@ public interface BrowserAutomationPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int DO_WHILE_FEATURE_COUNT = 2;
+  int DO_WHILE_FEATURE_COUNT = ACTION_FEATURE_COUNT + 2;
 
   /**
 	 * The meta object id for the '{@link org.joclal.browserAutomation.impl.BooleanExpImpl <em>Boolean Exp</em>}' class.
@@ -464,7 +510,7 @@ public interface BrowserAutomationPackage extends EPackage
 	 * @see org.joclal.browserAutomation.impl.BrowserAutomationPackageImpl#getBooleanExp()
 	 * @generated
 	 */
-  int BOOLEAN_EXP = 12;
+  int BOOLEAN_EXP = 13;
 
   /**
 	 * The feature id for the '<em><b>Left Member</b></em>' containment reference.
@@ -510,7 +556,7 @@ public interface BrowserAutomationPackage extends EPackage
 	 * @see org.joclal.browserAutomation.impl.BrowserAutomationPackageImpl#getIfThen()
 	 * @generated
 	 */
-  int IF_THEN = 13;
+  int IF_THEN = 14;
 
   /**
 	 * The feature id for the '<em><b>Condition</b></em>' containment reference.
@@ -519,7 +565,7 @@ public interface BrowserAutomationPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int IF_THEN__CONDITION = 0;
+  int IF_THEN__CONDITION = ACTION_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Then Actions</b></em>' containment reference list.
@@ -528,7 +574,7 @@ public interface BrowserAutomationPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int IF_THEN__THEN_ACTIONS = 1;
+  int IF_THEN__THEN_ACTIONS = ACTION_FEATURE_COUNT + 1;
 
   /**
 	 * The feature id for the '<em><b>Else Actions</b></em>' containment reference list.
@@ -537,7 +583,7 @@ public interface BrowserAutomationPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int IF_THEN__ELSE_ACTIONS = 2;
+  int IF_THEN__ELSE_ACTIONS = ACTION_FEATURE_COUNT + 2;
 
   /**
 	 * The number of structural features of the '<em>If Then</em>' class.
@@ -546,7 +592,72 @@ public interface BrowserAutomationPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int IF_THEN_FEATURE_COUNT = 3;
+  int IF_THEN_FEATURE_COUNT = ACTION_FEATURE_COUNT + 3;
+
+  /**
+	 * The meta object id for the '{@link org.joclal.browserAutomation.impl.SubroutineImpl <em>Subroutine</em>}' class.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @see org.joclal.browserAutomation.impl.SubroutineImpl
+	 * @see org.joclal.browserAutomation.impl.BrowserAutomationPackageImpl#getSubroutine()
+	 * @generated
+	 */
+  int SUBROUTINE = 15;
+
+  /**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int SUBROUTINE__NAME = 0;
+
+  /**
+	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int SUBROUTINE__ACTIONS = 1;
+
+  /**
+	 * The number of structural features of the '<em>Subroutine</em>' class.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int SUBROUTINE_FEATURE_COUNT = 2;
+
+  /**
+	 * The meta object id for the '{@link org.joclal.browserAutomation.impl.SubroutineCallImpl <em>Subroutine Call</em>}' class.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @see org.joclal.browserAutomation.impl.SubroutineCallImpl
+	 * @see org.joclal.browserAutomation.impl.BrowserAutomationPackageImpl#getSubroutineCall()
+	 * @generated
+	 */
+  int SUBROUTINE_CALL = 16;
+
+  /**
+	 * The feature id for the '<em><b>Subroutine</b></em>' reference.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int SUBROUTINE_CALL__SUBROUTINE = ACTION_FEATURE_COUNT + 0;
+
+  /**
+	 * The number of structural features of the '<em>Subroutine Call</em>' class.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int SUBROUTINE_CALL_FEATURE_COUNT = ACTION_FEATURE_COUNT + 1;
 
   /**
 	 * The meta object id for the '{@link org.joclal.browserAutomation.Browser <em>Browser</em>}' enum.
@@ -556,7 +667,7 @@ public interface BrowserAutomationPackage extends EPackage
 	 * @see org.joclal.browserAutomation.impl.BrowserAutomationPackageImpl#getBrowser()
 	 * @generated
 	 */
-  int BROWSER = 14;
+  int BROWSER = 17;
 
   /**
 	 * The meta object id for the '{@link org.joclal.browserAutomation.Operator <em>Operator</em>}' enum.
@@ -566,7 +677,7 @@ public interface BrowserAutomationPackage extends EPackage
 	 * @see org.joclal.browserAutomation.impl.BrowserAutomationPackageImpl#getOperator()
 	 * @generated
 	 */
-  int OPERATOR = 15;
+  int OPERATOR = 18;
 
 
   /**
@@ -578,6 +689,17 @@ public interface BrowserAutomationPackage extends EPackage
 	 * @generated
 	 */
   EClass getModel();
+
+  /**
+	 * Returns the meta object for the containment reference list '{@link org.joclal.browserAutomation.Model#getSubroutines <em>Subroutines</em>}'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Subroutines</em>'.
+	 * @see org.joclal.browserAutomation.Model#getSubroutines()
+	 * @see #getModel()
+	 * @generated
+	 */
+  EReference getModel_Subroutines();
 
   /**
 	 * Returns the meta object for the attribute '{@link org.joclal.browserAutomation.Model#getBrowser <em>Browser</em>}'.
@@ -675,15 +797,47 @@ public interface BrowserAutomationPackage extends EPackage
   EClass getSelector();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.joclal.browserAutomation.Selector#getId <em>Id</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.joclal.browserAutomation.Selector#getSel <em>Sel</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see org.joclal.browserAutomation.Selector#getId()
+	 * @return the meta object for the containment reference '<em>Sel</em>'.
+	 * @see org.joclal.browserAutomation.Selector#getSel()
 	 * @see #getSelector()
 	 * @generated
 	 */
-  EAttribute getSelector_Id();
+  EReference getSelector_Sel();
+
+  /**
+	 * Returns the meta object for class '{@link org.joclal.browserAutomation.DomID <em>Dom ID</em>}'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Dom ID</em>'.
+	 * @see org.joclal.browserAutomation.DomID
+	 * @generated
+	 */
+  EClass getDomID();
+
+  /**
+	 * Returns the meta object for the attribute '{@link org.joclal.browserAutomation.DomID#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.joclal.browserAutomation.DomID#getName()
+	 * @see #getDomID()
+	 * @generated
+	 */
+  EAttribute getDomID_Name();
+
+  /**
+	 * Returns the meta object for the containment reference '{@link org.joclal.browserAutomation.DomID#getNext <em>Next</em>}'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Next</em>'.
+	 * @see org.joclal.browserAutomation.DomID#getNext()
+	 * @see #getDomID()
+	 * @generated
+	 */
+  EReference getDomID_Next();
 
   /**
 	 * Returns the meta object for class '{@link org.joclal.browserAutomation.Fill <em>Fill</em>}'.
@@ -985,6 +1139,59 @@ public interface BrowserAutomationPackage extends EPackage
   EReference getIfThen_ElseActions();
 
   /**
+	 * Returns the meta object for class '{@link org.joclal.browserAutomation.Subroutine <em>Subroutine</em>}'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Subroutine</em>'.
+	 * @see org.joclal.browserAutomation.Subroutine
+	 * @generated
+	 */
+  EClass getSubroutine();
+
+  /**
+	 * Returns the meta object for the attribute '{@link org.joclal.browserAutomation.Subroutine#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.joclal.browserAutomation.Subroutine#getName()
+	 * @see #getSubroutine()
+	 * @generated
+	 */
+  EAttribute getSubroutine_Name();
+
+  /**
+	 * Returns the meta object for the containment reference list '{@link org.joclal.browserAutomation.Subroutine#getActions <em>Actions</em>}'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Actions</em>'.
+	 * @see org.joclal.browserAutomation.Subroutine#getActions()
+	 * @see #getSubroutine()
+	 * @generated
+	 */
+  EReference getSubroutine_Actions();
+
+  /**
+	 * Returns the meta object for class '{@link org.joclal.browserAutomation.SubroutineCall <em>Subroutine Call</em>}'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Subroutine Call</em>'.
+	 * @see org.joclal.browserAutomation.SubroutineCall
+	 * @generated
+	 */
+  EClass getSubroutineCall();
+
+  /**
+	 * Returns the meta object for the reference '{@link org.joclal.browserAutomation.SubroutineCall#getSubroutine <em>Subroutine</em>}'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Subroutine</em>'.
+	 * @see org.joclal.browserAutomation.SubroutineCall#getSubroutine()
+	 * @see #getSubroutineCall()
+	 * @generated
+	 */
+  EReference getSubroutineCall_Subroutine();
+
+  /**
 	 * Returns the meta object for enum '{@link org.joclal.browserAutomation.Browser <em>Browser</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1036,6 +1243,14 @@ public interface BrowserAutomationPackage extends EPackage
 		 * @generated
 		 */
     EClass MODEL = eINSTANCE.getModel();
+
+    /**
+		 * The meta object literal for the '<em><b>Subroutines</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+		 * @generated
+		 */
+    EReference MODEL__SUBROUTINES = eINSTANCE.getModel_Subroutines();
 
     /**
 		 * The meta object literal for the '<em><b>Browser</b></em>' attribute feature.
@@ -1118,12 +1333,38 @@ public interface BrowserAutomationPackage extends EPackage
     EClass SELECTOR = eINSTANCE.getSelector();
 
     /**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Sel</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EAttribute SELECTOR__ID = eINSTANCE.getSelector_Id();
+    EReference SELECTOR__SEL = eINSTANCE.getSelector_Sel();
+
+    /**
+		 * The meta object literal for the '{@link org.joclal.browserAutomation.impl.DomIDImpl <em>Dom ID</em>}' class.
+		 * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+		 * @see org.joclal.browserAutomation.impl.DomIDImpl
+		 * @see org.joclal.browserAutomation.impl.BrowserAutomationPackageImpl#getDomID()
+		 * @generated
+		 */
+    EClass DOM_ID = eINSTANCE.getDomID();
+
+    /**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+		 * @generated
+		 */
+    EAttribute DOM_ID__NAME = eINSTANCE.getDomID_Name();
+
+    /**
+		 * The meta object literal for the '<em><b>Next</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+		 * @generated
+		 */
+    EReference DOM_ID__NEXT = eINSTANCE.getDomID_Next();
 
     /**
 		 * The meta object literal for the '{@link org.joclal.browserAutomation.impl.FillImpl <em>Fill</em>}' class.
@@ -1366,6 +1607,50 @@ public interface BrowserAutomationPackage extends EPackage
 		 * @generated
 		 */
     EReference IF_THEN__ELSE_ACTIONS = eINSTANCE.getIfThen_ElseActions();
+
+    /**
+		 * The meta object literal for the '{@link org.joclal.browserAutomation.impl.SubroutineImpl <em>Subroutine</em>}' class.
+		 * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+		 * @see org.joclal.browserAutomation.impl.SubroutineImpl
+		 * @see org.joclal.browserAutomation.impl.BrowserAutomationPackageImpl#getSubroutine()
+		 * @generated
+		 */
+    EClass SUBROUTINE = eINSTANCE.getSubroutine();
+
+    /**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+		 * @generated
+		 */
+    EAttribute SUBROUTINE__NAME = eINSTANCE.getSubroutine_Name();
+
+    /**
+		 * The meta object literal for the '<em><b>Actions</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+		 * @generated
+		 */
+    EReference SUBROUTINE__ACTIONS = eINSTANCE.getSubroutine_Actions();
+
+    /**
+		 * The meta object literal for the '{@link org.joclal.browserAutomation.impl.SubroutineCallImpl <em>Subroutine Call</em>}' class.
+		 * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+		 * @see org.joclal.browserAutomation.impl.SubroutineCallImpl
+		 * @see org.joclal.browserAutomation.impl.BrowserAutomationPackageImpl#getSubroutineCall()
+		 * @generated
+		 */
+    EClass SUBROUTINE_CALL = eINSTANCE.getSubroutineCall();
+
+    /**
+		 * The meta object literal for the '<em><b>Subroutine</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+		 * @generated
+		 */
+    EReference SUBROUTINE_CALL__SUBROUTINE = eINSTANCE.getSubroutineCall_Subroutine();
 
     /**
 		 * The meta object literal for the '{@link org.joclal.browserAutomation.Browser <em>Browser</em>}' enum.

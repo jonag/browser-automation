@@ -14,15 +14,7 @@ import org.joclal.browserAutomation.IfThen;
  * <!-- end-user-doc -->
  * @generated
  */
-public class IfThenTest extends TestCase {
-
-	/**
-	 * The fixture for this If Then test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected IfThen fixture = null;
+public class IfThenTest extends ActionTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -44,16 +36,6 @@ public class IfThenTest extends TestCase {
 	}
 
 	/**
-	 * Sets the fixture for this If Then test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void setFixture(IfThen fixture) {
-		this.fixture = fixture;
-	}
-
-	/**
 	 * Returns the fixture for this If Then test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -61,7 +43,7 @@ public class IfThenTest extends TestCase {
 	 */
 	@Override
 	protected IfThen getFixture() {
-		return fixture;
+		return (IfThen)fixture;
 	}
 
 	/**

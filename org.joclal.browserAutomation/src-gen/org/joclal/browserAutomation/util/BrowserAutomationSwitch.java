@@ -102,6 +102,12 @@ public class BrowserAutomationSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case BrowserAutomationPackage.DOM_ID: {
+				DomID domID = (DomID)theEObject;
+				T result = caseDomID(domID);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case BrowserAutomationPackage.FILL: {
 				Fill fill = (Fill)theEObject;
 				T result = caseFill(fill);
@@ -145,6 +151,7 @@ public class BrowserAutomationSwitch<T> extends Switch<T>
 			case BrowserAutomationPackage.DO_WHILE: {
 				DoWhile doWhile = (DoWhile)theEObject;
 				T result = caseDoWhile(doWhile);
+				if (result == null) result = caseAction(doWhile);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -157,6 +164,20 @@ public class BrowserAutomationSwitch<T> extends Switch<T>
 			case BrowserAutomationPackage.IF_THEN: {
 				IfThen ifThen = (IfThen)theEObject;
 				T result = caseIfThen(ifThen);
+				if (result == null) result = caseAction(ifThen);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BrowserAutomationPackage.SUBROUTINE: {
+				Subroutine subroutine = (Subroutine)theEObject;
+				T result = caseSubroutine(subroutine);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BrowserAutomationPackage.SUBROUTINE_CALL: {
+				SubroutineCall subroutineCall = (SubroutineCall)theEObject;
+				T result = caseSubroutineCall(subroutineCall);
+				if (result == null) result = caseAction(subroutineCall);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -240,6 +261,22 @@ public class BrowserAutomationSwitch<T> extends Switch<T>
 	 * @generated
 	 */
   public T caseSelector(Selector object)
+  {
+		return null;
+	}
+
+  /**
+	 * Returns the result of interpreting the object as an instance of '<em>Dom ID</em>'.
+	 * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Dom ID</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+  public T caseDomID(DomID object)
   {
 		return null;
 	}
@@ -384,6 +421,38 @@ public class BrowserAutomationSwitch<T> extends Switch<T>
 	 * @generated
 	 */
   public T caseIfThen(IfThen object)
+  {
+		return null;
+	}
+
+  /**
+	 * Returns the result of interpreting the object as an instance of '<em>Subroutine</em>'.
+	 * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Subroutine</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+  public T caseSubroutine(Subroutine object)
+  {
+		return null;
+	}
+
+  /**
+	 * Returns the result of interpreting the object as an instance of '<em>Subroutine Call</em>'.
+	 * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Subroutine Call</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+  public T caseSubroutineCall(SubroutineCall object)
   {
 		return null;
 	}

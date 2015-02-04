@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.joclal.browserAutomation.Selector#getId <em>Id</em>}</li>
+ *   <li>{@link org.joclal.browserAutomation.Selector#getSel <em>Sel</em>}</li>
  * </ul>
  * </p>
  *
@@ -23,29 +23,29 @@ import org.eclipse.emf.ecore.EObject;
 public interface Selector extends EObject
 {
   /**
-	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * Returns the value of the '<em><b>Sel</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Id</em>' attribute isn't clear,
+   * If the meaning of the '<em>Sel</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id</em>' attribute.
-	 * @see #setId(String)
-	 * @see org.joclal.browserAutomation.BrowserAutomationPackage#getSelector_Id()
-	 * @model
+	 * @return the value of the '<em>Sel</em>' containment reference.
+	 * @see #setSel(DomID)
+	 * @see org.joclal.browserAutomation.BrowserAutomationPackage#getSelector_Sel()
+	 * @model containment="true"
 	 * @generated
 	 */
-  String getId();
+  DomID getSel();
 
   /**
-	 * Sets the value of the '{@link org.joclal.browserAutomation.Selector#getId <em>Id</em>}' attribute.
+	 * Sets the value of the '{@link org.joclal.browserAutomation.Selector#getSel <em>Sel</em>}' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id</em>' attribute.
-	 * @see #getId()
+	 * @param value the new value of the '<em>Sel</em>' containment reference.
+	 * @see #getSel()
 	 * @generated
 	 */
-  void setId(String value);
+  void setSel(DomID value);
 
 } // Selector

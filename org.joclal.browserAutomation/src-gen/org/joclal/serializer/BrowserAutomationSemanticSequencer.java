@@ -18,6 +18,7 @@ import org.joclal.browserAutomation.BrowserAutomationPackage;
 import org.joclal.browserAutomation.Check;
 import org.joclal.browserAutomation.ClickOn;
 import org.joclal.browserAutomation.DoWhile;
+import org.joclal.browserAutomation.DomID;
 import org.joclal.browserAutomation.Fill;
 import org.joclal.browserAutomation.Goto;
 import org.joclal.browserAutomation.IfThen;
@@ -25,6 +26,8 @@ import org.joclal.browserAutomation.Let;
 import org.joclal.browserAutomation.LetValue;
 import org.joclal.browserAutomation.Model;
 import org.joclal.browserAutomation.Selector;
+import org.joclal.browserAutomation.Subroutine;
+import org.joclal.browserAutomation.SubroutineCall;
 import org.joclal.browserAutomation.Uncheck;
 import org.joclal.browserAutomation.Value;
 import org.joclal.services.BrowserAutomationGrammarAccess;
@@ -58,8 +61,15 @@ public class BrowserAutomationSemanticSequencer extends AbstractDelegatingSemant
 				}
 				else break;
 			case BrowserAutomationPackage.DO_WHILE:
-				if(context == grammarAccess.getDoWhileRule()) {
+				if(context == grammarAccess.getActionRule() ||
+				   context == grammarAccess.getDoWhileRule()) {
 					sequence_DoWhile(context, (DoWhile) semanticObject); 
+					return; 
+				}
+				else break;
+			case BrowserAutomationPackage.DOM_ID:
+				if(context == grammarAccess.getDomIDRule()) {
+					sequence_DomID(context, (DomID) semanticObject); 
 					return; 
 				}
 				else break;
@@ -78,7 +88,8 @@ public class BrowserAutomationSemanticSequencer extends AbstractDelegatingSemant
 				}
 				else break;
 			case BrowserAutomationPackage.IF_THEN:
-				if(context == grammarAccess.getIfThenRule()) {
+				if(context == grammarAccess.getActionRule() ||
+				   context == grammarAccess.getIfThenRule()) {
 					sequence_IfThen(context, (IfThen) semanticObject); 
 					return; 
 				}
@@ -105,6 +116,19 @@ public class BrowserAutomationSemanticSequencer extends AbstractDelegatingSemant
 			case BrowserAutomationPackage.SELECTOR:
 				if(context == grammarAccess.getSelectorRule()) {
 					sequence_Selector(context, (Selector) semanticObject); 
+					return; 
+				}
+				else break;
+			case BrowserAutomationPackage.SUBROUTINE:
+				if(context == grammarAccess.getSubroutineRule()) {
+					sequence_Subroutine(context, (Subroutine) semanticObject); 
+					return; 
+				}
+				else break;
+			case BrowserAutomationPackage.SUBROUTINE_CALL:
+				if(context == grammarAccess.getActionRule() ||
+				   context == grammarAccess.getSubroutineCallRule()) {
+					sequence_SubroutineCall(context, (SubroutineCall) semanticObject); 
 					return; 
 				}
 				else break;
@@ -190,6 +214,15 @@ public class BrowserAutomationSemanticSequencer extends AbstractDelegatingSemant
 	
 	/**
 	 * Constraint:
+	 *     (name=STRING next=DomID?)
+	 */
+	protected void sequence_DomID(EObject context, DomID semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     (field=Selector value=Value)
 	 */
 	protected void sequence_Fill(EObject context, Fill semanticObject) {
@@ -262,7 +295,7 @@ public class BrowserAutomationSemanticSequencer extends AbstractDelegatingSemant
 	
 	/**
 	 * Constraint:
-	 *     (browser=Browser firstGoTo=Goto actions+=Action*)
+	 *     (subroutines+=Subroutine* browser=Browser firstGoTo=Goto actions+=Action*)
 	 */
 	protected void sequence_Model(EObject context, Model semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -271,17 +304,42 @@ public class BrowserAutomationSemanticSequencer extends AbstractDelegatingSemant
 	
 	/**
 	 * Constraint:
-	 *     id=STRING
+	 *     sel=DomID
 	 */
 	protected void sequence_Selector(EObject context, Selector semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, BrowserAutomationPackage.Literals.SELECTOR__ID) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BrowserAutomationPackage.Literals.SELECTOR__ID));
+			if(transientValues.isValueTransient(semanticObject, BrowserAutomationPackage.Literals.SELECTOR__SEL) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BrowserAutomationPackage.Literals.SELECTOR__SEL));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getSelectorAccess().getIdSTRINGTerminalRuleCall_1_0(), semanticObject.getId());
+		feeder.accept(grammarAccess.getSelectorAccess().getSelDomIDParserRuleCall_1_0(), semanticObject.getSel());
 		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     subroutine=[Subroutine|ID]
+	 */
+	protected void sequence_SubroutineCall(EObject context, SubroutineCall semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, BrowserAutomationPackage.Literals.SUBROUTINE_CALL__SUBROUTINE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BrowserAutomationPackage.Literals.SUBROUTINE_CALL__SUBROUTINE));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getSubroutineCallAccess().getSubroutineSubroutineIDTerminalRuleCall_1_0_1(), semanticObject.getSubroutine());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=ID actions+=Action*)
+	 */
+	protected void sequence_Subroutine(EObject context, Subroutine semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

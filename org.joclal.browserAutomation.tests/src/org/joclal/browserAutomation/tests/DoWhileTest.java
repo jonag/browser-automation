@@ -14,15 +14,7 @@ import org.joclal.browserAutomation.DoWhile;
  * <!-- end-user-doc -->
  * @generated
  */
-public class DoWhileTest extends TestCase {
-
-	/**
-	 * The fixture for this Do While test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected DoWhile fixture = null;
+public class DoWhileTest extends ActionTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -44,16 +36,6 @@ public class DoWhileTest extends TestCase {
 	}
 
 	/**
-	 * Sets the fixture for this Do While test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void setFixture(DoWhile fixture) {
-		this.fixture = fixture;
-	}
-
-	/**
 	 * Returns the fixture for this Do While test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -61,7 +43,7 @@ public class DoWhileTest extends TestCase {
 	 */
 	@Override
 	protected DoWhile getFixture() {
-		return fixture;
+		return (DoWhile)fixture;
 	}
 
 	/**

@@ -66,6 +66,7 @@ public class BrowserAutomationFactoryImpl extends EFactoryImpl implements Browse
 			case BrowserAutomationPackage.GOTO: return createGoto();
 			case BrowserAutomationPackage.CLICK_ON: return createClickOn();
 			case BrowserAutomationPackage.SELECTOR: return createSelector();
+			case BrowserAutomationPackage.DOM_ID: return createDomID();
 			case BrowserAutomationPackage.FILL: return createFill();
 			case BrowserAutomationPackage.CHECK: return createCheck();
 			case BrowserAutomationPackage.UNCHECK: return createUncheck();
@@ -75,6 +76,8 @@ public class BrowserAutomationFactoryImpl extends EFactoryImpl implements Browse
 			case BrowserAutomationPackage.DO_WHILE: return createDoWhile();
 			case BrowserAutomationPackage.BOOLEAN_EXP: return createBooleanExp();
 			case BrowserAutomationPackage.IF_THEN: return createIfThen();
+			case BrowserAutomationPackage.SUBROUTINE: return createSubroutine();
+			case BrowserAutomationPackage.SUBROUTINE_CALL: return createSubroutineCall();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -176,6 +179,17 @@ public class BrowserAutomationFactoryImpl extends EFactoryImpl implements Browse
    * <!-- end-user-doc -->
 	 * @generated
 	 */
+  public DomID createDomID()
+  {
+		DomIDImpl domID = new DomIDImpl();
+		return domID;
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
   public Fill createFill()
   {
 		FillImpl fill = new FillImpl();
@@ -268,6 +282,28 @@ public class BrowserAutomationFactoryImpl extends EFactoryImpl implements Browse
   {
 		IfThenImpl ifThen = new IfThenImpl();
 		return ifThen;
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public Subroutine createSubroutine()
+  {
+		SubroutineImpl subroutine = new SubroutineImpl();
+		return subroutine;
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public SubroutineCall createSubroutineCall()
+  {
+		SubroutineCallImpl subroutineCall = new SubroutineCallImpl();
+		return subroutineCall;
 	}
 
   /**

@@ -31,7 +31,7 @@ import org.joclal.browserAutomation.DoWhile;
  * <!-- end-user-doc -->
  * @generated
  */
-public class DoWhileItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class DoWhileItemProvider extends ActionItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -179,19 +179,23 @@ public class DoWhileItemProvider extends ItemProviderAdapter implements IEditing
 
 		newChildDescriptors.add
 			(createChildParameter
+				(BrowserAutomationPackage.Literals.DO_WHILE__ACTIONS,
+				 BrowserAutomationFactory.eINSTANCE.createDoWhile()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(BrowserAutomationPackage.Literals.DO_WHILE__ACTIONS,
+				 BrowserAutomationFactory.eINSTANCE.createIfThen()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(BrowserAutomationPackage.Literals.DO_WHILE__ACTIONS,
+				 BrowserAutomationFactory.eINSTANCE.createSubroutineCall()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(BrowserAutomationPackage.Literals.DO_WHILE__CONDITION,
 				 BrowserAutomationFactory.eINSTANCE.createBooleanExp()));
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return BrowserAutomationEditPlugin.INSTANCE;
 	}
 
 }

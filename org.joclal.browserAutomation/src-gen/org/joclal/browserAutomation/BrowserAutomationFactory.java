@@ -68,6 +68,15 @@ public interface BrowserAutomationFactory extends EFactory
   Selector createSelector();
 
   /**
+	 * Returns a new object of class '<em>Dom ID</em>'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Dom ID</em>'.
+	 * @generated
+	 */
+  DomID createDomID();
+
+  /**
 	 * Returns a new object of class '<em>Fill</em>'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -147,6 +156,24 @@ public interface BrowserAutomationFactory extends EFactory
 	 * @generated
 	 */
   IfThen createIfThen();
+
+  /**
+	 * Returns a new object of class '<em>Subroutine</em>'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Subroutine</em>'.
+	 * @generated
+	 */
+  Subroutine createSubroutine();
+
+  /**
+	 * Returns a new object of class '<em>Subroutine Call</em>'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Subroutine Call</em>'.
+	 * @generated
+	 */
+  SubroutineCall createSubroutineCall();
 
   /**
 	 * Returns the package supported by this factory.

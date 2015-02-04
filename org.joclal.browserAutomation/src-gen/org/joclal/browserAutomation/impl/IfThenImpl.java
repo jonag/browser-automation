@@ -13,7 +13,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -38,7 +37,7 @@ import org.joclal.browserAutomation.IfThen;
  *
  * @generated
  */
-public class IfThenImpl extends MinimalEObjectImpl.Container implements IfThen
+public class IfThenImpl extends ActionImpl implements IfThen
 {
   /**
 	 * The cached value of the '{@link #getCondition() <em>Condition</em>}' containment reference.
