@@ -493,19 +493,19 @@ ruleSubroutineParam returns [EObject current=null]
     @after { leaveRule(); }:
 ((
 (
-		lv_name_0_0=RULE_ID
-		{
-			newLeafNode(lv_name_0_0, grammarAccess.getSubroutineParamAccess().getNameIDTerminalRuleCall_0_0()); 
-		}
-		{
+		{ 
+	        newCompositeNode(grammarAccess.getSubroutineParamAccess().getNameVariableIdParserRuleCall_0_0()); 
+	    }
+		lv_name_0_0=ruleVariableId		{
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getSubroutineParamRule());
+	            $current = createModelElementForParent(grammarAccess.getSubroutineParamRule());
 	        }
-       		setWithLastConsumed(
+       		set(
        			$current, 
        			"name",
         		lv_name_0_0, 
-        		"ID");
+        		"VariableId");
+	        afterParserOrEnumRuleCall();
 	    }
 
 )
@@ -721,19 +721,19 @@ ruleLet returns [EObject current=null]
     }
 (
 (
-		lv_name_1_0=RULE_ID
-		{
-			newLeafNode(lv_name_1_0, grammarAccess.getLetAccess().getNameIDTerminalRuleCall_1_0()); 
-		}
-		{
+		{ 
+	        newCompositeNode(grammarAccess.getLetAccess().getNameVariableIdParserRuleCall_1_0()); 
+	    }
+		lv_name_1_0=ruleVariableId		{
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getLetRule());
+	            $current = createModelElementForParent(grammarAccess.getLetRule());
 	        }
-       		setWithLastConsumed(
+       		set(
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"VariableId");
+	        afterParserOrEnumRuleCall();
 	    }
 
 )
@@ -889,7 +889,7 @@ ruleValue returns [EObject current=null]
         }
 	otherlv_2=RULE_ID
 	{
-		newLeafNode(otherlv_2, grammarAccess.getValueAccess().getLetLetCrossReference_2_0()); 
+		newLeafNode(otherlv_2, grammarAccess.getValueAccess().getVariableVariableIdCrossReference_2_0()); 
 	}
 
 )
@@ -1216,7 +1216,7 @@ ruleSubroutine returns [EObject current=null]
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getSubroutineRule());
 	        }
-       		add(
+       		set(
        			$current, 
        			"params",
         		lv_params_3_0, 
@@ -1297,6 +1297,45 @@ ruleSubroutineCall returns [EObject current=null]
     {
     	newLeafNode(otherlv_2, grammarAccess.getSubroutineCallAccess().getSemicolonKeyword_2());
     }
+)
+;
+
+
+
+
+
+// Entry rule entryRuleVariableId
+entryRuleVariableId returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getVariableIdRule()); }
+	 iv_ruleVariableId=ruleVariableId 
+	 { $current=$iv_ruleVariableId.current; } 
+	 EOF 
+;
+
+// Rule VariableId
+ruleVariableId returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(
+(
+		lv_name_0_0=RULE_ID
+		{
+			newLeafNode(lv_name_0_0, grammarAccess.getVariableIdAccess().getNameIDTerminalRuleCall_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getVariableIdRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"name",
+        		lv_name_0_0, 
+        		"ID");
+	    }
+
+)
 )
 ;
 

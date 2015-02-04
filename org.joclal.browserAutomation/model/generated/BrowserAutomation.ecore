@@ -35,7 +35,8 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SubroutineParam">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="name" eType="#//VariableId"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="next" eType="#//SubroutineParam"
         containment="true"/>
   </eClassifiers>
@@ -54,7 +55,8 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Let" eSuperTypes="#//Action">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="name" eType="#//VariableId"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//LetValue"
         containment="true"/>
   </eClassifiers>
@@ -67,7 +69,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Value">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="string" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="int" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="let" eType="#//Let"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variable" eType="#//VariableId"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DoWhile" eSuperTypes="#//Action">
     <eStructuralFeatures xsi:type="ecore:EReference" name="actions" upperBound="-1"
@@ -99,12 +101,15 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Subroutine">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="params" upperBound="-1"
-        eType="#//SubroutineParam" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="params" eType="#//SubroutineParam"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="actions" upperBound="-1"
         eType="#//Action" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SubroutineCall" eSuperTypes="#//Action">
     <eStructuralFeatures xsi:type="ecore:EReference" name="subroutine" eType="#//Subroutine"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VariableId">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>

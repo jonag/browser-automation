@@ -34,7 +34,7 @@ DomID:
 ;
 
 SubroutineParam:
-	name=ID (',' next=SubroutineParam)?
+	name=VariableId (',' next=SubroutineParam)?
 ;
 
 Fill:
@@ -50,7 +50,7 @@ Uncheck:
 ;
 
 Let:
-	'Let' name=ID '=' value=LetValue ';'
+	'Let' name=VariableId '=' value=LetValue ';'
 ;
 
 LetValue:
@@ -58,7 +58,7 @@ LetValue:
 ;
 
 Value:
-	string=STRING | int=INT | let=[Let]
+	string=STRING | int=INT | variable=[VariableId]
 ;
 
 DoWhile:
@@ -90,7 +90,7 @@ IfThen:
 Subroutine:
 	'Def' name=ID 
 	('(' 
-		params+=SubroutineParam
+		params=SubroutineParam
 	')')?
 	'{'
 		(actions+=Action)*
@@ -99,4 +99,8 @@ Subroutine:
 
 SubroutineCall:
 	'Call' subroutine=[Subroutine] ';'
+;
+
+VariableId:
+	name=ID
 ;

@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'browser'", "';'", "'GoTo'", "'Click'", "'select('", "')'", "','", "'Fill'", "'with'", "'Check'", "'Uncheck'", "'Let'", "'='", "'Do'", "'{'", "'}'", "'While'", "'('", "'If'", "'Then'", "'Else'", "'Def'", "'Call'", "'Chrome'", "'Safari'", "'Opera'", "'Firefox'", "'Internet Explorer'", "'=='", "'>'", "'<'", "'>='", "'<='"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_INT", "RULE_ID", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'browser'", "';'", "'GoTo'", "'Click'", "'select('", "')'", "','", "'Fill'", "'with'", "'Check'", "'Uncheck'", "'Let'", "'='", "'Do'", "'{'", "'}'", "'While'", "'('", "'If'", "'Then'", "'Else'", "'Def'", "'Call'", "'Chrome'", "'Safari'", "'Opera'", "'Firefox'", "'Internet Explorer'", "'=='", "'>'", "'<'", "'>='", "'<='"
     };
     public static final int T__19=19;
     public static final int T__15=15;
@@ -33,11 +33,11 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
     public static final int T__12=12;
     public static final int T__13=13;
     public static final int T__14=14;
-    public static final int RULE_ID=5;
+    public static final int RULE_ID=6;
     public static final int T__26=26;
     public static final int T__27=27;
     public static final int T__28=28;
-    public static final int RULE_INT=6;
+    public static final int RULE_INT=5;
     public static final int T__29=29;
     public static final int T__22=22;
     public static final int RULE_ML_COMMENT=7;
@@ -1189,43 +1189,49 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
 
 
     // $ANTLR start "ruleSubroutineParam"
-    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:490:1: ruleSubroutineParam returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) (otherlv_1= ',' ( (lv_next_2_0= ruleSubroutineParam ) ) )? ) ;
+    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:490:1: ruleSubroutineParam returns [EObject current=null] : ( ( (lv_name_0_0= ruleVariableId ) ) (otherlv_1= ',' ( (lv_next_2_0= ruleSubroutineParam ) ) )? ) ;
     public final EObject ruleSubroutineParam() throws RecognitionException {
         EObject current = null;
 
-        Token lv_name_0_0=null;
         Token otherlv_1=null;
+        EObject lv_name_0_0 = null;
+
         EObject lv_next_2_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:493:28: ( ( ( (lv_name_0_0= RULE_ID ) ) (otherlv_1= ',' ( (lv_next_2_0= ruleSubroutineParam ) ) )? ) )
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:494:1: ( ( (lv_name_0_0= RULE_ID ) ) (otherlv_1= ',' ( (lv_next_2_0= ruleSubroutineParam ) ) )? )
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:493:28: ( ( ( (lv_name_0_0= ruleVariableId ) ) (otherlv_1= ',' ( (lv_next_2_0= ruleSubroutineParam ) ) )? ) )
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:494:1: ( ( (lv_name_0_0= ruleVariableId ) ) (otherlv_1= ',' ( (lv_next_2_0= ruleSubroutineParam ) ) )? )
             {
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:494:1: ( ( (lv_name_0_0= RULE_ID ) ) (otherlv_1= ',' ( (lv_next_2_0= ruleSubroutineParam ) ) )? )
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:494:2: ( (lv_name_0_0= RULE_ID ) ) (otherlv_1= ',' ( (lv_next_2_0= ruleSubroutineParam ) ) )?
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:494:1: ( ( (lv_name_0_0= ruleVariableId ) ) (otherlv_1= ',' ( (lv_next_2_0= ruleSubroutineParam ) ) )? )
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:494:2: ( (lv_name_0_0= ruleVariableId ) ) (otherlv_1= ',' ( (lv_next_2_0= ruleSubroutineParam ) ) )?
             {
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:494:2: ( (lv_name_0_0= RULE_ID ) )
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:495:1: (lv_name_0_0= RULE_ID )
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:494:2: ( (lv_name_0_0= ruleVariableId ) )
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:495:1: (lv_name_0_0= ruleVariableId )
             {
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:495:1: (lv_name_0_0= RULE_ID )
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:496:3: lv_name_0_0= RULE_ID
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:495:1: (lv_name_0_0= ruleVariableId )
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:496:3: lv_name_0_0= ruleVariableId
             {
-            lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleSubroutineParam1093); 
+             
+            	        newCompositeNode(grammarAccess.getSubroutineParamAccess().getNameVariableIdParserRuleCall_0_0()); 
+            	    
+            pushFollow(FOLLOW_ruleVariableId_in_ruleSubroutineParam1097);
+            lv_name_0_0=ruleVariableId();
 
-            			newLeafNode(lv_name_0_0, grammarAccess.getSubroutineParamAccess().getNameIDTerminalRuleCall_0_0()); 
-            		
+            state._fsp--;
+
 
             	        if (current==null) {
-            	            current = createModelElement(grammarAccess.getSubroutineParamRule());
+            	            current = createModelElementForParent(grammarAccess.getSubroutineParamRule());
             	        }
-                   		setWithLastConsumed(
+                   		set(
                    			current, 
                    			"name",
                     		lv_name_0_0, 
-                    		"ID");
+                    		"VariableId");
+            	        afterParserOrEnumRuleCall();
             	    
 
             }
@@ -1244,7 +1250,7 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
                 case 1 :
                     // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:512:4: otherlv_1= ',' ( (lv_next_2_0= ruleSubroutineParam ) )
                     {
-                    otherlv_1=(Token)match(input,17,FOLLOW_17_in_ruleSubroutineParam1111); 
+                    otherlv_1=(Token)match(input,17,FOLLOW_17_in_ruleSubroutineParam1110); 
 
                         	newLeafNode(otherlv_1, grammarAccess.getSubroutineParamAccess().getCommaKeyword_1_0());
                         
@@ -1257,7 +1263,7 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
                      
                     	        newCompositeNode(grammarAccess.getSubroutineParamAccess().getNextSubroutineParamParserRuleCall_1_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleSubroutineParam_in_ruleSubroutineParam1132);
+                    pushFollow(FOLLOW_ruleSubroutineParam_in_ruleSubroutineParam1131);
                     lv_next_2_0=ruleSubroutineParam();
 
                     state._fsp--;
@@ -1318,13 +1324,13 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
             // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:544:2: iv_ruleFill= ruleFill EOF
             {
              newCompositeNode(grammarAccess.getFillRule()); 
-            pushFollow(FOLLOW_ruleFill_in_entryRuleFill1170);
+            pushFollow(FOLLOW_ruleFill_in_entryRuleFill1169);
             iv_ruleFill=ruleFill();
 
             state._fsp--;
 
              current =iv_ruleFill; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFill1180); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleFill1179); 
 
             }
 
@@ -1363,7 +1369,7 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
             // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:555:1: (otherlv_0= 'Fill' ( (lv_field_1_0= ruleSelector ) ) otherlv_2= 'with' ( (lv_value_3_0= ruleValue ) ) otherlv_4= ';' )
             // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:555:3: otherlv_0= 'Fill' ( (lv_field_1_0= ruleSelector ) ) otherlv_2= 'with' ( (lv_value_3_0= ruleValue ) ) otherlv_4= ';'
             {
-            otherlv_0=(Token)match(input,18,FOLLOW_18_in_ruleFill1217); 
+            otherlv_0=(Token)match(input,18,FOLLOW_18_in_ruleFill1216); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getFillAccess().getFillKeyword_0());
                 
@@ -1376,7 +1382,7 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
              
             	        newCompositeNode(grammarAccess.getFillAccess().getFieldSelectorParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleSelector_in_ruleFill1238);
+            pushFollow(FOLLOW_ruleSelector_in_ruleFill1237);
             lv_field_1_0=ruleSelector();
 
             state._fsp--;
@@ -1398,7 +1404,7 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
 
             }
 
-            otherlv_2=(Token)match(input,19,FOLLOW_19_in_ruleFill1250); 
+            otherlv_2=(Token)match(input,19,FOLLOW_19_in_ruleFill1249); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getFillAccess().getWithKeyword_2());
                 
@@ -1411,7 +1417,7 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
              
             	        newCompositeNode(grammarAccess.getFillAccess().getValueValueParserRuleCall_3_0()); 
             	    
-            pushFollow(FOLLOW_ruleValue_in_ruleFill1271);
+            pushFollow(FOLLOW_ruleValue_in_ruleFill1270);
             lv_value_3_0=ruleValue();
 
             state._fsp--;
@@ -1433,7 +1439,7 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
 
             }
 
-            otherlv_4=(Token)match(input,12,FOLLOW_12_in_ruleFill1283); 
+            otherlv_4=(Token)match(input,12,FOLLOW_12_in_ruleFill1282); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getFillAccess().getSemicolonKeyword_4());
                 
@@ -1470,13 +1476,13 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
             // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:613:2: iv_ruleCheck= ruleCheck EOF
             {
              newCompositeNode(grammarAccess.getCheckRule()); 
-            pushFollow(FOLLOW_ruleCheck_in_entryRuleCheck1319);
+            pushFollow(FOLLOW_ruleCheck_in_entryRuleCheck1318);
             iv_ruleCheck=ruleCheck();
 
             state._fsp--;
 
              current =iv_ruleCheck; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleCheck1329); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleCheck1328); 
 
             }
 
@@ -1512,7 +1518,7 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
             // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:624:1: (otherlv_0= 'Check' ( (lv_checkbox_1_0= ruleSelector ) ) otherlv_2= ';' )
             // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:624:3: otherlv_0= 'Check' ( (lv_checkbox_1_0= ruleSelector ) ) otherlv_2= ';'
             {
-            otherlv_0=(Token)match(input,20,FOLLOW_20_in_ruleCheck1366); 
+            otherlv_0=(Token)match(input,20,FOLLOW_20_in_ruleCheck1365); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getCheckAccess().getCheckKeyword_0());
                 
@@ -1525,7 +1531,7 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
              
             	        newCompositeNode(grammarAccess.getCheckAccess().getCheckboxSelectorParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleSelector_in_ruleCheck1387);
+            pushFollow(FOLLOW_ruleSelector_in_ruleCheck1386);
             lv_checkbox_1_0=ruleSelector();
 
             state._fsp--;
@@ -1547,7 +1553,7 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
 
             }
 
-            otherlv_2=(Token)match(input,12,FOLLOW_12_in_ruleCheck1399); 
+            otherlv_2=(Token)match(input,12,FOLLOW_12_in_ruleCheck1398); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getCheckAccess().getSemicolonKeyword_2());
                 
@@ -1584,13 +1590,13 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
             // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:660:2: iv_ruleUncheck= ruleUncheck EOF
             {
              newCompositeNode(grammarAccess.getUncheckRule()); 
-            pushFollow(FOLLOW_ruleUncheck_in_entryRuleUncheck1435);
+            pushFollow(FOLLOW_ruleUncheck_in_entryRuleUncheck1434);
             iv_ruleUncheck=ruleUncheck();
 
             state._fsp--;
 
              current =iv_ruleUncheck; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleUncheck1445); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleUncheck1444); 
 
             }
 
@@ -1626,7 +1632,7 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
             // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:671:1: (otherlv_0= 'Uncheck' ( (lv_checkbox_1_0= ruleSelector ) ) otherlv_2= ';' )
             // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:671:3: otherlv_0= 'Uncheck' ( (lv_checkbox_1_0= ruleSelector ) ) otherlv_2= ';'
             {
-            otherlv_0=(Token)match(input,21,FOLLOW_21_in_ruleUncheck1482); 
+            otherlv_0=(Token)match(input,21,FOLLOW_21_in_ruleUncheck1481); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getUncheckAccess().getUncheckKeyword_0());
                 
@@ -1639,7 +1645,7 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
              
             	        newCompositeNode(grammarAccess.getUncheckAccess().getCheckboxSelectorParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleSelector_in_ruleUncheck1503);
+            pushFollow(FOLLOW_ruleSelector_in_ruleUncheck1502);
             lv_checkbox_1_0=ruleSelector();
 
             state._fsp--;
@@ -1661,7 +1667,7 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
 
             }
 
-            otherlv_2=(Token)match(input,12,FOLLOW_12_in_ruleUncheck1515); 
+            otherlv_2=(Token)match(input,12,FOLLOW_12_in_ruleUncheck1514); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getUncheckAccess().getSemicolonKeyword_2());
                 
@@ -1698,13 +1704,13 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
             // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:707:2: iv_ruleLet= ruleLet EOF
             {
              newCompositeNode(grammarAccess.getLetRule()); 
-            pushFollow(FOLLOW_ruleLet_in_entryRuleLet1551);
+            pushFollow(FOLLOW_ruleLet_in_entryRuleLet1550);
             iv_ruleLet=ruleLet();
 
             state._fsp--;
 
              current =iv_ruleLet; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleLet1561); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleLet1560); 
 
             }
 
@@ -1722,49 +1728,55 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
 
 
     // $ANTLR start "ruleLet"
-    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:714:1: ruleLet returns [EObject current=null] : (otherlv_0= 'Let' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_value_3_0= ruleLetValue ) ) otherlv_4= ';' ) ;
+    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:714:1: ruleLet returns [EObject current=null] : (otherlv_0= 'Let' ( (lv_name_1_0= ruleVariableId ) ) otherlv_2= '=' ( (lv_value_3_0= ruleLetValue ) ) otherlv_4= ';' ) ;
     public final EObject ruleLet() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
-        Token lv_name_1_0=null;
         Token otherlv_2=null;
         Token otherlv_4=null;
+        EObject lv_name_1_0 = null;
+
         EObject lv_value_3_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:717:28: ( (otherlv_0= 'Let' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_value_3_0= ruleLetValue ) ) otherlv_4= ';' ) )
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:718:1: (otherlv_0= 'Let' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_value_3_0= ruleLetValue ) ) otherlv_4= ';' )
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:717:28: ( (otherlv_0= 'Let' ( (lv_name_1_0= ruleVariableId ) ) otherlv_2= '=' ( (lv_value_3_0= ruleLetValue ) ) otherlv_4= ';' ) )
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:718:1: (otherlv_0= 'Let' ( (lv_name_1_0= ruleVariableId ) ) otherlv_2= '=' ( (lv_value_3_0= ruleLetValue ) ) otherlv_4= ';' )
             {
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:718:1: (otherlv_0= 'Let' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_value_3_0= ruleLetValue ) ) otherlv_4= ';' )
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:718:3: otherlv_0= 'Let' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_value_3_0= ruleLetValue ) ) otherlv_4= ';'
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:718:1: (otherlv_0= 'Let' ( (lv_name_1_0= ruleVariableId ) ) otherlv_2= '=' ( (lv_value_3_0= ruleLetValue ) ) otherlv_4= ';' )
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:718:3: otherlv_0= 'Let' ( (lv_name_1_0= ruleVariableId ) ) otherlv_2= '=' ( (lv_value_3_0= ruleLetValue ) ) otherlv_4= ';'
             {
-            otherlv_0=(Token)match(input,22,FOLLOW_22_in_ruleLet1598); 
+            otherlv_0=(Token)match(input,22,FOLLOW_22_in_ruleLet1597); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getLetAccess().getLetKeyword_0());
                 
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:722:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:723:1: (lv_name_1_0= RULE_ID )
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:722:1: ( (lv_name_1_0= ruleVariableId ) )
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:723:1: (lv_name_1_0= ruleVariableId )
             {
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:723:1: (lv_name_1_0= RULE_ID )
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:724:3: lv_name_1_0= RULE_ID
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:723:1: (lv_name_1_0= ruleVariableId )
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:724:3: lv_name_1_0= ruleVariableId
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleLet1615); 
+             
+            	        newCompositeNode(grammarAccess.getLetAccess().getNameVariableIdParserRuleCall_1_0()); 
+            	    
+            pushFollow(FOLLOW_ruleVariableId_in_ruleLet1618);
+            lv_name_1_0=ruleVariableId();
 
-            			newLeafNode(lv_name_1_0, grammarAccess.getLetAccess().getNameIDTerminalRuleCall_1_0()); 
-            		
+            state._fsp--;
+
 
             	        if (current==null) {
-            	            current = createModelElement(grammarAccess.getLetRule());
+            	            current = createModelElementForParent(grammarAccess.getLetRule());
             	        }
-                   		setWithLastConsumed(
+                   		set(
                    			current, 
                    			"name",
                     		lv_name_1_0, 
-                    		"ID");
+                    		"VariableId");
+            	        afterParserOrEnumRuleCall();
             	    
 
             }
@@ -1772,7 +1784,7 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
 
             }
 
-            otherlv_2=(Token)match(input,23,FOLLOW_23_in_ruleLet1632); 
+            otherlv_2=(Token)match(input,23,FOLLOW_23_in_ruleLet1630); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getLetAccess().getEqualsSignKeyword_2());
                 
@@ -1785,7 +1797,7 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
              
             	        newCompositeNode(grammarAccess.getLetAccess().getValueLetValueParserRuleCall_3_0()); 
             	    
-            pushFollow(FOLLOW_ruleLetValue_in_ruleLet1653);
+            pushFollow(FOLLOW_ruleLetValue_in_ruleLet1651);
             lv_value_3_0=ruleLetValue();
 
             state._fsp--;
@@ -1807,7 +1819,7 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
 
             }
 
-            otherlv_4=(Token)match(input,12,FOLLOW_12_in_ruleLet1665); 
+            otherlv_4=(Token)match(input,12,FOLLOW_12_in_ruleLet1663); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getLetAccess().getSemicolonKeyword_4());
                 
@@ -1844,13 +1856,13 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
             // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:776:2: iv_ruleLetValue= ruleLetValue EOF
             {
              newCompositeNode(grammarAccess.getLetValueRule()); 
-            pushFollow(FOLLOW_ruleLetValue_in_entryRuleLetValue1701);
+            pushFollow(FOLLOW_ruleLetValue_in_entryRuleLetValue1699);
             iv_ruleLetValue=ruleLetValue();
 
             state._fsp--;
 
              current =iv_ruleLetValue; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleLetValue1711); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleLetValue1709); 
 
             }
 
@@ -1890,7 +1902,7 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
             if ( (LA6_0==15) ) {
                 alt6=1;
             }
-            else if ( ((LA6_0>=RULE_STRING && LA6_0<=RULE_INT)) ) {
+            else if ( ((LA6_0>=RULE_STRING && LA6_0<=RULE_ID)) ) {
                 alt6=2;
             }
             else {
@@ -1912,7 +1924,7 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
                      
                     	        newCompositeNode(grammarAccess.getLetValueAccess().getSelectorSelectorParserRuleCall_0_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleSelector_in_ruleLetValue1757);
+                    pushFollow(FOLLOW_ruleSelector_in_ruleLetValue1755);
                     lv_selector_0_0=ruleSelector();
 
                     state._fsp--;
@@ -1949,7 +1961,7 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
                      
                     	        newCompositeNode(grammarAccess.getLetValueAccess().getValueValueParserRuleCall_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleValue_in_ruleLetValue1784);
+                    pushFollow(FOLLOW_ruleValue_in_ruleLetValue1782);
                     lv_value_1_0=ruleValue();
 
                     state._fsp--;
@@ -2007,13 +2019,13 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
             // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:834:2: iv_ruleValue= ruleValue EOF
             {
              newCompositeNode(grammarAccess.getValueRule()); 
-            pushFollow(FOLLOW_ruleValue_in_entryRuleValue1820);
+            pushFollow(FOLLOW_ruleValue_in_entryRuleValue1818);
             iv_ruleValue=ruleValue();
 
             state._fsp--;
 
              current =iv_ruleValue; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleValue1830); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleValue1828); 
 
             }
 
@@ -2080,7 +2092,7 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
                     // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:846:1: (lv_string_0_0= RULE_STRING )
                     // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:847:3: lv_string_0_0= RULE_STRING
                     {
-                    lv_string_0_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleValue1872); 
+                    lv_string_0_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleValue1870); 
 
                     			newLeafNode(lv_string_0_0, grammarAccess.getValueAccess().getStringSTRINGTerminalRuleCall_0_0()); 
                     		
@@ -2112,7 +2124,7 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
                     // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:865:1: (lv_int_1_0= RULE_INT )
                     // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:866:3: lv_int_1_0= RULE_INT
                     {
-                    lv_int_1_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleValue1900); 
+                    lv_int_1_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleValue1898); 
 
                     			newLeafNode(lv_int_1_0, grammarAccess.getValueAccess().getIntINTTerminalRuleCall_1_0()); 
                     		
@@ -2149,9 +2161,9 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
                     	            current = createModelElement(grammarAccess.getValueRule());
                     	        }
                             
-                    otherlv_2=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleValue1931); 
+                    otherlv_2=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleValue1929); 
 
-                    		newLeafNode(otherlv_2, grammarAccess.getValueAccess().getLetLetCrossReference_2_0()); 
+                    		newLeafNode(otherlv_2, grammarAccess.getValueAccess().getVariableVariableIdCrossReference_2_0()); 
                     	
 
                     }
@@ -2195,13 +2207,13 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
             // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:906:2: iv_ruleDoWhile= ruleDoWhile EOF
             {
              newCompositeNode(grammarAccess.getDoWhileRule()); 
-            pushFollow(FOLLOW_ruleDoWhile_in_entryRuleDoWhile1967);
+            pushFollow(FOLLOW_ruleDoWhile_in_entryRuleDoWhile1965);
             iv_ruleDoWhile=ruleDoWhile();
 
             state._fsp--;
 
              current =iv_ruleDoWhile; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDoWhile1977); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleDoWhile1975); 
 
             }
 
@@ -2243,11 +2255,11 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
             // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:917:1: (otherlv_0= 'Do' otherlv_1= '{' ( (lv_actions_2_0= ruleAction ) )* otherlv_3= '}' otherlv_4= 'While' otherlv_5= '(' ( (lv_condition_6_0= ruleBooleanExp ) ) otherlv_7= ')' )
             // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:917:3: otherlv_0= 'Do' otherlv_1= '{' ( (lv_actions_2_0= ruleAction ) )* otherlv_3= '}' otherlv_4= 'While' otherlv_5= '(' ( (lv_condition_6_0= ruleBooleanExp ) ) otherlv_7= ')'
             {
-            otherlv_0=(Token)match(input,24,FOLLOW_24_in_ruleDoWhile2014); 
+            otherlv_0=(Token)match(input,24,FOLLOW_24_in_ruleDoWhile2012); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getDoWhileAccess().getDoKeyword_0());
                 
-            otherlv_1=(Token)match(input,25,FOLLOW_25_in_ruleDoWhile2026); 
+            otherlv_1=(Token)match(input,25,FOLLOW_25_in_ruleDoWhile2024); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getDoWhileAccess().getLeftCurlyBracketKeyword_1());
                 
@@ -2272,7 +2284,7 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
             	     
             	    	        newCompositeNode(grammarAccess.getDoWhileAccess().getActionsActionParserRuleCall_2_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleAction_in_ruleDoWhile2047);
+            	    pushFollow(FOLLOW_ruleAction_in_ruleDoWhile2045);
             	    lv_actions_2_0=ruleAction();
 
             	    state._fsp--;
@@ -2300,15 +2312,15 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
                 }
             } while (true);
 
-            otherlv_3=(Token)match(input,26,FOLLOW_26_in_ruleDoWhile2060); 
+            otherlv_3=(Token)match(input,26,FOLLOW_26_in_ruleDoWhile2058); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getDoWhileAccess().getRightCurlyBracketKeyword_3());
                 
-            otherlv_4=(Token)match(input,27,FOLLOW_27_in_ruleDoWhile2072); 
+            otherlv_4=(Token)match(input,27,FOLLOW_27_in_ruleDoWhile2070); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getDoWhileAccess().getWhileKeyword_4());
                 
-            otherlv_5=(Token)match(input,28,FOLLOW_28_in_ruleDoWhile2084); 
+            otherlv_5=(Token)match(input,28,FOLLOW_28_in_ruleDoWhile2082); 
 
                 	newLeafNode(otherlv_5, grammarAccess.getDoWhileAccess().getLeftParenthesisKeyword_5());
                 
@@ -2321,7 +2333,7 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
              
             	        newCompositeNode(grammarAccess.getDoWhileAccess().getConditionBooleanExpParserRuleCall_6_0()); 
             	    
-            pushFollow(FOLLOW_ruleBooleanExp_in_ruleDoWhile2105);
+            pushFollow(FOLLOW_ruleBooleanExp_in_ruleDoWhile2103);
             lv_condition_6_0=ruleBooleanExp();
 
             state._fsp--;
@@ -2343,7 +2355,7 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
 
             }
 
-            otherlv_7=(Token)match(input,16,FOLLOW_16_in_ruleDoWhile2117); 
+            otherlv_7=(Token)match(input,16,FOLLOW_16_in_ruleDoWhile2115); 
 
                 	newLeafNode(otherlv_7, grammarAccess.getDoWhileAccess().getRightParenthesisKeyword_7());
                 
@@ -2380,13 +2392,13 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
             // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:987:2: iv_ruleBooleanExp= ruleBooleanExp EOF
             {
              newCompositeNode(grammarAccess.getBooleanExpRule()); 
-            pushFollow(FOLLOW_ruleBooleanExp_in_entryRuleBooleanExp2153);
+            pushFollow(FOLLOW_ruleBooleanExp_in_entryRuleBooleanExp2151);
             iv_ruleBooleanExp=ruleBooleanExp();
 
             state._fsp--;
 
              current =iv_ruleBooleanExp; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBooleanExp2163); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBooleanExp2161); 
 
             }
 
@@ -2433,7 +2445,7 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
              
             	        newCompositeNode(grammarAccess.getBooleanExpAccess().getLeftMemberValueParserRuleCall_0_0()); 
             	    
-            pushFollow(FOLLOW_ruleValue_in_ruleBooleanExp2209);
+            pushFollow(FOLLOW_ruleValue_in_ruleBooleanExp2207);
             lv_leftMember_0_0=ruleValue();
 
             state._fsp--;
@@ -2464,7 +2476,7 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
              
             	        newCompositeNode(grammarAccess.getBooleanExpAccess().getOperatorOperatorEnumRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleOperator_in_ruleBooleanExp2230);
+            pushFollow(FOLLOW_ruleOperator_in_ruleBooleanExp2228);
             lv_operator_1_0=ruleOperator();
 
             state._fsp--;
@@ -2495,7 +2507,7 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
              
             	        newCompositeNode(grammarAccess.getBooleanExpAccess().getRightMemberValueParserRuleCall_2_0()); 
             	    
-            pushFollow(FOLLOW_ruleValue_in_ruleBooleanExp2251);
+            pushFollow(FOLLOW_ruleValue_in_ruleBooleanExp2249);
             lv_rightMember_2_0=ruleValue();
 
             state._fsp--;
@@ -2550,13 +2562,13 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
             // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1062:2: iv_ruleIfThen= ruleIfThen EOF
             {
              newCompositeNode(grammarAccess.getIfThenRule()); 
-            pushFollow(FOLLOW_ruleIfThen_in_entryRuleIfThen2287);
+            pushFollow(FOLLOW_ruleIfThen_in_entryRuleIfThen2285);
             iv_ruleIfThen=ruleIfThen();
 
             state._fsp--;
 
              current =iv_ruleIfThen; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleIfThen2297); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleIfThen2295); 
 
             }
 
@@ -2603,11 +2615,11 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
             // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1073:1: (otherlv_0= 'If' otherlv_1= '(' ( (lv_condition_2_0= ruleBooleanExp ) ) otherlv_3= ')' otherlv_4= 'Then' otherlv_5= '{' ( (lv_thenActions_6_0= ruleAction ) )* otherlv_7= '}' (otherlv_8= 'Else' otherlv_9= '{' ( (lv_elseActions_10_0= ruleAction ) )* otherlv_11= '}' )? )
             // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1073:3: otherlv_0= 'If' otherlv_1= '(' ( (lv_condition_2_0= ruleBooleanExp ) ) otherlv_3= ')' otherlv_4= 'Then' otherlv_5= '{' ( (lv_thenActions_6_0= ruleAction ) )* otherlv_7= '}' (otherlv_8= 'Else' otherlv_9= '{' ( (lv_elseActions_10_0= ruleAction ) )* otherlv_11= '}' )?
             {
-            otherlv_0=(Token)match(input,29,FOLLOW_29_in_ruleIfThen2334); 
+            otherlv_0=(Token)match(input,29,FOLLOW_29_in_ruleIfThen2332); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getIfThenAccess().getIfKeyword_0());
                 
-            otherlv_1=(Token)match(input,28,FOLLOW_28_in_ruleIfThen2346); 
+            otherlv_1=(Token)match(input,28,FOLLOW_28_in_ruleIfThen2344); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getIfThenAccess().getLeftParenthesisKeyword_1());
                 
@@ -2620,7 +2632,7 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
              
             	        newCompositeNode(grammarAccess.getIfThenAccess().getConditionBooleanExpParserRuleCall_2_0()); 
             	    
-            pushFollow(FOLLOW_ruleBooleanExp_in_ruleIfThen2367);
+            pushFollow(FOLLOW_ruleBooleanExp_in_ruleIfThen2365);
             lv_condition_2_0=ruleBooleanExp();
 
             state._fsp--;
@@ -2642,15 +2654,15 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
 
             }
 
-            otherlv_3=(Token)match(input,16,FOLLOW_16_in_ruleIfThen2379); 
+            otherlv_3=(Token)match(input,16,FOLLOW_16_in_ruleIfThen2377); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getIfThenAccess().getRightParenthesisKeyword_3());
                 
-            otherlv_4=(Token)match(input,30,FOLLOW_30_in_ruleIfThen2391); 
+            otherlv_4=(Token)match(input,30,FOLLOW_30_in_ruleIfThen2389); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getIfThenAccess().getThenKeyword_4());
                 
-            otherlv_5=(Token)match(input,25,FOLLOW_25_in_ruleIfThen2403); 
+            otherlv_5=(Token)match(input,25,FOLLOW_25_in_ruleIfThen2401); 
 
                 	newLeafNode(otherlv_5, grammarAccess.getIfThenAccess().getLeftCurlyBracketKeyword_5());
                 
@@ -2675,7 +2687,7 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
             	     
             	    	        newCompositeNode(grammarAccess.getIfThenAccess().getThenActionsActionParserRuleCall_6_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleAction_in_ruleIfThen2424);
+            	    pushFollow(FOLLOW_ruleAction_in_ruleIfThen2422);
             	    lv_thenActions_6_0=ruleAction();
 
             	    state._fsp--;
@@ -2703,7 +2715,7 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
                 }
             } while (true);
 
-            otherlv_7=(Token)match(input,26,FOLLOW_26_in_ruleIfThen2437); 
+            otherlv_7=(Token)match(input,26,FOLLOW_26_in_ruleIfThen2435); 
 
                 	newLeafNode(otherlv_7, grammarAccess.getIfThenAccess().getRightCurlyBracketKeyword_7());
                 
@@ -2718,11 +2730,11 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
                 case 1 :
                     // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1133:3: otherlv_8= 'Else' otherlv_9= '{' ( (lv_elseActions_10_0= ruleAction ) )* otherlv_11= '}'
                     {
-                    otherlv_8=(Token)match(input,31,FOLLOW_31_in_ruleIfThen2450); 
+                    otherlv_8=(Token)match(input,31,FOLLOW_31_in_ruleIfThen2448); 
 
                         	newLeafNode(otherlv_8, grammarAccess.getIfThenAccess().getElseKeyword_8_0());
                         
-                    otherlv_9=(Token)match(input,25,FOLLOW_25_in_ruleIfThen2462); 
+                    otherlv_9=(Token)match(input,25,FOLLOW_25_in_ruleIfThen2460); 
 
                         	newLeafNode(otherlv_9, grammarAccess.getIfThenAccess().getLeftCurlyBracketKeyword_8_1());
                         
@@ -2747,7 +2759,7 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
                     	     
                     	    	        newCompositeNode(grammarAccess.getIfThenAccess().getElseActionsActionParserRuleCall_8_2_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleAction_in_ruleIfThen2483);
+                    	    pushFollow(FOLLOW_ruleAction_in_ruleIfThen2481);
                     	    lv_elseActions_10_0=ruleAction();
 
                     	    state._fsp--;
@@ -2775,7 +2787,7 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
                         }
                     } while (true);
 
-                    otherlv_11=(Token)match(input,26,FOLLOW_26_in_ruleIfThen2496); 
+                    otherlv_11=(Token)match(input,26,FOLLOW_26_in_ruleIfThen2494); 
 
                         	newLeafNode(otherlv_11, grammarAccess.getIfThenAccess().getRightCurlyBracketKeyword_8_3());
                         
@@ -2818,13 +2830,13 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
             // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1173:2: iv_ruleSubroutine= ruleSubroutine EOF
             {
              newCompositeNode(grammarAccess.getSubroutineRule()); 
-            pushFollow(FOLLOW_ruleSubroutine_in_entryRuleSubroutine2534);
+            pushFollow(FOLLOW_ruleSubroutine_in_entryRuleSubroutine2532);
             iv_ruleSubroutine=ruleSubroutine();
 
             state._fsp--;
 
              current =iv_ruleSubroutine; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSubroutine2544); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSubroutine2542); 
 
             }
 
@@ -2866,7 +2878,7 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
             // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1184:1: (otherlv_0= 'Def' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= '(' ( (lv_params_3_0= ruleSubroutineParam ) ) otherlv_4= ')' )? otherlv_5= '{' ( (lv_actions_6_0= ruleAction ) )* otherlv_7= '}' )
             // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1184:3: otherlv_0= 'Def' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= '(' ( (lv_params_3_0= ruleSubroutineParam ) ) otherlv_4= ')' )? otherlv_5= '{' ( (lv_actions_6_0= ruleAction ) )* otherlv_7= '}'
             {
-            otherlv_0=(Token)match(input,32,FOLLOW_32_in_ruleSubroutine2581); 
+            otherlv_0=(Token)match(input,32,FOLLOW_32_in_ruleSubroutine2579); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getSubroutineAccess().getDefKeyword_0());
                 
@@ -2876,7 +2888,7 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
             // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1189:1: (lv_name_1_0= RULE_ID )
             // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1190:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleSubroutine2598); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleSubroutine2596); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getSubroutineAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -2907,7 +2919,7 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
                 case 1 :
                     // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1206:4: otherlv_2= '(' ( (lv_params_3_0= ruleSubroutineParam ) ) otherlv_4= ')'
                     {
-                    otherlv_2=(Token)match(input,28,FOLLOW_28_in_ruleSubroutine2616); 
+                    otherlv_2=(Token)match(input,28,FOLLOW_28_in_ruleSubroutine2614); 
 
                         	newLeafNode(otherlv_2, grammarAccess.getSubroutineAccess().getLeftParenthesisKeyword_2_0());
                         
@@ -2920,7 +2932,7 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
                      
                     	        newCompositeNode(grammarAccess.getSubroutineAccess().getParamsSubroutineParamParserRuleCall_2_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleSubroutineParam_in_ruleSubroutine2637);
+                    pushFollow(FOLLOW_ruleSubroutineParam_in_ruleSubroutine2635);
                     lv_params_3_0=ruleSubroutineParam();
 
                     state._fsp--;
@@ -2929,7 +2941,7 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
                     	        if (current==null) {
                     	            current = createModelElementForParent(grammarAccess.getSubroutineRule());
                     	        }
-                           		add(
+                           		set(
                            			current, 
                            			"params",
                             		lv_params_3_0, 
@@ -2942,7 +2954,7 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
 
                     }
 
-                    otherlv_4=(Token)match(input,16,FOLLOW_16_in_ruleSubroutine2649); 
+                    otherlv_4=(Token)match(input,16,FOLLOW_16_in_ruleSubroutine2647); 
 
                         	newLeafNode(otherlv_4, grammarAccess.getSubroutineAccess().getRightParenthesisKeyword_2_2());
                         
@@ -2952,7 +2964,7 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
 
             }
 
-            otherlv_5=(Token)match(input,25,FOLLOW_25_in_ruleSubroutine2663); 
+            otherlv_5=(Token)match(input,25,FOLLOW_25_in_ruleSubroutine2661); 
 
                 	newLeafNode(otherlv_5, grammarAccess.getSubroutineAccess().getLeftCurlyBracketKeyword_3());
                 
@@ -2977,7 +2989,7 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
             	     
             	    	        newCompositeNode(grammarAccess.getSubroutineAccess().getActionsActionParserRuleCall_4_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleAction_in_ruleSubroutine2684);
+            	    pushFollow(FOLLOW_ruleAction_in_ruleSubroutine2682);
             	    lv_actions_6_0=ruleAction();
 
             	    state._fsp--;
@@ -3005,7 +3017,7 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
                 }
             } while (true);
 
-            otherlv_7=(Token)match(input,26,FOLLOW_26_in_ruleSubroutine2697); 
+            otherlv_7=(Token)match(input,26,FOLLOW_26_in_ruleSubroutine2695); 
 
                 	newLeafNode(otherlv_7, grammarAccess.getSubroutineAccess().getRightCurlyBracketKeyword_5());
                 
@@ -3042,13 +3054,13 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
             // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1268:2: iv_ruleSubroutineCall= ruleSubroutineCall EOF
             {
              newCompositeNode(grammarAccess.getSubroutineCallRule()); 
-            pushFollow(FOLLOW_ruleSubroutineCall_in_entryRuleSubroutineCall2733);
+            pushFollow(FOLLOW_ruleSubroutineCall_in_entryRuleSubroutineCall2731);
             iv_ruleSubroutineCall=ruleSubroutineCall();
 
             state._fsp--;
 
              current =iv_ruleSubroutineCall; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSubroutineCall2743); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSubroutineCall2741); 
 
             }
 
@@ -3083,7 +3095,7 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
             // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1279:1: (otherlv_0= 'Call' ( (otherlv_1= RULE_ID ) ) otherlv_2= ';' )
             // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1279:3: otherlv_0= 'Call' ( (otherlv_1= RULE_ID ) ) otherlv_2= ';'
             {
-            otherlv_0=(Token)match(input,33,FOLLOW_33_in_ruleSubroutineCall2780); 
+            otherlv_0=(Token)match(input,33,FOLLOW_33_in_ruleSubroutineCall2778); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getSubroutineCallAccess().getCallKeyword_0());
                 
@@ -3098,7 +3110,7 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
             	            current = createModelElement(grammarAccess.getSubroutineCallRule());
             	        }
                     
-            otherlv_1=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleSubroutineCall2800); 
+            otherlv_1=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleSubroutineCall2798); 
 
             		newLeafNode(otherlv_1, grammarAccess.getSubroutineCallAccess().getSubroutineSubroutineCrossReference_1_0()); 
             	
@@ -3108,7 +3120,7 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
 
             }
 
-            otherlv_2=(Token)match(input,12,FOLLOW_12_in_ruleSubroutineCall2812); 
+            otherlv_2=(Token)match(input,12,FOLLOW_12_in_ruleSubroutineCall2810); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getSubroutineCallAccess().getSemicolonKeyword_2());
                 
@@ -3132,8 +3144,100 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
     // $ANTLR end "ruleSubroutineCall"
 
 
+    // $ANTLR start "entryRuleVariableId"
+    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1308:1: entryRuleVariableId returns [EObject current=null] : iv_ruleVariableId= ruleVariableId EOF ;
+    public final EObject entryRuleVariableId() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleVariableId = null;
+
+
+        try {
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1309:2: (iv_ruleVariableId= ruleVariableId EOF )
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1310:2: iv_ruleVariableId= ruleVariableId EOF
+            {
+             newCompositeNode(grammarAccess.getVariableIdRule()); 
+            pushFollow(FOLLOW_ruleVariableId_in_entryRuleVariableId2846);
+            iv_ruleVariableId=ruleVariableId();
+
+            state._fsp--;
+
+             current =iv_ruleVariableId; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleVariableId2856); 
+
+            }
+
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleVariableId"
+
+
+    // $ANTLR start "ruleVariableId"
+    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1317:1: ruleVariableId returns [EObject current=null] : ( (lv_name_0_0= RULE_ID ) ) ;
+    public final EObject ruleVariableId() throws RecognitionException {
+        EObject current = null;
+
+        Token lv_name_0_0=null;
+
+         enterRule(); 
+            
+        try {
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1320:28: ( ( (lv_name_0_0= RULE_ID ) ) )
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1321:1: ( (lv_name_0_0= RULE_ID ) )
+            {
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1321:1: ( (lv_name_0_0= RULE_ID ) )
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1322:1: (lv_name_0_0= RULE_ID )
+            {
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1322:1: (lv_name_0_0= RULE_ID )
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1323:3: lv_name_0_0= RULE_ID
+            {
+            lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleVariableId2897); 
+
+            			newLeafNode(lv_name_0_0, grammarAccess.getVariableIdAccess().getNameIDTerminalRuleCall_0()); 
+            		
+
+            	        if (current==null) {
+            	            current = createModelElement(grammarAccess.getVariableIdRule());
+            	        }
+                   		setWithLastConsumed(
+                   			current, 
+                   			"name",
+                    		lv_name_0_0, 
+                    		"ID");
+            	    
+
+            }
+
+
+            }
+
+
+            }
+
+             leaveRule(); 
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleVariableId"
+
+
     // $ANTLR start "ruleBrowser"
-    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1308:1: ruleBrowser returns [Enumerator current=null] : ( (enumLiteral_0= 'Chrome' ) | (enumLiteral_1= 'Safari' ) | (enumLiteral_2= 'Opera' ) | (enumLiteral_3= 'Firefox' ) | (enumLiteral_4= 'Internet Explorer' ) ) ;
+    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1347:1: ruleBrowser returns [Enumerator current=null] : ( (enumLiteral_0= 'Chrome' ) | (enumLiteral_1= 'Safari' ) | (enumLiteral_2= 'Opera' ) | (enumLiteral_3= 'Firefox' ) | (enumLiteral_4= 'Internet Explorer' ) ) ;
     public final Enumerator ruleBrowser() throws RecognitionException {
         Enumerator current = null;
 
@@ -3145,10 +3249,10 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
 
          enterRule(); 
         try {
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1310:28: ( ( (enumLiteral_0= 'Chrome' ) | (enumLiteral_1= 'Safari' ) | (enumLiteral_2= 'Opera' ) | (enumLiteral_3= 'Firefox' ) | (enumLiteral_4= 'Internet Explorer' ) ) )
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1311:1: ( (enumLiteral_0= 'Chrome' ) | (enumLiteral_1= 'Safari' ) | (enumLiteral_2= 'Opera' ) | (enumLiteral_3= 'Firefox' ) | (enumLiteral_4= 'Internet Explorer' ) )
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1349:28: ( ( (enumLiteral_0= 'Chrome' ) | (enumLiteral_1= 'Safari' ) | (enumLiteral_2= 'Opera' ) | (enumLiteral_3= 'Firefox' ) | (enumLiteral_4= 'Internet Explorer' ) ) )
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1350:1: ( (enumLiteral_0= 'Chrome' ) | (enumLiteral_1= 'Safari' ) | (enumLiteral_2= 'Opera' ) | (enumLiteral_3= 'Firefox' ) | (enumLiteral_4= 'Internet Explorer' ) )
             {
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1311:1: ( (enumLiteral_0= 'Chrome' ) | (enumLiteral_1= 'Safari' ) | (enumLiteral_2= 'Opera' ) | (enumLiteral_3= 'Firefox' ) | (enumLiteral_4= 'Internet Explorer' ) )
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1350:1: ( (enumLiteral_0= 'Chrome' ) | (enumLiteral_1= 'Safari' ) | (enumLiteral_2= 'Opera' ) | (enumLiteral_3= 'Firefox' ) | (enumLiteral_4= 'Internet Explorer' ) )
             int alt14=5;
             switch ( input.LA(1) ) {
             case 34:
@@ -3185,12 +3289,12 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
 
             switch (alt14) {
                 case 1 :
-                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1311:2: (enumLiteral_0= 'Chrome' )
+                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1350:2: (enumLiteral_0= 'Chrome' )
                     {
-                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1311:2: (enumLiteral_0= 'Chrome' )
-                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1311:4: enumLiteral_0= 'Chrome'
+                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1350:2: (enumLiteral_0= 'Chrome' )
+                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1350:4: enumLiteral_0= 'Chrome'
                     {
-                    enumLiteral_0=(Token)match(input,34,FOLLOW_34_in_ruleBrowser2862); 
+                    enumLiteral_0=(Token)match(input,34,FOLLOW_34_in_ruleBrowser2951); 
 
                             current = grammarAccess.getBrowserAccess().getChromeEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getBrowserAccess().getChromeEnumLiteralDeclaration_0()); 
@@ -3202,12 +3306,12 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
                     }
                     break;
                 case 2 :
-                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1317:6: (enumLiteral_1= 'Safari' )
+                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1356:6: (enumLiteral_1= 'Safari' )
                     {
-                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1317:6: (enumLiteral_1= 'Safari' )
-                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1317:8: enumLiteral_1= 'Safari'
+                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1356:6: (enumLiteral_1= 'Safari' )
+                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1356:8: enumLiteral_1= 'Safari'
                     {
-                    enumLiteral_1=(Token)match(input,35,FOLLOW_35_in_ruleBrowser2879); 
+                    enumLiteral_1=(Token)match(input,35,FOLLOW_35_in_ruleBrowser2968); 
 
                             current = grammarAccess.getBrowserAccess().getSafariEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getBrowserAccess().getSafariEnumLiteralDeclaration_1()); 
@@ -3219,12 +3323,12 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
                     }
                     break;
                 case 3 :
-                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1323:6: (enumLiteral_2= 'Opera' )
+                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1362:6: (enumLiteral_2= 'Opera' )
                     {
-                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1323:6: (enumLiteral_2= 'Opera' )
-                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1323:8: enumLiteral_2= 'Opera'
+                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1362:6: (enumLiteral_2= 'Opera' )
+                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1362:8: enumLiteral_2= 'Opera'
                     {
-                    enumLiteral_2=(Token)match(input,36,FOLLOW_36_in_ruleBrowser2896); 
+                    enumLiteral_2=(Token)match(input,36,FOLLOW_36_in_ruleBrowser2985); 
 
                             current = grammarAccess.getBrowserAccess().getOperaEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getBrowserAccess().getOperaEnumLiteralDeclaration_2()); 
@@ -3236,12 +3340,12 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
                     }
                     break;
                 case 4 :
-                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1329:6: (enumLiteral_3= 'Firefox' )
+                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1368:6: (enumLiteral_3= 'Firefox' )
                     {
-                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1329:6: (enumLiteral_3= 'Firefox' )
-                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1329:8: enumLiteral_3= 'Firefox'
+                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1368:6: (enumLiteral_3= 'Firefox' )
+                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1368:8: enumLiteral_3= 'Firefox'
                     {
-                    enumLiteral_3=(Token)match(input,37,FOLLOW_37_in_ruleBrowser2913); 
+                    enumLiteral_3=(Token)match(input,37,FOLLOW_37_in_ruleBrowser3002); 
 
                             current = grammarAccess.getBrowserAccess().getFirefoxEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_3, grammarAccess.getBrowserAccess().getFirefoxEnumLiteralDeclaration_3()); 
@@ -3253,12 +3357,12 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
                     }
                     break;
                 case 5 :
-                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1335:6: (enumLiteral_4= 'Internet Explorer' )
+                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1374:6: (enumLiteral_4= 'Internet Explorer' )
                     {
-                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1335:6: (enumLiteral_4= 'Internet Explorer' )
-                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1335:8: enumLiteral_4= 'Internet Explorer'
+                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1374:6: (enumLiteral_4= 'Internet Explorer' )
+                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1374:8: enumLiteral_4= 'Internet Explorer'
                     {
-                    enumLiteral_4=(Token)match(input,38,FOLLOW_38_in_ruleBrowser2930); 
+                    enumLiteral_4=(Token)match(input,38,FOLLOW_38_in_ruleBrowser3019); 
 
                             current = grammarAccess.getBrowserAccess().getIeEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_4, grammarAccess.getBrowserAccess().getIeEnumLiteralDeclaration_4()); 
@@ -3290,7 +3394,7 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
 
 
     // $ANTLR start "ruleOperator"
-    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1345:1: ruleOperator returns [Enumerator current=null] : ( (enumLiteral_0= '==' ) | (enumLiteral_1= '>' ) | (enumLiteral_2= '<' ) | (enumLiteral_3= '>=' ) | (enumLiteral_4= '<=' ) ) ;
+    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1384:1: ruleOperator returns [Enumerator current=null] : ( (enumLiteral_0= '==' ) | (enumLiteral_1= '>' ) | (enumLiteral_2= '<' ) | (enumLiteral_3= '>=' ) | (enumLiteral_4= '<=' ) ) ;
     public final Enumerator ruleOperator() throws RecognitionException {
         Enumerator current = null;
 
@@ -3302,10 +3406,10 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
 
          enterRule(); 
         try {
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1347:28: ( ( (enumLiteral_0= '==' ) | (enumLiteral_1= '>' ) | (enumLiteral_2= '<' ) | (enumLiteral_3= '>=' ) | (enumLiteral_4= '<=' ) ) )
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1348:1: ( (enumLiteral_0= '==' ) | (enumLiteral_1= '>' ) | (enumLiteral_2= '<' ) | (enumLiteral_3= '>=' ) | (enumLiteral_4= '<=' ) )
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1386:28: ( ( (enumLiteral_0= '==' ) | (enumLiteral_1= '>' ) | (enumLiteral_2= '<' ) | (enumLiteral_3= '>=' ) | (enumLiteral_4= '<=' ) ) )
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1387:1: ( (enumLiteral_0= '==' ) | (enumLiteral_1= '>' ) | (enumLiteral_2= '<' ) | (enumLiteral_3= '>=' ) | (enumLiteral_4= '<=' ) )
             {
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1348:1: ( (enumLiteral_0= '==' ) | (enumLiteral_1= '>' ) | (enumLiteral_2= '<' ) | (enumLiteral_3= '>=' ) | (enumLiteral_4= '<=' ) )
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1387:1: ( (enumLiteral_0= '==' ) | (enumLiteral_1= '>' ) | (enumLiteral_2= '<' ) | (enumLiteral_3= '>=' ) | (enumLiteral_4= '<=' ) )
             int alt15=5;
             switch ( input.LA(1) ) {
             case 39:
@@ -3342,12 +3446,12 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
 
             switch (alt15) {
                 case 1 :
-                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1348:2: (enumLiteral_0= '==' )
+                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1387:2: (enumLiteral_0= '==' )
                     {
-                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1348:2: (enumLiteral_0= '==' )
-                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1348:4: enumLiteral_0= '=='
+                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1387:2: (enumLiteral_0= '==' )
+                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1387:4: enumLiteral_0= '=='
                     {
-                    enumLiteral_0=(Token)match(input,39,FOLLOW_39_in_ruleOperator2975); 
+                    enumLiteral_0=(Token)match(input,39,FOLLOW_39_in_ruleOperator3064); 
 
                             current = grammarAccess.getOperatorAccess().getEqualsEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getOperatorAccess().getEqualsEnumLiteralDeclaration_0()); 
@@ -3359,12 +3463,12 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
                     }
                     break;
                 case 2 :
-                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1354:6: (enumLiteral_1= '>' )
+                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1393:6: (enumLiteral_1= '>' )
                     {
-                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1354:6: (enumLiteral_1= '>' )
-                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1354:8: enumLiteral_1= '>'
+                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1393:6: (enumLiteral_1= '>' )
+                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1393:8: enumLiteral_1= '>'
                     {
-                    enumLiteral_1=(Token)match(input,40,FOLLOW_40_in_ruleOperator2992); 
+                    enumLiteral_1=(Token)match(input,40,FOLLOW_40_in_ruleOperator3081); 
 
                             current = grammarAccess.getOperatorAccess().getGtEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getOperatorAccess().getGtEnumLiteralDeclaration_1()); 
@@ -3376,12 +3480,12 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
                     }
                     break;
                 case 3 :
-                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1360:6: (enumLiteral_2= '<' )
+                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1399:6: (enumLiteral_2= '<' )
                     {
-                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1360:6: (enumLiteral_2= '<' )
-                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1360:8: enumLiteral_2= '<'
+                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1399:6: (enumLiteral_2= '<' )
+                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1399:8: enumLiteral_2= '<'
                     {
-                    enumLiteral_2=(Token)match(input,41,FOLLOW_41_in_ruleOperator3009); 
+                    enumLiteral_2=(Token)match(input,41,FOLLOW_41_in_ruleOperator3098); 
 
                             current = grammarAccess.getOperatorAccess().getLtEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getOperatorAccess().getLtEnumLiteralDeclaration_2()); 
@@ -3393,12 +3497,12 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
                     }
                     break;
                 case 4 :
-                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1366:6: (enumLiteral_3= '>=' )
+                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1405:6: (enumLiteral_3= '>=' )
                     {
-                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1366:6: (enumLiteral_3= '>=' )
-                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1366:8: enumLiteral_3= '>='
+                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1405:6: (enumLiteral_3= '>=' )
+                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1405:8: enumLiteral_3= '>='
                     {
-                    enumLiteral_3=(Token)match(input,42,FOLLOW_42_in_ruleOperator3026); 
+                    enumLiteral_3=(Token)match(input,42,FOLLOW_42_in_ruleOperator3115); 
 
                             current = grammarAccess.getOperatorAccess().getGteEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_3, grammarAccess.getOperatorAccess().getGteEnumLiteralDeclaration_3()); 
@@ -3410,12 +3514,12 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
                     }
                     break;
                 case 5 :
-                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1372:6: (enumLiteral_4= '<=' )
+                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1411:6: (enumLiteral_4= '<=' )
                     {
-                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1372:6: (enumLiteral_4= '<=' )
-                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1372:8: enumLiteral_4= '<='
+                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1411:6: (enumLiteral_4= '<=' )
+                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1411:8: enumLiteral_4= '<='
                     {
-                    enumLiteral_4=(Token)match(input,43,FOLLOW_43_in_ruleOperator3043); 
+                    enumLiteral_4=(Token)match(input,43,FOLLOW_43_in_ruleOperator3132); 
 
                             current = grammarAccess.getOperatorAccess().getLteEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_4, grammarAccess.getOperatorAccess().getLteEnumLiteralDeclaration_4()); 
@@ -3491,95 +3595,98 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
     public static final BitSet FOLLOW_ruleDomID_in_ruleDomID1003 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleSubroutineParam_in_entryRuleSubroutineParam1041 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleSubroutineParam1051 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleSubroutineParam1093 = new BitSet(new long[]{0x0000000000020002L});
-    public static final BitSet FOLLOW_17_in_ruleSubroutineParam1111 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleSubroutineParam_in_ruleSubroutineParam1132 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFill_in_entryRuleFill1170 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFill1180 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_ruleFill1217 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_ruleSelector_in_ruleFill1238 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_ruleFill1250 = new BitSet(new long[]{0x0000000000000070L});
-    public static final BitSet FOLLOW_ruleValue_in_ruleFill1271 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_ruleFill1283 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCheck_in_entryRuleCheck1319 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleCheck1329 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_ruleCheck1366 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_ruleSelector_in_ruleCheck1387 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_ruleCheck1399 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleUncheck_in_entryRuleUncheck1435 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleUncheck1445 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_ruleUncheck1482 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_ruleSelector_in_ruleUncheck1503 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_ruleUncheck1515 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLet_in_entryRuleLet1551 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleLet1561 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_ruleLet1598 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleLet1615 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_23_in_ruleLet1632 = new BitSet(new long[]{0x0000000000008070L});
-    public static final BitSet FOLLOW_ruleLetValue_in_ruleLet1653 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_ruleLet1665 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLetValue_in_entryRuleLetValue1701 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleLetValue1711 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSelector_in_ruleLetValue1757 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValue_in_ruleLetValue1784 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValue_in_entryRuleValue1820 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleValue1830 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleValue1872 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleValue1900 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleValue1931 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDoWhile_in_entryRuleDoWhile1967 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDoWhile1977 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_ruleDoWhile2014 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_25_in_ruleDoWhile2026 = new BitSet(new long[]{0x0000000225746000L});
-    public static final BitSet FOLLOW_ruleAction_in_ruleDoWhile2047 = new BitSet(new long[]{0x0000000225746000L});
-    public static final BitSet FOLLOW_26_in_ruleDoWhile2060 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_27_in_ruleDoWhile2072 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_28_in_ruleDoWhile2084 = new BitSet(new long[]{0x0000000000000070L});
-    public static final BitSet FOLLOW_ruleBooleanExp_in_ruleDoWhile2105 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_16_in_ruleDoWhile2117 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBooleanExp_in_entryRuleBooleanExp2153 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBooleanExp2163 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValue_in_ruleBooleanExp2209 = new BitSet(new long[]{0x00000F8000000000L});
-    public static final BitSet FOLLOW_ruleOperator_in_ruleBooleanExp2230 = new BitSet(new long[]{0x0000000000000070L});
-    public static final BitSet FOLLOW_ruleValue_in_ruleBooleanExp2251 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIfThen_in_entryRuleIfThen2287 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleIfThen2297 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_ruleIfThen2334 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_28_in_ruleIfThen2346 = new BitSet(new long[]{0x0000000000000070L});
-    public static final BitSet FOLLOW_ruleBooleanExp_in_ruleIfThen2367 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_16_in_ruleIfThen2379 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_30_in_ruleIfThen2391 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_25_in_ruleIfThen2403 = new BitSet(new long[]{0x0000000225746000L});
-    public static final BitSet FOLLOW_ruleAction_in_ruleIfThen2424 = new BitSet(new long[]{0x0000000225746000L});
-    public static final BitSet FOLLOW_26_in_ruleIfThen2437 = new BitSet(new long[]{0x0000000080000002L});
-    public static final BitSet FOLLOW_31_in_ruleIfThen2450 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_25_in_ruleIfThen2462 = new BitSet(new long[]{0x0000000225746000L});
-    public static final BitSet FOLLOW_ruleAction_in_ruleIfThen2483 = new BitSet(new long[]{0x0000000225746000L});
-    public static final BitSet FOLLOW_26_in_ruleIfThen2496 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSubroutine_in_entryRuleSubroutine2534 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSubroutine2544 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_ruleSubroutine2581 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleSubroutine2598 = new BitSet(new long[]{0x0000000012000000L});
-    public static final BitSet FOLLOW_28_in_ruleSubroutine2616 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleSubroutineParam_in_ruleSubroutine2637 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_16_in_ruleSubroutine2649 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_25_in_ruleSubroutine2663 = new BitSet(new long[]{0x0000000225746000L});
-    public static final BitSet FOLLOW_ruleAction_in_ruleSubroutine2684 = new BitSet(new long[]{0x0000000225746000L});
-    public static final BitSet FOLLOW_26_in_ruleSubroutine2697 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSubroutineCall_in_entryRuleSubroutineCall2733 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSubroutineCall2743 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_ruleSubroutineCall2780 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleSubroutineCall2800 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_ruleSubroutineCall2812 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_ruleBrowser2862 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_ruleBrowser2879 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_ruleBrowser2896 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_37_in_ruleBrowser2913 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_ruleBrowser2930 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_39_in_ruleOperator2975 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_ruleOperator2992 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_41_in_ruleOperator3009 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_42_in_ruleOperator3026 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_43_in_ruleOperator3043 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariableId_in_ruleSubroutineParam1097 = new BitSet(new long[]{0x0000000000020002L});
+    public static final BitSet FOLLOW_17_in_ruleSubroutineParam1110 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_ruleSubroutineParam_in_ruleSubroutineParam1131 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFill_in_entryRuleFill1169 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleFill1179 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_ruleFill1216 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_ruleSelector_in_ruleFill1237 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_ruleFill1249 = new BitSet(new long[]{0x0000000000000070L});
+    public static final BitSet FOLLOW_ruleValue_in_ruleFill1270 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_ruleFill1282 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCheck_in_entryRuleCheck1318 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleCheck1328 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_ruleCheck1365 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_ruleSelector_in_ruleCheck1386 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_ruleCheck1398 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleUncheck_in_entryRuleUncheck1434 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleUncheck1444 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_ruleUncheck1481 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_ruleSelector_in_ruleUncheck1502 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_ruleUncheck1514 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLet_in_entryRuleLet1550 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleLet1560 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_ruleLet1597 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_ruleVariableId_in_ruleLet1618 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_23_in_ruleLet1630 = new BitSet(new long[]{0x0000000000008070L});
+    public static final BitSet FOLLOW_ruleLetValue_in_ruleLet1651 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_ruleLet1663 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLetValue_in_entryRuleLetValue1699 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleLetValue1709 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSelector_in_ruleLetValue1755 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValue_in_ruleLetValue1782 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValue_in_entryRuleValue1818 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleValue1828 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleValue1870 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleValue1898 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleValue1929 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDoWhile_in_entryRuleDoWhile1965 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleDoWhile1975 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_ruleDoWhile2012 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_25_in_ruleDoWhile2024 = new BitSet(new long[]{0x0000000225746000L});
+    public static final BitSet FOLLOW_ruleAction_in_ruleDoWhile2045 = new BitSet(new long[]{0x0000000225746000L});
+    public static final BitSet FOLLOW_26_in_ruleDoWhile2058 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_27_in_ruleDoWhile2070 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_28_in_ruleDoWhile2082 = new BitSet(new long[]{0x0000000000000070L});
+    public static final BitSet FOLLOW_ruleBooleanExp_in_ruleDoWhile2103 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_16_in_ruleDoWhile2115 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBooleanExp_in_entryRuleBooleanExp2151 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBooleanExp2161 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValue_in_ruleBooleanExp2207 = new BitSet(new long[]{0x00000F8000000000L});
+    public static final BitSet FOLLOW_ruleOperator_in_ruleBooleanExp2228 = new BitSet(new long[]{0x0000000000000070L});
+    public static final BitSet FOLLOW_ruleValue_in_ruleBooleanExp2249 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIfThen_in_entryRuleIfThen2285 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleIfThen2295 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_ruleIfThen2332 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_28_in_ruleIfThen2344 = new BitSet(new long[]{0x0000000000000070L});
+    public static final BitSet FOLLOW_ruleBooleanExp_in_ruleIfThen2365 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_16_in_ruleIfThen2377 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_30_in_ruleIfThen2389 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_25_in_ruleIfThen2401 = new BitSet(new long[]{0x0000000225746000L});
+    public static final BitSet FOLLOW_ruleAction_in_ruleIfThen2422 = new BitSet(new long[]{0x0000000225746000L});
+    public static final BitSet FOLLOW_26_in_ruleIfThen2435 = new BitSet(new long[]{0x0000000080000002L});
+    public static final BitSet FOLLOW_31_in_ruleIfThen2448 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_25_in_ruleIfThen2460 = new BitSet(new long[]{0x0000000225746000L});
+    public static final BitSet FOLLOW_ruleAction_in_ruleIfThen2481 = new BitSet(new long[]{0x0000000225746000L});
+    public static final BitSet FOLLOW_26_in_ruleIfThen2494 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSubroutine_in_entryRuleSubroutine2532 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSubroutine2542 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_ruleSubroutine2579 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleSubroutine2596 = new BitSet(new long[]{0x0000000012000000L});
+    public static final BitSet FOLLOW_28_in_ruleSubroutine2614 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_ruleSubroutineParam_in_ruleSubroutine2635 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_16_in_ruleSubroutine2647 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_25_in_ruleSubroutine2661 = new BitSet(new long[]{0x0000000225746000L});
+    public static final BitSet FOLLOW_ruleAction_in_ruleSubroutine2682 = new BitSet(new long[]{0x0000000225746000L});
+    public static final BitSet FOLLOW_26_in_ruleSubroutine2695 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSubroutineCall_in_entryRuleSubroutineCall2731 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSubroutineCall2741 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_ruleSubroutineCall2778 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleSubroutineCall2798 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_ruleSubroutineCall2810 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariableId_in_entryRuleVariableId2846 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleVariableId2856 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleVariableId2897 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_34_in_ruleBrowser2951 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_ruleBrowser2968 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_ruleBrowser2985 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_37_in_ruleBrowser3002 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_ruleBrowser3019 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_39_in_ruleOperator3064 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_ruleOperator3081 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_ruleOperator3098 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_42_in_ruleOperator3115 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_43_in_ruleOperator3132 = new BitSet(new long[]{0x0000000000000002L});
 
 }

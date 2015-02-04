@@ -39,202 +39,194 @@ import org.joclal.browserAutomation.DoWhile;
 public class DoWhileImpl extends ActionImpl implements DoWhile
 {
   /**
-   * The cached value of the '{@link #getActions() <em>Actions</em>}' containment reference list.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getActions() <em>Actions</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getActions()
-   * @generated
-   * @ordered
-   */
+	 * @see #getActions()
+	 * @generated
+	 * @ordered
+	 */
   protected EList<Action> actions;
 
   /**
-   * The cached value of the '{@link #getCondition() <em>Condition</em>}' containment reference.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getCondition() <em>Condition</em>}' containment reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getCondition()
-   * @generated
-   * @ordered
-   */
+	 * @see #getCondition()
+	 * @generated
+	 * @ordered
+	 */
   protected BooleanExp condition;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected DoWhileImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return BrowserAutomationPackage.Literals.DO_WHILE;
-  }
+		return BrowserAutomationPackage.Literals.DO_WHILE;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public EList<Action> getActions()
   {
-    if (actions == null)
-    {
-      actions = new EObjectContainmentEList<Action>(Action.class, this, BrowserAutomationPackage.DO_WHILE__ACTIONS);
-    }
-    return actions;
-  }
+		if (actions == null) {
+			actions = new EObjectContainmentEList<Action>(Action.class, this, BrowserAutomationPackage.DO_WHILE__ACTIONS);
+		}
+		return actions;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public BooleanExp getCondition()
   {
-    return condition;
-  }
+		return condition;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public NotificationChain basicSetCondition(BooleanExp newCondition, NotificationChain msgs)
   {
-    BooleanExp oldCondition = condition;
-    condition = newCondition;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.DO_WHILE__CONDITION, oldCondition, newCondition);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
+		BooleanExp oldCondition = condition;
+		condition = newCondition;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.DO_WHILE__CONDITION, oldCondition, newCondition);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public void setCondition(BooleanExp newCondition)
   {
-    if (newCondition != condition)
-    {
-      NotificationChain msgs = null;
-      if (condition != null)
-        msgs = ((InternalEObject)condition).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BrowserAutomationPackage.DO_WHILE__CONDITION, null, msgs);
-      if (newCondition != null)
-        msgs = ((InternalEObject)newCondition).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BrowserAutomationPackage.DO_WHILE__CONDITION, null, msgs);
-      msgs = basicSetCondition(newCondition, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.DO_WHILE__CONDITION, newCondition, newCondition));
-  }
+		if (newCondition != condition) {
+			NotificationChain msgs = null;
+			if (condition != null)
+				msgs = ((InternalEObject)condition).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BrowserAutomationPackage.DO_WHILE__CONDITION, null, msgs);
+			if (newCondition != null)
+				msgs = ((InternalEObject)newCondition).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BrowserAutomationPackage.DO_WHILE__CONDITION, null, msgs);
+			msgs = basicSetCondition(newCondition, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.DO_WHILE__CONDITION, newCondition, newCondition));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
-    switch (featureID)
-    {
-      case BrowserAutomationPackage.DO_WHILE__ACTIONS:
-        return ((InternalEList<?>)getActions()).basicRemove(otherEnd, msgs);
-      case BrowserAutomationPackage.DO_WHILE__CONDITION:
-        return basicSetCondition(null, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
-  }
+		switch (featureID) {
+			case BrowserAutomationPackage.DO_WHILE__ACTIONS:
+				return ((InternalEList<?>)getActions()).basicRemove(otherEnd, msgs);
+			case BrowserAutomationPackage.DO_WHILE__CONDITION:
+				return basicSetCondition(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
-    switch (featureID)
-    {
-      case BrowserAutomationPackage.DO_WHILE__ACTIONS:
-        return getActions();
-      case BrowserAutomationPackage.DO_WHILE__CONDITION:
-        return getCondition();
-    }
-    return super.eGet(featureID, resolve, coreType);
-  }
+		switch (featureID) {
+			case BrowserAutomationPackage.DO_WHILE__ACTIONS:
+				return getActions();
+			case BrowserAutomationPackage.DO_WHILE__CONDITION:
+				return getCondition();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
-    switch (featureID)
-    {
-      case BrowserAutomationPackage.DO_WHILE__ACTIONS:
-        getActions().clear();
-        getActions().addAll((Collection<? extends Action>)newValue);
-        return;
-      case BrowserAutomationPackage.DO_WHILE__CONDITION:
-        setCondition((BooleanExp)newValue);
-        return;
-    }
-    super.eSet(featureID, newValue);
-  }
+		switch (featureID) {
+			case BrowserAutomationPackage.DO_WHILE__ACTIONS:
+				getActions().clear();
+				getActions().addAll((Collection<? extends Action>)newValue);
+				return;
+			case BrowserAutomationPackage.DO_WHILE__CONDITION:
+				setCondition((BooleanExp)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void eUnset(int featureID)
   {
-    switch (featureID)
-    {
-      case BrowserAutomationPackage.DO_WHILE__ACTIONS:
-        getActions().clear();
-        return;
-      case BrowserAutomationPackage.DO_WHILE__CONDITION:
-        setCondition((BooleanExp)null);
-        return;
-    }
-    super.eUnset(featureID);
-  }
+		switch (featureID) {
+			case BrowserAutomationPackage.DO_WHILE__ACTIONS:
+				getActions().clear();
+				return;
+			case BrowserAutomationPackage.DO_WHILE__CONDITION:
+				setCondition((BooleanExp)null);
+				return;
+		}
+		super.eUnset(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public boolean eIsSet(int featureID)
   {
-    switch (featureID)
-    {
-      case BrowserAutomationPackage.DO_WHILE__ACTIONS:
-        return actions != null && !actions.isEmpty();
-      case BrowserAutomationPackage.DO_WHILE__CONDITION:
-        return condition != null;
-    }
-    return super.eIsSet(featureID);
-  }
+		switch (featureID) {
+			case BrowserAutomationPackage.DO_WHILE__ACTIONS:
+				return actions != null && !actions.isEmpty();
+			case BrowserAutomationPackage.DO_WHILE__CONDITION:
+				return condition != null;
+		}
+		return super.eIsSet(featureID);
+	}
 
 } //DoWhileImpl

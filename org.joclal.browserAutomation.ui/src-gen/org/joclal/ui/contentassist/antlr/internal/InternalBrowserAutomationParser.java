@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalBrowserAutomationParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Chrome'", "'Safari'", "'Opera'", "'Firefox'", "'Internet Explorer'", "'=='", "'>'", "'<'", "'>='", "'<='", "'browser'", "';'", "'GoTo'", "'Click'", "'select('", "')'", "','", "'Fill'", "'with'", "'Check'", "'Uncheck'", "'Let'", "'='", "'Do'", "'{'", "'}'", "'While'", "'('", "'If'", "'Then'", "'Else'", "'Def'", "'Call'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_INT", "RULE_ID", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Chrome'", "'Safari'", "'Opera'", "'Firefox'", "'Internet Explorer'", "'=='", "'>'", "'<'", "'>='", "'<='", "'browser'", "';'", "'GoTo'", "'Click'", "'select('", "')'", "','", "'Fill'", "'with'", "'Check'", "'Uncheck'", "'Let'", "'='", "'Do'", "'{'", "'}'", "'While'", "'('", "'If'", "'Then'", "'Else'", "'Def'", "'Call'"
     };
     public static final int T__19=19;
     public static final int T__15=15;
@@ -33,11 +33,11 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
     public static final int T__12=12;
     public static final int T__13=13;
     public static final int T__14=14;
-    public static final int RULE_ID=5;
+    public static final int RULE_ID=6;
     public static final int T__26=26;
     public static final int T__27=27;
     public static final int T__28=28;
-    public static final int RULE_INT=6;
+    public static final int RULE_INT=5;
     public static final int T__29=29;
     public static final int T__22=22;
     public static final int RULE_ML_COMMENT=7;
@@ -1489,24 +1489,101 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
     // $ANTLR end "ruleSubroutineCall"
 
 
+    // $ANTLR start "entryRuleVariableId"
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:564:1: entryRuleVariableId : ruleVariableId EOF ;
+    public final void entryRuleVariableId() throws RecognitionException {
+        try {
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:565:1: ( ruleVariableId EOF )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:566:1: ruleVariableId EOF
+            {
+             before(grammarAccess.getVariableIdRule()); 
+            pushFollow(FOLLOW_ruleVariableId_in_entryRuleVariableId1141);
+            ruleVariableId();
+
+            state._fsp--;
+
+             after(grammarAccess.getVariableIdRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleVariableId1148); 
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return ;
+    }
+    // $ANTLR end "entryRuleVariableId"
+
+
+    // $ANTLR start "ruleVariableId"
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:573:1: ruleVariableId : ( ( rule__VariableId__NameAssignment ) ) ;
+    public final void ruleVariableId() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:577:2: ( ( ( rule__VariableId__NameAssignment ) ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:578:1: ( ( rule__VariableId__NameAssignment ) )
+            {
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:578:1: ( ( rule__VariableId__NameAssignment ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:579:1: ( rule__VariableId__NameAssignment )
+            {
+             before(grammarAccess.getVariableIdAccess().getNameAssignment()); 
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:580:1: ( rule__VariableId__NameAssignment )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:580:2: rule__VariableId__NameAssignment
+            {
+            pushFollow(FOLLOW_rule__VariableId__NameAssignment_in_ruleVariableId1174);
+            rule__VariableId__NameAssignment();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getVariableIdAccess().getNameAssignment()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "ruleVariableId"
+
+
     // $ANTLR start "ruleBrowser"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:565:1: ruleBrowser : ( ( rule__Browser__Alternatives ) ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:593:1: ruleBrowser : ( ( rule__Browser__Alternatives ) ) ;
     public final void ruleBrowser() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:569:1: ( ( ( rule__Browser__Alternatives ) ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:570:1: ( ( rule__Browser__Alternatives ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:597:1: ( ( ( rule__Browser__Alternatives ) ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:598:1: ( ( rule__Browser__Alternatives ) )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:570:1: ( ( rule__Browser__Alternatives ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:571:1: ( rule__Browser__Alternatives )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:598:1: ( ( rule__Browser__Alternatives ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:599:1: ( rule__Browser__Alternatives )
             {
              before(grammarAccess.getBrowserAccess().getAlternatives()); 
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:572:1: ( rule__Browser__Alternatives )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:572:2: rule__Browser__Alternatives
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:600:1: ( rule__Browser__Alternatives )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:600:2: rule__Browser__Alternatives
             {
-            pushFollow(FOLLOW_rule__Browser__Alternatives_in_ruleBrowser1151);
+            pushFollow(FOLLOW_rule__Browser__Alternatives_in_ruleBrowser1211);
             rule__Browser__Alternatives();
 
             state._fsp--;
@@ -1537,23 +1614,23 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "ruleOperator"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:584:1: ruleOperator : ( ( rule__Operator__Alternatives ) ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:612:1: ruleOperator : ( ( rule__Operator__Alternatives ) ) ;
     public final void ruleOperator() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:588:1: ( ( ( rule__Operator__Alternatives ) ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:589:1: ( ( rule__Operator__Alternatives ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:616:1: ( ( ( rule__Operator__Alternatives ) ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:617:1: ( ( rule__Operator__Alternatives ) )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:589:1: ( ( rule__Operator__Alternatives ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:590:1: ( rule__Operator__Alternatives )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:617:1: ( ( rule__Operator__Alternatives ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:618:1: ( rule__Operator__Alternatives )
             {
              before(grammarAccess.getOperatorAccess().getAlternatives()); 
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:591:1: ( rule__Operator__Alternatives )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:591:2: rule__Operator__Alternatives
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:619:1: ( rule__Operator__Alternatives )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:619:2: rule__Operator__Alternatives
             {
-            pushFollow(FOLLOW_rule__Operator__Alternatives_in_ruleOperator1187);
+            pushFollow(FOLLOW_rule__Operator__Alternatives_in_ruleOperator1247);
             rule__Operator__Alternatives();
 
             state._fsp--;
@@ -1584,13 +1661,13 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Action__Alternatives"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:602:1: rule__Action__Alternatives : ( ( ruleGoto ) | ( ruleClickOn ) | ( ruleFill ) | ( ruleCheck ) | ( ruleUncheck ) | ( ruleLet ) | ( ruleDoWhile ) | ( ruleIfThen ) | ( ruleSubroutineCall ) );
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:630:1: rule__Action__Alternatives : ( ( ruleGoto ) | ( ruleClickOn ) | ( ruleFill ) | ( ruleCheck ) | ( ruleUncheck ) | ( ruleLet ) | ( ruleDoWhile ) | ( ruleIfThen ) | ( ruleSubroutineCall ) );
     public final void rule__Action__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:606:1: ( ( ruleGoto ) | ( ruleClickOn ) | ( ruleFill ) | ( ruleCheck ) | ( ruleUncheck ) | ( ruleLet ) | ( ruleDoWhile ) | ( ruleIfThen ) | ( ruleSubroutineCall ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:634:1: ( ( ruleGoto ) | ( ruleClickOn ) | ( ruleFill ) | ( ruleCheck ) | ( ruleUncheck ) | ( ruleLet ) | ( ruleDoWhile ) | ( ruleIfThen ) | ( ruleSubroutineCall ) )
             int alt1=9;
             switch ( input.LA(1) ) {
             case 23:
@@ -1647,13 +1724,13 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
             switch (alt1) {
                 case 1 :
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:607:1: ( ruleGoto )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:635:1: ( ruleGoto )
                     {
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:607:1: ( ruleGoto )
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:608:1: ruleGoto
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:635:1: ( ruleGoto )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:636:1: ruleGoto
                     {
                      before(grammarAccess.getActionAccess().getGotoParserRuleCall_0()); 
-                    pushFollow(FOLLOW_ruleGoto_in_rule__Action__Alternatives1222);
+                    pushFollow(FOLLOW_ruleGoto_in_rule__Action__Alternatives1282);
                     ruleGoto();
 
                     state._fsp--;
@@ -1666,13 +1743,13 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
                     }
                     break;
                 case 2 :
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:613:6: ( ruleClickOn )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:641:6: ( ruleClickOn )
                     {
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:613:6: ( ruleClickOn )
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:614:1: ruleClickOn
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:641:6: ( ruleClickOn )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:642:1: ruleClickOn
                     {
                      before(grammarAccess.getActionAccess().getClickOnParserRuleCall_1()); 
-                    pushFollow(FOLLOW_ruleClickOn_in_rule__Action__Alternatives1239);
+                    pushFollow(FOLLOW_ruleClickOn_in_rule__Action__Alternatives1299);
                     ruleClickOn();
 
                     state._fsp--;
@@ -1685,13 +1762,13 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
                     }
                     break;
                 case 3 :
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:619:6: ( ruleFill )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:647:6: ( ruleFill )
                     {
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:619:6: ( ruleFill )
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:620:1: ruleFill
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:647:6: ( ruleFill )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:648:1: ruleFill
                     {
                      before(grammarAccess.getActionAccess().getFillParserRuleCall_2()); 
-                    pushFollow(FOLLOW_ruleFill_in_rule__Action__Alternatives1256);
+                    pushFollow(FOLLOW_ruleFill_in_rule__Action__Alternatives1316);
                     ruleFill();
 
                     state._fsp--;
@@ -1704,13 +1781,13 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
                     }
                     break;
                 case 4 :
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:625:6: ( ruleCheck )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:653:6: ( ruleCheck )
                     {
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:625:6: ( ruleCheck )
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:626:1: ruleCheck
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:653:6: ( ruleCheck )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:654:1: ruleCheck
                     {
                      before(grammarAccess.getActionAccess().getCheckParserRuleCall_3()); 
-                    pushFollow(FOLLOW_ruleCheck_in_rule__Action__Alternatives1273);
+                    pushFollow(FOLLOW_ruleCheck_in_rule__Action__Alternatives1333);
                     ruleCheck();
 
                     state._fsp--;
@@ -1723,13 +1800,13 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
                     }
                     break;
                 case 5 :
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:631:6: ( ruleUncheck )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:659:6: ( ruleUncheck )
                     {
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:631:6: ( ruleUncheck )
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:632:1: ruleUncheck
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:659:6: ( ruleUncheck )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:660:1: ruleUncheck
                     {
                      before(grammarAccess.getActionAccess().getUncheckParserRuleCall_4()); 
-                    pushFollow(FOLLOW_ruleUncheck_in_rule__Action__Alternatives1290);
+                    pushFollow(FOLLOW_ruleUncheck_in_rule__Action__Alternatives1350);
                     ruleUncheck();
 
                     state._fsp--;
@@ -1742,13 +1819,13 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
                     }
                     break;
                 case 6 :
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:637:6: ( ruleLet )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:665:6: ( ruleLet )
                     {
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:637:6: ( ruleLet )
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:638:1: ruleLet
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:665:6: ( ruleLet )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:666:1: ruleLet
                     {
                      before(grammarAccess.getActionAccess().getLetParserRuleCall_5()); 
-                    pushFollow(FOLLOW_ruleLet_in_rule__Action__Alternatives1307);
+                    pushFollow(FOLLOW_ruleLet_in_rule__Action__Alternatives1367);
                     ruleLet();
 
                     state._fsp--;
@@ -1761,13 +1838,13 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
                     }
                     break;
                 case 7 :
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:643:6: ( ruleDoWhile )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:671:6: ( ruleDoWhile )
                     {
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:643:6: ( ruleDoWhile )
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:644:1: ruleDoWhile
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:671:6: ( ruleDoWhile )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:672:1: ruleDoWhile
                     {
                      before(grammarAccess.getActionAccess().getDoWhileParserRuleCall_6()); 
-                    pushFollow(FOLLOW_ruleDoWhile_in_rule__Action__Alternatives1324);
+                    pushFollow(FOLLOW_ruleDoWhile_in_rule__Action__Alternatives1384);
                     ruleDoWhile();
 
                     state._fsp--;
@@ -1780,13 +1857,13 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
                     }
                     break;
                 case 8 :
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:649:6: ( ruleIfThen )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:677:6: ( ruleIfThen )
                     {
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:649:6: ( ruleIfThen )
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:650:1: ruleIfThen
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:677:6: ( ruleIfThen )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:678:1: ruleIfThen
                     {
                      before(grammarAccess.getActionAccess().getIfThenParserRuleCall_7()); 
-                    pushFollow(FOLLOW_ruleIfThen_in_rule__Action__Alternatives1341);
+                    pushFollow(FOLLOW_ruleIfThen_in_rule__Action__Alternatives1401);
                     ruleIfThen();
 
                     state._fsp--;
@@ -1799,13 +1876,13 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
                     }
                     break;
                 case 9 :
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:655:6: ( ruleSubroutineCall )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:683:6: ( ruleSubroutineCall )
                     {
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:655:6: ( ruleSubroutineCall )
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:656:1: ruleSubroutineCall
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:683:6: ( ruleSubroutineCall )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:684:1: ruleSubroutineCall
                     {
                      before(grammarAccess.getActionAccess().getSubroutineCallParserRuleCall_8()); 
-                    pushFollow(FOLLOW_ruleSubroutineCall_in_rule__Action__Alternatives1358);
+                    pushFollow(FOLLOW_ruleSubroutineCall_in_rule__Action__Alternatives1418);
                     ruleSubroutineCall();
 
                     state._fsp--;
@@ -1835,20 +1912,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__LetValue__Alternatives"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:666:1: rule__LetValue__Alternatives : ( ( ( rule__LetValue__SelectorAssignment_0 ) ) | ( ( rule__LetValue__ValueAssignment_1 ) ) );
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:694:1: rule__LetValue__Alternatives : ( ( ( rule__LetValue__SelectorAssignment_0 ) ) | ( ( rule__LetValue__ValueAssignment_1 ) ) );
     public final void rule__LetValue__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:670:1: ( ( ( rule__LetValue__SelectorAssignment_0 ) ) | ( ( rule__LetValue__ValueAssignment_1 ) ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:698:1: ( ( ( rule__LetValue__SelectorAssignment_0 ) ) | ( ( rule__LetValue__ValueAssignment_1 ) ) )
             int alt2=2;
             int LA2_0 = input.LA(1);
 
             if ( (LA2_0==25) ) {
                 alt2=1;
             }
-            else if ( ((LA2_0>=RULE_STRING && LA2_0<=RULE_INT)) ) {
+            else if ( ((LA2_0>=RULE_STRING && LA2_0<=RULE_ID)) ) {
                 alt2=2;
             }
             else {
@@ -1859,16 +1936,16 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
             }
             switch (alt2) {
                 case 1 :
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:671:1: ( ( rule__LetValue__SelectorAssignment_0 ) )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:699:1: ( ( rule__LetValue__SelectorAssignment_0 ) )
                     {
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:671:1: ( ( rule__LetValue__SelectorAssignment_0 ) )
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:672:1: ( rule__LetValue__SelectorAssignment_0 )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:699:1: ( ( rule__LetValue__SelectorAssignment_0 ) )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:700:1: ( rule__LetValue__SelectorAssignment_0 )
                     {
                      before(grammarAccess.getLetValueAccess().getSelectorAssignment_0()); 
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:673:1: ( rule__LetValue__SelectorAssignment_0 )
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:673:2: rule__LetValue__SelectorAssignment_0
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:701:1: ( rule__LetValue__SelectorAssignment_0 )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:701:2: rule__LetValue__SelectorAssignment_0
                     {
-                    pushFollow(FOLLOW_rule__LetValue__SelectorAssignment_0_in_rule__LetValue__Alternatives1390);
+                    pushFollow(FOLLOW_rule__LetValue__SelectorAssignment_0_in_rule__LetValue__Alternatives1450);
                     rule__LetValue__SelectorAssignment_0();
 
                     state._fsp--;
@@ -1884,16 +1961,16 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
                     }
                     break;
                 case 2 :
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:677:6: ( ( rule__LetValue__ValueAssignment_1 ) )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:705:6: ( ( rule__LetValue__ValueAssignment_1 ) )
                     {
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:677:6: ( ( rule__LetValue__ValueAssignment_1 ) )
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:678:1: ( rule__LetValue__ValueAssignment_1 )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:705:6: ( ( rule__LetValue__ValueAssignment_1 ) )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:706:1: ( rule__LetValue__ValueAssignment_1 )
                     {
                      before(grammarAccess.getLetValueAccess().getValueAssignment_1()); 
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:679:1: ( rule__LetValue__ValueAssignment_1 )
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:679:2: rule__LetValue__ValueAssignment_1
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:707:1: ( rule__LetValue__ValueAssignment_1 )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:707:2: rule__LetValue__ValueAssignment_1
                     {
-                    pushFollow(FOLLOW_rule__LetValue__ValueAssignment_1_in_rule__LetValue__Alternatives1408);
+                    pushFollow(FOLLOW_rule__LetValue__ValueAssignment_1_in_rule__LetValue__Alternatives1468);
                     rule__LetValue__ValueAssignment_1();
 
                     state._fsp--;
@@ -1926,13 +2003,13 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Value__Alternatives"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:688:1: rule__Value__Alternatives : ( ( ( rule__Value__StringAssignment_0 ) ) | ( ( rule__Value__IntAssignment_1 ) ) | ( ( rule__Value__LetAssignment_2 ) ) );
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:716:1: rule__Value__Alternatives : ( ( ( rule__Value__StringAssignment_0 ) ) | ( ( rule__Value__IntAssignment_1 ) ) | ( ( rule__Value__VariableAssignment_2 ) ) );
     public final void rule__Value__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:692:1: ( ( ( rule__Value__StringAssignment_0 ) ) | ( ( rule__Value__IntAssignment_1 ) ) | ( ( rule__Value__LetAssignment_2 ) ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:720:1: ( ( ( rule__Value__StringAssignment_0 ) ) | ( ( rule__Value__IntAssignment_1 ) ) | ( ( rule__Value__VariableAssignment_2 ) ) )
             int alt3=3;
             switch ( input.LA(1) ) {
             case RULE_STRING:
@@ -1959,16 +2036,16 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
             switch (alt3) {
                 case 1 :
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:693:1: ( ( rule__Value__StringAssignment_0 ) )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:721:1: ( ( rule__Value__StringAssignment_0 ) )
                     {
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:693:1: ( ( rule__Value__StringAssignment_0 ) )
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:694:1: ( rule__Value__StringAssignment_0 )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:721:1: ( ( rule__Value__StringAssignment_0 ) )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:722:1: ( rule__Value__StringAssignment_0 )
                     {
                      before(grammarAccess.getValueAccess().getStringAssignment_0()); 
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:695:1: ( rule__Value__StringAssignment_0 )
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:695:2: rule__Value__StringAssignment_0
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:723:1: ( rule__Value__StringAssignment_0 )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:723:2: rule__Value__StringAssignment_0
                     {
-                    pushFollow(FOLLOW_rule__Value__StringAssignment_0_in_rule__Value__Alternatives1441);
+                    pushFollow(FOLLOW_rule__Value__StringAssignment_0_in_rule__Value__Alternatives1501);
                     rule__Value__StringAssignment_0();
 
                     state._fsp--;
@@ -1984,16 +2061,16 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
                     }
                     break;
                 case 2 :
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:699:6: ( ( rule__Value__IntAssignment_1 ) )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:727:6: ( ( rule__Value__IntAssignment_1 ) )
                     {
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:699:6: ( ( rule__Value__IntAssignment_1 ) )
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:700:1: ( rule__Value__IntAssignment_1 )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:727:6: ( ( rule__Value__IntAssignment_1 ) )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:728:1: ( rule__Value__IntAssignment_1 )
                     {
                      before(grammarAccess.getValueAccess().getIntAssignment_1()); 
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:701:1: ( rule__Value__IntAssignment_1 )
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:701:2: rule__Value__IntAssignment_1
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:729:1: ( rule__Value__IntAssignment_1 )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:729:2: rule__Value__IntAssignment_1
                     {
-                    pushFollow(FOLLOW_rule__Value__IntAssignment_1_in_rule__Value__Alternatives1459);
+                    pushFollow(FOLLOW_rule__Value__IntAssignment_1_in_rule__Value__Alternatives1519);
                     rule__Value__IntAssignment_1();
 
                     state._fsp--;
@@ -2009,24 +2086,24 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
                     }
                     break;
                 case 3 :
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:705:6: ( ( rule__Value__LetAssignment_2 ) )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:733:6: ( ( rule__Value__VariableAssignment_2 ) )
                     {
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:705:6: ( ( rule__Value__LetAssignment_2 ) )
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:706:1: ( rule__Value__LetAssignment_2 )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:733:6: ( ( rule__Value__VariableAssignment_2 ) )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:734:1: ( rule__Value__VariableAssignment_2 )
                     {
-                     before(grammarAccess.getValueAccess().getLetAssignment_2()); 
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:707:1: ( rule__Value__LetAssignment_2 )
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:707:2: rule__Value__LetAssignment_2
+                     before(grammarAccess.getValueAccess().getVariableAssignment_2()); 
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:735:1: ( rule__Value__VariableAssignment_2 )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:735:2: rule__Value__VariableAssignment_2
                     {
-                    pushFollow(FOLLOW_rule__Value__LetAssignment_2_in_rule__Value__Alternatives1477);
-                    rule__Value__LetAssignment_2();
+                    pushFollow(FOLLOW_rule__Value__VariableAssignment_2_in_rule__Value__Alternatives1537);
+                    rule__Value__VariableAssignment_2();
 
                     state._fsp--;
 
 
                     }
 
-                     after(grammarAccess.getValueAccess().getLetAssignment_2()); 
+                     after(grammarAccess.getValueAccess().getVariableAssignment_2()); 
 
                     }
 
@@ -2051,13 +2128,13 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Browser__Alternatives"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:716:1: rule__Browser__Alternatives : ( ( ( 'Chrome' ) ) | ( ( 'Safari' ) ) | ( ( 'Opera' ) ) | ( ( 'Firefox' ) ) | ( ( 'Internet Explorer' ) ) );
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:744:1: rule__Browser__Alternatives : ( ( ( 'Chrome' ) ) | ( ( 'Safari' ) ) | ( ( 'Opera' ) ) | ( ( 'Firefox' ) ) | ( ( 'Internet Explorer' ) ) );
     public final void rule__Browser__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:720:1: ( ( ( 'Chrome' ) ) | ( ( 'Safari' ) ) | ( ( 'Opera' ) ) | ( ( 'Firefox' ) ) | ( ( 'Internet Explorer' ) ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:748:1: ( ( ( 'Chrome' ) ) | ( ( 'Safari' ) ) | ( ( 'Opera' ) ) | ( ( 'Firefox' ) ) | ( ( 'Internet Explorer' ) ) )
             int alt4=5;
             switch ( input.LA(1) ) {
             case 11:
@@ -2094,16 +2171,16 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
             switch (alt4) {
                 case 1 :
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:721:1: ( ( 'Chrome' ) )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:749:1: ( ( 'Chrome' ) )
                     {
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:721:1: ( ( 'Chrome' ) )
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:722:1: ( 'Chrome' )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:749:1: ( ( 'Chrome' ) )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:750:1: ( 'Chrome' )
                     {
                      before(grammarAccess.getBrowserAccess().getChromeEnumLiteralDeclaration_0()); 
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:723:1: ( 'Chrome' )
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:723:3: 'Chrome'
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:751:1: ( 'Chrome' )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:751:3: 'Chrome'
                     {
-                    match(input,11,FOLLOW_11_in_rule__Browser__Alternatives1511); 
+                    match(input,11,FOLLOW_11_in_rule__Browser__Alternatives1571); 
 
                     }
 
@@ -2115,16 +2192,16 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
                     }
                     break;
                 case 2 :
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:728:6: ( ( 'Safari' ) )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:756:6: ( ( 'Safari' ) )
                     {
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:728:6: ( ( 'Safari' ) )
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:729:1: ( 'Safari' )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:756:6: ( ( 'Safari' ) )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:757:1: ( 'Safari' )
                     {
                      before(grammarAccess.getBrowserAccess().getSafariEnumLiteralDeclaration_1()); 
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:730:1: ( 'Safari' )
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:730:3: 'Safari'
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:758:1: ( 'Safari' )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:758:3: 'Safari'
                     {
-                    match(input,12,FOLLOW_12_in_rule__Browser__Alternatives1532); 
+                    match(input,12,FOLLOW_12_in_rule__Browser__Alternatives1592); 
 
                     }
 
@@ -2136,16 +2213,16 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
                     }
                     break;
                 case 3 :
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:735:6: ( ( 'Opera' ) )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:763:6: ( ( 'Opera' ) )
                     {
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:735:6: ( ( 'Opera' ) )
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:736:1: ( 'Opera' )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:763:6: ( ( 'Opera' ) )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:764:1: ( 'Opera' )
                     {
                      before(grammarAccess.getBrowserAccess().getOperaEnumLiteralDeclaration_2()); 
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:737:1: ( 'Opera' )
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:737:3: 'Opera'
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:765:1: ( 'Opera' )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:765:3: 'Opera'
                     {
-                    match(input,13,FOLLOW_13_in_rule__Browser__Alternatives1553); 
+                    match(input,13,FOLLOW_13_in_rule__Browser__Alternatives1613); 
 
                     }
 
@@ -2157,16 +2234,16 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
                     }
                     break;
                 case 4 :
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:742:6: ( ( 'Firefox' ) )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:770:6: ( ( 'Firefox' ) )
                     {
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:742:6: ( ( 'Firefox' ) )
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:743:1: ( 'Firefox' )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:770:6: ( ( 'Firefox' ) )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:771:1: ( 'Firefox' )
                     {
                      before(grammarAccess.getBrowserAccess().getFirefoxEnumLiteralDeclaration_3()); 
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:744:1: ( 'Firefox' )
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:744:3: 'Firefox'
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:772:1: ( 'Firefox' )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:772:3: 'Firefox'
                     {
-                    match(input,14,FOLLOW_14_in_rule__Browser__Alternatives1574); 
+                    match(input,14,FOLLOW_14_in_rule__Browser__Alternatives1634); 
 
                     }
 
@@ -2178,16 +2255,16 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
                     }
                     break;
                 case 5 :
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:749:6: ( ( 'Internet Explorer' ) )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:777:6: ( ( 'Internet Explorer' ) )
                     {
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:749:6: ( ( 'Internet Explorer' ) )
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:750:1: ( 'Internet Explorer' )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:777:6: ( ( 'Internet Explorer' ) )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:778:1: ( 'Internet Explorer' )
                     {
                      before(grammarAccess.getBrowserAccess().getIeEnumLiteralDeclaration_4()); 
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:751:1: ( 'Internet Explorer' )
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:751:3: 'Internet Explorer'
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:779:1: ( 'Internet Explorer' )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:779:3: 'Internet Explorer'
                     {
-                    match(input,15,FOLLOW_15_in_rule__Browser__Alternatives1595); 
+                    match(input,15,FOLLOW_15_in_rule__Browser__Alternatives1655); 
 
                     }
 
@@ -2216,13 +2293,13 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Operator__Alternatives"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:761:1: rule__Operator__Alternatives : ( ( ( '==' ) ) | ( ( '>' ) ) | ( ( '<' ) ) | ( ( '>=' ) ) | ( ( '<=' ) ) );
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:789:1: rule__Operator__Alternatives : ( ( ( '==' ) ) | ( ( '>' ) ) | ( ( '<' ) ) | ( ( '>=' ) ) | ( ( '<=' ) ) );
     public final void rule__Operator__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:765:1: ( ( ( '==' ) ) | ( ( '>' ) ) | ( ( '<' ) ) | ( ( '>=' ) ) | ( ( '<=' ) ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:793:1: ( ( ( '==' ) ) | ( ( '>' ) ) | ( ( '<' ) ) | ( ( '>=' ) ) | ( ( '<=' ) ) )
             int alt5=5;
             switch ( input.LA(1) ) {
             case 16:
@@ -2259,16 +2336,16 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
             switch (alt5) {
                 case 1 :
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:766:1: ( ( '==' ) )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:794:1: ( ( '==' ) )
                     {
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:766:1: ( ( '==' ) )
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:767:1: ( '==' )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:794:1: ( ( '==' ) )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:795:1: ( '==' )
                     {
                      before(grammarAccess.getOperatorAccess().getEqualsEnumLiteralDeclaration_0()); 
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:768:1: ( '==' )
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:768:3: '=='
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:796:1: ( '==' )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:796:3: '=='
                     {
-                    match(input,16,FOLLOW_16_in_rule__Operator__Alternatives1631); 
+                    match(input,16,FOLLOW_16_in_rule__Operator__Alternatives1691); 
 
                     }
 
@@ -2280,16 +2357,16 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
                     }
                     break;
                 case 2 :
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:773:6: ( ( '>' ) )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:801:6: ( ( '>' ) )
                     {
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:773:6: ( ( '>' ) )
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:774:1: ( '>' )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:801:6: ( ( '>' ) )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:802:1: ( '>' )
                     {
                      before(grammarAccess.getOperatorAccess().getGtEnumLiteralDeclaration_1()); 
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:775:1: ( '>' )
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:775:3: '>'
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:803:1: ( '>' )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:803:3: '>'
                     {
-                    match(input,17,FOLLOW_17_in_rule__Operator__Alternatives1652); 
+                    match(input,17,FOLLOW_17_in_rule__Operator__Alternatives1712); 
 
                     }
 
@@ -2301,16 +2378,16 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
                     }
                     break;
                 case 3 :
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:780:6: ( ( '<' ) )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:808:6: ( ( '<' ) )
                     {
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:780:6: ( ( '<' ) )
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:781:1: ( '<' )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:808:6: ( ( '<' ) )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:809:1: ( '<' )
                     {
                      before(grammarAccess.getOperatorAccess().getLtEnumLiteralDeclaration_2()); 
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:782:1: ( '<' )
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:782:3: '<'
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:810:1: ( '<' )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:810:3: '<'
                     {
-                    match(input,18,FOLLOW_18_in_rule__Operator__Alternatives1673); 
+                    match(input,18,FOLLOW_18_in_rule__Operator__Alternatives1733); 
 
                     }
 
@@ -2322,16 +2399,16 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
                     }
                     break;
                 case 4 :
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:787:6: ( ( '>=' ) )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:815:6: ( ( '>=' ) )
                     {
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:787:6: ( ( '>=' ) )
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:788:1: ( '>=' )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:815:6: ( ( '>=' ) )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:816:1: ( '>=' )
                     {
                      before(grammarAccess.getOperatorAccess().getGteEnumLiteralDeclaration_3()); 
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:789:1: ( '>=' )
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:789:3: '>='
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:817:1: ( '>=' )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:817:3: '>='
                     {
-                    match(input,19,FOLLOW_19_in_rule__Operator__Alternatives1694); 
+                    match(input,19,FOLLOW_19_in_rule__Operator__Alternatives1754); 
 
                     }
 
@@ -2343,16 +2420,16 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
                     }
                     break;
                 case 5 :
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:794:6: ( ( '<=' ) )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:822:6: ( ( '<=' ) )
                     {
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:794:6: ( ( '<=' ) )
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:795:1: ( '<=' )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:822:6: ( ( '<=' ) )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:823:1: ( '<=' )
                     {
                      before(grammarAccess.getOperatorAccess().getLteEnumLiteralDeclaration_4()); 
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:796:1: ( '<=' )
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:796:3: '<='
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:824:1: ( '<=' )
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:824:3: '<='
                     {
-                    match(input,20,FOLLOW_20_in_rule__Operator__Alternatives1715); 
+                    match(input,20,FOLLOW_20_in_rule__Operator__Alternatives1775); 
 
                     }
 
@@ -2381,21 +2458,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Model__Group__0"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:808:1: rule__Model__Group__0 : rule__Model__Group__0__Impl rule__Model__Group__1 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:836:1: rule__Model__Group__0 : rule__Model__Group__0__Impl rule__Model__Group__1 ;
     public final void rule__Model__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:812:1: ( rule__Model__Group__0__Impl rule__Model__Group__1 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:813:2: rule__Model__Group__0__Impl rule__Model__Group__1
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:840:1: ( rule__Model__Group__0__Impl rule__Model__Group__1 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:841:2: rule__Model__Group__0__Impl rule__Model__Group__1
             {
-            pushFollow(FOLLOW_rule__Model__Group__0__Impl_in_rule__Model__Group__01748);
+            pushFollow(FOLLOW_rule__Model__Group__0__Impl_in_rule__Model__Group__01808);
             rule__Model__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Model__Group__1_in_rule__Model__Group__01751);
+            pushFollow(FOLLOW_rule__Model__Group__1_in_rule__Model__Group__01811);
             rule__Model__Group__1();
 
             state._fsp--;
@@ -2419,20 +2496,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Model__Group__0__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:820:1: rule__Model__Group__0__Impl : ( ( rule__Model__SubroutinesAssignment_0 )* ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:848:1: rule__Model__Group__0__Impl : ( ( rule__Model__SubroutinesAssignment_0 )* ) ;
     public final void rule__Model__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:824:1: ( ( ( rule__Model__SubroutinesAssignment_0 )* ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:825:1: ( ( rule__Model__SubroutinesAssignment_0 )* )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:852:1: ( ( ( rule__Model__SubroutinesAssignment_0 )* ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:853:1: ( ( rule__Model__SubroutinesAssignment_0 )* )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:825:1: ( ( rule__Model__SubroutinesAssignment_0 )* )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:826:1: ( rule__Model__SubroutinesAssignment_0 )*
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:853:1: ( ( rule__Model__SubroutinesAssignment_0 )* )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:854:1: ( rule__Model__SubroutinesAssignment_0 )*
             {
              before(grammarAccess.getModelAccess().getSubroutinesAssignment_0()); 
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:827:1: ( rule__Model__SubroutinesAssignment_0 )*
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:855:1: ( rule__Model__SubroutinesAssignment_0 )*
             loop6:
             do {
                 int alt6=2;
@@ -2445,9 +2522,9 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
                 switch (alt6) {
             	case 1 :
-            	    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:827:2: rule__Model__SubroutinesAssignment_0
+            	    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:855:2: rule__Model__SubroutinesAssignment_0
             	    {
-            	    pushFollow(FOLLOW_rule__Model__SubroutinesAssignment_0_in_rule__Model__Group__0__Impl1778);
+            	    pushFollow(FOLLOW_rule__Model__SubroutinesAssignment_0_in_rule__Model__Group__0__Impl1838);
             	    rule__Model__SubroutinesAssignment_0();
 
             	    state._fsp--;
@@ -2484,21 +2561,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Model__Group__1"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:837:1: rule__Model__Group__1 : rule__Model__Group__1__Impl rule__Model__Group__2 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:865:1: rule__Model__Group__1 : rule__Model__Group__1__Impl rule__Model__Group__2 ;
     public final void rule__Model__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:841:1: ( rule__Model__Group__1__Impl rule__Model__Group__2 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:842:2: rule__Model__Group__1__Impl rule__Model__Group__2
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:869:1: ( rule__Model__Group__1__Impl rule__Model__Group__2 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:870:2: rule__Model__Group__1__Impl rule__Model__Group__2
             {
-            pushFollow(FOLLOW_rule__Model__Group__1__Impl_in_rule__Model__Group__11809);
+            pushFollow(FOLLOW_rule__Model__Group__1__Impl_in_rule__Model__Group__11869);
             rule__Model__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Model__Group__2_in_rule__Model__Group__11812);
+            pushFollow(FOLLOW_rule__Model__Group__2_in_rule__Model__Group__11872);
             rule__Model__Group__2();
 
             state._fsp--;
@@ -2522,20 +2599,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Model__Group__1__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:849:1: rule__Model__Group__1__Impl : ( 'browser' ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:877:1: rule__Model__Group__1__Impl : ( 'browser' ) ;
     public final void rule__Model__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:853:1: ( ( 'browser' ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:854:1: ( 'browser' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:881:1: ( ( 'browser' ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:882:1: ( 'browser' )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:854:1: ( 'browser' )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:855:1: 'browser'
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:882:1: ( 'browser' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:883:1: 'browser'
             {
              before(grammarAccess.getModelAccess().getBrowserKeyword_1()); 
-            match(input,21,FOLLOW_21_in_rule__Model__Group__1__Impl1840); 
+            match(input,21,FOLLOW_21_in_rule__Model__Group__1__Impl1900); 
              after(grammarAccess.getModelAccess().getBrowserKeyword_1()); 
 
             }
@@ -2559,21 +2636,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Model__Group__2"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:868:1: rule__Model__Group__2 : rule__Model__Group__2__Impl rule__Model__Group__3 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:896:1: rule__Model__Group__2 : rule__Model__Group__2__Impl rule__Model__Group__3 ;
     public final void rule__Model__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:872:1: ( rule__Model__Group__2__Impl rule__Model__Group__3 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:873:2: rule__Model__Group__2__Impl rule__Model__Group__3
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:900:1: ( rule__Model__Group__2__Impl rule__Model__Group__3 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:901:2: rule__Model__Group__2__Impl rule__Model__Group__3
             {
-            pushFollow(FOLLOW_rule__Model__Group__2__Impl_in_rule__Model__Group__21871);
+            pushFollow(FOLLOW_rule__Model__Group__2__Impl_in_rule__Model__Group__21931);
             rule__Model__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Model__Group__3_in_rule__Model__Group__21874);
+            pushFollow(FOLLOW_rule__Model__Group__3_in_rule__Model__Group__21934);
             rule__Model__Group__3();
 
             state._fsp--;
@@ -2597,23 +2674,23 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Model__Group__2__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:880:1: rule__Model__Group__2__Impl : ( ( rule__Model__BrowserAssignment_2 ) ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:908:1: rule__Model__Group__2__Impl : ( ( rule__Model__BrowserAssignment_2 ) ) ;
     public final void rule__Model__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:884:1: ( ( ( rule__Model__BrowserAssignment_2 ) ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:885:1: ( ( rule__Model__BrowserAssignment_2 ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:912:1: ( ( ( rule__Model__BrowserAssignment_2 ) ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:913:1: ( ( rule__Model__BrowserAssignment_2 ) )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:885:1: ( ( rule__Model__BrowserAssignment_2 ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:886:1: ( rule__Model__BrowserAssignment_2 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:913:1: ( ( rule__Model__BrowserAssignment_2 ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:914:1: ( rule__Model__BrowserAssignment_2 )
             {
              before(grammarAccess.getModelAccess().getBrowserAssignment_2()); 
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:887:1: ( rule__Model__BrowserAssignment_2 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:887:2: rule__Model__BrowserAssignment_2
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:915:1: ( rule__Model__BrowserAssignment_2 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:915:2: rule__Model__BrowserAssignment_2
             {
-            pushFollow(FOLLOW_rule__Model__BrowserAssignment_2_in_rule__Model__Group__2__Impl1901);
+            pushFollow(FOLLOW_rule__Model__BrowserAssignment_2_in_rule__Model__Group__2__Impl1961);
             rule__Model__BrowserAssignment_2();
 
             state._fsp--;
@@ -2644,21 +2721,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Model__Group__3"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:897:1: rule__Model__Group__3 : rule__Model__Group__3__Impl rule__Model__Group__4 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:925:1: rule__Model__Group__3 : rule__Model__Group__3__Impl rule__Model__Group__4 ;
     public final void rule__Model__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:901:1: ( rule__Model__Group__3__Impl rule__Model__Group__4 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:902:2: rule__Model__Group__3__Impl rule__Model__Group__4
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:929:1: ( rule__Model__Group__3__Impl rule__Model__Group__4 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:930:2: rule__Model__Group__3__Impl rule__Model__Group__4
             {
-            pushFollow(FOLLOW_rule__Model__Group__3__Impl_in_rule__Model__Group__31931);
+            pushFollow(FOLLOW_rule__Model__Group__3__Impl_in_rule__Model__Group__31991);
             rule__Model__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Model__Group__4_in_rule__Model__Group__31934);
+            pushFollow(FOLLOW_rule__Model__Group__4_in_rule__Model__Group__31994);
             rule__Model__Group__4();
 
             state._fsp--;
@@ -2682,20 +2759,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Model__Group__3__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:909:1: rule__Model__Group__3__Impl : ( ';' ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:937:1: rule__Model__Group__3__Impl : ( ';' ) ;
     public final void rule__Model__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:913:1: ( ( ';' ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:914:1: ( ';' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:941:1: ( ( ';' ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:942:1: ( ';' )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:914:1: ( ';' )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:915:1: ';'
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:942:1: ( ';' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:943:1: ';'
             {
              before(grammarAccess.getModelAccess().getSemicolonKeyword_3()); 
-            match(input,22,FOLLOW_22_in_rule__Model__Group__3__Impl1962); 
+            match(input,22,FOLLOW_22_in_rule__Model__Group__3__Impl2022); 
              after(grammarAccess.getModelAccess().getSemicolonKeyword_3()); 
 
             }
@@ -2719,21 +2796,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Model__Group__4"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:928:1: rule__Model__Group__4 : rule__Model__Group__4__Impl rule__Model__Group__5 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:956:1: rule__Model__Group__4 : rule__Model__Group__4__Impl rule__Model__Group__5 ;
     public final void rule__Model__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:932:1: ( rule__Model__Group__4__Impl rule__Model__Group__5 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:933:2: rule__Model__Group__4__Impl rule__Model__Group__5
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:960:1: ( rule__Model__Group__4__Impl rule__Model__Group__5 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:961:2: rule__Model__Group__4__Impl rule__Model__Group__5
             {
-            pushFollow(FOLLOW_rule__Model__Group__4__Impl_in_rule__Model__Group__41993);
+            pushFollow(FOLLOW_rule__Model__Group__4__Impl_in_rule__Model__Group__42053);
             rule__Model__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Model__Group__5_in_rule__Model__Group__41996);
+            pushFollow(FOLLOW_rule__Model__Group__5_in_rule__Model__Group__42056);
             rule__Model__Group__5();
 
             state._fsp--;
@@ -2757,23 +2834,23 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Model__Group__4__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:940:1: rule__Model__Group__4__Impl : ( ( rule__Model__FirstGoToAssignment_4 ) ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:968:1: rule__Model__Group__4__Impl : ( ( rule__Model__FirstGoToAssignment_4 ) ) ;
     public final void rule__Model__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:944:1: ( ( ( rule__Model__FirstGoToAssignment_4 ) ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:945:1: ( ( rule__Model__FirstGoToAssignment_4 ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:972:1: ( ( ( rule__Model__FirstGoToAssignment_4 ) ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:973:1: ( ( rule__Model__FirstGoToAssignment_4 ) )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:945:1: ( ( rule__Model__FirstGoToAssignment_4 ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:946:1: ( rule__Model__FirstGoToAssignment_4 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:973:1: ( ( rule__Model__FirstGoToAssignment_4 ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:974:1: ( rule__Model__FirstGoToAssignment_4 )
             {
              before(grammarAccess.getModelAccess().getFirstGoToAssignment_4()); 
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:947:1: ( rule__Model__FirstGoToAssignment_4 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:947:2: rule__Model__FirstGoToAssignment_4
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:975:1: ( rule__Model__FirstGoToAssignment_4 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:975:2: rule__Model__FirstGoToAssignment_4
             {
-            pushFollow(FOLLOW_rule__Model__FirstGoToAssignment_4_in_rule__Model__Group__4__Impl2023);
+            pushFollow(FOLLOW_rule__Model__FirstGoToAssignment_4_in_rule__Model__Group__4__Impl2083);
             rule__Model__FirstGoToAssignment_4();
 
             state._fsp--;
@@ -2804,16 +2881,16 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Model__Group__5"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:957:1: rule__Model__Group__5 : rule__Model__Group__5__Impl ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:985:1: rule__Model__Group__5 : rule__Model__Group__5__Impl ;
     public final void rule__Model__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:961:1: ( rule__Model__Group__5__Impl )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:962:2: rule__Model__Group__5__Impl
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:989:1: ( rule__Model__Group__5__Impl )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:990:2: rule__Model__Group__5__Impl
             {
-            pushFollow(FOLLOW_rule__Model__Group__5__Impl_in_rule__Model__Group__52053);
+            pushFollow(FOLLOW_rule__Model__Group__5__Impl_in_rule__Model__Group__52113);
             rule__Model__Group__5__Impl();
 
             state._fsp--;
@@ -2837,20 +2914,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Model__Group__5__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:968:1: rule__Model__Group__5__Impl : ( ( rule__Model__ActionsAssignment_5 )* ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:996:1: rule__Model__Group__5__Impl : ( ( rule__Model__ActionsAssignment_5 )* ) ;
     public final void rule__Model__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:972:1: ( ( ( rule__Model__ActionsAssignment_5 )* ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:973:1: ( ( rule__Model__ActionsAssignment_5 )* )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1000:1: ( ( ( rule__Model__ActionsAssignment_5 )* ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1001:1: ( ( rule__Model__ActionsAssignment_5 )* )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:973:1: ( ( rule__Model__ActionsAssignment_5 )* )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:974:1: ( rule__Model__ActionsAssignment_5 )*
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1001:1: ( ( rule__Model__ActionsAssignment_5 )* )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1002:1: ( rule__Model__ActionsAssignment_5 )*
             {
              before(grammarAccess.getModelAccess().getActionsAssignment_5()); 
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:975:1: ( rule__Model__ActionsAssignment_5 )*
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1003:1: ( rule__Model__ActionsAssignment_5 )*
             loop7:
             do {
                 int alt7=2;
@@ -2863,9 +2940,9 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
                 switch (alt7) {
             	case 1 :
-            	    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:975:2: rule__Model__ActionsAssignment_5
+            	    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1003:2: rule__Model__ActionsAssignment_5
             	    {
-            	    pushFollow(FOLLOW_rule__Model__ActionsAssignment_5_in_rule__Model__Group__5__Impl2080);
+            	    pushFollow(FOLLOW_rule__Model__ActionsAssignment_5_in_rule__Model__Group__5__Impl2140);
             	    rule__Model__ActionsAssignment_5();
 
             	    state._fsp--;
@@ -2902,21 +2979,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Goto__Group__0"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:997:1: rule__Goto__Group__0 : rule__Goto__Group__0__Impl rule__Goto__Group__1 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1025:1: rule__Goto__Group__0 : rule__Goto__Group__0__Impl rule__Goto__Group__1 ;
     public final void rule__Goto__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1001:1: ( rule__Goto__Group__0__Impl rule__Goto__Group__1 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1002:2: rule__Goto__Group__0__Impl rule__Goto__Group__1
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1029:1: ( rule__Goto__Group__0__Impl rule__Goto__Group__1 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1030:2: rule__Goto__Group__0__Impl rule__Goto__Group__1
             {
-            pushFollow(FOLLOW_rule__Goto__Group__0__Impl_in_rule__Goto__Group__02123);
+            pushFollow(FOLLOW_rule__Goto__Group__0__Impl_in_rule__Goto__Group__02183);
             rule__Goto__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Goto__Group__1_in_rule__Goto__Group__02126);
+            pushFollow(FOLLOW_rule__Goto__Group__1_in_rule__Goto__Group__02186);
             rule__Goto__Group__1();
 
             state._fsp--;
@@ -2940,20 +3017,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Goto__Group__0__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1009:1: rule__Goto__Group__0__Impl : ( 'GoTo' ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1037:1: rule__Goto__Group__0__Impl : ( 'GoTo' ) ;
     public final void rule__Goto__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1013:1: ( ( 'GoTo' ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1014:1: ( 'GoTo' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1041:1: ( ( 'GoTo' ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1042:1: ( 'GoTo' )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1014:1: ( 'GoTo' )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1015:1: 'GoTo'
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1042:1: ( 'GoTo' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1043:1: 'GoTo'
             {
              before(grammarAccess.getGotoAccess().getGoToKeyword_0()); 
-            match(input,23,FOLLOW_23_in_rule__Goto__Group__0__Impl2154); 
+            match(input,23,FOLLOW_23_in_rule__Goto__Group__0__Impl2214); 
              after(grammarAccess.getGotoAccess().getGoToKeyword_0()); 
 
             }
@@ -2977,21 +3054,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Goto__Group__1"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1028:1: rule__Goto__Group__1 : rule__Goto__Group__1__Impl rule__Goto__Group__2 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1056:1: rule__Goto__Group__1 : rule__Goto__Group__1__Impl rule__Goto__Group__2 ;
     public final void rule__Goto__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1032:1: ( rule__Goto__Group__1__Impl rule__Goto__Group__2 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1033:2: rule__Goto__Group__1__Impl rule__Goto__Group__2
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1060:1: ( rule__Goto__Group__1__Impl rule__Goto__Group__2 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1061:2: rule__Goto__Group__1__Impl rule__Goto__Group__2
             {
-            pushFollow(FOLLOW_rule__Goto__Group__1__Impl_in_rule__Goto__Group__12185);
+            pushFollow(FOLLOW_rule__Goto__Group__1__Impl_in_rule__Goto__Group__12245);
             rule__Goto__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Goto__Group__2_in_rule__Goto__Group__12188);
+            pushFollow(FOLLOW_rule__Goto__Group__2_in_rule__Goto__Group__12248);
             rule__Goto__Group__2();
 
             state._fsp--;
@@ -3015,23 +3092,23 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Goto__Group__1__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1040:1: rule__Goto__Group__1__Impl : ( ( rule__Goto__UrlAssignment_1 ) ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1068:1: rule__Goto__Group__1__Impl : ( ( rule__Goto__UrlAssignment_1 ) ) ;
     public final void rule__Goto__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1044:1: ( ( ( rule__Goto__UrlAssignment_1 ) ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1045:1: ( ( rule__Goto__UrlAssignment_1 ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1072:1: ( ( ( rule__Goto__UrlAssignment_1 ) ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1073:1: ( ( rule__Goto__UrlAssignment_1 ) )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1045:1: ( ( rule__Goto__UrlAssignment_1 ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1046:1: ( rule__Goto__UrlAssignment_1 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1073:1: ( ( rule__Goto__UrlAssignment_1 ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1074:1: ( rule__Goto__UrlAssignment_1 )
             {
              before(grammarAccess.getGotoAccess().getUrlAssignment_1()); 
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1047:1: ( rule__Goto__UrlAssignment_1 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1047:2: rule__Goto__UrlAssignment_1
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1075:1: ( rule__Goto__UrlAssignment_1 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1075:2: rule__Goto__UrlAssignment_1
             {
-            pushFollow(FOLLOW_rule__Goto__UrlAssignment_1_in_rule__Goto__Group__1__Impl2215);
+            pushFollow(FOLLOW_rule__Goto__UrlAssignment_1_in_rule__Goto__Group__1__Impl2275);
             rule__Goto__UrlAssignment_1();
 
             state._fsp--;
@@ -3062,16 +3139,16 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Goto__Group__2"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1057:1: rule__Goto__Group__2 : rule__Goto__Group__2__Impl ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1085:1: rule__Goto__Group__2 : rule__Goto__Group__2__Impl ;
     public final void rule__Goto__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1061:1: ( rule__Goto__Group__2__Impl )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1062:2: rule__Goto__Group__2__Impl
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1089:1: ( rule__Goto__Group__2__Impl )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1090:2: rule__Goto__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Goto__Group__2__Impl_in_rule__Goto__Group__22245);
+            pushFollow(FOLLOW_rule__Goto__Group__2__Impl_in_rule__Goto__Group__22305);
             rule__Goto__Group__2__Impl();
 
             state._fsp--;
@@ -3095,20 +3172,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Goto__Group__2__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1068:1: rule__Goto__Group__2__Impl : ( ';' ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1096:1: rule__Goto__Group__2__Impl : ( ';' ) ;
     public final void rule__Goto__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1072:1: ( ( ';' ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1073:1: ( ';' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1100:1: ( ( ';' ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1101:1: ( ';' )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1073:1: ( ';' )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1074:1: ';'
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1101:1: ( ';' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1102:1: ';'
             {
              before(grammarAccess.getGotoAccess().getSemicolonKeyword_2()); 
-            match(input,22,FOLLOW_22_in_rule__Goto__Group__2__Impl2273); 
+            match(input,22,FOLLOW_22_in_rule__Goto__Group__2__Impl2333); 
              after(grammarAccess.getGotoAccess().getSemicolonKeyword_2()); 
 
             }
@@ -3132,21 +3209,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__ClickOn__Group__0"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1093:1: rule__ClickOn__Group__0 : rule__ClickOn__Group__0__Impl rule__ClickOn__Group__1 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1121:1: rule__ClickOn__Group__0 : rule__ClickOn__Group__0__Impl rule__ClickOn__Group__1 ;
     public final void rule__ClickOn__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1097:1: ( rule__ClickOn__Group__0__Impl rule__ClickOn__Group__1 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1098:2: rule__ClickOn__Group__0__Impl rule__ClickOn__Group__1
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1125:1: ( rule__ClickOn__Group__0__Impl rule__ClickOn__Group__1 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1126:2: rule__ClickOn__Group__0__Impl rule__ClickOn__Group__1
             {
-            pushFollow(FOLLOW_rule__ClickOn__Group__0__Impl_in_rule__ClickOn__Group__02310);
+            pushFollow(FOLLOW_rule__ClickOn__Group__0__Impl_in_rule__ClickOn__Group__02370);
             rule__ClickOn__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ClickOn__Group__1_in_rule__ClickOn__Group__02313);
+            pushFollow(FOLLOW_rule__ClickOn__Group__1_in_rule__ClickOn__Group__02373);
             rule__ClickOn__Group__1();
 
             state._fsp--;
@@ -3170,20 +3247,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__ClickOn__Group__0__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1105:1: rule__ClickOn__Group__0__Impl : ( 'Click' ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1133:1: rule__ClickOn__Group__0__Impl : ( 'Click' ) ;
     public final void rule__ClickOn__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1109:1: ( ( 'Click' ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1110:1: ( 'Click' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1137:1: ( ( 'Click' ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1138:1: ( 'Click' )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1110:1: ( 'Click' )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1111:1: 'Click'
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1138:1: ( 'Click' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1139:1: 'Click'
             {
              before(grammarAccess.getClickOnAccess().getClickKeyword_0()); 
-            match(input,24,FOLLOW_24_in_rule__ClickOn__Group__0__Impl2341); 
+            match(input,24,FOLLOW_24_in_rule__ClickOn__Group__0__Impl2401); 
              after(grammarAccess.getClickOnAccess().getClickKeyword_0()); 
 
             }
@@ -3207,21 +3284,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__ClickOn__Group__1"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1124:1: rule__ClickOn__Group__1 : rule__ClickOn__Group__1__Impl rule__ClickOn__Group__2 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1152:1: rule__ClickOn__Group__1 : rule__ClickOn__Group__1__Impl rule__ClickOn__Group__2 ;
     public final void rule__ClickOn__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1128:1: ( rule__ClickOn__Group__1__Impl rule__ClickOn__Group__2 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1129:2: rule__ClickOn__Group__1__Impl rule__ClickOn__Group__2
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1156:1: ( rule__ClickOn__Group__1__Impl rule__ClickOn__Group__2 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1157:2: rule__ClickOn__Group__1__Impl rule__ClickOn__Group__2
             {
-            pushFollow(FOLLOW_rule__ClickOn__Group__1__Impl_in_rule__ClickOn__Group__12372);
+            pushFollow(FOLLOW_rule__ClickOn__Group__1__Impl_in_rule__ClickOn__Group__12432);
             rule__ClickOn__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ClickOn__Group__2_in_rule__ClickOn__Group__12375);
+            pushFollow(FOLLOW_rule__ClickOn__Group__2_in_rule__ClickOn__Group__12435);
             rule__ClickOn__Group__2();
 
             state._fsp--;
@@ -3245,23 +3322,23 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__ClickOn__Group__1__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1136:1: rule__ClickOn__Group__1__Impl : ( ( rule__ClickOn__SelectorAssignment_1 ) ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1164:1: rule__ClickOn__Group__1__Impl : ( ( rule__ClickOn__SelectorAssignment_1 ) ) ;
     public final void rule__ClickOn__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1140:1: ( ( ( rule__ClickOn__SelectorAssignment_1 ) ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1141:1: ( ( rule__ClickOn__SelectorAssignment_1 ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1168:1: ( ( ( rule__ClickOn__SelectorAssignment_1 ) ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1169:1: ( ( rule__ClickOn__SelectorAssignment_1 ) )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1141:1: ( ( rule__ClickOn__SelectorAssignment_1 ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1142:1: ( rule__ClickOn__SelectorAssignment_1 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1169:1: ( ( rule__ClickOn__SelectorAssignment_1 ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1170:1: ( rule__ClickOn__SelectorAssignment_1 )
             {
              before(grammarAccess.getClickOnAccess().getSelectorAssignment_1()); 
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1143:1: ( rule__ClickOn__SelectorAssignment_1 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1143:2: rule__ClickOn__SelectorAssignment_1
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1171:1: ( rule__ClickOn__SelectorAssignment_1 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1171:2: rule__ClickOn__SelectorAssignment_1
             {
-            pushFollow(FOLLOW_rule__ClickOn__SelectorAssignment_1_in_rule__ClickOn__Group__1__Impl2402);
+            pushFollow(FOLLOW_rule__ClickOn__SelectorAssignment_1_in_rule__ClickOn__Group__1__Impl2462);
             rule__ClickOn__SelectorAssignment_1();
 
             state._fsp--;
@@ -3292,16 +3369,16 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__ClickOn__Group__2"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1153:1: rule__ClickOn__Group__2 : rule__ClickOn__Group__2__Impl ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1181:1: rule__ClickOn__Group__2 : rule__ClickOn__Group__2__Impl ;
     public final void rule__ClickOn__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1157:1: ( rule__ClickOn__Group__2__Impl )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1158:2: rule__ClickOn__Group__2__Impl
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1185:1: ( rule__ClickOn__Group__2__Impl )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1186:2: rule__ClickOn__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__ClickOn__Group__2__Impl_in_rule__ClickOn__Group__22432);
+            pushFollow(FOLLOW_rule__ClickOn__Group__2__Impl_in_rule__ClickOn__Group__22492);
             rule__ClickOn__Group__2__Impl();
 
             state._fsp--;
@@ -3325,20 +3402,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__ClickOn__Group__2__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1164:1: rule__ClickOn__Group__2__Impl : ( ';' ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1192:1: rule__ClickOn__Group__2__Impl : ( ';' ) ;
     public final void rule__ClickOn__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1168:1: ( ( ';' ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1169:1: ( ';' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1196:1: ( ( ';' ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1197:1: ( ';' )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1169:1: ( ';' )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1170:1: ';'
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1197:1: ( ';' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1198:1: ';'
             {
              before(grammarAccess.getClickOnAccess().getSemicolonKeyword_2()); 
-            match(input,22,FOLLOW_22_in_rule__ClickOn__Group__2__Impl2460); 
+            match(input,22,FOLLOW_22_in_rule__ClickOn__Group__2__Impl2520); 
              after(grammarAccess.getClickOnAccess().getSemicolonKeyword_2()); 
 
             }
@@ -3362,21 +3439,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Selector__Group__0"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1189:1: rule__Selector__Group__0 : rule__Selector__Group__0__Impl rule__Selector__Group__1 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1217:1: rule__Selector__Group__0 : rule__Selector__Group__0__Impl rule__Selector__Group__1 ;
     public final void rule__Selector__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1193:1: ( rule__Selector__Group__0__Impl rule__Selector__Group__1 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1194:2: rule__Selector__Group__0__Impl rule__Selector__Group__1
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1221:1: ( rule__Selector__Group__0__Impl rule__Selector__Group__1 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1222:2: rule__Selector__Group__0__Impl rule__Selector__Group__1
             {
-            pushFollow(FOLLOW_rule__Selector__Group__0__Impl_in_rule__Selector__Group__02497);
+            pushFollow(FOLLOW_rule__Selector__Group__0__Impl_in_rule__Selector__Group__02557);
             rule__Selector__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Selector__Group__1_in_rule__Selector__Group__02500);
+            pushFollow(FOLLOW_rule__Selector__Group__1_in_rule__Selector__Group__02560);
             rule__Selector__Group__1();
 
             state._fsp--;
@@ -3400,20 +3477,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Selector__Group__0__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1201:1: rule__Selector__Group__0__Impl : ( 'select(' ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1229:1: rule__Selector__Group__0__Impl : ( 'select(' ) ;
     public final void rule__Selector__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1205:1: ( ( 'select(' ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1206:1: ( 'select(' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1233:1: ( ( 'select(' ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1234:1: ( 'select(' )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1206:1: ( 'select(' )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1207:1: 'select('
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1234:1: ( 'select(' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1235:1: 'select('
             {
              before(grammarAccess.getSelectorAccess().getSelectKeyword_0()); 
-            match(input,25,FOLLOW_25_in_rule__Selector__Group__0__Impl2528); 
+            match(input,25,FOLLOW_25_in_rule__Selector__Group__0__Impl2588); 
              after(grammarAccess.getSelectorAccess().getSelectKeyword_0()); 
 
             }
@@ -3437,21 +3514,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Selector__Group__1"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1220:1: rule__Selector__Group__1 : rule__Selector__Group__1__Impl rule__Selector__Group__2 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1248:1: rule__Selector__Group__1 : rule__Selector__Group__1__Impl rule__Selector__Group__2 ;
     public final void rule__Selector__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1224:1: ( rule__Selector__Group__1__Impl rule__Selector__Group__2 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1225:2: rule__Selector__Group__1__Impl rule__Selector__Group__2
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1252:1: ( rule__Selector__Group__1__Impl rule__Selector__Group__2 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1253:2: rule__Selector__Group__1__Impl rule__Selector__Group__2
             {
-            pushFollow(FOLLOW_rule__Selector__Group__1__Impl_in_rule__Selector__Group__12559);
+            pushFollow(FOLLOW_rule__Selector__Group__1__Impl_in_rule__Selector__Group__12619);
             rule__Selector__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Selector__Group__2_in_rule__Selector__Group__12562);
+            pushFollow(FOLLOW_rule__Selector__Group__2_in_rule__Selector__Group__12622);
             rule__Selector__Group__2();
 
             state._fsp--;
@@ -3475,23 +3552,23 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Selector__Group__1__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1232:1: rule__Selector__Group__1__Impl : ( ( rule__Selector__SelAssignment_1 ) ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1260:1: rule__Selector__Group__1__Impl : ( ( rule__Selector__SelAssignment_1 ) ) ;
     public final void rule__Selector__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1236:1: ( ( ( rule__Selector__SelAssignment_1 ) ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1237:1: ( ( rule__Selector__SelAssignment_1 ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1264:1: ( ( ( rule__Selector__SelAssignment_1 ) ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1265:1: ( ( rule__Selector__SelAssignment_1 ) )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1237:1: ( ( rule__Selector__SelAssignment_1 ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1238:1: ( rule__Selector__SelAssignment_1 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1265:1: ( ( rule__Selector__SelAssignment_1 ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1266:1: ( rule__Selector__SelAssignment_1 )
             {
              before(grammarAccess.getSelectorAccess().getSelAssignment_1()); 
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1239:1: ( rule__Selector__SelAssignment_1 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1239:2: rule__Selector__SelAssignment_1
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1267:1: ( rule__Selector__SelAssignment_1 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1267:2: rule__Selector__SelAssignment_1
             {
-            pushFollow(FOLLOW_rule__Selector__SelAssignment_1_in_rule__Selector__Group__1__Impl2589);
+            pushFollow(FOLLOW_rule__Selector__SelAssignment_1_in_rule__Selector__Group__1__Impl2649);
             rule__Selector__SelAssignment_1();
 
             state._fsp--;
@@ -3522,16 +3599,16 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Selector__Group__2"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1249:1: rule__Selector__Group__2 : rule__Selector__Group__2__Impl ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1277:1: rule__Selector__Group__2 : rule__Selector__Group__2__Impl ;
     public final void rule__Selector__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1253:1: ( rule__Selector__Group__2__Impl )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1254:2: rule__Selector__Group__2__Impl
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1281:1: ( rule__Selector__Group__2__Impl )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1282:2: rule__Selector__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Selector__Group__2__Impl_in_rule__Selector__Group__22619);
+            pushFollow(FOLLOW_rule__Selector__Group__2__Impl_in_rule__Selector__Group__22679);
             rule__Selector__Group__2__Impl();
 
             state._fsp--;
@@ -3555,20 +3632,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Selector__Group__2__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1260:1: rule__Selector__Group__2__Impl : ( ')' ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1288:1: rule__Selector__Group__2__Impl : ( ')' ) ;
     public final void rule__Selector__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1264:1: ( ( ')' ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1265:1: ( ')' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1292:1: ( ( ')' ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1293:1: ( ')' )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1265:1: ( ')' )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1266:1: ')'
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1293:1: ( ')' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1294:1: ')'
             {
              before(grammarAccess.getSelectorAccess().getRightParenthesisKeyword_2()); 
-            match(input,26,FOLLOW_26_in_rule__Selector__Group__2__Impl2647); 
+            match(input,26,FOLLOW_26_in_rule__Selector__Group__2__Impl2707); 
              after(grammarAccess.getSelectorAccess().getRightParenthesisKeyword_2()); 
 
             }
@@ -3592,21 +3669,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__DomID__Group__0"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1285:1: rule__DomID__Group__0 : rule__DomID__Group__0__Impl rule__DomID__Group__1 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1313:1: rule__DomID__Group__0 : rule__DomID__Group__0__Impl rule__DomID__Group__1 ;
     public final void rule__DomID__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1289:1: ( rule__DomID__Group__0__Impl rule__DomID__Group__1 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1290:2: rule__DomID__Group__0__Impl rule__DomID__Group__1
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1317:1: ( rule__DomID__Group__0__Impl rule__DomID__Group__1 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1318:2: rule__DomID__Group__0__Impl rule__DomID__Group__1
             {
-            pushFollow(FOLLOW_rule__DomID__Group__0__Impl_in_rule__DomID__Group__02684);
+            pushFollow(FOLLOW_rule__DomID__Group__0__Impl_in_rule__DomID__Group__02744);
             rule__DomID__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__DomID__Group__1_in_rule__DomID__Group__02687);
+            pushFollow(FOLLOW_rule__DomID__Group__1_in_rule__DomID__Group__02747);
             rule__DomID__Group__1();
 
             state._fsp--;
@@ -3630,23 +3707,23 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__DomID__Group__0__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1297:1: rule__DomID__Group__0__Impl : ( ( rule__DomID__NameAssignment_0 ) ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1325:1: rule__DomID__Group__0__Impl : ( ( rule__DomID__NameAssignment_0 ) ) ;
     public final void rule__DomID__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1301:1: ( ( ( rule__DomID__NameAssignment_0 ) ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1302:1: ( ( rule__DomID__NameAssignment_0 ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1329:1: ( ( ( rule__DomID__NameAssignment_0 ) ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1330:1: ( ( rule__DomID__NameAssignment_0 ) )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1302:1: ( ( rule__DomID__NameAssignment_0 ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1303:1: ( rule__DomID__NameAssignment_0 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1330:1: ( ( rule__DomID__NameAssignment_0 ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1331:1: ( rule__DomID__NameAssignment_0 )
             {
              before(grammarAccess.getDomIDAccess().getNameAssignment_0()); 
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1304:1: ( rule__DomID__NameAssignment_0 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1304:2: rule__DomID__NameAssignment_0
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1332:1: ( rule__DomID__NameAssignment_0 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1332:2: rule__DomID__NameAssignment_0
             {
-            pushFollow(FOLLOW_rule__DomID__NameAssignment_0_in_rule__DomID__Group__0__Impl2714);
+            pushFollow(FOLLOW_rule__DomID__NameAssignment_0_in_rule__DomID__Group__0__Impl2774);
             rule__DomID__NameAssignment_0();
 
             state._fsp--;
@@ -3677,16 +3754,16 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__DomID__Group__1"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1314:1: rule__DomID__Group__1 : rule__DomID__Group__1__Impl ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1342:1: rule__DomID__Group__1 : rule__DomID__Group__1__Impl ;
     public final void rule__DomID__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1318:1: ( rule__DomID__Group__1__Impl )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1319:2: rule__DomID__Group__1__Impl
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1346:1: ( rule__DomID__Group__1__Impl )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1347:2: rule__DomID__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__DomID__Group__1__Impl_in_rule__DomID__Group__12744);
+            pushFollow(FOLLOW_rule__DomID__Group__1__Impl_in_rule__DomID__Group__12804);
             rule__DomID__Group__1__Impl();
 
             state._fsp--;
@@ -3710,20 +3787,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__DomID__Group__1__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1325:1: rule__DomID__Group__1__Impl : ( ( rule__DomID__Group_1__0 )? ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1353:1: rule__DomID__Group__1__Impl : ( ( rule__DomID__Group_1__0 )? ) ;
     public final void rule__DomID__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1329:1: ( ( ( rule__DomID__Group_1__0 )? ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1330:1: ( ( rule__DomID__Group_1__0 )? )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1357:1: ( ( ( rule__DomID__Group_1__0 )? ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1358:1: ( ( rule__DomID__Group_1__0 )? )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1330:1: ( ( rule__DomID__Group_1__0 )? )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1331:1: ( rule__DomID__Group_1__0 )?
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1358:1: ( ( rule__DomID__Group_1__0 )? )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1359:1: ( rule__DomID__Group_1__0 )?
             {
              before(grammarAccess.getDomIDAccess().getGroup_1()); 
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1332:1: ( rule__DomID__Group_1__0 )?
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1360:1: ( rule__DomID__Group_1__0 )?
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -3732,9 +3809,9 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
             }
             switch (alt8) {
                 case 1 :
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1332:2: rule__DomID__Group_1__0
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1360:2: rule__DomID__Group_1__0
                     {
-                    pushFollow(FOLLOW_rule__DomID__Group_1__0_in_rule__DomID__Group__1__Impl2771);
+                    pushFollow(FOLLOW_rule__DomID__Group_1__0_in_rule__DomID__Group__1__Impl2831);
                     rule__DomID__Group_1__0();
 
                     state._fsp--;
@@ -3768,21 +3845,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__DomID__Group_1__0"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1346:1: rule__DomID__Group_1__0 : rule__DomID__Group_1__0__Impl rule__DomID__Group_1__1 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1374:1: rule__DomID__Group_1__0 : rule__DomID__Group_1__0__Impl rule__DomID__Group_1__1 ;
     public final void rule__DomID__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1350:1: ( rule__DomID__Group_1__0__Impl rule__DomID__Group_1__1 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1351:2: rule__DomID__Group_1__0__Impl rule__DomID__Group_1__1
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1378:1: ( rule__DomID__Group_1__0__Impl rule__DomID__Group_1__1 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1379:2: rule__DomID__Group_1__0__Impl rule__DomID__Group_1__1
             {
-            pushFollow(FOLLOW_rule__DomID__Group_1__0__Impl_in_rule__DomID__Group_1__02806);
+            pushFollow(FOLLOW_rule__DomID__Group_1__0__Impl_in_rule__DomID__Group_1__02866);
             rule__DomID__Group_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__DomID__Group_1__1_in_rule__DomID__Group_1__02809);
+            pushFollow(FOLLOW_rule__DomID__Group_1__1_in_rule__DomID__Group_1__02869);
             rule__DomID__Group_1__1();
 
             state._fsp--;
@@ -3806,20 +3883,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__DomID__Group_1__0__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1358:1: rule__DomID__Group_1__0__Impl : ( ',' ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1386:1: rule__DomID__Group_1__0__Impl : ( ',' ) ;
     public final void rule__DomID__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1362:1: ( ( ',' ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1363:1: ( ',' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1390:1: ( ( ',' ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1391:1: ( ',' )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1363:1: ( ',' )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1364:1: ','
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1391:1: ( ',' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1392:1: ','
             {
              before(grammarAccess.getDomIDAccess().getCommaKeyword_1_0()); 
-            match(input,27,FOLLOW_27_in_rule__DomID__Group_1__0__Impl2837); 
+            match(input,27,FOLLOW_27_in_rule__DomID__Group_1__0__Impl2897); 
              after(grammarAccess.getDomIDAccess().getCommaKeyword_1_0()); 
 
             }
@@ -3843,16 +3920,16 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__DomID__Group_1__1"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1377:1: rule__DomID__Group_1__1 : rule__DomID__Group_1__1__Impl ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1405:1: rule__DomID__Group_1__1 : rule__DomID__Group_1__1__Impl ;
     public final void rule__DomID__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1381:1: ( rule__DomID__Group_1__1__Impl )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1382:2: rule__DomID__Group_1__1__Impl
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1409:1: ( rule__DomID__Group_1__1__Impl )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1410:2: rule__DomID__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__DomID__Group_1__1__Impl_in_rule__DomID__Group_1__12868);
+            pushFollow(FOLLOW_rule__DomID__Group_1__1__Impl_in_rule__DomID__Group_1__12928);
             rule__DomID__Group_1__1__Impl();
 
             state._fsp--;
@@ -3876,23 +3953,23 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__DomID__Group_1__1__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1388:1: rule__DomID__Group_1__1__Impl : ( ( rule__DomID__NextAssignment_1_1 ) ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1416:1: rule__DomID__Group_1__1__Impl : ( ( rule__DomID__NextAssignment_1_1 ) ) ;
     public final void rule__DomID__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1392:1: ( ( ( rule__DomID__NextAssignment_1_1 ) ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1393:1: ( ( rule__DomID__NextAssignment_1_1 ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1420:1: ( ( ( rule__DomID__NextAssignment_1_1 ) ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1421:1: ( ( rule__DomID__NextAssignment_1_1 ) )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1393:1: ( ( rule__DomID__NextAssignment_1_1 ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1394:1: ( rule__DomID__NextAssignment_1_1 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1421:1: ( ( rule__DomID__NextAssignment_1_1 ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1422:1: ( rule__DomID__NextAssignment_1_1 )
             {
              before(grammarAccess.getDomIDAccess().getNextAssignment_1_1()); 
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1395:1: ( rule__DomID__NextAssignment_1_1 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1395:2: rule__DomID__NextAssignment_1_1
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1423:1: ( rule__DomID__NextAssignment_1_1 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1423:2: rule__DomID__NextAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__DomID__NextAssignment_1_1_in_rule__DomID__Group_1__1__Impl2895);
+            pushFollow(FOLLOW_rule__DomID__NextAssignment_1_1_in_rule__DomID__Group_1__1__Impl2955);
             rule__DomID__NextAssignment_1_1();
 
             state._fsp--;
@@ -3923,21 +4000,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__SubroutineParam__Group__0"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1409:1: rule__SubroutineParam__Group__0 : rule__SubroutineParam__Group__0__Impl rule__SubroutineParam__Group__1 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1437:1: rule__SubroutineParam__Group__0 : rule__SubroutineParam__Group__0__Impl rule__SubroutineParam__Group__1 ;
     public final void rule__SubroutineParam__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1413:1: ( rule__SubroutineParam__Group__0__Impl rule__SubroutineParam__Group__1 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1414:2: rule__SubroutineParam__Group__0__Impl rule__SubroutineParam__Group__1
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1441:1: ( rule__SubroutineParam__Group__0__Impl rule__SubroutineParam__Group__1 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1442:2: rule__SubroutineParam__Group__0__Impl rule__SubroutineParam__Group__1
             {
-            pushFollow(FOLLOW_rule__SubroutineParam__Group__0__Impl_in_rule__SubroutineParam__Group__02929);
+            pushFollow(FOLLOW_rule__SubroutineParam__Group__0__Impl_in_rule__SubroutineParam__Group__02989);
             rule__SubroutineParam__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SubroutineParam__Group__1_in_rule__SubroutineParam__Group__02932);
+            pushFollow(FOLLOW_rule__SubroutineParam__Group__1_in_rule__SubroutineParam__Group__02992);
             rule__SubroutineParam__Group__1();
 
             state._fsp--;
@@ -3961,23 +4038,23 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__SubroutineParam__Group__0__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1421:1: rule__SubroutineParam__Group__0__Impl : ( ( rule__SubroutineParam__NameAssignment_0 ) ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1449:1: rule__SubroutineParam__Group__0__Impl : ( ( rule__SubroutineParam__NameAssignment_0 ) ) ;
     public final void rule__SubroutineParam__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1425:1: ( ( ( rule__SubroutineParam__NameAssignment_0 ) ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1426:1: ( ( rule__SubroutineParam__NameAssignment_0 ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1453:1: ( ( ( rule__SubroutineParam__NameAssignment_0 ) ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1454:1: ( ( rule__SubroutineParam__NameAssignment_0 ) )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1426:1: ( ( rule__SubroutineParam__NameAssignment_0 ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1427:1: ( rule__SubroutineParam__NameAssignment_0 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1454:1: ( ( rule__SubroutineParam__NameAssignment_0 ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1455:1: ( rule__SubroutineParam__NameAssignment_0 )
             {
              before(grammarAccess.getSubroutineParamAccess().getNameAssignment_0()); 
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1428:1: ( rule__SubroutineParam__NameAssignment_0 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1428:2: rule__SubroutineParam__NameAssignment_0
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1456:1: ( rule__SubroutineParam__NameAssignment_0 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1456:2: rule__SubroutineParam__NameAssignment_0
             {
-            pushFollow(FOLLOW_rule__SubroutineParam__NameAssignment_0_in_rule__SubroutineParam__Group__0__Impl2959);
+            pushFollow(FOLLOW_rule__SubroutineParam__NameAssignment_0_in_rule__SubroutineParam__Group__0__Impl3019);
             rule__SubroutineParam__NameAssignment_0();
 
             state._fsp--;
@@ -4008,16 +4085,16 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__SubroutineParam__Group__1"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1438:1: rule__SubroutineParam__Group__1 : rule__SubroutineParam__Group__1__Impl ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1466:1: rule__SubroutineParam__Group__1 : rule__SubroutineParam__Group__1__Impl ;
     public final void rule__SubroutineParam__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1442:1: ( rule__SubroutineParam__Group__1__Impl )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1443:2: rule__SubroutineParam__Group__1__Impl
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1470:1: ( rule__SubroutineParam__Group__1__Impl )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1471:2: rule__SubroutineParam__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__SubroutineParam__Group__1__Impl_in_rule__SubroutineParam__Group__12989);
+            pushFollow(FOLLOW_rule__SubroutineParam__Group__1__Impl_in_rule__SubroutineParam__Group__13049);
             rule__SubroutineParam__Group__1__Impl();
 
             state._fsp--;
@@ -4041,20 +4118,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__SubroutineParam__Group__1__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1449:1: rule__SubroutineParam__Group__1__Impl : ( ( rule__SubroutineParam__Group_1__0 )? ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1477:1: rule__SubroutineParam__Group__1__Impl : ( ( rule__SubroutineParam__Group_1__0 )? ) ;
     public final void rule__SubroutineParam__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1453:1: ( ( ( rule__SubroutineParam__Group_1__0 )? ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1454:1: ( ( rule__SubroutineParam__Group_1__0 )? )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1481:1: ( ( ( rule__SubroutineParam__Group_1__0 )? ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1482:1: ( ( rule__SubroutineParam__Group_1__0 )? )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1454:1: ( ( rule__SubroutineParam__Group_1__0 )? )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1455:1: ( rule__SubroutineParam__Group_1__0 )?
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1482:1: ( ( rule__SubroutineParam__Group_1__0 )? )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1483:1: ( rule__SubroutineParam__Group_1__0 )?
             {
              before(grammarAccess.getSubroutineParamAccess().getGroup_1()); 
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1456:1: ( rule__SubroutineParam__Group_1__0 )?
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1484:1: ( rule__SubroutineParam__Group_1__0 )?
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -4063,9 +4140,9 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
             }
             switch (alt9) {
                 case 1 :
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1456:2: rule__SubroutineParam__Group_1__0
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1484:2: rule__SubroutineParam__Group_1__0
                     {
-                    pushFollow(FOLLOW_rule__SubroutineParam__Group_1__0_in_rule__SubroutineParam__Group__1__Impl3016);
+                    pushFollow(FOLLOW_rule__SubroutineParam__Group_1__0_in_rule__SubroutineParam__Group__1__Impl3076);
                     rule__SubroutineParam__Group_1__0();
 
                     state._fsp--;
@@ -4099,21 +4176,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__SubroutineParam__Group_1__0"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1470:1: rule__SubroutineParam__Group_1__0 : rule__SubroutineParam__Group_1__0__Impl rule__SubroutineParam__Group_1__1 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1498:1: rule__SubroutineParam__Group_1__0 : rule__SubroutineParam__Group_1__0__Impl rule__SubroutineParam__Group_1__1 ;
     public final void rule__SubroutineParam__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1474:1: ( rule__SubroutineParam__Group_1__0__Impl rule__SubroutineParam__Group_1__1 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1475:2: rule__SubroutineParam__Group_1__0__Impl rule__SubroutineParam__Group_1__1
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1502:1: ( rule__SubroutineParam__Group_1__0__Impl rule__SubroutineParam__Group_1__1 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1503:2: rule__SubroutineParam__Group_1__0__Impl rule__SubroutineParam__Group_1__1
             {
-            pushFollow(FOLLOW_rule__SubroutineParam__Group_1__0__Impl_in_rule__SubroutineParam__Group_1__03051);
+            pushFollow(FOLLOW_rule__SubroutineParam__Group_1__0__Impl_in_rule__SubroutineParam__Group_1__03111);
             rule__SubroutineParam__Group_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SubroutineParam__Group_1__1_in_rule__SubroutineParam__Group_1__03054);
+            pushFollow(FOLLOW_rule__SubroutineParam__Group_1__1_in_rule__SubroutineParam__Group_1__03114);
             rule__SubroutineParam__Group_1__1();
 
             state._fsp--;
@@ -4137,20 +4214,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__SubroutineParam__Group_1__0__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1482:1: rule__SubroutineParam__Group_1__0__Impl : ( ',' ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1510:1: rule__SubroutineParam__Group_1__0__Impl : ( ',' ) ;
     public final void rule__SubroutineParam__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1486:1: ( ( ',' ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1487:1: ( ',' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1514:1: ( ( ',' ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1515:1: ( ',' )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1487:1: ( ',' )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1488:1: ','
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1515:1: ( ',' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1516:1: ','
             {
              before(grammarAccess.getSubroutineParamAccess().getCommaKeyword_1_0()); 
-            match(input,27,FOLLOW_27_in_rule__SubroutineParam__Group_1__0__Impl3082); 
+            match(input,27,FOLLOW_27_in_rule__SubroutineParam__Group_1__0__Impl3142); 
              after(grammarAccess.getSubroutineParamAccess().getCommaKeyword_1_0()); 
 
             }
@@ -4174,16 +4251,16 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__SubroutineParam__Group_1__1"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1501:1: rule__SubroutineParam__Group_1__1 : rule__SubroutineParam__Group_1__1__Impl ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1529:1: rule__SubroutineParam__Group_1__1 : rule__SubroutineParam__Group_1__1__Impl ;
     public final void rule__SubroutineParam__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1505:1: ( rule__SubroutineParam__Group_1__1__Impl )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1506:2: rule__SubroutineParam__Group_1__1__Impl
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1533:1: ( rule__SubroutineParam__Group_1__1__Impl )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1534:2: rule__SubroutineParam__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__SubroutineParam__Group_1__1__Impl_in_rule__SubroutineParam__Group_1__13113);
+            pushFollow(FOLLOW_rule__SubroutineParam__Group_1__1__Impl_in_rule__SubroutineParam__Group_1__13173);
             rule__SubroutineParam__Group_1__1__Impl();
 
             state._fsp--;
@@ -4207,23 +4284,23 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__SubroutineParam__Group_1__1__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1512:1: rule__SubroutineParam__Group_1__1__Impl : ( ( rule__SubroutineParam__NextAssignment_1_1 ) ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1540:1: rule__SubroutineParam__Group_1__1__Impl : ( ( rule__SubroutineParam__NextAssignment_1_1 ) ) ;
     public final void rule__SubroutineParam__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1516:1: ( ( ( rule__SubroutineParam__NextAssignment_1_1 ) ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1517:1: ( ( rule__SubroutineParam__NextAssignment_1_1 ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1544:1: ( ( ( rule__SubroutineParam__NextAssignment_1_1 ) ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1545:1: ( ( rule__SubroutineParam__NextAssignment_1_1 ) )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1517:1: ( ( rule__SubroutineParam__NextAssignment_1_1 ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1518:1: ( rule__SubroutineParam__NextAssignment_1_1 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1545:1: ( ( rule__SubroutineParam__NextAssignment_1_1 ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1546:1: ( rule__SubroutineParam__NextAssignment_1_1 )
             {
              before(grammarAccess.getSubroutineParamAccess().getNextAssignment_1_1()); 
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1519:1: ( rule__SubroutineParam__NextAssignment_1_1 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1519:2: rule__SubroutineParam__NextAssignment_1_1
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1547:1: ( rule__SubroutineParam__NextAssignment_1_1 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1547:2: rule__SubroutineParam__NextAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__SubroutineParam__NextAssignment_1_1_in_rule__SubroutineParam__Group_1__1__Impl3140);
+            pushFollow(FOLLOW_rule__SubroutineParam__NextAssignment_1_1_in_rule__SubroutineParam__Group_1__1__Impl3200);
             rule__SubroutineParam__NextAssignment_1_1();
 
             state._fsp--;
@@ -4254,21 +4331,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Fill__Group__0"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1533:1: rule__Fill__Group__0 : rule__Fill__Group__0__Impl rule__Fill__Group__1 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1561:1: rule__Fill__Group__0 : rule__Fill__Group__0__Impl rule__Fill__Group__1 ;
     public final void rule__Fill__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1537:1: ( rule__Fill__Group__0__Impl rule__Fill__Group__1 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1538:2: rule__Fill__Group__0__Impl rule__Fill__Group__1
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1565:1: ( rule__Fill__Group__0__Impl rule__Fill__Group__1 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1566:2: rule__Fill__Group__0__Impl rule__Fill__Group__1
             {
-            pushFollow(FOLLOW_rule__Fill__Group__0__Impl_in_rule__Fill__Group__03174);
+            pushFollow(FOLLOW_rule__Fill__Group__0__Impl_in_rule__Fill__Group__03234);
             rule__Fill__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Fill__Group__1_in_rule__Fill__Group__03177);
+            pushFollow(FOLLOW_rule__Fill__Group__1_in_rule__Fill__Group__03237);
             rule__Fill__Group__1();
 
             state._fsp--;
@@ -4292,20 +4369,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Fill__Group__0__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1545:1: rule__Fill__Group__0__Impl : ( 'Fill' ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1573:1: rule__Fill__Group__0__Impl : ( 'Fill' ) ;
     public final void rule__Fill__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1549:1: ( ( 'Fill' ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1550:1: ( 'Fill' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1577:1: ( ( 'Fill' ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1578:1: ( 'Fill' )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1550:1: ( 'Fill' )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1551:1: 'Fill'
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1578:1: ( 'Fill' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1579:1: 'Fill'
             {
              before(grammarAccess.getFillAccess().getFillKeyword_0()); 
-            match(input,28,FOLLOW_28_in_rule__Fill__Group__0__Impl3205); 
+            match(input,28,FOLLOW_28_in_rule__Fill__Group__0__Impl3265); 
              after(grammarAccess.getFillAccess().getFillKeyword_0()); 
 
             }
@@ -4329,21 +4406,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Fill__Group__1"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1564:1: rule__Fill__Group__1 : rule__Fill__Group__1__Impl rule__Fill__Group__2 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1592:1: rule__Fill__Group__1 : rule__Fill__Group__1__Impl rule__Fill__Group__2 ;
     public final void rule__Fill__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1568:1: ( rule__Fill__Group__1__Impl rule__Fill__Group__2 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1569:2: rule__Fill__Group__1__Impl rule__Fill__Group__2
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1596:1: ( rule__Fill__Group__1__Impl rule__Fill__Group__2 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1597:2: rule__Fill__Group__1__Impl rule__Fill__Group__2
             {
-            pushFollow(FOLLOW_rule__Fill__Group__1__Impl_in_rule__Fill__Group__13236);
+            pushFollow(FOLLOW_rule__Fill__Group__1__Impl_in_rule__Fill__Group__13296);
             rule__Fill__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Fill__Group__2_in_rule__Fill__Group__13239);
+            pushFollow(FOLLOW_rule__Fill__Group__2_in_rule__Fill__Group__13299);
             rule__Fill__Group__2();
 
             state._fsp--;
@@ -4367,23 +4444,23 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Fill__Group__1__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1576:1: rule__Fill__Group__1__Impl : ( ( rule__Fill__FieldAssignment_1 ) ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1604:1: rule__Fill__Group__1__Impl : ( ( rule__Fill__FieldAssignment_1 ) ) ;
     public final void rule__Fill__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1580:1: ( ( ( rule__Fill__FieldAssignment_1 ) ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1581:1: ( ( rule__Fill__FieldAssignment_1 ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1608:1: ( ( ( rule__Fill__FieldAssignment_1 ) ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1609:1: ( ( rule__Fill__FieldAssignment_1 ) )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1581:1: ( ( rule__Fill__FieldAssignment_1 ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1582:1: ( rule__Fill__FieldAssignment_1 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1609:1: ( ( rule__Fill__FieldAssignment_1 ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1610:1: ( rule__Fill__FieldAssignment_1 )
             {
              before(grammarAccess.getFillAccess().getFieldAssignment_1()); 
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1583:1: ( rule__Fill__FieldAssignment_1 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1583:2: rule__Fill__FieldAssignment_1
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1611:1: ( rule__Fill__FieldAssignment_1 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1611:2: rule__Fill__FieldAssignment_1
             {
-            pushFollow(FOLLOW_rule__Fill__FieldAssignment_1_in_rule__Fill__Group__1__Impl3266);
+            pushFollow(FOLLOW_rule__Fill__FieldAssignment_1_in_rule__Fill__Group__1__Impl3326);
             rule__Fill__FieldAssignment_1();
 
             state._fsp--;
@@ -4414,21 +4491,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Fill__Group__2"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1593:1: rule__Fill__Group__2 : rule__Fill__Group__2__Impl rule__Fill__Group__3 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1621:1: rule__Fill__Group__2 : rule__Fill__Group__2__Impl rule__Fill__Group__3 ;
     public final void rule__Fill__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1597:1: ( rule__Fill__Group__2__Impl rule__Fill__Group__3 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1598:2: rule__Fill__Group__2__Impl rule__Fill__Group__3
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1625:1: ( rule__Fill__Group__2__Impl rule__Fill__Group__3 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1626:2: rule__Fill__Group__2__Impl rule__Fill__Group__3
             {
-            pushFollow(FOLLOW_rule__Fill__Group__2__Impl_in_rule__Fill__Group__23296);
+            pushFollow(FOLLOW_rule__Fill__Group__2__Impl_in_rule__Fill__Group__23356);
             rule__Fill__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Fill__Group__3_in_rule__Fill__Group__23299);
+            pushFollow(FOLLOW_rule__Fill__Group__3_in_rule__Fill__Group__23359);
             rule__Fill__Group__3();
 
             state._fsp--;
@@ -4452,20 +4529,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Fill__Group__2__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1605:1: rule__Fill__Group__2__Impl : ( 'with' ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1633:1: rule__Fill__Group__2__Impl : ( 'with' ) ;
     public final void rule__Fill__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1609:1: ( ( 'with' ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1610:1: ( 'with' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1637:1: ( ( 'with' ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1638:1: ( 'with' )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1610:1: ( 'with' )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1611:1: 'with'
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1638:1: ( 'with' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1639:1: 'with'
             {
              before(grammarAccess.getFillAccess().getWithKeyword_2()); 
-            match(input,29,FOLLOW_29_in_rule__Fill__Group__2__Impl3327); 
+            match(input,29,FOLLOW_29_in_rule__Fill__Group__2__Impl3387); 
              after(grammarAccess.getFillAccess().getWithKeyword_2()); 
 
             }
@@ -4489,21 +4566,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Fill__Group__3"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1624:1: rule__Fill__Group__3 : rule__Fill__Group__3__Impl rule__Fill__Group__4 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1652:1: rule__Fill__Group__3 : rule__Fill__Group__3__Impl rule__Fill__Group__4 ;
     public final void rule__Fill__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1628:1: ( rule__Fill__Group__3__Impl rule__Fill__Group__4 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1629:2: rule__Fill__Group__3__Impl rule__Fill__Group__4
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1656:1: ( rule__Fill__Group__3__Impl rule__Fill__Group__4 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1657:2: rule__Fill__Group__3__Impl rule__Fill__Group__4
             {
-            pushFollow(FOLLOW_rule__Fill__Group__3__Impl_in_rule__Fill__Group__33358);
+            pushFollow(FOLLOW_rule__Fill__Group__3__Impl_in_rule__Fill__Group__33418);
             rule__Fill__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Fill__Group__4_in_rule__Fill__Group__33361);
+            pushFollow(FOLLOW_rule__Fill__Group__4_in_rule__Fill__Group__33421);
             rule__Fill__Group__4();
 
             state._fsp--;
@@ -4527,23 +4604,23 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Fill__Group__3__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1636:1: rule__Fill__Group__3__Impl : ( ( rule__Fill__ValueAssignment_3 ) ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1664:1: rule__Fill__Group__3__Impl : ( ( rule__Fill__ValueAssignment_3 ) ) ;
     public final void rule__Fill__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1640:1: ( ( ( rule__Fill__ValueAssignment_3 ) ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1641:1: ( ( rule__Fill__ValueAssignment_3 ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1668:1: ( ( ( rule__Fill__ValueAssignment_3 ) ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1669:1: ( ( rule__Fill__ValueAssignment_3 ) )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1641:1: ( ( rule__Fill__ValueAssignment_3 ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1642:1: ( rule__Fill__ValueAssignment_3 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1669:1: ( ( rule__Fill__ValueAssignment_3 ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1670:1: ( rule__Fill__ValueAssignment_3 )
             {
              before(grammarAccess.getFillAccess().getValueAssignment_3()); 
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1643:1: ( rule__Fill__ValueAssignment_3 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1643:2: rule__Fill__ValueAssignment_3
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1671:1: ( rule__Fill__ValueAssignment_3 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1671:2: rule__Fill__ValueAssignment_3
             {
-            pushFollow(FOLLOW_rule__Fill__ValueAssignment_3_in_rule__Fill__Group__3__Impl3388);
+            pushFollow(FOLLOW_rule__Fill__ValueAssignment_3_in_rule__Fill__Group__3__Impl3448);
             rule__Fill__ValueAssignment_3();
 
             state._fsp--;
@@ -4574,16 +4651,16 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Fill__Group__4"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1653:1: rule__Fill__Group__4 : rule__Fill__Group__4__Impl ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1681:1: rule__Fill__Group__4 : rule__Fill__Group__4__Impl ;
     public final void rule__Fill__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1657:1: ( rule__Fill__Group__4__Impl )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1658:2: rule__Fill__Group__4__Impl
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1685:1: ( rule__Fill__Group__4__Impl )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1686:2: rule__Fill__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__Fill__Group__4__Impl_in_rule__Fill__Group__43418);
+            pushFollow(FOLLOW_rule__Fill__Group__4__Impl_in_rule__Fill__Group__43478);
             rule__Fill__Group__4__Impl();
 
             state._fsp--;
@@ -4607,20 +4684,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Fill__Group__4__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1664:1: rule__Fill__Group__4__Impl : ( ';' ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1692:1: rule__Fill__Group__4__Impl : ( ';' ) ;
     public final void rule__Fill__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1668:1: ( ( ';' ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1669:1: ( ';' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1696:1: ( ( ';' ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1697:1: ( ';' )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1669:1: ( ';' )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1670:1: ';'
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1697:1: ( ';' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1698:1: ';'
             {
              before(grammarAccess.getFillAccess().getSemicolonKeyword_4()); 
-            match(input,22,FOLLOW_22_in_rule__Fill__Group__4__Impl3446); 
+            match(input,22,FOLLOW_22_in_rule__Fill__Group__4__Impl3506); 
              after(grammarAccess.getFillAccess().getSemicolonKeyword_4()); 
 
             }
@@ -4644,21 +4721,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Check__Group__0"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1693:1: rule__Check__Group__0 : rule__Check__Group__0__Impl rule__Check__Group__1 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1721:1: rule__Check__Group__0 : rule__Check__Group__0__Impl rule__Check__Group__1 ;
     public final void rule__Check__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1697:1: ( rule__Check__Group__0__Impl rule__Check__Group__1 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1698:2: rule__Check__Group__0__Impl rule__Check__Group__1
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1725:1: ( rule__Check__Group__0__Impl rule__Check__Group__1 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1726:2: rule__Check__Group__0__Impl rule__Check__Group__1
             {
-            pushFollow(FOLLOW_rule__Check__Group__0__Impl_in_rule__Check__Group__03487);
+            pushFollow(FOLLOW_rule__Check__Group__0__Impl_in_rule__Check__Group__03547);
             rule__Check__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Check__Group__1_in_rule__Check__Group__03490);
+            pushFollow(FOLLOW_rule__Check__Group__1_in_rule__Check__Group__03550);
             rule__Check__Group__1();
 
             state._fsp--;
@@ -4682,20 +4759,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Check__Group__0__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1705:1: rule__Check__Group__0__Impl : ( 'Check' ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1733:1: rule__Check__Group__0__Impl : ( 'Check' ) ;
     public final void rule__Check__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1709:1: ( ( 'Check' ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1710:1: ( 'Check' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1737:1: ( ( 'Check' ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1738:1: ( 'Check' )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1710:1: ( 'Check' )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1711:1: 'Check'
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1738:1: ( 'Check' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1739:1: 'Check'
             {
              before(grammarAccess.getCheckAccess().getCheckKeyword_0()); 
-            match(input,30,FOLLOW_30_in_rule__Check__Group__0__Impl3518); 
+            match(input,30,FOLLOW_30_in_rule__Check__Group__0__Impl3578); 
              after(grammarAccess.getCheckAccess().getCheckKeyword_0()); 
 
             }
@@ -4719,21 +4796,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Check__Group__1"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1724:1: rule__Check__Group__1 : rule__Check__Group__1__Impl rule__Check__Group__2 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1752:1: rule__Check__Group__1 : rule__Check__Group__1__Impl rule__Check__Group__2 ;
     public final void rule__Check__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1728:1: ( rule__Check__Group__1__Impl rule__Check__Group__2 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1729:2: rule__Check__Group__1__Impl rule__Check__Group__2
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1756:1: ( rule__Check__Group__1__Impl rule__Check__Group__2 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1757:2: rule__Check__Group__1__Impl rule__Check__Group__2
             {
-            pushFollow(FOLLOW_rule__Check__Group__1__Impl_in_rule__Check__Group__13549);
+            pushFollow(FOLLOW_rule__Check__Group__1__Impl_in_rule__Check__Group__13609);
             rule__Check__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Check__Group__2_in_rule__Check__Group__13552);
+            pushFollow(FOLLOW_rule__Check__Group__2_in_rule__Check__Group__13612);
             rule__Check__Group__2();
 
             state._fsp--;
@@ -4757,23 +4834,23 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Check__Group__1__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1736:1: rule__Check__Group__1__Impl : ( ( rule__Check__CheckboxAssignment_1 ) ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1764:1: rule__Check__Group__1__Impl : ( ( rule__Check__CheckboxAssignment_1 ) ) ;
     public final void rule__Check__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1740:1: ( ( ( rule__Check__CheckboxAssignment_1 ) ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1741:1: ( ( rule__Check__CheckboxAssignment_1 ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1768:1: ( ( ( rule__Check__CheckboxAssignment_1 ) ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1769:1: ( ( rule__Check__CheckboxAssignment_1 ) )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1741:1: ( ( rule__Check__CheckboxAssignment_1 ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1742:1: ( rule__Check__CheckboxAssignment_1 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1769:1: ( ( rule__Check__CheckboxAssignment_1 ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1770:1: ( rule__Check__CheckboxAssignment_1 )
             {
              before(grammarAccess.getCheckAccess().getCheckboxAssignment_1()); 
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1743:1: ( rule__Check__CheckboxAssignment_1 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1743:2: rule__Check__CheckboxAssignment_1
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1771:1: ( rule__Check__CheckboxAssignment_1 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1771:2: rule__Check__CheckboxAssignment_1
             {
-            pushFollow(FOLLOW_rule__Check__CheckboxAssignment_1_in_rule__Check__Group__1__Impl3579);
+            pushFollow(FOLLOW_rule__Check__CheckboxAssignment_1_in_rule__Check__Group__1__Impl3639);
             rule__Check__CheckboxAssignment_1();
 
             state._fsp--;
@@ -4804,16 +4881,16 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Check__Group__2"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1753:1: rule__Check__Group__2 : rule__Check__Group__2__Impl ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1781:1: rule__Check__Group__2 : rule__Check__Group__2__Impl ;
     public final void rule__Check__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1757:1: ( rule__Check__Group__2__Impl )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1758:2: rule__Check__Group__2__Impl
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1785:1: ( rule__Check__Group__2__Impl )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1786:2: rule__Check__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Check__Group__2__Impl_in_rule__Check__Group__23609);
+            pushFollow(FOLLOW_rule__Check__Group__2__Impl_in_rule__Check__Group__23669);
             rule__Check__Group__2__Impl();
 
             state._fsp--;
@@ -4837,20 +4914,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Check__Group__2__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1764:1: rule__Check__Group__2__Impl : ( ';' ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1792:1: rule__Check__Group__2__Impl : ( ';' ) ;
     public final void rule__Check__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1768:1: ( ( ';' ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1769:1: ( ';' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1796:1: ( ( ';' ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1797:1: ( ';' )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1769:1: ( ';' )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1770:1: ';'
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1797:1: ( ';' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1798:1: ';'
             {
              before(grammarAccess.getCheckAccess().getSemicolonKeyword_2()); 
-            match(input,22,FOLLOW_22_in_rule__Check__Group__2__Impl3637); 
+            match(input,22,FOLLOW_22_in_rule__Check__Group__2__Impl3697); 
              after(grammarAccess.getCheckAccess().getSemicolonKeyword_2()); 
 
             }
@@ -4874,21 +4951,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Uncheck__Group__0"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1789:1: rule__Uncheck__Group__0 : rule__Uncheck__Group__0__Impl rule__Uncheck__Group__1 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1817:1: rule__Uncheck__Group__0 : rule__Uncheck__Group__0__Impl rule__Uncheck__Group__1 ;
     public final void rule__Uncheck__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1793:1: ( rule__Uncheck__Group__0__Impl rule__Uncheck__Group__1 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1794:2: rule__Uncheck__Group__0__Impl rule__Uncheck__Group__1
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1821:1: ( rule__Uncheck__Group__0__Impl rule__Uncheck__Group__1 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1822:2: rule__Uncheck__Group__0__Impl rule__Uncheck__Group__1
             {
-            pushFollow(FOLLOW_rule__Uncheck__Group__0__Impl_in_rule__Uncheck__Group__03674);
+            pushFollow(FOLLOW_rule__Uncheck__Group__0__Impl_in_rule__Uncheck__Group__03734);
             rule__Uncheck__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Uncheck__Group__1_in_rule__Uncheck__Group__03677);
+            pushFollow(FOLLOW_rule__Uncheck__Group__1_in_rule__Uncheck__Group__03737);
             rule__Uncheck__Group__1();
 
             state._fsp--;
@@ -4912,20 +4989,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Uncheck__Group__0__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1801:1: rule__Uncheck__Group__0__Impl : ( 'Uncheck' ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1829:1: rule__Uncheck__Group__0__Impl : ( 'Uncheck' ) ;
     public final void rule__Uncheck__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1805:1: ( ( 'Uncheck' ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1806:1: ( 'Uncheck' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1833:1: ( ( 'Uncheck' ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1834:1: ( 'Uncheck' )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1806:1: ( 'Uncheck' )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1807:1: 'Uncheck'
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1834:1: ( 'Uncheck' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1835:1: 'Uncheck'
             {
              before(grammarAccess.getUncheckAccess().getUncheckKeyword_0()); 
-            match(input,31,FOLLOW_31_in_rule__Uncheck__Group__0__Impl3705); 
+            match(input,31,FOLLOW_31_in_rule__Uncheck__Group__0__Impl3765); 
              after(grammarAccess.getUncheckAccess().getUncheckKeyword_0()); 
 
             }
@@ -4949,21 +5026,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Uncheck__Group__1"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1820:1: rule__Uncheck__Group__1 : rule__Uncheck__Group__1__Impl rule__Uncheck__Group__2 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1848:1: rule__Uncheck__Group__1 : rule__Uncheck__Group__1__Impl rule__Uncheck__Group__2 ;
     public final void rule__Uncheck__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1824:1: ( rule__Uncheck__Group__1__Impl rule__Uncheck__Group__2 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1825:2: rule__Uncheck__Group__1__Impl rule__Uncheck__Group__2
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1852:1: ( rule__Uncheck__Group__1__Impl rule__Uncheck__Group__2 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1853:2: rule__Uncheck__Group__1__Impl rule__Uncheck__Group__2
             {
-            pushFollow(FOLLOW_rule__Uncheck__Group__1__Impl_in_rule__Uncheck__Group__13736);
+            pushFollow(FOLLOW_rule__Uncheck__Group__1__Impl_in_rule__Uncheck__Group__13796);
             rule__Uncheck__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Uncheck__Group__2_in_rule__Uncheck__Group__13739);
+            pushFollow(FOLLOW_rule__Uncheck__Group__2_in_rule__Uncheck__Group__13799);
             rule__Uncheck__Group__2();
 
             state._fsp--;
@@ -4987,23 +5064,23 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Uncheck__Group__1__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1832:1: rule__Uncheck__Group__1__Impl : ( ( rule__Uncheck__CheckboxAssignment_1 ) ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1860:1: rule__Uncheck__Group__1__Impl : ( ( rule__Uncheck__CheckboxAssignment_1 ) ) ;
     public final void rule__Uncheck__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1836:1: ( ( ( rule__Uncheck__CheckboxAssignment_1 ) ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1837:1: ( ( rule__Uncheck__CheckboxAssignment_1 ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1864:1: ( ( ( rule__Uncheck__CheckboxAssignment_1 ) ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1865:1: ( ( rule__Uncheck__CheckboxAssignment_1 ) )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1837:1: ( ( rule__Uncheck__CheckboxAssignment_1 ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1838:1: ( rule__Uncheck__CheckboxAssignment_1 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1865:1: ( ( rule__Uncheck__CheckboxAssignment_1 ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1866:1: ( rule__Uncheck__CheckboxAssignment_1 )
             {
              before(grammarAccess.getUncheckAccess().getCheckboxAssignment_1()); 
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1839:1: ( rule__Uncheck__CheckboxAssignment_1 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1839:2: rule__Uncheck__CheckboxAssignment_1
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1867:1: ( rule__Uncheck__CheckboxAssignment_1 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1867:2: rule__Uncheck__CheckboxAssignment_1
             {
-            pushFollow(FOLLOW_rule__Uncheck__CheckboxAssignment_1_in_rule__Uncheck__Group__1__Impl3766);
+            pushFollow(FOLLOW_rule__Uncheck__CheckboxAssignment_1_in_rule__Uncheck__Group__1__Impl3826);
             rule__Uncheck__CheckboxAssignment_1();
 
             state._fsp--;
@@ -5034,16 +5111,16 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Uncheck__Group__2"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1849:1: rule__Uncheck__Group__2 : rule__Uncheck__Group__2__Impl ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1877:1: rule__Uncheck__Group__2 : rule__Uncheck__Group__2__Impl ;
     public final void rule__Uncheck__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1853:1: ( rule__Uncheck__Group__2__Impl )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1854:2: rule__Uncheck__Group__2__Impl
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1881:1: ( rule__Uncheck__Group__2__Impl )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1882:2: rule__Uncheck__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Uncheck__Group__2__Impl_in_rule__Uncheck__Group__23796);
+            pushFollow(FOLLOW_rule__Uncheck__Group__2__Impl_in_rule__Uncheck__Group__23856);
             rule__Uncheck__Group__2__Impl();
 
             state._fsp--;
@@ -5067,20 +5144,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Uncheck__Group__2__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1860:1: rule__Uncheck__Group__2__Impl : ( ';' ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1888:1: rule__Uncheck__Group__2__Impl : ( ';' ) ;
     public final void rule__Uncheck__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1864:1: ( ( ';' ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1865:1: ( ';' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1892:1: ( ( ';' ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1893:1: ( ';' )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1865:1: ( ';' )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1866:1: ';'
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1893:1: ( ';' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1894:1: ';'
             {
              before(grammarAccess.getUncheckAccess().getSemicolonKeyword_2()); 
-            match(input,22,FOLLOW_22_in_rule__Uncheck__Group__2__Impl3824); 
+            match(input,22,FOLLOW_22_in_rule__Uncheck__Group__2__Impl3884); 
              after(grammarAccess.getUncheckAccess().getSemicolonKeyword_2()); 
 
             }
@@ -5104,21 +5181,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Let__Group__0"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1885:1: rule__Let__Group__0 : rule__Let__Group__0__Impl rule__Let__Group__1 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1913:1: rule__Let__Group__0 : rule__Let__Group__0__Impl rule__Let__Group__1 ;
     public final void rule__Let__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1889:1: ( rule__Let__Group__0__Impl rule__Let__Group__1 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1890:2: rule__Let__Group__0__Impl rule__Let__Group__1
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1917:1: ( rule__Let__Group__0__Impl rule__Let__Group__1 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1918:2: rule__Let__Group__0__Impl rule__Let__Group__1
             {
-            pushFollow(FOLLOW_rule__Let__Group__0__Impl_in_rule__Let__Group__03861);
+            pushFollow(FOLLOW_rule__Let__Group__0__Impl_in_rule__Let__Group__03921);
             rule__Let__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Let__Group__1_in_rule__Let__Group__03864);
+            pushFollow(FOLLOW_rule__Let__Group__1_in_rule__Let__Group__03924);
             rule__Let__Group__1();
 
             state._fsp--;
@@ -5142,20 +5219,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Let__Group__0__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1897:1: rule__Let__Group__0__Impl : ( 'Let' ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1925:1: rule__Let__Group__0__Impl : ( 'Let' ) ;
     public final void rule__Let__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1901:1: ( ( 'Let' ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1902:1: ( 'Let' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1929:1: ( ( 'Let' ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1930:1: ( 'Let' )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1902:1: ( 'Let' )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1903:1: 'Let'
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1930:1: ( 'Let' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1931:1: 'Let'
             {
              before(grammarAccess.getLetAccess().getLetKeyword_0()); 
-            match(input,32,FOLLOW_32_in_rule__Let__Group__0__Impl3892); 
+            match(input,32,FOLLOW_32_in_rule__Let__Group__0__Impl3952); 
              after(grammarAccess.getLetAccess().getLetKeyword_0()); 
 
             }
@@ -5179,21 +5256,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Let__Group__1"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1916:1: rule__Let__Group__1 : rule__Let__Group__1__Impl rule__Let__Group__2 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1944:1: rule__Let__Group__1 : rule__Let__Group__1__Impl rule__Let__Group__2 ;
     public final void rule__Let__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1920:1: ( rule__Let__Group__1__Impl rule__Let__Group__2 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1921:2: rule__Let__Group__1__Impl rule__Let__Group__2
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1948:1: ( rule__Let__Group__1__Impl rule__Let__Group__2 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1949:2: rule__Let__Group__1__Impl rule__Let__Group__2
             {
-            pushFollow(FOLLOW_rule__Let__Group__1__Impl_in_rule__Let__Group__13923);
+            pushFollow(FOLLOW_rule__Let__Group__1__Impl_in_rule__Let__Group__13983);
             rule__Let__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Let__Group__2_in_rule__Let__Group__13926);
+            pushFollow(FOLLOW_rule__Let__Group__2_in_rule__Let__Group__13986);
             rule__Let__Group__2();
 
             state._fsp--;
@@ -5217,23 +5294,23 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Let__Group__1__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1928:1: rule__Let__Group__1__Impl : ( ( rule__Let__NameAssignment_1 ) ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1956:1: rule__Let__Group__1__Impl : ( ( rule__Let__NameAssignment_1 ) ) ;
     public final void rule__Let__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1932:1: ( ( ( rule__Let__NameAssignment_1 ) ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1933:1: ( ( rule__Let__NameAssignment_1 ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1960:1: ( ( ( rule__Let__NameAssignment_1 ) ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1961:1: ( ( rule__Let__NameAssignment_1 ) )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1933:1: ( ( rule__Let__NameAssignment_1 ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1934:1: ( rule__Let__NameAssignment_1 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1961:1: ( ( rule__Let__NameAssignment_1 ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1962:1: ( rule__Let__NameAssignment_1 )
             {
              before(grammarAccess.getLetAccess().getNameAssignment_1()); 
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1935:1: ( rule__Let__NameAssignment_1 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1935:2: rule__Let__NameAssignment_1
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1963:1: ( rule__Let__NameAssignment_1 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1963:2: rule__Let__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__Let__NameAssignment_1_in_rule__Let__Group__1__Impl3953);
+            pushFollow(FOLLOW_rule__Let__NameAssignment_1_in_rule__Let__Group__1__Impl4013);
             rule__Let__NameAssignment_1();
 
             state._fsp--;
@@ -5264,21 +5341,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Let__Group__2"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1945:1: rule__Let__Group__2 : rule__Let__Group__2__Impl rule__Let__Group__3 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1973:1: rule__Let__Group__2 : rule__Let__Group__2__Impl rule__Let__Group__3 ;
     public final void rule__Let__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1949:1: ( rule__Let__Group__2__Impl rule__Let__Group__3 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1950:2: rule__Let__Group__2__Impl rule__Let__Group__3
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1977:1: ( rule__Let__Group__2__Impl rule__Let__Group__3 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1978:2: rule__Let__Group__2__Impl rule__Let__Group__3
             {
-            pushFollow(FOLLOW_rule__Let__Group__2__Impl_in_rule__Let__Group__23983);
+            pushFollow(FOLLOW_rule__Let__Group__2__Impl_in_rule__Let__Group__24043);
             rule__Let__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Let__Group__3_in_rule__Let__Group__23986);
+            pushFollow(FOLLOW_rule__Let__Group__3_in_rule__Let__Group__24046);
             rule__Let__Group__3();
 
             state._fsp--;
@@ -5302,20 +5379,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Let__Group__2__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1957:1: rule__Let__Group__2__Impl : ( '=' ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1985:1: rule__Let__Group__2__Impl : ( '=' ) ;
     public final void rule__Let__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1961:1: ( ( '=' ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1962:1: ( '=' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1989:1: ( ( '=' ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1990:1: ( '=' )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1962:1: ( '=' )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1963:1: '='
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1990:1: ( '=' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1991:1: '='
             {
              before(grammarAccess.getLetAccess().getEqualsSignKeyword_2()); 
-            match(input,33,FOLLOW_33_in_rule__Let__Group__2__Impl4014); 
+            match(input,33,FOLLOW_33_in_rule__Let__Group__2__Impl4074); 
              after(grammarAccess.getLetAccess().getEqualsSignKeyword_2()); 
 
             }
@@ -5339,21 +5416,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Let__Group__3"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1976:1: rule__Let__Group__3 : rule__Let__Group__3__Impl rule__Let__Group__4 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2004:1: rule__Let__Group__3 : rule__Let__Group__3__Impl rule__Let__Group__4 ;
     public final void rule__Let__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1980:1: ( rule__Let__Group__3__Impl rule__Let__Group__4 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1981:2: rule__Let__Group__3__Impl rule__Let__Group__4
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2008:1: ( rule__Let__Group__3__Impl rule__Let__Group__4 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2009:2: rule__Let__Group__3__Impl rule__Let__Group__4
             {
-            pushFollow(FOLLOW_rule__Let__Group__3__Impl_in_rule__Let__Group__34045);
+            pushFollow(FOLLOW_rule__Let__Group__3__Impl_in_rule__Let__Group__34105);
             rule__Let__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Let__Group__4_in_rule__Let__Group__34048);
+            pushFollow(FOLLOW_rule__Let__Group__4_in_rule__Let__Group__34108);
             rule__Let__Group__4();
 
             state._fsp--;
@@ -5377,23 +5454,23 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Let__Group__3__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1988:1: rule__Let__Group__3__Impl : ( ( rule__Let__ValueAssignment_3 ) ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2016:1: rule__Let__Group__3__Impl : ( ( rule__Let__ValueAssignment_3 ) ) ;
     public final void rule__Let__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1992:1: ( ( ( rule__Let__ValueAssignment_3 ) ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1993:1: ( ( rule__Let__ValueAssignment_3 ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2020:1: ( ( ( rule__Let__ValueAssignment_3 ) ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2021:1: ( ( rule__Let__ValueAssignment_3 ) )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1993:1: ( ( rule__Let__ValueAssignment_3 ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1994:1: ( rule__Let__ValueAssignment_3 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2021:1: ( ( rule__Let__ValueAssignment_3 ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2022:1: ( rule__Let__ValueAssignment_3 )
             {
              before(grammarAccess.getLetAccess().getValueAssignment_3()); 
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1995:1: ( rule__Let__ValueAssignment_3 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:1995:2: rule__Let__ValueAssignment_3
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2023:1: ( rule__Let__ValueAssignment_3 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2023:2: rule__Let__ValueAssignment_3
             {
-            pushFollow(FOLLOW_rule__Let__ValueAssignment_3_in_rule__Let__Group__3__Impl4075);
+            pushFollow(FOLLOW_rule__Let__ValueAssignment_3_in_rule__Let__Group__3__Impl4135);
             rule__Let__ValueAssignment_3();
 
             state._fsp--;
@@ -5424,16 +5501,16 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Let__Group__4"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2005:1: rule__Let__Group__4 : rule__Let__Group__4__Impl ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2033:1: rule__Let__Group__4 : rule__Let__Group__4__Impl ;
     public final void rule__Let__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2009:1: ( rule__Let__Group__4__Impl )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2010:2: rule__Let__Group__4__Impl
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2037:1: ( rule__Let__Group__4__Impl )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2038:2: rule__Let__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__Let__Group__4__Impl_in_rule__Let__Group__44105);
+            pushFollow(FOLLOW_rule__Let__Group__4__Impl_in_rule__Let__Group__44165);
             rule__Let__Group__4__Impl();
 
             state._fsp--;
@@ -5457,20 +5534,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Let__Group__4__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2016:1: rule__Let__Group__4__Impl : ( ';' ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2044:1: rule__Let__Group__4__Impl : ( ';' ) ;
     public final void rule__Let__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2020:1: ( ( ';' ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2021:1: ( ';' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2048:1: ( ( ';' ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2049:1: ( ';' )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2021:1: ( ';' )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2022:1: ';'
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2049:1: ( ';' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2050:1: ';'
             {
              before(grammarAccess.getLetAccess().getSemicolonKeyword_4()); 
-            match(input,22,FOLLOW_22_in_rule__Let__Group__4__Impl4133); 
+            match(input,22,FOLLOW_22_in_rule__Let__Group__4__Impl4193); 
              after(grammarAccess.getLetAccess().getSemicolonKeyword_4()); 
 
             }
@@ -5494,21 +5571,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__DoWhile__Group__0"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2045:1: rule__DoWhile__Group__0 : rule__DoWhile__Group__0__Impl rule__DoWhile__Group__1 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2073:1: rule__DoWhile__Group__0 : rule__DoWhile__Group__0__Impl rule__DoWhile__Group__1 ;
     public final void rule__DoWhile__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2049:1: ( rule__DoWhile__Group__0__Impl rule__DoWhile__Group__1 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2050:2: rule__DoWhile__Group__0__Impl rule__DoWhile__Group__1
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2077:1: ( rule__DoWhile__Group__0__Impl rule__DoWhile__Group__1 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2078:2: rule__DoWhile__Group__0__Impl rule__DoWhile__Group__1
             {
-            pushFollow(FOLLOW_rule__DoWhile__Group__0__Impl_in_rule__DoWhile__Group__04174);
+            pushFollow(FOLLOW_rule__DoWhile__Group__0__Impl_in_rule__DoWhile__Group__04234);
             rule__DoWhile__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__DoWhile__Group__1_in_rule__DoWhile__Group__04177);
+            pushFollow(FOLLOW_rule__DoWhile__Group__1_in_rule__DoWhile__Group__04237);
             rule__DoWhile__Group__1();
 
             state._fsp--;
@@ -5532,20 +5609,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__DoWhile__Group__0__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2057:1: rule__DoWhile__Group__0__Impl : ( 'Do' ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2085:1: rule__DoWhile__Group__0__Impl : ( 'Do' ) ;
     public final void rule__DoWhile__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2061:1: ( ( 'Do' ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2062:1: ( 'Do' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2089:1: ( ( 'Do' ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2090:1: ( 'Do' )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2062:1: ( 'Do' )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2063:1: 'Do'
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2090:1: ( 'Do' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2091:1: 'Do'
             {
              before(grammarAccess.getDoWhileAccess().getDoKeyword_0()); 
-            match(input,34,FOLLOW_34_in_rule__DoWhile__Group__0__Impl4205); 
+            match(input,34,FOLLOW_34_in_rule__DoWhile__Group__0__Impl4265); 
              after(grammarAccess.getDoWhileAccess().getDoKeyword_0()); 
 
             }
@@ -5569,21 +5646,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__DoWhile__Group__1"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2076:1: rule__DoWhile__Group__1 : rule__DoWhile__Group__1__Impl rule__DoWhile__Group__2 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2104:1: rule__DoWhile__Group__1 : rule__DoWhile__Group__1__Impl rule__DoWhile__Group__2 ;
     public final void rule__DoWhile__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2080:1: ( rule__DoWhile__Group__1__Impl rule__DoWhile__Group__2 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2081:2: rule__DoWhile__Group__1__Impl rule__DoWhile__Group__2
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2108:1: ( rule__DoWhile__Group__1__Impl rule__DoWhile__Group__2 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2109:2: rule__DoWhile__Group__1__Impl rule__DoWhile__Group__2
             {
-            pushFollow(FOLLOW_rule__DoWhile__Group__1__Impl_in_rule__DoWhile__Group__14236);
+            pushFollow(FOLLOW_rule__DoWhile__Group__1__Impl_in_rule__DoWhile__Group__14296);
             rule__DoWhile__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__DoWhile__Group__2_in_rule__DoWhile__Group__14239);
+            pushFollow(FOLLOW_rule__DoWhile__Group__2_in_rule__DoWhile__Group__14299);
             rule__DoWhile__Group__2();
 
             state._fsp--;
@@ -5607,20 +5684,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__DoWhile__Group__1__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2088:1: rule__DoWhile__Group__1__Impl : ( '{' ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2116:1: rule__DoWhile__Group__1__Impl : ( '{' ) ;
     public final void rule__DoWhile__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2092:1: ( ( '{' ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2093:1: ( '{' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2120:1: ( ( '{' ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2121:1: ( '{' )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2093:1: ( '{' )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2094:1: '{'
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2121:1: ( '{' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2122:1: '{'
             {
              before(grammarAccess.getDoWhileAccess().getLeftCurlyBracketKeyword_1()); 
-            match(input,35,FOLLOW_35_in_rule__DoWhile__Group__1__Impl4267); 
+            match(input,35,FOLLOW_35_in_rule__DoWhile__Group__1__Impl4327); 
              after(grammarAccess.getDoWhileAccess().getLeftCurlyBracketKeyword_1()); 
 
             }
@@ -5644,21 +5721,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__DoWhile__Group__2"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2107:1: rule__DoWhile__Group__2 : rule__DoWhile__Group__2__Impl rule__DoWhile__Group__3 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2135:1: rule__DoWhile__Group__2 : rule__DoWhile__Group__2__Impl rule__DoWhile__Group__3 ;
     public final void rule__DoWhile__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2111:1: ( rule__DoWhile__Group__2__Impl rule__DoWhile__Group__3 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2112:2: rule__DoWhile__Group__2__Impl rule__DoWhile__Group__3
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2139:1: ( rule__DoWhile__Group__2__Impl rule__DoWhile__Group__3 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2140:2: rule__DoWhile__Group__2__Impl rule__DoWhile__Group__3
             {
-            pushFollow(FOLLOW_rule__DoWhile__Group__2__Impl_in_rule__DoWhile__Group__24298);
+            pushFollow(FOLLOW_rule__DoWhile__Group__2__Impl_in_rule__DoWhile__Group__24358);
             rule__DoWhile__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__DoWhile__Group__3_in_rule__DoWhile__Group__24301);
+            pushFollow(FOLLOW_rule__DoWhile__Group__3_in_rule__DoWhile__Group__24361);
             rule__DoWhile__Group__3();
 
             state._fsp--;
@@ -5682,20 +5759,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__DoWhile__Group__2__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2119:1: rule__DoWhile__Group__2__Impl : ( ( rule__DoWhile__ActionsAssignment_2 )* ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2147:1: rule__DoWhile__Group__2__Impl : ( ( rule__DoWhile__ActionsAssignment_2 )* ) ;
     public final void rule__DoWhile__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2123:1: ( ( ( rule__DoWhile__ActionsAssignment_2 )* ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2124:1: ( ( rule__DoWhile__ActionsAssignment_2 )* )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2151:1: ( ( ( rule__DoWhile__ActionsAssignment_2 )* ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2152:1: ( ( rule__DoWhile__ActionsAssignment_2 )* )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2124:1: ( ( rule__DoWhile__ActionsAssignment_2 )* )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2125:1: ( rule__DoWhile__ActionsAssignment_2 )*
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2152:1: ( ( rule__DoWhile__ActionsAssignment_2 )* )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2153:1: ( rule__DoWhile__ActionsAssignment_2 )*
             {
              before(grammarAccess.getDoWhileAccess().getActionsAssignment_2()); 
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2126:1: ( rule__DoWhile__ActionsAssignment_2 )*
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2154:1: ( rule__DoWhile__ActionsAssignment_2 )*
             loop10:
             do {
                 int alt10=2;
@@ -5708,9 +5785,9 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
                 switch (alt10) {
             	case 1 :
-            	    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2126:2: rule__DoWhile__ActionsAssignment_2
+            	    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2154:2: rule__DoWhile__ActionsAssignment_2
             	    {
-            	    pushFollow(FOLLOW_rule__DoWhile__ActionsAssignment_2_in_rule__DoWhile__Group__2__Impl4328);
+            	    pushFollow(FOLLOW_rule__DoWhile__ActionsAssignment_2_in_rule__DoWhile__Group__2__Impl4388);
             	    rule__DoWhile__ActionsAssignment_2();
 
             	    state._fsp--;
@@ -5747,21 +5824,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__DoWhile__Group__3"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2136:1: rule__DoWhile__Group__3 : rule__DoWhile__Group__3__Impl rule__DoWhile__Group__4 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2164:1: rule__DoWhile__Group__3 : rule__DoWhile__Group__3__Impl rule__DoWhile__Group__4 ;
     public final void rule__DoWhile__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2140:1: ( rule__DoWhile__Group__3__Impl rule__DoWhile__Group__4 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2141:2: rule__DoWhile__Group__3__Impl rule__DoWhile__Group__4
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2168:1: ( rule__DoWhile__Group__3__Impl rule__DoWhile__Group__4 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2169:2: rule__DoWhile__Group__3__Impl rule__DoWhile__Group__4
             {
-            pushFollow(FOLLOW_rule__DoWhile__Group__3__Impl_in_rule__DoWhile__Group__34359);
+            pushFollow(FOLLOW_rule__DoWhile__Group__3__Impl_in_rule__DoWhile__Group__34419);
             rule__DoWhile__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__DoWhile__Group__4_in_rule__DoWhile__Group__34362);
+            pushFollow(FOLLOW_rule__DoWhile__Group__4_in_rule__DoWhile__Group__34422);
             rule__DoWhile__Group__4();
 
             state._fsp--;
@@ -5785,20 +5862,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__DoWhile__Group__3__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2148:1: rule__DoWhile__Group__3__Impl : ( '}' ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2176:1: rule__DoWhile__Group__3__Impl : ( '}' ) ;
     public final void rule__DoWhile__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2152:1: ( ( '}' ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2153:1: ( '}' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2180:1: ( ( '}' ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2181:1: ( '}' )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2153:1: ( '}' )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2154:1: '}'
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2181:1: ( '}' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2182:1: '}'
             {
              before(grammarAccess.getDoWhileAccess().getRightCurlyBracketKeyword_3()); 
-            match(input,36,FOLLOW_36_in_rule__DoWhile__Group__3__Impl4390); 
+            match(input,36,FOLLOW_36_in_rule__DoWhile__Group__3__Impl4450); 
              after(grammarAccess.getDoWhileAccess().getRightCurlyBracketKeyword_3()); 
 
             }
@@ -5822,21 +5899,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__DoWhile__Group__4"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2167:1: rule__DoWhile__Group__4 : rule__DoWhile__Group__4__Impl rule__DoWhile__Group__5 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2195:1: rule__DoWhile__Group__4 : rule__DoWhile__Group__4__Impl rule__DoWhile__Group__5 ;
     public final void rule__DoWhile__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2171:1: ( rule__DoWhile__Group__4__Impl rule__DoWhile__Group__5 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2172:2: rule__DoWhile__Group__4__Impl rule__DoWhile__Group__5
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2199:1: ( rule__DoWhile__Group__4__Impl rule__DoWhile__Group__5 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2200:2: rule__DoWhile__Group__4__Impl rule__DoWhile__Group__5
             {
-            pushFollow(FOLLOW_rule__DoWhile__Group__4__Impl_in_rule__DoWhile__Group__44421);
+            pushFollow(FOLLOW_rule__DoWhile__Group__4__Impl_in_rule__DoWhile__Group__44481);
             rule__DoWhile__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__DoWhile__Group__5_in_rule__DoWhile__Group__44424);
+            pushFollow(FOLLOW_rule__DoWhile__Group__5_in_rule__DoWhile__Group__44484);
             rule__DoWhile__Group__5();
 
             state._fsp--;
@@ -5860,20 +5937,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__DoWhile__Group__4__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2179:1: rule__DoWhile__Group__4__Impl : ( 'While' ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2207:1: rule__DoWhile__Group__4__Impl : ( 'While' ) ;
     public final void rule__DoWhile__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2183:1: ( ( 'While' ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2184:1: ( 'While' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2211:1: ( ( 'While' ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2212:1: ( 'While' )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2184:1: ( 'While' )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2185:1: 'While'
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2212:1: ( 'While' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2213:1: 'While'
             {
              before(grammarAccess.getDoWhileAccess().getWhileKeyword_4()); 
-            match(input,37,FOLLOW_37_in_rule__DoWhile__Group__4__Impl4452); 
+            match(input,37,FOLLOW_37_in_rule__DoWhile__Group__4__Impl4512); 
              after(grammarAccess.getDoWhileAccess().getWhileKeyword_4()); 
 
             }
@@ -5897,21 +5974,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__DoWhile__Group__5"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2198:1: rule__DoWhile__Group__5 : rule__DoWhile__Group__5__Impl rule__DoWhile__Group__6 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2226:1: rule__DoWhile__Group__5 : rule__DoWhile__Group__5__Impl rule__DoWhile__Group__6 ;
     public final void rule__DoWhile__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2202:1: ( rule__DoWhile__Group__5__Impl rule__DoWhile__Group__6 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2203:2: rule__DoWhile__Group__5__Impl rule__DoWhile__Group__6
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2230:1: ( rule__DoWhile__Group__5__Impl rule__DoWhile__Group__6 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2231:2: rule__DoWhile__Group__5__Impl rule__DoWhile__Group__6
             {
-            pushFollow(FOLLOW_rule__DoWhile__Group__5__Impl_in_rule__DoWhile__Group__54483);
+            pushFollow(FOLLOW_rule__DoWhile__Group__5__Impl_in_rule__DoWhile__Group__54543);
             rule__DoWhile__Group__5__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__DoWhile__Group__6_in_rule__DoWhile__Group__54486);
+            pushFollow(FOLLOW_rule__DoWhile__Group__6_in_rule__DoWhile__Group__54546);
             rule__DoWhile__Group__6();
 
             state._fsp--;
@@ -5935,20 +6012,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__DoWhile__Group__5__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2210:1: rule__DoWhile__Group__5__Impl : ( '(' ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2238:1: rule__DoWhile__Group__5__Impl : ( '(' ) ;
     public final void rule__DoWhile__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2214:1: ( ( '(' ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2215:1: ( '(' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2242:1: ( ( '(' ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2243:1: ( '(' )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2215:1: ( '(' )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2216:1: '('
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2243:1: ( '(' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2244:1: '('
             {
              before(grammarAccess.getDoWhileAccess().getLeftParenthesisKeyword_5()); 
-            match(input,38,FOLLOW_38_in_rule__DoWhile__Group__5__Impl4514); 
+            match(input,38,FOLLOW_38_in_rule__DoWhile__Group__5__Impl4574); 
              after(grammarAccess.getDoWhileAccess().getLeftParenthesisKeyword_5()); 
 
             }
@@ -5972,21 +6049,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__DoWhile__Group__6"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2229:1: rule__DoWhile__Group__6 : rule__DoWhile__Group__6__Impl rule__DoWhile__Group__7 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2257:1: rule__DoWhile__Group__6 : rule__DoWhile__Group__6__Impl rule__DoWhile__Group__7 ;
     public final void rule__DoWhile__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2233:1: ( rule__DoWhile__Group__6__Impl rule__DoWhile__Group__7 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2234:2: rule__DoWhile__Group__6__Impl rule__DoWhile__Group__7
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2261:1: ( rule__DoWhile__Group__6__Impl rule__DoWhile__Group__7 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2262:2: rule__DoWhile__Group__6__Impl rule__DoWhile__Group__7
             {
-            pushFollow(FOLLOW_rule__DoWhile__Group__6__Impl_in_rule__DoWhile__Group__64545);
+            pushFollow(FOLLOW_rule__DoWhile__Group__6__Impl_in_rule__DoWhile__Group__64605);
             rule__DoWhile__Group__6__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__DoWhile__Group__7_in_rule__DoWhile__Group__64548);
+            pushFollow(FOLLOW_rule__DoWhile__Group__7_in_rule__DoWhile__Group__64608);
             rule__DoWhile__Group__7();
 
             state._fsp--;
@@ -6010,23 +6087,23 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__DoWhile__Group__6__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2241:1: rule__DoWhile__Group__6__Impl : ( ( rule__DoWhile__ConditionAssignment_6 ) ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2269:1: rule__DoWhile__Group__6__Impl : ( ( rule__DoWhile__ConditionAssignment_6 ) ) ;
     public final void rule__DoWhile__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2245:1: ( ( ( rule__DoWhile__ConditionAssignment_6 ) ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2246:1: ( ( rule__DoWhile__ConditionAssignment_6 ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2273:1: ( ( ( rule__DoWhile__ConditionAssignment_6 ) ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2274:1: ( ( rule__DoWhile__ConditionAssignment_6 ) )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2246:1: ( ( rule__DoWhile__ConditionAssignment_6 ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2247:1: ( rule__DoWhile__ConditionAssignment_6 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2274:1: ( ( rule__DoWhile__ConditionAssignment_6 ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2275:1: ( rule__DoWhile__ConditionAssignment_6 )
             {
              before(grammarAccess.getDoWhileAccess().getConditionAssignment_6()); 
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2248:1: ( rule__DoWhile__ConditionAssignment_6 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2248:2: rule__DoWhile__ConditionAssignment_6
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2276:1: ( rule__DoWhile__ConditionAssignment_6 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2276:2: rule__DoWhile__ConditionAssignment_6
             {
-            pushFollow(FOLLOW_rule__DoWhile__ConditionAssignment_6_in_rule__DoWhile__Group__6__Impl4575);
+            pushFollow(FOLLOW_rule__DoWhile__ConditionAssignment_6_in_rule__DoWhile__Group__6__Impl4635);
             rule__DoWhile__ConditionAssignment_6();
 
             state._fsp--;
@@ -6057,16 +6134,16 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__DoWhile__Group__7"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2258:1: rule__DoWhile__Group__7 : rule__DoWhile__Group__7__Impl ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2286:1: rule__DoWhile__Group__7 : rule__DoWhile__Group__7__Impl ;
     public final void rule__DoWhile__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2262:1: ( rule__DoWhile__Group__7__Impl )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2263:2: rule__DoWhile__Group__7__Impl
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2290:1: ( rule__DoWhile__Group__7__Impl )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2291:2: rule__DoWhile__Group__7__Impl
             {
-            pushFollow(FOLLOW_rule__DoWhile__Group__7__Impl_in_rule__DoWhile__Group__74605);
+            pushFollow(FOLLOW_rule__DoWhile__Group__7__Impl_in_rule__DoWhile__Group__74665);
             rule__DoWhile__Group__7__Impl();
 
             state._fsp--;
@@ -6090,20 +6167,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__DoWhile__Group__7__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2269:1: rule__DoWhile__Group__7__Impl : ( ')' ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2297:1: rule__DoWhile__Group__7__Impl : ( ')' ) ;
     public final void rule__DoWhile__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2273:1: ( ( ')' ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2274:1: ( ')' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2301:1: ( ( ')' ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2302:1: ( ')' )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2274:1: ( ')' )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2275:1: ')'
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2302:1: ( ')' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2303:1: ')'
             {
              before(grammarAccess.getDoWhileAccess().getRightParenthesisKeyword_7()); 
-            match(input,26,FOLLOW_26_in_rule__DoWhile__Group__7__Impl4633); 
+            match(input,26,FOLLOW_26_in_rule__DoWhile__Group__7__Impl4693); 
              after(grammarAccess.getDoWhileAccess().getRightParenthesisKeyword_7()); 
 
             }
@@ -6127,21 +6204,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__BooleanExp__Group__0"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2304:1: rule__BooleanExp__Group__0 : rule__BooleanExp__Group__0__Impl rule__BooleanExp__Group__1 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2332:1: rule__BooleanExp__Group__0 : rule__BooleanExp__Group__0__Impl rule__BooleanExp__Group__1 ;
     public final void rule__BooleanExp__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2308:1: ( rule__BooleanExp__Group__0__Impl rule__BooleanExp__Group__1 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2309:2: rule__BooleanExp__Group__0__Impl rule__BooleanExp__Group__1
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2336:1: ( rule__BooleanExp__Group__0__Impl rule__BooleanExp__Group__1 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2337:2: rule__BooleanExp__Group__0__Impl rule__BooleanExp__Group__1
             {
-            pushFollow(FOLLOW_rule__BooleanExp__Group__0__Impl_in_rule__BooleanExp__Group__04680);
+            pushFollow(FOLLOW_rule__BooleanExp__Group__0__Impl_in_rule__BooleanExp__Group__04740);
             rule__BooleanExp__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__BooleanExp__Group__1_in_rule__BooleanExp__Group__04683);
+            pushFollow(FOLLOW_rule__BooleanExp__Group__1_in_rule__BooleanExp__Group__04743);
             rule__BooleanExp__Group__1();
 
             state._fsp--;
@@ -6165,23 +6242,23 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__BooleanExp__Group__0__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2316:1: rule__BooleanExp__Group__0__Impl : ( ( rule__BooleanExp__LeftMemberAssignment_0 ) ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2344:1: rule__BooleanExp__Group__0__Impl : ( ( rule__BooleanExp__LeftMemberAssignment_0 ) ) ;
     public final void rule__BooleanExp__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2320:1: ( ( ( rule__BooleanExp__LeftMemberAssignment_0 ) ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2321:1: ( ( rule__BooleanExp__LeftMemberAssignment_0 ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2348:1: ( ( ( rule__BooleanExp__LeftMemberAssignment_0 ) ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2349:1: ( ( rule__BooleanExp__LeftMemberAssignment_0 ) )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2321:1: ( ( rule__BooleanExp__LeftMemberAssignment_0 ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2322:1: ( rule__BooleanExp__LeftMemberAssignment_0 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2349:1: ( ( rule__BooleanExp__LeftMemberAssignment_0 ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2350:1: ( rule__BooleanExp__LeftMemberAssignment_0 )
             {
              before(grammarAccess.getBooleanExpAccess().getLeftMemberAssignment_0()); 
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2323:1: ( rule__BooleanExp__LeftMemberAssignment_0 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2323:2: rule__BooleanExp__LeftMemberAssignment_0
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2351:1: ( rule__BooleanExp__LeftMemberAssignment_0 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2351:2: rule__BooleanExp__LeftMemberAssignment_0
             {
-            pushFollow(FOLLOW_rule__BooleanExp__LeftMemberAssignment_0_in_rule__BooleanExp__Group__0__Impl4710);
+            pushFollow(FOLLOW_rule__BooleanExp__LeftMemberAssignment_0_in_rule__BooleanExp__Group__0__Impl4770);
             rule__BooleanExp__LeftMemberAssignment_0();
 
             state._fsp--;
@@ -6212,21 +6289,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__BooleanExp__Group__1"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2333:1: rule__BooleanExp__Group__1 : rule__BooleanExp__Group__1__Impl rule__BooleanExp__Group__2 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2361:1: rule__BooleanExp__Group__1 : rule__BooleanExp__Group__1__Impl rule__BooleanExp__Group__2 ;
     public final void rule__BooleanExp__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2337:1: ( rule__BooleanExp__Group__1__Impl rule__BooleanExp__Group__2 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2338:2: rule__BooleanExp__Group__1__Impl rule__BooleanExp__Group__2
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2365:1: ( rule__BooleanExp__Group__1__Impl rule__BooleanExp__Group__2 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2366:2: rule__BooleanExp__Group__1__Impl rule__BooleanExp__Group__2
             {
-            pushFollow(FOLLOW_rule__BooleanExp__Group__1__Impl_in_rule__BooleanExp__Group__14740);
+            pushFollow(FOLLOW_rule__BooleanExp__Group__1__Impl_in_rule__BooleanExp__Group__14800);
             rule__BooleanExp__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__BooleanExp__Group__2_in_rule__BooleanExp__Group__14743);
+            pushFollow(FOLLOW_rule__BooleanExp__Group__2_in_rule__BooleanExp__Group__14803);
             rule__BooleanExp__Group__2();
 
             state._fsp--;
@@ -6250,23 +6327,23 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__BooleanExp__Group__1__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2345:1: rule__BooleanExp__Group__1__Impl : ( ( rule__BooleanExp__OperatorAssignment_1 ) ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2373:1: rule__BooleanExp__Group__1__Impl : ( ( rule__BooleanExp__OperatorAssignment_1 ) ) ;
     public final void rule__BooleanExp__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2349:1: ( ( ( rule__BooleanExp__OperatorAssignment_1 ) ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2350:1: ( ( rule__BooleanExp__OperatorAssignment_1 ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2377:1: ( ( ( rule__BooleanExp__OperatorAssignment_1 ) ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2378:1: ( ( rule__BooleanExp__OperatorAssignment_1 ) )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2350:1: ( ( rule__BooleanExp__OperatorAssignment_1 ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2351:1: ( rule__BooleanExp__OperatorAssignment_1 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2378:1: ( ( rule__BooleanExp__OperatorAssignment_1 ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2379:1: ( rule__BooleanExp__OperatorAssignment_1 )
             {
              before(grammarAccess.getBooleanExpAccess().getOperatorAssignment_1()); 
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2352:1: ( rule__BooleanExp__OperatorAssignment_1 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2352:2: rule__BooleanExp__OperatorAssignment_1
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2380:1: ( rule__BooleanExp__OperatorAssignment_1 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2380:2: rule__BooleanExp__OperatorAssignment_1
             {
-            pushFollow(FOLLOW_rule__BooleanExp__OperatorAssignment_1_in_rule__BooleanExp__Group__1__Impl4770);
+            pushFollow(FOLLOW_rule__BooleanExp__OperatorAssignment_1_in_rule__BooleanExp__Group__1__Impl4830);
             rule__BooleanExp__OperatorAssignment_1();
 
             state._fsp--;
@@ -6297,16 +6374,16 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__BooleanExp__Group__2"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2362:1: rule__BooleanExp__Group__2 : rule__BooleanExp__Group__2__Impl ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2390:1: rule__BooleanExp__Group__2 : rule__BooleanExp__Group__2__Impl ;
     public final void rule__BooleanExp__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2366:1: ( rule__BooleanExp__Group__2__Impl )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2367:2: rule__BooleanExp__Group__2__Impl
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2394:1: ( rule__BooleanExp__Group__2__Impl )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2395:2: rule__BooleanExp__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__BooleanExp__Group__2__Impl_in_rule__BooleanExp__Group__24800);
+            pushFollow(FOLLOW_rule__BooleanExp__Group__2__Impl_in_rule__BooleanExp__Group__24860);
             rule__BooleanExp__Group__2__Impl();
 
             state._fsp--;
@@ -6330,23 +6407,23 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__BooleanExp__Group__2__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2373:1: rule__BooleanExp__Group__2__Impl : ( ( rule__BooleanExp__RightMemberAssignment_2 ) ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2401:1: rule__BooleanExp__Group__2__Impl : ( ( rule__BooleanExp__RightMemberAssignment_2 ) ) ;
     public final void rule__BooleanExp__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2377:1: ( ( ( rule__BooleanExp__RightMemberAssignment_2 ) ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2378:1: ( ( rule__BooleanExp__RightMemberAssignment_2 ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2405:1: ( ( ( rule__BooleanExp__RightMemberAssignment_2 ) ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2406:1: ( ( rule__BooleanExp__RightMemberAssignment_2 ) )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2378:1: ( ( rule__BooleanExp__RightMemberAssignment_2 ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2379:1: ( rule__BooleanExp__RightMemberAssignment_2 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2406:1: ( ( rule__BooleanExp__RightMemberAssignment_2 ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2407:1: ( rule__BooleanExp__RightMemberAssignment_2 )
             {
              before(grammarAccess.getBooleanExpAccess().getRightMemberAssignment_2()); 
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2380:1: ( rule__BooleanExp__RightMemberAssignment_2 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2380:2: rule__BooleanExp__RightMemberAssignment_2
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2408:1: ( rule__BooleanExp__RightMemberAssignment_2 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2408:2: rule__BooleanExp__RightMemberAssignment_2
             {
-            pushFollow(FOLLOW_rule__BooleanExp__RightMemberAssignment_2_in_rule__BooleanExp__Group__2__Impl4827);
+            pushFollow(FOLLOW_rule__BooleanExp__RightMemberAssignment_2_in_rule__BooleanExp__Group__2__Impl4887);
             rule__BooleanExp__RightMemberAssignment_2();
 
             state._fsp--;
@@ -6377,21 +6454,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__IfThen__Group__0"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2396:1: rule__IfThen__Group__0 : rule__IfThen__Group__0__Impl rule__IfThen__Group__1 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2424:1: rule__IfThen__Group__0 : rule__IfThen__Group__0__Impl rule__IfThen__Group__1 ;
     public final void rule__IfThen__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2400:1: ( rule__IfThen__Group__0__Impl rule__IfThen__Group__1 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2401:2: rule__IfThen__Group__0__Impl rule__IfThen__Group__1
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2428:1: ( rule__IfThen__Group__0__Impl rule__IfThen__Group__1 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2429:2: rule__IfThen__Group__0__Impl rule__IfThen__Group__1
             {
-            pushFollow(FOLLOW_rule__IfThen__Group__0__Impl_in_rule__IfThen__Group__04863);
+            pushFollow(FOLLOW_rule__IfThen__Group__0__Impl_in_rule__IfThen__Group__04923);
             rule__IfThen__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__IfThen__Group__1_in_rule__IfThen__Group__04866);
+            pushFollow(FOLLOW_rule__IfThen__Group__1_in_rule__IfThen__Group__04926);
             rule__IfThen__Group__1();
 
             state._fsp--;
@@ -6415,20 +6492,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__IfThen__Group__0__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2408:1: rule__IfThen__Group__0__Impl : ( 'If' ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2436:1: rule__IfThen__Group__0__Impl : ( 'If' ) ;
     public final void rule__IfThen__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2412:1: ( ( 'If' ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2413:1: ( 'If' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2440:1: ( ( 'If' ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2441:1: ( 'If' )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2413:1: ( 'If' )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2414:1: 'If'
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2441:1: ( 'If' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2442:1: 'If'
             {
              before(grammarAccess.getIfThenAccess().getIfKeyword_0()); 
-            match(input,39,FOLLOW_39_in_rule__IfThen__Group__0__Impl4894); 
+            match(input,39,FOLLOW_39_in_rule__IfThen__Group__0__Impl4954); 
              after(grammarAccess.getIfThenAccess().getIfKeyword_0()); 
 
             }
@@ -6452,21 +6529,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__IfThen__Group__1"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2427:1: rule__IfThen__Group__1 : rule__IfThen__Group__1__Impl rule__IfThen__Group__2 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2455:1: rule__IfThen__Group__1 : rule__IfThen__Group__1__Impl rule__IfThen__Group__2 ;
     public final void rule__IfThen__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2431:1: ( rule__IfThen__Group__1__Impl rule__IfThen__Group__2 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2432:2: rule__IfThen__Group__1__Impl rule__IfThen__Group__2
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2459:1: ( rule__IfThen__Group__1__Impl rule__IfThen__Group__2 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2460:2: rule__IfThen__Group__1__Impl rule__IfThen__Group__2
             {
-            pushFollow(FOLLOW_rule__IfThen__Group__1__Impl_in_rule__IfThen__Group__14925);
+            pushFollow(FOLLOW_rule__IfThen__Group__1__Impl_in_rule__IfThen__Group__14985);
             rule__IfThen__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__IfThen__Group__2_in_rule__IfThen__Group__14928);
+            pushFollow(FOLLOW_rule__IfThen__Group__2_in_rule__IfThen__Group__14988);
             rule__IfThen__Group__2();
 
             state._fsp--;
@@ -6490,20 +6567,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__IfThen__Group__1__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2439:1: rule__IfThen__Group__1__Impl : ( '(' ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2467:1: rule__IfThen__Group__1__Impl : ( '(' ) ;
     public final void rule__IfThen__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2443:1: ( ( '(' ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2444:1: ( '(' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2471:1: ( ( '(' ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2472:1: ( '(' )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2444:1: ( '(' )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2445:1: '('
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2472:1: ( '(' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2473:1: '('
             {
              before(grammarAccess.getIfThenAccess().getLeftParenthesisKeyword_1()); 
-            match(input,38,FOLLOW_38_in_rule__IfThen__Group__1__Impl4956); 
+            match(input,38,FOLLOW_38_in_rule__IfThen__Group__1__Impl5016); 
              after(grammarAccess.getIfThenAccess().getLeftParenthesisKeyword_1()); 
 
             }
@@ -6527,21 +6604,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__IfThen__Group__2"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2458:1: rule__IfThen__Group__2 : rule__IfThen__Group__2__Impl rule__IfThen__Group__3 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2486:1: rule__IfThen__Group__2 : rule__IfThen__Group__2__Impl rule__IfThen__Group__3 ;
     public final void rule__IfThen__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2462:1: ( rule__IfThen__Group__2__Impl rule__IfThen__Group__3 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2463:2: rule__IfThen__Group__2__Impl rule__IfThen__Group__3
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2490:1: ( rule__IfThen__Group__2__Impl rule__IfThen__Group__3 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2491:2: rule__IfThen__Group__2__Impl rule__IfThen__Group__3
             {
-            pushFollow(FOLLOW_rule__IfThen__Group__2__Impl_in_rule__IfThen__Group__24987);
+            pushFollow(FOLLOW_rule__IfThen__Group__2__Impl_in_rule__IfThen__Group__25047);
             rule__IfThen__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__IfThen__Group__3_in_rule__IfThen__Group__24990);
+            pushFollow(FOLLOW_rule__IfThen__Group__3_in_rule__IfThen__Group__25050);
             rule__IfThen__Group__3();
 
             state._fsp--;
@@ -6565,23 +6642,23 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__IfThen__Group__2__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2470:1: rule__IfThen__Group__2__Impl : ( ( rule__IfThen__ConditionAssignment_2 ) ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2498:1: rule__IfThen__Group__2__Impl : ( ( rule__IfThen__ConditionAssignment_2 ) ) ;
     public final void rule__IfThen__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2474:1: ( ( ( rule__IfThen__ConditionAssignment_2 ) ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2475:1: ( ( rule__IfThen__ConditionAssignment_2 ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2502:1: ( ( ( rule__IfThen__ConditionAssignment_2 ) ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2503:1: ( ( rule__IfThen__ConditionAssignment_2 ) )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2475:1: ( ( rule__IfThen__ConditionAssignment_2 ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2476:1: ( rule__IfThen__ConditionAssignment_2 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2503:1: ( ( rule__IfThen__ConditionAssignment_2 ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2504:1: ( rule__IfThen__ConditionAssignment_2 )
             {
              before(grammarAccess.getIfThenAccess().getConditionAssignment_2()); 
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2477:1: ( rule__IfThen__ConditionAssignment_2 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2477:2: rule__IfThen__ConditionAssignment_2
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2505:1: ( rule__IfThen__ConditionAssignment_2 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2505:2: rule__IfThen__ConditionAssignment_2
             {
-            pushFollow(FOLLOW_rule__IfThen__ConditionAssignment_2_in_rule__IfThen__Group__2__Impl5017);
+            pushFollow(FOLLOW_rule__IfThen__ConditionAssignment_2_in_rule__IfThen__Group__2__Impl5077);
             rule__IfThen__ConditionAssignment_2();
 
             state._fsp--;
@@ -6612,21 +6689,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__IfThen__Group__3"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2487:1: rule__IfThen__Group__3 : rule__IfThen__Group__3__Impl rule__IfThen__Group__4 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2515:1: rule__IfThen__Group__3 : rule__IfThen__Group__3__Impl rule__IfThen__Group__4 ;
     public final void rule__IfThen__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2491:1: ( rule__IfThen__Group__3__Impl rule__IfThen__Group__4 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2492:2: rule__IfThen__Group__3__Impl rule__IfThen__Group__4
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2519:1: ( rule__IfThen__Group__3__Impl rule__IfThen__Group__4 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2520:2: rule__IfThen__Group__3__Impl rule__IfThen__Group__4
             {
-            pushFollow(FOLLOW_rule__IfThen__Group__3__Impl_in_rule__IfThen__Group__35047);
+            pushFollow(FOLLOW_rule__IfThen__Group__3__Impl_in_rule__IfThen__Group__35107);
             rule__IfThen__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__IfThen__Group__4_in_rule__IfThen__Group__35050);
+            pushFollow(FOLLOW_rule__IfThen__Group__4_in_rule__IfThen__Group__35110);
             rule__IfThen__Group__4();
 
             state._fsp--;
@@ -6650,20 +6727,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__IfThen__Group__3__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2499:1: rule__IfThen__Group__3__Impl : ( ')' ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2527:1: rule__IfThen__Group__3__Impl : ( ')' ) ;
     public final void rule__IfThen__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2503:1: ( ( ')' ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2504:1: ( ')' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2531:1: ( ( ')' ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2532:1: ( ')' )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2504:1: ( ')' )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2505:1: ')'
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2532:1: ( ')' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2533:1: ')'
             {
              before(grammarAccess.getIfThenAccess().getRightParenthesisKeyword_3()); 
-            match(input,26,FOLLOW_26_in_rule__IfThen__Group__3__Impl5078); 
+            match(input,26,FOLLOW_26_in_rule__IfThen__Group__3__Impl5138); 
              after(grammarAccess.getIfThenAccess().getRightParenthesisKeyword_3()); 
 
             }
@@ -6687,21 +6764,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__IfThen__Group__4"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2518:1: rule__IfThen__Group__4 : rule__IfThen__Group__4__Impl rule__IfThen__Group__5 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2546:1: rule__IfThen__Group__4 : rule__IfThen__Group__4__Impl rule__IfThen__Group__5 ;
     public final void rule__IfThen__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2522:1: ( rule__IfThen__Group__4__Impl rule__IfThen__Group__5 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2523:2: rule__IfThen__Group__4__Impl rule__IfThen__Group__5
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2550:1: ( rule__IfThen__Group__4__Impl rule__IfThen__Group__5 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2551:2: rule__IfThen__Group__4__Impl rule__IfThen__Group__5
             {
-            pushFollow(FOLLOW_rule__IfThen__Group__4__Impl_in_rule__IfThen__Group__45109);
+            pushFollow(FOLLOW_rule__IfThen__Group__4__Impl_in_rule__IfThen__Group__45169);
             rule__IfThen__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__IfThen__Group__5_in_rule__IfThen__Group__45112);
+            pushFollow(FOLLOW_rule__IfThen__Group__5_in_rule__IfThen__Group__45172);
             rule__IfThen__Group__5();
 
             state._fsp--;
@@ -6725,20 +6802,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__IfThen__Group__4__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2530:1: rule__IfThen__Group__4__Impl : ( 'Then' ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2558:1: rule__IfThen__Group__4__Impl : ( 'Then' ) ;
     public final void rule__IfThen__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2534:1: ( ( 'Then' ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2535:1: ( 'Then' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2562:1: ( ( 'Then' ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2563:1: ( 'Then' )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2535:1: ( 'Then' )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2536:1: 'Then'
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2563:1: ( 'Then' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2564:1: 'Then'
             {
              before(grammarAccess.getIfThenAccess().getThenKeyword_4()); 
-            match(input,40,FOLLOW_40_in_rule__IfThen__Group__4__Impl5140); 
+            match(input,40,FOLLOW_40_in_rule__IfThen__Group__4__Impl5200); 
              after(grammarAccess.getIfThenAccess().getThenKeyword_4()); 
 
             }
@@ -6762,21 +6839,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__IfThen__Group__5"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2549:1: rule__IfThen__Group__5 : rule__IfThen__Group__5__Impl rule__IfThen__Group__6 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2577:1: rule__IfThen__Group__5 : rule__IfThen__Group__5__Impl rule__IfThen__Group__6 ;
     public final void rule__IfThen__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2553:1: ( rule__IfThen__Group__5__Impl rule__IfThen__Group__6 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2554:2: rule__IfThen__Group__5__Impl rule__IfThen__Group__6
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2581:1: ( rule__IfThen__Group__5__Impl rule__IfThen__Group__6 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2582:2: rule__IfThen__Group__5__Impl rule__IfThen__Group__6
             {
-            pushFollow(FOLLOW_rule__IfThen__Group__5__Impl_in_rule__IfThen__Group__55171);
+            pushFollow(FOLLOW_rule__IfThen__Group__5__Impl_in_rule__IfThen__Group__55231);
             rule__IfThen__Group__5__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__IfThen__Group__6_in_rule__IfThen__Group__55174);
+            pushFollow(FOLLOW_rule__IfThen__Group__6_in_rule__IfThen__Group__55234);
             rule__IfThen__Group__6();
 
             state._fsp--;
@@ -6800,20 +6877,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__IfThen__Group__5__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2561:1: rule__IfThen__Group__5__Impl : ( '{' ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2589:1: rule__IfThen__Group__5__Impl : ( '{' ) ;
     public final void rule__IfThen__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2565:1: ( ( '{' ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2566:1: ( '{' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2593:1: ( ( '{' ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2594:1: ( '{' )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2566:1: ( '{' )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2567:1: '{'
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2594:1: ( '{' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2595:1: '{'
             {
              before(grammarAccess.getIfThenAccess().getLeftCurlyBracketKeyword_5()); 
-            match(input,35,FOLLOW_35_in_rule__IfThen__Group__5__Impl5202); 
+            match(input,35,FOLLOW_35_in_rule__IfThen__Group__5__Impl5262); 
              after(grammarAccess.getIfThenAccess().getLeftCurlyBracketKeyword_5()); 
 
             }
@@ -6837,21 +6914,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__IfThen__Group__6"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2580:1: rule__IfThen__Group__6 : rule__IfThen__Group__6__Impl rule__IfThen__Group__7 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2608:1: rule__IfThen__Group__6 : rule__IfThen__Group__6__Impl rule__IfThen__Group__7 ;
     public final void rule__IfThen__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2584:1: ( rule__IfThen__Group__6__Impl rule__IfThen__Group__7 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2585:2: rule__IfThen__Group__6__Impl rule__IfThen__Group__7
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2612:1: ( rule__IfThen__Group__6__Impl rule__IfThen__Group__7 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2613:2: rule__IfThen__Group__6__Impl rule__IfThen__Group__7
             {
-            pushFollow(FOLLOW_rule__IfThen__Group__6__Impl_in_rule__IfThen__Group__65233);
+            pushFollow(FOLLOW_rule__IfThen__Group__6__Impl_in_rule__IfThen__Group__65293);
             rule__IfThen__Group__6__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__IfThen__Group__7_in_rule__IfThen__Group__65236);
+            pushFollow(FOLLOW_rule__IfThen__Group__7_in_rule__IfThen__Group__65296);
             rule__IfThen__Group__7();
 
             state._fsp--;
@@ -6875,20 +6952,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__IfThen__Group__6__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2592:1: rule__IfThen__Group__6__Impl : ( ( rule__IfThen__ThenActionsAssignment_6 )* ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2620:1: rule__IfThen__Group__6__Impl : ( ( rule__IfThen__ThenActionsAssignment_6 )* ) ;
     public final void rule__IfThen__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2596:1: ( ( ( rule__IfThen__ThenActionsAssignment_6 )* ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2597:1: ( ( rule__IfThen__ThenActionsAssignment_6 )* )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2624:1: ( ( ( rule__IfThen__ThenActionsAssignment_6 )* ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2625:1: ( ( rule__IfThen__ThenActionsAssignment_6 )* )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2597:1: ( ( rule__IfThen__ThenActionsAssignment_6 )* )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2598:1: ( rule__IfThen__ThenActionsAssignment_6 )*
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2625:1: ( ( rule__IfThen__ThenActionsAssignment_6 )* )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2626:1: ( rule__IfThen__ThenActionsAssignment_6 )*
             {
              before(grammarAccess.getIfThenAccess().getThenActionsAssignment_6()); 
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2599:1: ( rule__IfThen__ThenActionsAssignment_6 )*
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2627:1: ( rule__IfThen__ThenActionsAssignment_6 )*
             loop11:
             do {
                 int alt11=2;
@@ -6901,9 +6978,9 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
                 switch (alt11) {
             	case 1 :
-            	    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2599:2: rule__IfThen__ThenActionsAssignment_6
+            	    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2627:2: rule__IfThen__ThenActionsAssignment_6
             	    {
-            	    pushFollow(FOLLOW_rule__IfThen__ThenActionsAssignment_6_in_rule__IfThen__Group__6__Impl5263);
+            	    pushFollow(FOLLOW_rule__IfThen__ThenActionsAssignment_6_in_rule__IfThen__Group__6__Impl5323);
             	    rule__IfThen__ThenActionsAssignment_6();
 
             	    state._fsp--;
@@ -6940,21 +7017,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__IfThen__Group__7"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2609:1: rule__IfThen__Group__7 : rule__IfThen__Group__7__Impl rule__IfThen__Group__8 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2637:1: rule__IfThen__Group__7 : rule__IfThen__Group__7__Impl rule__IfThen__Group__8 ;
     public final void rule__IfThen__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2613:1: ( rule__IfThen__Group__7__Impl rule__IfThen__Group__8 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2614:2: rule__IfThen__Group__7__Impl rule__IfThen__Group__8
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2641:1: ( rule__IfThen__Group__7__Impl rule__IfThen__Group__8 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2642:2: rule__IfThen__Group__7__Impl rule__IfThen__Group__8
             {
-            pushFollow(FOLLOW_rule__IfThen__Group__7__Impl_in_rule__IfThen__Group__75294);
+            pushFollow(FOLLOW_rule__IfThen__Group__7__Impl_in_rule__IfThen__Group__75354);
             rule__IfThen__Group__7__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__IfThen__Group__8_in_rule__IfThen__Group__75297);
+            pushFollow(FOLLOW_rule__IfThen__Group__8_in_rule__IfThen__Group__75357);
             rule__IfThen__Group__8();
 
             state._fsp--;
@@ -6978,20 +7055,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__IfThen__Group__7__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2621:1: rule__IfThen__Group__7__Impl : ( '}' ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2649:1: rule__IfThen__Group__7__Impl : ( '}' ) ;
     public final void rule__IfThen__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2625:1: ( ( '}' ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2626:1: ( '}' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2653:1: ( ( '}' ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2654:1: ( '}' )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2626:1: ( '}' )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2627:1: '}'
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2654:1: ( '}' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2655:1: '}'
             {
              before(grammarAccess.getIfThenAccess().getRightCurlyBracketKeyword_7()); 
-            match(input,36,FOLLOW_36_in_rule__IfThen__Group__7__Impl5325); 
+            match(input,36,FOLLOW_36_in_rule__IfThen__Group__7__Impl5385); 
              after(grammarAccess.getIfThenAccess().getRightCurlyBracketKeyword_7()); 
 
             }
@@ -7015,16 +7092,16 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__IfThen__Group__8"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2640:1: rule__IfThen__Group__8 : rule__IfThen__Group__8__Impl ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2668:1: rule__IfThen__Group__8 : rule__IfThen__Group__8__Impl ;
     public final void rule__IfThen__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2644:1: ( rule__IfThen__Group__8__Impl )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2645:2: rule__IfThen__Group__8__Impl
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2672:1: ( rule__IfThen__Group__8__Impl )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2673:2: rule__IfThen__Group__8__Impl
             {
-            pushFollow(FOLLOW_rule__IfThen__Group__8__Impl_in_rule__IfThen__Group__85356);
+            pushFollow(FOLLOW_rule__IfThen__Group__8__Impl_in_rule__IfThen__Group__85416);
             rule__IfThen__Group__8__Impl();
 
             state._fsp--;
@@ -7048,20 +7125,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__IfThen__Group__8__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2651:1: rule__IfThen__Group__8__Impl : ( ( rule__IfThen__Group_8__0 )? ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2679:1: rule__IfThen__Group__8__Impl : ( ( rule__IfThen__Group_8__0 )? ) ;
     public final void rule__IfThen__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2655:1: ( ( ( rule__IfThen__Group_8__0 )? ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2656:1: ( ( rule__IfThen__Group_8__0 )? )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2683:1: ( ( ( rule__IfThen__Group_8__0 )? ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2684:1: ( ( rule__IfThen__Group_8__0 )? )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2656:1: ( ( rule__IfThen__Group_8__0 )? )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2657:1: ( rule__IfThen__Group_8__0 )?
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2684:1: ( ( rule__IfThen__Group_8__0 )? )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2685:1: ( rule__IfThen__Group_8__0 )?
             {
              before(grammarAccess.getIfThenAccess().getGroup_8()); 
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2658:1: ( rule__IfThen__Group_8__0 )?
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2686:1: ( rule__IfThen__Group_8__0 )?
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -7070,9 +7147,9 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
             }
             switch (alt12) {
                 case 1 :
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2658:2: rule__IfThen__Group_8__0
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2686:2: rule__IfThen__Group_8__0
                     {
-                    pushFollow(FOLLOW_rule__IfThen__Group_8__0_in_rule__IfThen__Group__8__Impl5383);
+                    pushFollow(FOLLOW_rule__IfThen__Group_8__0_in_rule__IfThen__Group__8__Impl5443);
                     rule__IfThen__Group_8__0();
 
                     state._fsp--;
@@ -7106,21 +7183,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__IfThen__Group_8__0"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2686:1: rule__IfThen__Group_8__0 : rule__IfThen__Group_8__0__Impl rule__IfThen__Group_8__1 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2714:1: rule__IfThen__Group_8__0 : rule__IfThen__Group_8__0__Impl rule__IfThen__Group_8__1 ;
     public final void rule__IfThen__Group_8__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2690:1: ( rule__IfThen__Group_8__0__Impl rule__IfThen__Group_8__1 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2691:2: rule__IfThen__Group_8__0__Impl rule__IfThen__Group_8__1
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2718:1: ( rule__IfThen__Group_8__0__Impl rule__IfThen__Group_8__1 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2719:2: rule__IfThen__Group_8__0__Impl rule__IfThen__Group_8__1
             {
-            pushFollow(FOLLOW_rule__IfThen__Group_8__0__Impl_in_rule__IfThen__Group_8__05432);
+            pushFollow(FOLLOW_rule__IfThen__Group_8__0__Impl_in_rule__IfThen__Group_8__05492);
             rule__IfThen__Group_8__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__IfThen__Group_8__1_in_rule__IfThen__Group_8__05435);
+            pushFollow(FOLLOW_rule__IfThen__Group_8__1_in_rule__IfThen__Group_8__05495);
             rule__IfThen__Group_8__1();
 
             state._fsp--;
@@ -7144,20 +7221,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__IfThen__Group_8__0__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2698:1: rule__IfThen__Group_8__0__Impl : ( 'Else' ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2726:1: rule__IfThen__Group_8__0__Impl : ( 'Else' ) ;
     public final void rule__IfThen__Group_8__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2702:1: ( ( 'Else' ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2703:1: ( 'Else' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2730:1: ( ( 'Else' ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2731:1: ( 'Else' )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2703:1: ( 'Else' )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2704:1: 'Else'
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2731:1: ( 'Else' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2732:1: 'Else'
             {
              before(grammarAccess.getIfThenAccess().getElseKeyword_8_0()); 
-            match(input,41,FOLLOW_41_in_rule__IfThen__Group_8__0__Impl5463); 
+            match(input,41,FOLLOW_41_in_rule__IfThen__Group_8__0__Impl5523); 
              after(grammarAccess.getIfThenAccess().getElseKeyword_8_0()); 
 
             }
@@ -7181,21 +7258,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__IfThen__Group_8__1"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2717:1: rule__IfThen__Group_8__1 : rule__IfThen__Group_8__1__Impl rule__IfThen__Group_8__2 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2745:1: rule__IfThen__Group_8__1 : rule__IfThen__Group_8__1__Impl rule__IfThen__Group_8__2 ;
     public final void rule__IfThen__Group_8__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2721:1: ( rule__IfThen__Group_8__1__Impl rule__IfThen__Group_8__2 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2722:2: rule__IfThen__Group_8__1__Impl rule__IfThen__Group_8__2
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2749:1: ( rule__IfThen__Group_8__1__Impl rule__IfThen__Group_8__2 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2750:2: rule__IfThen__Group_8__1__Impl rule__IfThen__Group_8__2
             {
-            pushFollow(FOLLOW_rule__IfThen__Group_8__1__Impl_in_rule__IfThen__Group_8__15494);
+            pushFollow(FOLLOW_rule__IfThen__Group_8__1__Impl_in_rule__IfThen__Group_8__15554);
             rule__IfThen__Group_8__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__IfThen__Group_8__2_in_rule__IfThen__Group_8__15497);
+            pushFollow(FOLLOW_rule__IfThen__Group_8__2_in_rule__IfThen__Group_8__15557);
             rule__IfThen__Group_8__2();
 
             state._fsp--;
@@ -7219,20 +7296,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__IfThen__Group_8__1__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2729:1: rule__IfThen__Group_8__1__Impl : ( '{' ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2757:1: rule__IfThen__Group_8__1__Impl : ( '{' ) ;
     public final void rule__IfThen__Group_8__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2733:1: ( ( '{' ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2734:1: ( '{' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2761:1: ( ( '{' ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2762:1: ( '{' )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2734:1: ( '{' )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2735:1: '{'
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2762:1: ( '{' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2763:1: '{'
             {
              before(grammarAccess.getIfThenAccess().getLeftCurlyBracketKeyword_8_1()); 
-            match(input,35,FOLLOW_35_in_rule__IfThen__Group_8__1__Impl5525); 
+            match(input,35,FOLLOW_35_in_rule__IfThen__Group_8__1__Impl5585); 
              after(grammarAccess.getIfThenAccess().getLeftCurlyBracketKeyword_8_1()); 
 
             }
@@ -7256,21 +7333,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__IfThen__Group_8__2"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2748:1: rule__IfThen__Group_8__2 : rule__IfThen__Group_8__2__Impl rule__IfThen__Group_8__3 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2776:1: rule__IfThen__Group_8__2 : rule__IfThen__Group_8__2__Impl rule__IfThen__Group_8__3 ;
     public final void rule__IfThen__Group_8__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2752:1: ( rule__IfThen__Group_8__2__Impl rule__IfThen__Group_8__3 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2753:2: rule__IfThen__Group_8__2__Impl rule__IfThen__Group_8__3
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2780:1: ( rule__IfThen__Group_8__2__Impl rule__IfThen__Group_8__3 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2781:2: rule__IfThen__Group_8__2__Impl rule__IfThen__Group_8__3
             {
-            pushFollow(FOLLOW_rule__IfThen__Group_8__2__Impl_in_rule__IfThen__Group_8__25556);
+            pushFollow(FOLLOW_rule__IfThen__Group_8__2__Impl_in_rule__IfThen__Group_8__25616);
             rule__IfThen__Group_8__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__IfThen__Group_8__3_in_rule__IfThen__Group_8__25559);
+            pushFollow(FOLLOW_rule__IfThen__Group_8__3_in_rule__IfThen__Group_8__25619);
             rule__IfThen__Group_8__3();
 
             state._fsp--;
@@ -7294,20 +7371,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__IfThen__Group_8__2__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2760:1: rule__IfThen__Group_8__2__Impl : ( ( rule__IfThen__ElseActionsAssignment_8_2 )* ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2788:1: rule__IfThen__Group_8__2__Impl : ( ( rule__IfThen__ElseActionsAssignment_8_2 )* ) ;
     public final void rule__IfThen__Group_8__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2764:1: ( ( ( rule__IfThen__ElseActionsAssignment_8_2 )* ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2765:1: ( ( rule__IfThen__ElseActionsAssignment_8_2 )* )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2792:1: ( ( ( rule__IfThen__ElseActionsAssignment_8_2 )* ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2793:1: ( ( rule__IfThen__ElseActionsAssignment_8_2 )* )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2765:1: ( ( rule__IfThen__ElseActionsAssignment_8_2 )* )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2766:1: ( rule__IfThen__ElseActionsAssignment_8_2 )*
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2793:1: ( ( rule__IfThen__ElseActionsAssignment_8_2 )* )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2794:1: ( rule__IfThen__ElseActionsAssignment_8_2 )*
             {
              before(grammarAccess.getIfThenAccess().getElseActionsAssignment_8_2()); 
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2767:1: ( rule__IfThen__ElseActionsAssignment_8_2 )*
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2795:1: ( rule__IfThen__ElseActionsAssignment_8_2 )*
             loop13:
             do {
                 int alt13=2;
@@ -7320,9 +7397,9 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
                 switch (alt13) {
             	case 1 :
-            	    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2767:2: rule__IfThen__ElseActionsAssignment_8_2
+            	    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2795:2: rule__IfThen__ElseActionsAssignment_8_2
             	    {
-            	    pushFollow(FOLLOW_rule__IfThen__ElseActionsAssignment_8_2_in_rule__IfThen__Group_8__2__Impl5586);
+            	    pushFollow(FOLLOW_rule__IfThen__ElseActionsAssignment_8_2_in_rule__IfThen__Group_8__2__Impl5646);
             	    rule__IfThen__ElseActionsAssignment_8_2();
 
             	    state._fsp--;
@@ -7359,16 +7436,16 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__IfThen__Group_8__3"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2777:1: rule__IfThen__Group_8__3 : rule__IfThen__Group_8__3__Impl ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2805:1: rule__IfThen__Group_8__3 : rule__IfThen__Group_8__3__Impl ;
     public final void rule__IfThen__Group_8__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2781:1: ( rule__IfThen__Group_8__3__Impl )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2782:2: rule__IfThen__Group_8__3__Impl
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2809:1: ( rule__IfThen__Group_8__3__Impl )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2810:2: rule__IfThen__Group_8__3__Impl
             {
-            pushFollow(FOLLOW_rule__IfThen__Group_8__3__Impl_in_rule__IfThen__Group_8__35617);
+            pushFollow(FOLLOW_rule__IfThen__Group_8__3__Impl_in_rule__IfThen__Group_8__35677);
             rule__IfThen__Group_8__3__Impl();
 
             state._fsp--;
@@ -7392,20 +7469,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__IfThen__Group_8__3__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2788:1: rule__IfThen__Group_8__3__Impl : ( '}' ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2816:1: rule__IfThen__Group_8__3__Impl : ( '}' ) ;
     public final void rule__IfThen__Group_8__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2792:1: ( ( '}' ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2793:1: ( '}' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2820:1: ( ( '}' ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2821:1: ( '}' )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2793:1: ( '}' )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2794:1: '}'
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2821:1: ( '}' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2822:1: '}'
             {
              before(grammarAccess.getIfThenAccess().getRightCurlyBracketKeyword_8_3()); 
-            match(input,36,FOLLOW_36_in_rule__IfThen__Group_8__3__Impl5645); 
+            match(input,36,FOLLOW_36_in_rule__IfThen__Group_8__3__Impl5705); 
              after(grammarAccess.getIfThenAccess().getRightCurlyBracketKeyword_8_3()); 
 
             }
@@ -7429,21 +7506,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Subroutine__Group__0"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2815:1: rule__Subroutine__Group__0 : rule__Subroutine__Group__0__Impl rule__Subroutine__Group__1 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2843:1: rule__Subroutine__Group__0 : rule__Subroutine__Group__0__Impl rule__Subroutine__Group__1 ;
     public final void rule__Subroutine__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2819:1: ( rule__Subroutine__Group__0__Impl rule__Subroutine__Group__1 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2820:2: rule__Subroutine__Group__0__Impl rule__Subroutine__Group__1
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2847:1: ( rule__Subroutine__Group__0__Impl rule__Subroutine__Group__1 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2848:2: rule__Subroutine__Group__0__Impl rule__Subroutine__Group__1
             {
-            pushFollow(FOLLOW_rule__Subroutine__Group__0__Impl_in_rule__Subroutine__Group__05684);
+            pushFollow(FOLLOW_rule__Subroutine__Group__0__Impl_in_rule__Subroutine__Group__05744);
             rule__Subroutine__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Subroutine__Group__1_in_rule__Subroutine__Group__05687);
+            pushFollow(FOLLOW_rule__Subroutine__Group__1_in_rule__Subroutine__Group__05747);
             rule__Subroutine__Group__1();
 
             state._fsp--;
@@ -7467,20 +7544,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Subroutine__Group__0__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2827:1: rule__Subroutine__Group__0__Impl : ( 'Def' ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2855:1: rule__Subroutine__Group__0__Impl : ( 'Def' ) ;
     public final void rule__Subroutine__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2831:1: ( ( 'Def' ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2832:1: ( 'Def' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2859:1: ( ( 'Def' ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2860:1: ( 'Def' )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2832:1: ( 'Def' )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2833:1: 'Def'
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2860:1: ( 'Def' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2861:1: 'Def'
             {
              before(grammarAccess.getSubroutineAccess().getDefKeyword_0()); 
-            match(input,42,FOLLOW_42_in_rule__Subroutine__Group__0__Impl5715); 
+            match(input,42,FOLLOW_42_in_rule__Subroutine__Group__0__Impl5775); 
              after(grammarAccess.getSubroutineAccess().getDefKeyword_0()); 
 
             }
@@ -7504,21 +7581,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Subroutine__Group__1"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2846:1: rule__Subroutine__Group__1 : rule__Subroutine__Group__1__Impl rule__Subroutine__Group__2 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2874:1: rule__Subroutine__Group__1 : rule__Subroutine__Group__1__Impl rule__Subroutine__Group__2 ;
     public final void rule__Subroutine__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2850:1: ( rule__Subroutine__Group__1__Impl rule__Subroutine__Group__2 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2851:2: rule__Subroutine__Group__1__Impl rule__Subroutine__Group__2
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2878:1: ( rule__Subroutine__Group__1__Impl rule__Subroutine__Group__2 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2879:2: rule__Subroutine__Group__1__Impl rule__Subroutine__Group__2
             {
-            pushFollow(FOLLOW_rule__Subroutine__Group__1__Impl_in_rule__Subroutine__Group__15746);
+            pushFollow(FOLLOW_rule__Subroutine__Group__1__Impl_in_rule__Subroutine__Group__15806);
             rule__Subroutine__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Subroutine__Group__2_in_rule__Subroutine__Group__15749);
+            pushFollow(FOLLOW_rule__Subroutine__Group__2_in_rule__Subroutine__Group__15809);
             rule__Subroutine__Group__2();
 
             state._fsp--;
@@ -7542,23 +7619,23 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Subroutine__Group__1__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2858:1: rule__Subroutine__Group__1__Impl : ( ( rule__Subroutine__NameAssignment_1 ) ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2886:1: rule__Subroutine__Group__1__Impl : ( ( rule__Subroutine__NameAssignment_1 ) ) ;
     public final void rule__Subroutine__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2862:1: ( ( ( rule__Subroutine__NameAssignment_1 ) ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2863:1: ( ( rule__Subroutine__NameAssignment_1 ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2890:1: ( ( ( rule__Subroutine__NameAssignment_1 ) ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2891:1: ( ( rule__Subroutine__NameAssignment_1 ) )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2863:1: ( ( rule__Subroutine__NameAssignment_1 ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2864:1: ( rule__Subroutine__NameAssignment_1 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2891:1: ( ( rule__Subroutine__NameAssignment_1 ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2892:1: ( rule__Subroutine__NameAssignment_1 )
             {
              before(grammarAccess.getSubroutineAccess().getNameAssignment_1()); 
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2865:1: ( rule__Subroutine__NameAssignment_1 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2865:2: rule__Subroutine__NameAssignment_1
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2893:1: ( rule__Subroutine__NameAssignment_1 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2893:2: rule__Subroutine__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__Subroutine__NameAssignment_1_in_rule__Subroutine__Group__1__Impl5776);
+            pushFollow(FOLLOW_rule__Subroutine__NameAssignment_1_in_rule__Subroutine__Group__1__Impl5836);
             rule__Subroutine__NameAssignment_1();
 
             state._fsp--;
@@ -7589,21 +7666,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Subroutine__Group__2"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2875:1: rule__Subroutine__Group__2 : rule__Subroutine__Group__2__Impl rule__Subroutine__Group__3 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2903:1: rule__Subroutine__Group__2 : rule__Subroutine__Group__2__Impl rule__Subroutine__Group__3 ;
     public final void rule__Subroutine__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2879:1: ( rule__Subroutine__Group__2__Impl rule__Subroutine__Group__3 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2880:2: rule__Subroutine__Group__2__Impl rule__Subroutine__Group__3
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2907:1: ( rule__Subroutine__Group__2__Impl rule__Subroutine__Group__3 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2908:2: rule__Subroutine__Group__2__Impl rule__Subroutine__Group__3
             {
-            pushFollow(FOLLOW_rule__Subroutine__Group__2__Impl_in_rule__Subroutine__Group__25806);
+            pushFollow(FOLLOW_rule__Subroutine__Group__2__Impl_in_rule__Subroutine__Group__25866);
             rule__Subroutine__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Subroutine__Group__3_in_rule__Subroutine__Group__25809);
+            pushFollow(FOLLOW_rule__Subroutine__Group__3_in_rule__Subroutine__Group__25869);
             rule__Subroutine__Group__3();
 
             state._fsp--;
@@ -7627,20 +7704,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Subroutine__Group__2__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2887:1: rule__Subroutine__Group__2__Impl : ( ( rule__Subroutine__Group_2__0 )? ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2915:1: rule__Subroutine__Group__2__Impl : ( ( rule__Subroutine__Group_2__0 )? ) ;
     public final void rule__Subroutine__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2891:1: ( ( ( rule__Subroutine__Group_2__0 )? ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2892:1: ( ( rule__Subroutine__Group_2__0 )? )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2919:1: ( ( ( rule__Subroutine__Group_2__0 )? ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2920:1: ( ( rule__Subroutine__Group_2__0 )? )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2892:1: ( ( rule__Subroutine__Group_2__0 )? )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2893:1: ( rule__Subroutine__Group_2__0 )?
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2920:1: ( ( rule__Subroutine__Group_2__0 )? )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2921:1: ( rule__Subroutine__Group_2__0 )?
             {
              before(grammarAccess.getSubroutineAccess().getGroup_2()); 
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2894:1: ( rule__Subroutine__Group_2__0 )?
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2922:1: ( rule__Subroutine__Group_2__0 )?
             int alt14=2;
             int LA14_0 = input.LA(1);
 
@@ -7649,9 +7726,9 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
             }
             switch (alt14) {
                 case 1 :
-                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2894:2: rule__Subroutine__Group_2__0
+                    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2922:2: rule__Subroutine__Group_2__0
                     {
-                    pushFollow(FOLLOW_rule__Subroutine__Group_2__0_in_rule__Subroutine__Group__2__Impl5836);
+                    pushFollow(FOLLOW_rule__Subroutine__Group_2__0_in_rule__Subroutine__Group__2__Impl5896);
                     rule__Subroutine__Group_2__0();
 
                     state._fsp--;
@@ -7685,21 +7762,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Subroutine__Group__3"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2904:1: rule__Subroutine__Group__3 : rule__Subroutine__Group__3__Impl rule__Subroutine__Group__4 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2932:1: rule__Subroutine__Group__3 : rule__Subroutine__Group__3__Impl rule__Subroutine__Group__4 ;
     public final void rule__Subroutine__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2908:1: ( rule__Subroutine__Group__3__Impl rule__Subroutine__Group__4 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2909:2: rule__Subroutine__Group__3__Impl rule__Subroutine__Group__4
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2936:1: ( rule__Subroutine__Group__3__Impl rule__Subroutine__Group__4 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2937:2: rule__Subroutine__Group__3__Impl rule__Subroutine__Group__4
             {
-            pushFollow(FOLLOW_rule__Subroutine__Group__3__Impl_in_rule__Subroutine__Group__35867);
+            pushFollow(FOLLOW_rule__Subroutine__Group__3__Impl_in_rule__Subroutine__Group__35927);
             rule__Subroutine__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Subroutine__Group__4_in_rule__Subroutine__Group__35870);
+            pushFollow(FOLLOW_rule__Subroutine__Group__4_in_rule__Subroutine__Group__35930);
             rule__Subroutine__Group__4();
 
             state._fsp--;
@@ -7723,20 +7800,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Subroutine__Group__3__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2916:1: rule__Subroutine__Group__3__Impl : ( '{' ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2944:1: rule__Subroutine__Group__3__Impl : ( '{' ) ;
     public final void rule__Subroutine__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2920:1: ( ( '{' ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2921:1: ( '{' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2948:1: ( ( '{' ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2949:1: ( '{' )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2921:1: ( '{' )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2922:1: '{'
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2949:1: ( '{' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2950:1: '{'
             {
              before(grammarAccess.getSubroutineAccess().getLeftCurlyBracketKeyword_3()); 
-            match(input,35,FOLLOW_35_in_rule__Subroutine__Group__3__Impl5898); 
+            match(input,35,FOLLOW_35_in_rule__Subroutine__Group__3__Impl5958); 
              after(grammarAccess.getSubroutineAccess().getLeftCurlyBracketKeyword_3()); 
 
             }
@@ -7760,21 +7837,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Subroutine__Group__4"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2935:1: rule__Subroutine__Group__4 : rule__Subroutine__Group__4__Impl rule__Subroutine__Group__5 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2963:1: rule__Subroutine__Group__4 : rule__Subroutine__Group__4__Impl rule__Subroutine__Group__5 ;
     public final void rule__Subroutine__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2939:1: ( rule__Subroutine__Group__4__Impl rule__Subroutine__Group__5 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2940:2: rule__Subroutine__Group__4__Impl rule__Subroutine__Group__5
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2967:1: ( rule__Subroutine__Group__4__Impl rule__Subroutine__Group__5 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2968:2: rule__Subroutine__Group__4__Impl rule__Subroutine__Group__5
             {
-            pushFollow(FOLLOW_rule__Subroutine__Group__4__Impl_in_rule__Subroutine__Group__45929);
+            pushFollow(FOLLOW_rule__Subroutine__Group__4__Impl_in_rule__Subroutine__Group__45989);
             rule__Subroutine__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Subroutine__Group__5_in_rule__Subroutine__Group__45932);
+            pushFollow(FOLLOW_rule__Subroutine__Group__5_in_rule__Subroutine__Group__45992);
             rule__Subroutine__Group__5();
 
             state._fsp--;
@@ -7798,20 +7875,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Subroutine__Group__4__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2947:1: rule__Subroutine__Group__4__Impl : ( ( rule__Subroutine__ActionsAssignment_4 )* ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2975:1: rule__Subroutine__Group__4__Impl : ( ( rule__Subroutine__ActionsAssignment_4 )* ) ;
     public final void rule__Subroutine__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2951:1: ( ( ( rule__Subroutine__ActionsAssignment_4 )* ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2952:1: ( ( rule__Subroutine__ActionsAssignment_4 )* )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2979:1: ( ( ( rule__Subroutine__ActionsAssignment_4 )* ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2980:1: ( ( rule__Subroutine__ActionsAssignment_4 )* )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2952:1: ( ( rule__Subroutine__ActionsAssignment_4 )* )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2953:1: ( rule__Subroutine__ActionsAssignment_4 )*
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2980:1: ( ( rule__Subroutine__ActionsAssignment_4 )* )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2981:1: ( rule__Subroutine__ActionsAssignment_4 )*
             {
              before(grammarAccess.getSubroutineAccess().getActionsAssignment_4()); 
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2954:1: ( rule__Subroutine__ActionsAssignment_4 )*
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2982:1: ( rule__Subroutine__ActionsAssignment_4 )*
             loop15:
             do {
                 int alt15=2;
@@ -7824,9 +7901,9 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
                 switch (alt15) {
             	case 1 :
-            	    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2954:2: rule__Subroutine__ActionsAssignment_4
+            	    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2982:2: rule__Subroutine__ActionsAssignment_4
             	    {
-            	    pushFollow(FOLLOW_rule__Subroutine__ActionsAssignment_4_in_rule__Subroutine__Group__4__Impl5959);
+            	    pushFollow(FOLLOW_rule__Subroutine__ActionsAssignment_4_in_rule__Subroutine__Group__4__Impl6019);
             	    rule__Subroutine__ActionsAssignment_4();
 
             	    state._fsp--;
@@ -7863,16 +7940,16 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Subroutine__Group__5"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2964:1: rule__Subroutine__Group__5 : rule__Subroutine__Group__5__Impl ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2992:1: rule__Subroutine__Group__5 : rule__Subroutine__Group__5__Impl ;
     public final void rule__Subroutine__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2968:1: ( rule__Subroutine__Group__5__Impl )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2969:2: rule__Subroutine__Group__5__Impl
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2996:1: ( rule__Subroutine__Group__5__Impl )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2997:2: rule__Subroutine__Group__5__Impl
             {
-            pushFollow(FOLLOW_rule__Subroutine__Group__5__Impl_in_rule__Subroutine__Group__55990);
+            pushFollow(FOLLOW_rule__Subroutine__Group__5__Impl_in_rule__Subroutine__Group__56050);
             rule__Subroutine__Group__5__Impl();
 
             state._fsp--;
@@ -7896,20 +7973,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Subroutine__Group__5__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2975:1: rule__Subroutine__Group__5__Impl : ( '}' ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3003:1: rule__Subroutine__Group__5__Impl : ( '}' ) ;
     public final void rule__Subroutine__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2979:1: ( ( '}' ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2980:1: ( '}' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3007:1: ( ( '}' ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3008:1: ( '}' )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2980:1: ( '}' )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:2981:1: '}'
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3008:1: ( '}' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3009:1: '}'
             {
              before(grammarAccess.getSubroutineAccess().getRightCurlyBracketKeyword_5()); 
-            match(input,36,FOLLOW_36_in_rule__Subroutine__Group__5__Impl6018); 
+            match(input,36,FOLLOW_36_in_rule__Subroutine__Group__5__Impl6078); 
              after(grammarAccess.getSubroutineAccess().getRightCurlyBracketKeyword_5()); 
 
             }
@@ -7933,21 +8010,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Subroutine__Group_2__0"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3006:1: rule__Subroutine__Group_2__0 : rule__Subroutine__Group_2__0__Impl rule__Subroutine__Group_2__1 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3034:1: rule__Subroutine__Group_2__0 : rule__Subroutine__Group_2__0__Impl rule__Subroutine__Group_2__1 ;
     public final void rule__Subroutine__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3010:1: ( rule__Subroutine__Group_2__0__Impl rule__Subroutine__Group_2__1 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3011:2: rule__Subroutine__Group_2__0__Impl rule__Subroutine__Group_2__1
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3038:1: ( rule__Subroutine__Group_2__0__Impl rule__Subroutine__Group_2__1 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3039:2: rule__Subroutine__Group_2__0__Impl rule__Subroutine__Group_2__1
             {
-            pushFollow(FOLLOW_rule__Subroutine__Group_2__0__Impl_in_rule__Subroutine__Group_2__06061);
+            pushFollow(FOLLOW_rule__Subroutine__Group_2__0__Impl_in_rule__Subroutine__Group_2__06121);
             rule__Subroutine__Group_2__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Subroutine__Group_2__1_in_rule__Subroutine__Group_2__06064);
+            pushFollow(FOLLOW_rule__Subroutine__Group_2__1_in_rule__Subroutine__Group_2__06124);
             rule__Subroutine__Group_2__1();
 
             state._fsp--;
@@ -7971,20 +8048,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Subroutine__Group_2__0__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3018:1: rule__Subroutine__Group_2__0__Impl : ( '(' ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3046:1: rule__Subroutine__Group_2__0__Impl : ( '(' ) ;
     public final void rule__Subroutine__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3022:1: ( ( '(' ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3023:1: ( '(' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3050:1: ( ( '(' ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3051:1: ( '(' )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3023:1: ( '(' )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3024:1: '('
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3051:1: ( '(' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3052:1: '('
             {
              before(grammarAccess.getSubroutineAccess().getLeftParenthesisKeyword_2_0()); 
-            match(input,38,FOLLOW_38_in_rule__Subroutine__Group_2__0__Impl6092); 
+            match(input,38,FOLLOW_38_in_rule__Subroutine__Group_2__0__Impl6152); 
              after(grammarAccess.getSubroutineAccess().getLeftParenthesisKeyword_2_0()); 
 
             }
@@ -8008,21 +8085,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Subroutine__Group_2__1"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3037:1: rule__Subroutine__Group_2__1 : rule__Subroutine__Group_2__1__Impl rule__Subroutine__Group_2__2 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3065:1: rule__Subroutine__Group_2__1 : rule__Subroutine__Group_2__1__Impl rule__Subroutine__Group_2__2 ;
     public final void rule__Subroutine__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3041:1: ( rule__Subroutine__Group_2__1__Impl rule__Subroutine__Group_2__2 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3042:2: rule__Subroutine__Group_2__1__Impl rule__Subroutine__Group_2__2
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3069:1: ( rule__Subroutine__Group_2__1__Impl rule__Subroutine__Group_2__2 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3070:2: rule__Subroutine__Group_2__1__Impl rule__Subroutine__Group_2__2
             {
-            pushFollow(FOLLOW_rule__Subroutine__Group_2__1__Impl_in_rule__Subroutine__Group_2__16123);
+            pushFollow(FOLLOW_rule__Subroutine__Group_2__1__Impl_in_rule__Subroutine__Group_2__16183);
             rule__Subroutine__Group_2__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Subroutine__Group_2__2_in_rule__Subroutine__Group_2__16126);
+            pushFollow(FOLLOW_rule__Subroutine__Group_2__2_in_rule__Subroutine__Group_2__16186);
             rule__Subroutine__Group_2__2();
 
             state._fsp--;
@@ -8046,23 +8123,23 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Subroutine__Group_2__1__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3049:1: rule__Subroutine__Group_2__1__Impl : ( ( rule__Subroutine__ParamsAssignment_2_1 ) ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3077:1: rule__Subroutine__Group_2__1__Impl : ( ( rule__Subroutine__ParamsAssignment_2_1 ) ) ;
     public final void rule__Subroutine__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3053:1: ( ( ( rule__Subroutine__ParamsAssignment_2_1 ) ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3054:1: ( ( rule__Subroutine__ParamsAssignment_2_1 ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3081:1: ( ( ( rule__Subroutine__ParamsAssignment_2_1 ) ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3082:1: ( ( rule__Subroutine__ParamsAssignment_2_1 ) )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3054:1: ( ( rule__Subroutine__ParamsAssignment_2_1 ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3055:1: ( rule__Subroutine__ParamsAssignment_2_1 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3082:1: ( ( rule__Subroutine__ParamsAssignment_2_1 ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3083:1: ( rule__Subroutine__ParamsAssignment_2_1 )
             {
              before(grammarAccess.getSubroutineAccess().getParamsAssignment_2_1()); 
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3056:1: ( rule__Subroutine__ParamsAssignment_2_1 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3056:2: rule__Subroutine__ParamsAssignment_2_1
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3084:1: ( rule__Subroutine__ParamsAssignment_2_1 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3084:2: rule__Subroutine__ParamsAssignment_2_1
             {
-            pushFollow(FOLLOW_rule__Subroutine__ParamsAssignment_2_1_in_rule__Subroutine__Group_2__1__Impl6153);
+            pushFollow(FOLLOW_rule__Subroutine__ParamsAssignment_2_1_in_rule__Subroutine__Group_2__1__Impl6213);
             rule__Subroutine__ParamsAssignment_2_1();
 
             state._fsp--;
@@ -8093,16 +8170,16 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Subroutine__Group_2__2"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3066:1: rule__Subroutine__Group_2__2 : rule__Subroutine__Group_2__2__Impl ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3094:1: rule__Subroutine__Group_2__2 : rule__Subroutine__Group_2__2__Impl ;
     public final void rule__Subroutine__Group_2__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3070:1: ( rule__Subroutine__Group_2__2__Impl )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3071:2: rule__Subroutine__Group_2__2__Impl
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3098:1: ( rule__Subroutine__Group_2__2__Impl )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3099:2: rule__Subroutine__Group_2__2__Impl
             {
-            pushFollow(FOLLOW_rule__Subroutine__Group_2__2__Impl_in_rule__Subroutine__Group_2__26183);
+            pushFollow(FOLLOW_rule__Subroutine__Group_2__2__Impl_in_rule__Subroutine__Group_2__26243);
             rule__Subroutine__Group_2__2__Impl();
 
             state._fsp--;
@@ -8126,20 +8203,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Subroutine__Group_2__2__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3077:1: rule__Subroutine__Group_2__2__Impl : ( ')' ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3105:1: rule__Subroutine__Group_2__2__Impl : ( ')' ) ;
     public final void rule__Subroutine__Group_2__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3081:1: ( ( ')' ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3082:1: ( ')' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3109:1: ( ( ')' ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3110:1: ( ')' )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3082:1: ( ')' )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3083:1: ')'
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3110:1: ( ')' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3111:1: ')'
             {
              before(grammarAccess.getSubroutineAccess().getRightParenthesisKeyword_2_2()); 
-            match(input,26,FOLLOW_26_in_rule__Subroutine__Group_2__2__Impl6211); 
+            match(input,26,FOLLOW_26_in_rule__Subroutine__Group_2__2__Impl6271); 
              after(grammarAccess.getSubroutineAccess().getRightParenthesisKeyword_2_2()); 
 
             }
@@ -8163,21 +8240,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__SubroutineCall__Group__0"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3102:1: rule__SubroutineCall__Group__0 : rule__SubroutineCall__Group__0__Impl rule__SubroutineCall__Group__1 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3130:1: rule__SubroutineCall__Group__0 : rule__SubroutineCall__Group__0__Impl rule__SubroutineCall__Group__1 ;
     public final void rule__SubroutineCall__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3106:1: ( rule__SubroutineCall__Group__0__Impl rule__SubroutineCall__Group__1 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3107:2: rule__SubroutineCall__Group__0__Impl rule__SubroutineCall__Group__1
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3134:1: ( rule__SubroutineCall__Group__0__Impl rule__SubroutineCall__Group__1 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3135:2: rule__SubroutineCall__Group__0__Impl rule__SubroutineCall__Group__1
             {
-            pushFollow(FOLLOW_rule__SubroutineCall__Group__0__Impl_in_rule__SubroutineCall__Group__06248);
+            pushFollow(FOLLOW_rule__SubroutineCall__Group__0__Impl_in_rule__SubroutineCall__Group__06308);
             rule__SubroutineCall__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SubroutineCall__Group__1_in_rule__SubroutineCall__Group__06251);
+            pushFollow(FOLLOW_rule__SubroutineCall__Group__1_in_rule__SubroutineCall__Group__06311);
             rule__SubroutineCall__Group__1();
 
             state._fsp--;
@@ -8201,20 +8278,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__SubroutineCall__Group__0__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3114:1: rule__SubroutineCall__Group__0__Impl : ( 'Call' ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3142:1: rule__SubroutineCall__Group__0__Impl : ( 'Call' ) ;
     public final void rule__SubroutineCall__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3118:1: ( ( 'Call' ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3119:1: ( 'Call' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3146:1: ( ( 'Call' ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3147:1: ( 'Call' )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3119:1: ( 'Call' )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3120:1: 'Call'
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3147:1: ( 'Call' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3148:1: 'Call'
             {
              before(grammarAccess.getSubroutineCallAccess().getCallKeyword_0()); 
-            match(input,43,FOLLOW_43_in_rule__SubroutineCall__Group__0__Impl6279); 
+            match(input,43,FOLLOW_43_in_rule__SubroutineCall__Group__0__Impl6339); 
              after(grammarAccess.getSubroutineCallAccess().getCallKeyword_0()); 
 
             }
@@ -8238,21 +8315,21 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__SubroutineCall__Group__1"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3133:1: rule__SubroutineCall__Group__1 : rule__SubroutineCall__Group__1__Impl rule__SubroutineCall__Group__2 ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3161:1: rule__SubroutineCall__Group__1 : rule__SubroutineCall__Group__1__Impl rule__SubroutineCall__Group__2 ;
     public final void rule__SubroutineCall__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3137:1: ( rule__SubroutineCall__Group__1__Impl rule__SubroutineCall__Group__2 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3138:2: rule__SubroutineCall__Group__1__Impl rule__SubroutineCall__Group__2
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3165:1: ( rule__SubroutineCall__Group__1__Impl rule__SubroutineCall__Group__2 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3166:2: rule__SubroutineCall__Group__1__Impl rule__SubroutineCall__Group__2
             {
-            pushFollow(FOLLOW_rule__SubroutineCall__Group__1__Impl_in_rule__SubroutineCall__Group__16310);
+            pushFollow(FOLLOW_rule__SubroutineCall__Group__1__Impl_in_rule__SubroutineCall__Group__16370);
             rule__SubroutineCall__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SubroutineCall__Group__2_in_rule__SubroutineCall__Group__16313);
+            pushFollow(FOLLOW_rule__SubroutineCall__Group__2_in_rule__SubroutineCall__Group__16373);
             rule__SubroutineCall__Group__2();
 
             state._fsp--;
@@ -8276,23 +8353,23 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__SubroutineCall__Group__1__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3145:1: rule__SubroutineCall__Group__1__Impl : ( ( rule__SubroutineCall__SubroutineAssignment_1 ) ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3173:1: rule__SubroutineCall__Group__1__Impl : ( ( rule__SubroutineCall__SubroutineAssignment_1 ) ) ;
     public final void rule__SubroutineCall__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3149:1: ( ( ( rule__SubroutineCall__SubroutineAssignment_1 ) ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3150:1: ( ( rule__SubroutineCall__SubroutineAssignment_1 ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3177:1: ( ( ( rule__SubroutineCall__SubroutineAssignment_1 ) ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3178:1: ( ( rule__SubroutineCall__SubroutineAssignment_1 ) )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3150:1: ( ( rule__SubroutineCall__SubroutineAssignment_1 ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3151:1: ( rule__SubroutineCall__SubroutineAssignment_1 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3178:1: ( ( rule__SubroutineCall__SubroutineAssignment_1 ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3179:1: ( rule__SubroutineCall__SubroutineAssignment_1 )
             {
              before(grammarAccess.getSubroutineCallAccess().getSubroutineAssignment_1()); 
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3152:1: ( rule__SubroutineCall__SubroutineAssignment_1 )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3152:2: rule__SubroutineCall__SubroutineAssignment_1
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3180:1: ( rule__SubroutineCall__SubroutineAssignment_1 )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3180:2: rule__SubroutineCall__SubroutineAssignment_1
             {
-            pushFollow(FOLLOW_rule__SubroutineCall__SubroutineAssignment_1_in_rule__SubroutineCall__Group__1__Impl6340);
+            pushFollow(FOLLOW_rule__SubroutineCall__SubroutineAssignment_1_in_rule__SubroutineCall__Group__1__Impl6400);
             rule__SubroutineCall__SubroutineAssignment_1();
 
             state._fsp--;
@@ -8323,16 +8400,16 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__SubroutineCall__Group__2"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3162:1: rule__SubroutineCall__Group__2 : rule__SubroutineCall__Group__2__Impl ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3190:1: rule__SubroutineCall__Group__2 : rule__SubroutineCall__Group__2__Impl ;
     public final void rule__SubroutineCall__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3166:1: ( rule__SubroutineCall__Group__2__Impl )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3167:2: rule__SubroutineCall__Group__2__Impl
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3194:1: ( rule__SubroutineCall__Group__2__Impl )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3195:2: rule__SubroutineCall__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__SubroutineCall__Group__2__Impl_in_rule__SubroutineCall__Group__26370);
+            pushFollow(FOLLOW_rule__SubroutineCall__Group__2__Impl_in_rule__SubroutineCall__Group__26430);
             rule__SubroutineCall__Group__2__Impl();
 
             state._fsp--;
@@ -8356,20 +8433,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__SubroutineCall__Group__2__Impl"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3173:1: rule__SubroutineCall__Group__2__Impl : ( ';' ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3201:1: rule__SubroutineCall__Group__2__Impl : ( ';' ) ;
     public final void rule__SubroutineCall__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3177:1: ( ( ';' ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3178:1: ( ';' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3205:1: ( ( ';' ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3206:1: ( ';' )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3178:1: ( ';' )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3179:1: ';'
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3206:1: ( ';' )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3207:1: ';'
             {
              before(grammarAccess.getSubroutineCallAccess().getSemicolonKeyword_2()); 
-            match(input,22,FOLLOW_22_in_rule__SubroutineCall__Group__2__Impl6398); 
+            match(input,22,FOLLOW_22_in_rule__SubroutineCall__Group__2__Impl6458); 
              after(grammarAccess.getSubroutineCallAccess().getSemicolonKeyword_2()); 
 
             }
@@ -8393,20 +8470,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Model__SubroutinesAssignment_0"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3199:1: rule__Model__SubroutinesAssignment_0 : ( ruleSubroutine ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3227:1: rule__Model__SubroutinesAssignment_0 : ( ruleSubroutine ) ;
     public final void rule__Model__SubroutinesAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3203:1: ( ( ruleSubroutine ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3204:1: ( ruleSubroutine )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3231:1: ( ( ruleSubroutine ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3232:1: ( ruleSubroutine )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3204:1: ( ruleSubroutine )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3205:1: ruleSubroutine
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3232:1: ( ruleSubroutine )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3233:1: ruleSubroutine
             {
              before(grammarAccess.getModelAccess().getSubroutinesSubroutineParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleSubroutine_in_rule__Model__SubroutinesAssignment_06440);
+            pushFollow(FOLLOW_ruleSubroutine_in_rule__Model__SubroutinesAssignment_06500);
             ruleSubroutine();
 
             state._fsp--;
@@ -8434,20 +8511,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Model__BrowserAssignment_2"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3214:1: rule__Model__BrowserAssignment_2 : ( ruleBrowser ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3242:1: rule__Model__BrowserAssignment_2 : ( ruleBrowser ) ;
     public final void rule__Model__BrowserAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3218:1: ( ( ruleBrowser ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3219:1: ( ruleBrowser )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3246:1: ( ( ruleBrowser ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3247:1: ( ruleBrowser )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3219:1: ( ruleBrowser )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3220:1: ruleBrowser
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3247:1: ( ruleBrowser )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3248:1: ruleBrowser
             {
              before(grammarAccess.getModelAccess().getBrowserBrowserEnumRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleBrowser_in_rule__Model__BrowserAssignment_26471);
+            pushFollow(FOLLOW_ruleBrowser_in_rule__Model__BrowserAssignment_26531);
             ruleBrowser();
 
             state._fsp--;
@@ -8475,20 +8552,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Model__FirstGoToAssignment_4"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3229:1: rule__Model__FirstGoToAssignment_4 : ( ruleGoto ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3257:1: rule__Model__FirstGoToAssignment_4 : ( ruleGoto ) ;
     public final void rule__Model__FirstGoToAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3233:1: ( ( ruleGoto ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3234:1: ( ruleGoto )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3261:1: ( ( ruleGoto ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3262:1: ( ruleGoto )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3234:1: ( ruleGoto )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3235:1: ruleGoto
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3262:1: ( ruleGoto )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3263:1: ruleGoto
             {
              before(grammarAccess.getModelAccess().getFirstGoToGotoParserRuleCall_4_0()); 
-            pushFollow(FOLLOW_ruleGoto_in_rule__Model__FirstGoToAssignment_46502);
+            pushFollow(FOLLOW_ruleGoto_in_rule__Model__FirstGoToAssignment_46562);
             ruleGoto();
 
             state._fsp--;
@@ -8516,20 +8593,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Model__ActionsAssignment_5"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3244:1: rule__Model__ActionsAssignment_5 : ( ruleAction ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3272:1: rule__Model__ActionsAssignment_5 : ( ruleAction ) ;
     public final void rule__Model__ActionsAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3248:1: ( ( ruleAction ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3249:1: ( ruleAction )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3276:1: ( ( ruleAction ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3277:1: ( ruleAction )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3249:1: ( ruleAction )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3250:1: ruleAction
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3277:1: ( ruleAction )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3278:1: ruleAction
             {
              before(grammarAccess.getModelAccess().getActionsActionParserRuleCall_5_0()); 
-            pushFollow(FOLLOW_ruleAction_in_rule__Model__ActionsAssignment_56533);
+            pushFollow(FOLLOW_ruleAction_in_rule__Model__ActionsAssignment_56593);
             ruleAction();
 
             state._fsp--;
@@ -8557,20 +8634,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Goto__UrlAssignment_1"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3259:1: rule__Goto__UrlAssignment_1 : ( ruleValue ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3287:1: rule__Goto__UrlAssignment_1 : ( ruleValue ) ;
     public final void rule__Goto__UrlAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3263:1: ( ( ruleValue ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3264:1: ( ruleValue )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3291:1: ( ( ruleValue ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3292:1: ( ruleValue )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3264:1: ( ruleValue )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3265:1: ruleValue
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3292:1: ( ruleValue )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3293:1: ruleValue
             {
              before(grammarAccess.getGotoAccess().getUrlValueParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleValue_in_rule__Goto__UrlAssignment_16564);
+            pushFollow(FOLLOW_ruleValue_in_rule__Goto__UrlAssignment_16624);
             ruleValue();
 
             state._fsp--;
@@ -8598,20 +8675,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__ClickOn__SelectorAssignment_1"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3274:1: rule__ClickOn__SelectorAssignment_1 : ( ruleSelector ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3302:1: rule__ClickOn__SelectorAssignment_1 : ( ruleSelector ) ;
     public final void rule__ClickOn__SelectorAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3278:1: ( ( ruleSelector ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3279:1: ( ruleSelector )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3306:1: ( ( ruleSelector ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3307:1: ( ruleSelector )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3279:1: ( ruleSelector )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3280:1: ruleSelector
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3307:1: ( ruleSelector )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3308:1: ruleSelector
             {
              before(grammarAccess.getClickOnAccess().getSelectorSelectorParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleSelector_in_rule__ClickOn__SelectorAssignment_16595);
+            pushFollow(FOLLOW_ruleSelector_in_rule__ClickOn__SelectorAssignment_16655);
             ruleSelector();
 
             state._fsp--;
@@ -8639,20 +8716,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Selector__SelAssignment_1"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3289:1: rule__Selector__SelAssignment_1 : ( ruleDomID ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3317:1: rule__Selector__SelAssignment_1 : ( ruleDomID ) ;
     public final void rule__Selector__SelAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3293:1: ( ( ruleDomID ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3294:1: ( ruleDomID )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3321:1: ( ( ruleDomID ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3322:1: ( ruleDomID )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3294:1: ( ruleDomID )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3295:1: ruleDomID
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3322:1: ( ruleDomID )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3323:1: ruleDomID
             {
              before(grammarAccess.getSelectorAccess().getSelDomIDParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleDomID_in_rule__Selector__SelAssignment_16626);
+            pushFollow(FOLLOW_ruleDomID_in_rule__Selector__SelAssignment_16686);
             ruleDomID();
 
             state._fsp--;
@@ -8680,20 +8757,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__DomID__NameAssignment_0"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3304:1: rule__DomID__NameAssignment_0 : ( RULE_STRING ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3332:1: rule__DomID__NameAssignment_0 : ( RULE_STRING ) ;
     public final void rule__DomID__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3308:1: ( ( RULE_STRING ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3309:1: ( RULE_STRING )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3336:1: ( ( RULE_STRING ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3337:1: ( RULE_STRING )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3309:1: ( RULE_STRING )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3310:1: RULE_STRING
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3337:1: ( RULE_STRING )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3338:1: RULE_STRING
             {
              before(grammarAccess.getDomIDAccess().getNameSTRINGTerminalRuleCall_0_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__DomID__NameAssignment_06657); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__DomID__NameAssignment_06717); 
              after(grammarAccess.getDomIDAccess().getNameSTRINGTerminalRuleCall_0_0()); 
 
             }
@@ -8717,20 +8794,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__DomID__NextAssignment_1_1"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3319:1: rule__DomID__NextAssignment_1_1 : ( ruleDomID ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3347:1: rule__DomID__NextAssignment_1_1 : ( ruleDomID ) ;
     public final void rule__DomID__NextAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3323:1: ( ( ruleDomID ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3324:1: ( ruleDomID )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3351:1: ( ( ruleDomID ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3352:1: ( ruleDomID )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3324:1: ( ruleDomID )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3325:1: ruleDomID
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3352:1: ( ruleDomID )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3353:1: ruleDomID
             {
              before(grammarAccess.getDomIDAccess().getNextDomIDParserRuleCall_1_1_0()); 
-            pushFollow(FOLLOW_ruleDomID_in_rule__DomID__NextAssignment_1_16688);
+            pushFollow(FOLLOW_ruleDomID_in_rule__DomID__NextAssignment_1_16748);
             ruleDomID();
 
             state._fsp--;
@@ -8758,21 +8835,25 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__SubroutineParam__NameAssignment_0"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3334:1: rule__SubroutineParam__NameAssignment_0 : ( RULE_ID ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3362:1: rule__SubroutineParam__NameAssignment_0 : ( ruleVariableId ) ;
     public final void rule__SubroutineParam__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3338:1: ( ( RULE_ID ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3339:1: ( RULE_ID )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3366:1: ( ( ruleVariableId ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3367:1: ( ruleVariableId )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3339:1: ( RULE_ID )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3340:1: RULE_ID
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3367:1: ( ruleVariableId )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3368:1: ruleVariableId
             {
-             before(grammarAccess.getSubroutineParamAccess().getNameIDTerminalRuleCall_0_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SubroutineParam__NameAssignment_06719); 
-             after(grammarAccess.getSubroutineParamAccess().getNameIDTerminalRuleCall_0_0()); 
+             before(grammarAccess.getSubroutineParamAccess().getNameVariableIdParserRuleCall_0_0()); 
+            pushFollow(FOLLOW_ruleVariableId_in_rule__SubroutineParam__NameAssignment_06779);
+            ruleVariableId();
+
+            state._fsp--;
+
+             after(grammarAccess.getSubroutineParamAccess().getNameVariableIdParserRuleCall_0_0()); 
 
             }
 
@@ -8795,20 +8876,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__SubroutineParam__NextAssignment_1_1"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3349:1: rule__SubroutineParam__NextAssignment_1_1 : ( ruleSubroutineParam ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3377:1: rule__SubroutineParam__NextAssignment_1_1 : ( ruleSubroutineParam ) ;
     public final void rule__SubroutineParam__NextAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3353:1: ( ( ruleSubroutineParam ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3354:1: ( ruleSubroutineParam )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3381:1: ( ( ruleSubroutineParam ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3382:1: ( ruleSubroutineParam )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3354:1: ( ruleSubroutineParam )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3355:1: ruleSubroutineParam
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3382:1: ( ruleSubroutineParam )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3383:1: ruleSubroutineParam
             {
              before(grammarAccess.getSubroutineParamAccess().getNextSubroutineParamParserRuleCall_1_1_0()); 
-            pushFollow(FOLLOW_ruleSubroutineParam_in_rule__SubroutineParam__NextAssignment_1_16750);
+            pushFollow(FOLLOW_ruleSubroutineParam_in_rule__SubroutineParam__NextAssignment_1_16810);
             ruleSubroutineParam();
 
             state._fsp--;
@@ -8836,20 +8917,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Fill__FieldAssignment_1"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3364:1: rule__Fill__FieldAssignment_1 : ( ruleSelector ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3392:1: rule__Fill__FieldAssignment_1 : ( ruleSelector ) ;
     public final void rule__Fill__FieldAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3368:1: ( ( ruleSelector ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3369:1: ( ruleSelector )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3396:1: ( ( ruleSelector ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3397:1: ( ruleSelector )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3369:1: ( ruleSelector )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3370:1: ruleSelector
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3397:1: ( ruleSelector )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3398:1: ruleSelector
             {
              before(grammarAccess.getFillAccess().getFieldSelectorParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleSelector_in_rule__Fill__FieldAssignment_16781);
+            pushFollow(FOLLOW_ruleSelector_in_rule__Fill__FieldAssignment_16841);
             ruleSelector();
 
             state._fsp--;
@@ -8877,20 +8958,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Fill__ValueAssignment_3"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3379:1: rule__Fill__ValueAssignment_3 : ( ruleValue ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3407:1: rule__Fill__ValueAssignment_3 : ( ruleValue ) ;
     public final void rule__Fill__ValueAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3383:1: ( ( ruleValue ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3384:1: ( ruleValue )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3411:1: ( ( ruleValue ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3412:1: ( ruleValue )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3384:1: ( ruleValue )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3385:1: ruleValue
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3412:1: ( ruleValue )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3413:1: ruleValue
             {
              before(grammarAccess.getFillAccess().getValueValueParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleValue_in_rule__Fill__ValueAssignment_36812);
+            pushFollow(FOLLOW_ruleValue_in_rule__Fill__ValueAssignment_36872);
             ruleValue();
 
             state._fsp--;
@@ -8918,20 +8999,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Check__CheckboxAssignment_1"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3394:1: rule__Check__CheckboxAssignment_1 : ( ruleSelector ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3422:1: rule__Check__CheckboxAssignment_1 : ( ruleSelector ) ;
     public final void rule__Check__CheckboxAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3398:1: ( ( ruleSelector ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3399:1: ( ruleSelector )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3426:1: ( ( ruleSelector ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3427:1: ( ruleSelector )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3399:1: ( ruleSelector )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3400:1: ruleSelector
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3427:1: ( ruleSelector )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3428:1: ruleSelector
             {
              before(grammarAccess.getCheckAccess().getCheckboxSelectorParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleSelector_in_rule__Check__CheckboxAssignment_16843);
+            pushFollow(FOLLOW_ruleSelector_in_rule__Check__CheckboxAssignment_16903);
             ruleSelector();
 
             state._fsp--;
@@ -8959,20 +9040,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Uncheck__CheckboxAssignment_1"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3409:1: rule__Uncheck__CheckboxAssignment_1 : ( ruleSelector ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3437:1: rule__Uncheck__CheckboxAssignment_1 : ( ruleSelector ) ;
     public final void rule__Uncheck__CheckboxAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3413:1: ( ( ruleSelector ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3414:1: ( ruleSelector )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3441:1: ( ( ruleSelector ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3442:1: ( ruleSelector )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3414:1: ( ruleSelector )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3415:1: ruleSelector
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3442:1: ( ruleSelector )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3443:1: ruleSelector
             {
              before(grammarAccess.getUncheckAccess().getCheckboxSelectorParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleSelector_in_rule__Uncheck__CheckboxAssignment_16874);
+            pushFollow(FOLLOW_ruleSelector_in_rule__Uncheck__CheckboxAssignment_16934);
             ruleSelector();
 
             state._fsp--;
@@ -9000,21 +9081,25 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Let__NameAssignment_1"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3424:1: rule__Let__NameAssignment_1 : ( RULE_ID ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3452:1: rule__Let__NameAssignment_1 : ( ruleVariableId ) ;
     public final void rule__Let__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3428:1: ( ( RULE_ID ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3429:1: ( RULE_ID )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3456:1: ( ( ruleVariableId ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3457:1: ( ruleVariableId )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3429:1: ( RULE_ID )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3430:1: RULE_ID
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3457:1: ( ruleVariableId )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3458:1: ruleVariableId
             {
-             before(grammarAccess.getLetAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Let__NameAssignment_16905); 
-             after(grammarAccess.getLetAccess().getNameIDTerminalRuleCall_1_0()); 
+             before(grammarAccess.getLetAccess().getNameVariableIdParserRuleCall_1_0()); 
+            pushFollow(FOLLOW_ruleVariableId_in_rule__Let__NameAssignment_16965);
+            ruleVariableId();
+
+            state._fsp--;
+
+             after(grammarAccess.getLetAccess().getNameVariableIdParserRuleCall_1_0()); 
 
             }
 
@@ -9037,20 +9122,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Let__ValueAssignment_3"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3439:1: rule__Let__ValueAssignment_3 : ( ruleLetValue ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3467:1: rule__Let__ValueAssignment_3 : ( ruleLetValue ) ;
     public final void rule__Let__ValueAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3443:1: ( ( ruleLetValue ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3444:1: ( ruleLetValue )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3471:1: ( ( ruleLetValue ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3472:1: ( ruleLetValue )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3444:1: ( ruleLetValue )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3445:1: ruleLetValue
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3472:1: ( ruleLetValue )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3473:1: ruleLetValue
             {
              before(grammarAccess.getLetAccess().getValueLetValueParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleLetValue_in_rule__Let__ValueAssignment_36936);
+            pushFollow(FOLLOW_ruleLetValue_in_rule__Let__ValueAssignment_36996);
             ruleLetValue();
 
             state._fsp--;
@@ -9078,20 +9163,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__LetValue__SelectorAssignment_0"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3454:1: rule__LetValue__SelectorAssignment_0 : ( ruleSelector ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3482:1: rule__LetValue__SelectorAssignment_0 : ( ruleSelector ) ;
     public final void rule__LetValue__SelectorAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3458:1: ( ( ruleSelector ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3459:1: ( ruleSelector )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3486:1: ( ( ruleSelector ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3487:1: ( ruleSelector )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3459:1: ( ruleSelector )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3460:1: ruleSelector
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3487:1: ( ruleSelector )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3488:1: ruleSelector
             {
              before(grammarAccess.getLetValueAccess().getSelectorSelectorParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleSelector_in_rule__LetValue__SelectorAssignment_06967);
+            pushFollow(FOLLOW_ruleSelector_in_rule__LetValue__SelectorAssignment_07027);
             ruleSelector();
 
             state._fsp--;
@@ -9119,20 +9204,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__LetValue__ValueAssignment_1"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3469:1: rule__LetValue__ValueAssignment_1 : ( ruleValue ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3497:1: rule__LetValue__ValueAssignment_1 : ( ruleValue ) ;
     public final void rule__LetValue__ValueAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3473:1: ( ( ruleValue ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3474:1: ( ruleValue )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3501:1: ( ( ruleValue ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3502:1: ( ruleValue )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3474:1: ( ruleValue )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3475:1: ruleValue
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3502:1: ( ruleValue )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3503:1: ruleValue
             {
              before(grammarAccess.getLetValueAccess().getValueValueParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleValue_in_rule__LetValue__ValueAssignment_16998);
+            pushFollow(FOLLOW_ruleValue_in_rule__LetValue__ValueAssignment_17058);
             ruleValue();
 
             state._fsp--;
@@ -9160,20 +9245,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Value__StringAssignment_0"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3484:1: rule__Value__StringAssignment_0 : ( RULE_STRING ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3512:1: rule__Value__StringAssignment_0 : ( RULE_STRING ) ;
     public final void rule__Value__StringAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3488:1: ( ( RULE_STRING ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3489:1: ( RULE_STRING )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3516:1: ( ( RULE_STRING ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3517:1: ( RULE_STRING )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3489:1: ( RULE_STRING )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3490:1: RULE_STRING
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3517:1: ( RULE_STRING )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3518:1: RULE_STRING
             {
              before(grammarAccess.getValueAccess().getStringSTRINGTerminalRuleCall_0_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Value__StringAssignment_07029); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Value__StringAssignment_07089); 
              after(grammarAccess.getValueAccess().getStringSTRINGTerminalRuleCall_0_0()); 
 
             }
@@ -9197,20 +9282,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Value__IntAssignment_1"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3499:1: rule__Value__IntAssignment_1 : ( RULE_INT ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3527:1: rule__Value__IntAssignment_1 : ( RULE_INT ) ;
     public final void rule__Value__IntAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3503:1: ( ( RULE_INT ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3504:1: ( RULE_INT )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3531:1: ( ( RULE_INT ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3532:1: ( RULE_INT )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3504:1: ( RULE_INT )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3505:1: RULE_INT
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3532:1: ( RULE_INT )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3533:1: RULE_INT
             {
              before(grammarAccess.getValueAccess().getIntINTTerminalRuleCall_1_0()); 
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__Value__IntAssignment_17060); 
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__Value__IntAssignment_17120); 
              after(grammarAccess.getValueAccess().getIntINTTerminalRuleCall_1_0()); 
 
             }
@@ -9233,30 +9318,30 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
     // $ANTLR end "rule__Value__IntAssignment_1"
 
 
-    // $ANTLR start "rule__Value__LetAssignment_2"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3514:1: rule__Value__LetAssignment_2 : ( ( RULE_ID ) ) ;
-    public final void rule__Value__LetAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__Value__VariableAssignment_2"
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3542:1: rule__Value__VariableAssignment_2 : ( ( RULE_ID ) ) ;
+    public final void rule__Value__VariableAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3518:1: ( ( ( RULE_ID ) ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3519:1: ( ( RULE_ID ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3546:1: ( ( ( RULE_ID ) ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3547:1: ( ( RULE_ID ) )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3519:1: ( ( RULE_ID ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3520:1: ( RULE_ID )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3547:1: ( ( RULE_ID ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3548:1: ( RULE_ID )
             {
-             before(grammarAccess.getValueAccess().getLetLetCrossReference_2_0()); 
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3521:1: ( RULE_ID )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3522:1: RULE_ID
+             before(grammarAccess.getValueAccess().getVariableVariableIdCrossReference_2_0()); 
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3549:1: ( RULE_ID )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3550:1: RULE_ID
             {
-             before(grammarAccess.getValueAccess().getLetLetIDTerminalRuleCall_2_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Value__LetAssignment_27095); 
-             after(grammarAccess.getValueAccess().getLetLetIDTerminalRuleCall_2_0_1()); 
+             before(grammarAccess.getValueAccess().getVariableVariableIdIDTerminalRuleCall_2_0_1()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Value__VariableAssignment_27155); 
+             after(grammarAccess.getValueAccess().getVariableVariableIdIDTerminalRuleCall_2_0_1()); 
 
             }
 
-             after(grammarAccess.getValueAccess().getLetLetCrossReference_2_0()); 
+             after(grammarAccess.getValueAccess().getVariableVariableIdCrossReference_2_0()); 
 
             }
 
@@ -9275,24 +9360,24 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
         }
         return ;
     }
-    // $ANTLR end "rule__Value__LetAssignment_2"
+    // $ANTLR end "rule__Value__VariableAssignment_2"
 
 
     // $ANTLR start "rule__DoWhile__ActionsAssignment_2"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3533:1: rule__DoWhile__ActionsAssignment_2 : ( ruleAction ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3561:1: rule__DoWhile__ActionsAssignment_2 : ( ruleAction ) ;
     public final void rule__DoWhile__ActionsAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3537:1: ( ( ruleAction ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3538:1: ( ruleAction )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3565:1: ( ( ruleAction ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3566:1: ( ruleAction )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3538:1: ( ruleAction )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3539:1: ruleAction
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3566:1: ( ruleAction )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3567:1: ruleAction
             {
              before(grammarAccess.getDoWhileAccess().getActionsActionParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleAction_in_rule__DoWhile__ActionsAssignment_27130);
+            pushFollow(FOLLOW_ruleAction_in_rule__DoWhile__ActionsAssignment_27190);
             ruleAction();
 
             state._fsp--;
@@ -9320,20 +9405,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__DoWhile__ConditionAssignment_6"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3548:1: rule__DoWhile__ConditionAssignment_6 : ( ruleBooleanExp ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3576:1: rule__DoWhile__ConditionAssignment_6 : ( ruleBooleanExp ) ;
     public final void rule__DoWhile__ConditionAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3552:1: ( ( ruleBooleanExp ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3553:1: ( ruleBooleanExp )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3580:1: ( ( ruleBooleanExp ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3581:1: ( ruleBooleanExp )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3553:1: ( ruleBooleanExp )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3554:1: ruleBooleanExp
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3581:1: ( ruleBooleanExp )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3582:1: ruleBooleanExp
             {
              before(grammarAccess.getDoWhileAccess().getConditionBooleanExpParserRuleCall_6_0()); 
-            pushFollow(FOLLOW_ruleBooleanExp_in_rule__DoWhile__ConditionAssignment_67161);
+            pushFollow(FOLLOW_ruleBooleanExp_in_rule__DoWhile__ConditionAssignment_67221);
             ruleBooleanExp();
 
             state._fsp--;
@@ -9361,20 +9446,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__BooleanExp__LeftMemberAssignment_0"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3563:1: rule__BooleanExp__LeftMemberAssignment_0 : ( ruleValue ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3591:1: rule__BooleanExp__LeftMemberAssignment_0 : ( ruleValue ) ;
     public final void rule__BooleanExp__LeftMemberAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3567:1: ( ( ruleValue ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3568:1: ( ruleValue )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3595:1: ( ( ruleValue ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3596:1: ( ruleValue )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3568:1: ( ruleValue )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3569:1: ruleValue
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3596:1: ( ruleValue )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3597:1: ruleValue
             {
              before(grammarAccess.getBooleanExpAccess().getLeftMemberValueParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleValue_in_rule__BooleanExp__LeftMemberAssignment_07192);
+            pushFollow(FOLLOW_ruleValue_in_rule__BooleanExp__LeftMemberAssignment_07252);
             ruleValue();
 
             state._fsp--;
@@ -9402,20 +9487,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__BooleanExp__OperatorAssignment_1"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3578:1: rule__BooleanExp__OperatorAssignment_1 : ( ruleOperator ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3606:1: rule__BooleanExp__OperatorAssignment_1 : ( ruleOperator ) ;
     public final void rule__BooleanExp__OperatorAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3582:1: ( ( ruleOperator ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3583:1: ( ruleOperator )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3610:1: ( ( ruleOperator ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3611:1: ( ruleOperator )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3583:1: ( ruleOperator )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3584:1: ruleOperator
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3611:1: ( ruleOperator )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3612:1: ruleOperator
             {
              before(grammarAccess.getBooleanExpAccess().getOperatorOperatorEnumRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleOperator_in_rule__BooleanExp__OperatorAssignment_17223);
+            pushFollow(FOLLOW_ruleOperator_in_rule__BooleanExp__OperatorAssignment_17283);
             ruleOperator();
 
             state._fsp--;
@@ -9443,20 +9528,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__BooleanExp__RightMemberAssignment_2"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3593:1: rule__BooleanExp__RightMemberAssignment_2 : ( ruleValue ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3621:1: rule__BooleanExp__RightMemberAssignment_2 : ( ruleValue ) ;
     public final void rule__BooleanExp__RightMemberAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3597:1: ( ( ruleValue ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3598:1: ( ruleValue )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3625:1: ( ( ruleValue ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3626:1: ( ruleValue )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3598:1: ( ruleValue )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3599:1: ruleValue
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3626:1: ( ruleValue )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3627:1: ruleValue
             {
              before(grammarAccess.getBooleanExpAccess().getRightMemberValueParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleValue_in_rule__BooleanExp__RightMemberAssignment_27254);
+            pushFollow(FOLLOW_ruleValue_in_rule__BooleanExp__RightMemberAssignment_27314);
             ruleValue();
 
             state._fsp--;
@@ -9484,20 +9569,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__IfThen__ConditionAssignment_2"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3608:1: rule__IfThen__ConditionAssignment_2 : ( ruleBooleanExp ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3636:1: rule__IfThen__ConditionAssignment_2 : ( ruleBooleanExp ) ;
     public final void rule__IfThen__ConditionAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3612:1: ( ( ruleBooleanExp ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3613:1: ( ruleBooleanExp )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3640:1: ( ( ruleBooleanExp ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3641:1: ( ruleBooleanExp )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3613:1: ( ruleBooleanExp )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3614:1: ruleBooleanExp
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3641:1: ( ruleBooleanExp )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3642:1: ruleBooleanExp
             {
              before(grammarAccess.getIfThenAccess().getConditionBooleanExpParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleBooleanExp_in_rule__IfThen__ConditionAssignment_27285);
+            pushFollow(FOLLOW_ruleBooleanExp_in_rule__IfThen__ConditionAssignment_27345);
             ruleBooleanExp();
 
             state._fsp--;
@@ -9525,20 +9610,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__IfThen__ThenActionsAssignment_6"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3623:1: rule__IfThen__ThenActionsAssignment_6 : ( ruleAction ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3651:1: rule__IfThen__ThenActionsAssignment_6 : ( ruleAction ) ;
     public final void rule__IfThen__ThenActionsAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3627:1: ( ( ruleAction ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3628:1: ( ruleAction )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3655:1: ( ( ruleAction ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3656:1: ( ruleAction )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3628:1: ( ruleAction )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3629:1: ruleAction
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3656:1: ( ruleAction )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3657:1: ruleAction
             {
              before(grammarAccess.getIfThenAccess().getThenActionsActionParserRuleCall_6_0()); 
-            pushFollow(FOLLOW_ruleAction_in_rule__IfThen__ThenActionsAssignment_67316);
+            pushFollow(FOLLOW_ruleAction_in_rule__IfThen__ThenActionsAssignment_67376);
             ruleAction();
 
             state._fsp--;
@@ -9566,20 +9651,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__IfThen__ElseActionsAssignment_8_2"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3638:1: rule__IfThen__ElseActionsAssignment_8_2 : ( ruleAction ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3666:1: rule__IfThen__ElseActionsAssignment_8_2 : ( ruleAction ) ;
     public final void rule__IfThen__ElseActionsAssignment_8_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3642:1: ( ( ruleAction ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3643:1: ( ruleAction )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3670:1: ( ( ruleAction ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3671:1: ( ruleAction )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3643:1: ( ruleAction )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3644:1: ruleAction
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3671:1: ( ruleAction )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3672:1: ruleAction
             {
              before(grammarAccess.getIfThenAccess().getElseActionsActionParserRuleCall_8_2_0()); 
-            pushFollow(FOLLOW_ruleAction_in_rule__IfThen__ElseActionsAssignment_8_27347);
+            pushFollow(FOLLOW_ruleAction_in_rule__IfThen__ElseActionsAssignment_8_27407);
             ruleAction();
 
             state._fsp--;
@@ -9607,20 +9692,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Subroutine__NameAssignment_1"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3653:1: rule__Subroutine__NameAssignment_1 : ( RULE_ID ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3681:1: rule__Subroutine__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Subroutine__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3657:1: ( ( RULE_ID ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3658:1: ( RULE_ID )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3685:1: ( ( RULE_ID ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3686:1: ( RULE_ID )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3658:1: ( RULE_ID )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3659:1: RULE_ID
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3686:1: ( RULE_ID )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3687:1: RULE_ID
             {
              before(grammarAccess.getSubroutineAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Subroutine__NameAssignment_17378); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Subroutine__NameAssignment_17438); 
              after(grammarAccess.getSubroutineAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -9644,20 +9729,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Subroutine__ParamsAssignment_2_1"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3668:1: rule__Subroutine__ParamsAssignment_2_1 : ( ruleSubroutineParam ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3696:1: rule__Subroutine__ParamsAssignment_2_1 : ( ruleSubroutineParam ) ;
     public final void rule__Subroutine__ParamsAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3672:1: ( ( ruleSubroutineParam ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3673:1: ( ruleSubroutineParam )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3700:1: ( ( ruleSubroutineParam ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3701:1: ( ruleSubroutineParam )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3673:1: ( ruleSubroutineParam )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3674:1: ruleSubroutineParam
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3701:1: ( ruleSubroutineParam )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3702:1: ruleSubroutineParam
             {
              before(grammarAccess.getSubroutineAccess().getParamsSubroutineParamParserRuleCall_2_1_0()); 
-            pushFollow(FOLLOW_ruleSubroutineParam_in_rule__Subroutine__ParamsAssignment_2_17409);
+            pushFollow(FOLLOW_ruleSubroutineParam_in_rule__Subroutine__ParamsAssignment_2_17469);
             ruleSubroutineParam();
 
             state._fsp--;
@@ -9685,20 +9770,20 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__Subroutine__ActionsAssignment_4"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3683:1: rule__Subroutine__ActionsAssignment_4 : ( ruleAction ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3711:1: rule__Subroutine__ActionsAssignment_4 : ( ruleAction ) ;
     public final void rule__Subroutine__ActionsAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3687:1: ( ( ruleAction ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3688:1: ( ruleAction )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3715:1: ( ( ruleAction ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3716:1: ( ruleAction )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3688:1: ( ruleAction )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3689:1: ruleAction
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3716:1: ( ruleAction )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3717:1: ruleAction
             {
              before(grammarAccess.getSubroutineAccess().getActionsActionParserRuleCall_4_0()); 
-            pushFollow(FOLLOW_ruleAction_in_rule__Subroutine__ActionsAssignment_47440);
+            pushFollow(FOLLOW_ruleAction_in_rule__Subroutine__ActionsAssignment_47500);
             ruleAction();
 
             state._fsp--;
@@ -9726,24 +9811,24 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start "rule__SubroutineCall__SubroutineAssignment_1"
-    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3698:1: rule__SubroutineCall__SubroutineAssignment_1 : ( ( RULE_ID ) ) ;
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3726:1: rule__SubroutineCall__SubroutineAssignment_1 : ( ( RULE_ID ) ) ;
     public final void rule__SubroutineCall__SubroutineAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3702:1: ( ( ( RULE_ID ) ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3703:1: ( ( RULE_ID ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3730:1: ( ( ( RULE_ID ) ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3731:1: ( ( RULE_ID ) )
             {
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3703:1: ( ( RULE_ID ) )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3704:1: ( RULE_ID )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3731:1: ( ( RULE_ID ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3732:1: ( RULE_ID )
             {
              before(grammarAccess.getSubroutineCallAccess().getSubroutineSubroutineCrossReference_1_0()); 
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3705:1: ( RULE_ID )
-            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3706:1: RULE_ID
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3733:1: ( RULE_ID )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3734:1: RULE_ID
             {
              before(grammarAccess.getSubroutineCallAccess().getSubroutineSubroutineIDTerminalRuleCall_1_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SubroutineCall__SubroutineAssignment_17475); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SubroutineCall__SubroutineAssignment_17535); 
              after(grammarAccess.getSubroutineCallAccess().getSubroutineSubroutineIDTerminalRuleCall_1_0_1()); 
 
             }
@@ -9768,6 +9853,43 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
         return ;
     }
     // $ANTLR end "rule__SubroutineCall__SubroutineAssignment_1"
+
+
+    // $ANTLR start "rule__VariableId__NameAssignment"
+    // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3745:1: rule__VariableId__NameAssignment : ( RULE_ID ) ;
+    public final void rule__VariableId__NameAssignment() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3749:1: ( ( RULE_ID ) )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3750:1: ( RULE_ID )
+            {
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3750:1: ( RULE_ID )
+            // ../org.joclal.browserAutomation.ui/src-gen/org/joclal/ui/contentassist/antlr/internal/InternalBrowserAutomation.g:3751:1: RULE_ID
+            {
+             before(grammarAccess.getVariableIdAccess().getNameIDTerminalRuleCall_0()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__VariableId__NameAssignment7570); 
+             after(grammarAccess.getVariableIdAccess().getNameIDTerminalRuleCall_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__VariableId__NameAssignment"
 
     // Delegated rules
 
@@ -9828,271 +9950,275 @@ public class InternalBrowserAutomationParser extends AbstractInternalContentAssi
     public static final BitSet FOLLOW_ruleSubroutineCall_in_entryRuleSubroutineCall1081 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleSubroutineCall1088 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__SubroutineCall__Group__0_in_ruleSubroutineCall1114 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Browser__Alternatives_in_ruleBrowser1151 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Operator__Alternatives_in_ruleOperator1187 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleGoto_in_rule__Action__Alternatives1222 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleClickOn_in_rule__Action__Alternatives1239 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFill_in_rule__Action__Alternatives1256 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCheck_in_rule__Action__Alternatives1273 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleUncheck_in_rule__Action__Alternatives1290 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLet_in_rule__Action__Alternatives1307 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDoWhile_in_rule__Action__Alternatives1324 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIfThen_in_rule__Action__Alternatives1341 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSubroutineCall_in_rule__Action__Alternatives1358 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LetValue__SelectorAssignment_0_in_rule__LetValue__Alternatives1390 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LetValue__ValueAssignment_1_in_rule__LetValue__Alternatives1408 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Value__StringAssignment_0_in_rule__Value__Alternatives1441 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Value__IntAssignment_1_in_rule__Value__Alternatives1459 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Value__LetAssignment_2_in_rule__Value__Alternatives1477 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_11_in_rule__Browser__Alternatives1511 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_rule__Browser__Alternatives1532 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_rule__Browser__Alternatives1553 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_rule__Browser__Alternatives1574 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_rule__Browser__Alternatives1595 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_16_in_rule__Operator__Alternatives1631 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_rule__Operator__Alternatives1652 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rule__Operator__Alternatives1673 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_rule__Operator__Alternatives1694 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_rule__Operator__Alternatives1715 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__Group__0__Impl_in_rule__Model__Group__01748 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_rule__Model__Group__1_in_rule__Model__Group__01751 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__SubroutinesAssignment_0_in_rule__Model__Group__0__Impl1778 = new BitSet(new long[]{0x0000040000000002L});
-    public static final BitSet FOLLOW_rule__Model__Group__1__Impl_in_rule__Model__Group__11809 = new BitSet(new long[]{0x000000000000F800L});
-    public static final BitSet FOLLOW_rule__Model__Group__2_in_rule__Model__Group__11812 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_rule__Model__Group__1__Impl1840 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__Group__2__Impl_in_rule__Model__Group__21871 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_rule__Model__Group__3_in_rule__Model__Group__21874 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__BrowserAssignment_2_in_rule__Model__Group__2__Impl1901 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__Group__3__Impl_in_rule__Model__Group__31931 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_rule__Model__Group__4_in_rule__Model__Group__31934 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_rule__Model__Group__3__Impl1962 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__Group__4__Impl_in_rule__Model__Group__41993 = new BitSet(new long[]{0x00000885D1800000L});
-    public static final BitSet FOLLOW_rule__Model__Group__5_in_rule__Model__Group__41996 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__FirstGoToAssignment_4_in_rule__Model__Group__4__Impl2023 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__Group__5__Impl_in_rule__Model__Group__52053 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__ActionsAssignment_5_in_rule__Model__Group__5__Impl2080 = new BitSet(new long[]{0x00000885D1800002L});
-    public static final BitSet FOLLOW_rule__Goto__Group__0__Impl_in_rule__Goto__Group__02123 = new BitSet(new long[]{0x0000000000000070L});
-    public static final BitSet FOLLOW_rule__Goto__Group__1_in_rule__Goto__Group__02126 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rule__Goto__Group__0__Impl2154 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Goto__Group__1__Impl_in_rule__Goto__Group__12185 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_rule__Goto__Group__2_in_rule__Goto__Group__12188 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Goto__UrlAssignment_1_in_rule__Goto__Group__1__Impl2215 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Goto__Group__2__Impl_in_rule__Goto__Group__22245 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_rule__Goto__Group__2__Impl2273 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ClickOn__Group__0__Impl_in_rule__ClickOn__Group__02310 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_rule__ClickOn__Group__1_in_rule__ClickOn__Group__02313 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_rule__ClickOn__Group__0__Impl2341 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ClickOn__Group__1__Impl_in_rule__ClickOn__Group__12372 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_rule__ClickOn__Group__2_in_rule__ClickOn__Group__12375 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ClickOn__SelectorAssignment_1_in_rule__ClickOn__Group__1__Impl2402 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ClickOn__Group__2__Impl_in_rule__ClickOn__Group__22432 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_rule__ClickOn__Group__2__Impl2460 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Selector__Group__0__Impl_in_rule__Selector__Group__02497 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Selector__Group__1_in_rule__Selector__Group__02500 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_rule__Selector__Group__0__Impl2528 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Selector__Group__1__Impl_in_rule__Selector__Group__12559 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_rule__Selector__Group__2_in_rule__Selector__Group__12562 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Selector__SelAssignment_1_in_rule__Selector__Group__1__Impl2589 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Selector__Group__2__Impl_in_rule__Selector__Group__22619 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_rule__Selector__Group__2__Impl2647 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DomID__Group__0__Impl_in_rule__DomID__Group__02684 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_rule__DomID__Group__1_in_rule__DomID__Group__02687 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DomID__NameAssignment_0_in_rule__DomID__Group__0__Impl2714 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DomID__Group__1__Impl_in_rule__DomID__Group__12744 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DomID__Group_1__0_in_rule__DomID__Group__1__Impl2771 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DomID__Group_1__0__Impl_in_rule__DomID__Group_1__02806 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__DomID__Group_1__1_in_rule__DomID__Group_1__02809 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_rule__DomID__Group_1__0__Impl2837 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DomID__Group_1__1__Impl_in_rule__DomID__Group_1__12868 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DomID__NextAssignment_1_1_in_rule__DomID__Group_1__1__Impl2895 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SubroutineParam__Group__0__Impl_in_rule__SubroutineParam__Group__02929 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_rule__SubroutineParam__Group__1_in_rule__SubroutineParam__Group__02932 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SubroutineParam__NameAssignment_0_in_rule__SubroutineParam__Group__0__Impl2959 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SubroutineParam__Group__1__Impl_in_rule__SubroutineParam__Group__12989 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SubroutineParam__Group_1__0_in_rule__SubroutineParam__Group__1__Impl3016 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SubroutineParam__Group_1__0__Impl_in_rule__SubroutineParam__Group_1__03051 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__SubroutineParam__Group_1__1_in_rule__SubroutineParam__Group_1__03054 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_rule__SubroutineParam__Group_1__0__Impl3082 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SubroutineParam__Group_1__1__Impl_in_rule__SubroutineParam__Group_1__13113 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SubroutineParam__NextAssignment_1_1_in_rule__SubroutineParam__Group_1__1__Impl3140 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Fill__Group__0__Impl_in_rule__Fill__Group__03174 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_rule__Fill__Group__1_in_rule__Fill__Group__03177 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_rule__Fill__Group__0__Impl3205 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Fill__Group__1__Impl_in_rule__Fill__Group__13236 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_rule__Fill__Group__2_in_rule__Fill__Group__13239 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Fill__FieldAssignment_1_in_rule__Fill__Group__1__Impl3266 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Fill__Group__2__Impl_in_rule__Fill__Group__23296 = new BitSet(new long[]{0x0000000000000070L});
-    public static final BitSet FOLLOW_rule__Fill__Group__3_in_rule__Fill__Group__23299 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_rule__Fill__Group__2__Impl3327 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Fill__Group__3__Impl_in_rule__Fill__Group__33358 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_rule__Fill__Group__4_in_rule__Fill__Group__33361 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Fill__ValueAssignment_3_in_rule__Fill__Group__3__Impl3388 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Fill__Group__4__Impl_in_rule__Fill__Group__43418 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_rule__Fill__Group__4__Impl3446 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Check__Group__0__Impl_in_rule__Check__Group__03487 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_rule__Check__Group__1_in_rule__Check__Group__03490 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_rule__Check__Group__0__Impl3518 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Check__Group__1__Impl_in_rule__Check__Group__13549 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_rule__Check__Group__2_in_rule__Check__Group__13552 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Check__CheckboxAssignment_1_in_rule__Check__Group__1__Impl3579 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Check__Group__2__Impl_in_rule__Check__Group__23609 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_rule__Check__Group__2__Impl3637 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Uncheck__Group__0__Impl_in_rule__Uncheck__Group__03674 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_rule__Uncheck__Group__1_in_rule__Uncheck__Group__03677 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_rule__Uncheck__Group__0__Impl3705 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Uncheck__Group__1__Impl_in_rule__Uncheck__Group__13736 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_rule__Uncheck__Group__2_in_rule__Uncheck__Group__13739 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Uncheck__CheckboxAssignment_1_in_rule__Uncheck__Group__1__Impl3766 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Uncheck__Group__2__Impl_in_rule__Uncheck__Group__23796 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_rule__Uncheck__Group__2__Impl3824 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Let__Group__0__Impl_in_rule__Let__Group__03861 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Let__Group__1_in_rule__Let__Group__03864 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_rule__Let__Group__0__Impl3892 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Let__Group__1__Impl_in_rule__Let__Group__13923 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_rule__Let__Group__2_in_rule__Let__Group__13926 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Let__NameAssignment_1_in_rule__Let__Group__1__Impl3953 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Let__Group__2__Impl_in_rule__Let__Group__23983 = new BitSet(new long[]{0x0000000002000070L});
-    public static final BitSet FOLLOW_rule__Let__Group__3_in_rule__Let__Group__23986 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_rule__Let__Group__2__Impl4014 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Let__Group__3__Impl_in_rule__Let__Group__34045 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_rule__Let__Group__4_in_rule__Let__Group__34048 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Let__ValueAssignment_3_in_rule__Let__Group__3__Impl4075 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Let__Group__4__Impl_in_rule__Let__Group__44105 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_rule__Let__Group__4__Impl4133 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DoWhile__Group__0__Impl_in_rule__DoWhile__Group__04174 = new BitSet(new long[]{0x0000000800000000L});
-    public static final BitSet FOLLOW_rule__DoWhile__Group__1_in_rule__DoWhile__Group__04177 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_rule__DoWhile__Group__0__Impl4205 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DoWhile__Group__1__Impl_in_rule__DoWhile__Group__14236 = new BitSet(new long[]{0x00000895D1800000L});
-    public static final BitSet FOLLOW_rule__DoWhile__Group__2_in_rule__DoWhile__Group__14239 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_rule__DoWhile__Group__1__Impl4267 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DoWhile__Group__2__Impl_in_rule__DoWhile__Group__24298 = new BitSet(new long[]{0x00000895D1800000L});
-    public static final BitSet FOLLOW_rule__DoWhile__Group__3_in_rule__DoWhile__Group__24301 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DoWhile__ActionsAssignment_2_in_rule__DoWhile__Group__2__Impl4328 = new BitSet(new long[]{0x00000885D1800002L});
-    public static final BitSet FOLLOW_rule__DoWhile__Group__3__Impl_in_rule__DoWhile__Group__34359 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_rule__DoWhile__Group__4_in_rule__DoWhile__Group__34362 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_rule__DoWhile__Group__3__Impl4390 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DoWhile__Group__4__Impl_in_rule__DoWhile__Group__44421 = new BitSet(new long[]{0x0000004000000000L});
-    public static final BitSet FOLLOW_rule__DoWhile__Group__5_in_rule__DoWhile__Group__44424 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_37_in_rule__DoWhile__Group__4__Impl4452 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DoWhile__Group__5__Impl_in_rule__DoWhile__Group__54483 = new BitSet(new long[]{0x0000000000000070L});
-    public static final BitSet FOLLOW_rule__DoWhile__Group__6_in_rule__DoWhile__Group__54486 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_rule__DoWhile__Group__5__Impl4514 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DoWhile__Group__6__Impl_in_rule__DoWhile__Group__64545 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_rule__DoWhile__Group__7_in_rule__DoWhile__Group__64548 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DoWhile__ConditionAssignment_6_in_rule__DoWhile__Group__6__Impl4575 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DoWhile__Group__7__Impl_in_rule__DoWhile__Group__74605 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_rule__DoWhile__Group__7__Impl4633 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BooleanExp__Group__0__Impl_in_rule__BooleanExp__Group__04680 = new BitSet(new long[]{0x00000000001F0000L});
-    public static final BitSet FOLLOW_rule__BooleanExp__Group__1_in_rule__BooleanExp__Group__04683 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BooleanExp__LeftMemberAssignment_0_in_rule__BooleanExp__Group__0__Impl4710 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BooleanExp__Group__1__Impl_in_rule__BooleanExp__Group__14740 = new BitSet(new long[]{0x0000000000000070L});
-    public static final BitSet FOLLOW_rule__BooleanExp__Group__2_in_rule__BooleanExp__Group__14743 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BooleanExp__OperatorAssignment_1_in_rule__BooleanExp__Group__1__Impl4770 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BooleanExp__Group__2__Impl_in_rule__BooleanExp__Group__24800 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BooleanExp__RightMemberAssignment_2_in_rule__BooleanExp__Group__2__Impl4827 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__IfThen__Group__0__Impl_in_rule__IfThen__Group__04863 = new BitSet(new long[]{0x0000004000000000L});
-    public static final BitSet FOLLOW_rule__IfThen__Group__1_in_rule__IfThen__Group__04866 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_39_in_rule__IfThen__Group__0__Impl4894 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__IfThen__Group__1__Impl_in_rule__IfThen__Group__14925 = new BitSet(new long[]{0x0000000000000070L});
-    public static final BitSet FOLLOW_rule__IfThen__Group__2_in_rule__IfThen__Group__14928 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_rule__IfThen__Group__1__Impl4956 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__IfThen__Group__2__Impl_in_rule__IfThen__Group__24987 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_rule__IfThen__Group__3_in_rule__IfThen__Group__24990 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__IfThen__ConditionAssignment_2_in_rule__IfThen__Group__2__Impl5017 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__IfThen__Group__3__Impl_in_rule__IfThen__Group__35047 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_rule__IfThen__Group__4_in_rule__IfThen__Group__35050 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_rule__IfThen__Group__3__Impl5078 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__IfThen__Group__4__Impl_in_rule__IfThen__Group__45109 = new BitSet(new long[]{0x0000000800000000L});
-    public static final BitSet FOLLOW_rule__IfThen__Group__5_in_rule__IfThen__Group__45112 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_rule__IfThen__Group__4__Impl5140 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__IfThen__Group__5__Impl_in_rule__IfThen__Group__55171 = new BitSet(new long[]{0x00000895D1800000L});
-    public static final BitSet FOLLOW_rule__IfThen__Group__6_in_rule__IfThen__Group__55174 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_rule__IfThen__Group__5__Impl5202 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__IfThen__Group__6__Impl_in_rule__IfThen__Group__65233 = new BitSet(new long[]{0x00000895D1800000L});
-    public static final BitSet FOLLOW_rule__IfThen__Group__7_in_rule__IfThen__Group__65236 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__IfThen__ThenActionsAssignment_6_in_rule__IfThen__Group__6__Impl5263 = new BitSet(new long[]{0x00000885D1800002L});
-    public static final BitSet FOLLOW_rule__IfThen__Group__7__Impl_in_rule__IfThen__Group__75294 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_rule__IfThen__Group__8_in_rule__IfThen__Group__75297 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_rule__IfThen__Group__7__Impl5325 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__IfThen__Group__8__Impl_in_rule__IfThen__Group__85356 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__IfThen__Group_8__0_in_rule__IfThen__Group__8__Impl5383 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__IfThen__Group_8__0__Impl_in_rule__IfThen__Group_8__05432 = new BitSet(new long[]{0x0000000800000000L});
-    public static final BitSet FOLLOW_rule__IfThen__Group_8__1_in_rule__IfThen__Group_8__05435 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_41_in_rule__IfThen__Group_8__0__Impl5463 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__IfThen__Group_8__1__Impl_in_rule__IfThen__Group_8__15494 = new BitSet(new long[]{0x00000895D1800000L});
-    public static final BitSet FOLLOW_rule__IfThen__Group_8__2_in_rule__IfThen__Group_8__15497 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_rule__IfThen__Group_8__1__Impl5525 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__IfThen__Group_8__2__Impl_in_rule__IfThen__Group_8__25556 = new BitSet(new long[]{0x00000895D1800000L});
-    public static final BitSet FOLLOW_rule__IfThen__Group_8__3_in_rule__IfThen__Group_8__25559 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__IfThen__ElseActionsAssignment_8_2_in_rule__IfThen__Group_8__2__Impl5586 = new BitSet(new long[]{0x00000885D1800002L});
-    public static final BitSet FOLLOW_rule__IfThen__Group_8__3__Impl_in_rule__IfThen__Group_8__35617 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_rule__IfThen__Group_8__3__Impl5645 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Subroutine__Group__0__Impl_in_rule__Subroutine__Group__05684 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Subroutine__Group__1_in_rule__Subroutine__Group__05687 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_42_in_rule__Subroutine__Group__0__Impl5715 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Subroutine__Group__1__Impl_in_rule__Subroutine__Group__15746 = new BitSet(new long[]{0x0000004800000000L});
-    public static final BitSet FOLLOW_rule__Subroutine__Group__2_in_rule__Subroutine__Group__15749 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Subroutine__NameAssignment_1_in_rule__Subroutine__Group__1__Impl5776 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Subroutine__Group__2__Impl_in_rule__Subroutine__Group__25806 = new BitSet(new long[]{0x0000004800000000L});
-    public static final BitSet FOLLOW_rule__Subroutine__Group__3_in_rule__Subroutine__Group__25809 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Subroutine__Group_2__0_in_rule__Subroutine__Group__2__Impl5836 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Subroutine__Group__3__Impl_in_rule__Subroutine__Group__35867 = new BitSet(new long[]{0x00000895D1800000L});
-    public static final BitSet FOLLOW_rule__Subroutine__Group__4_in_rule__Subroutine__Group__35870 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_rule__Subroutine__Group__3__Impl5898 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Subroutine__Group__4__Impl_in_rule__Subroutine__Group__45929 = new BitSet(new long[]{0x00000895D1800000L});
-    public static final BitSet FOLLOW_rule__Subroutine__Group__5_in_rule__Subroutine__Group__45932 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Subroutine__ActionsAssignment_4_in_rule__Subroutine__Group__4__Impl5959 = new BitSet(new long[]{0x00000885D1800002L});
-    public static final BitSet FOLLOW_rule__Subroutine__Group__5__Impl_in_rule__Subroutine__Group__55990 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_rule__Subroutine__Group__5__Impl6018 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Subroutine__Group_2__0__Impl_in_rule__Subroutine__Group_2__06061 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Subroutine__Group_2__1_in_rule__Subroutine__Group_2__06064 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_rule__Subroutine__Group_2__0__Impl6092 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Subroutine__Group_2__1__Impl_in_rule__Subroutine__Group_2__16123 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_rule__Subroutine__Group_2__2_in_rule__Subroutine__Group_2__16126 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Subroutine__ParamsAssignment_2_1_in_rule__Subroutine__Group_2__1__Impl6153 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Subroutine__Group_2__2__Impl_in_rule__Subroutine__Group_2__26183 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_rule__Subroutine__Group_2__2__Impl6211 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SubroutineCall__Group__0__Impl_in_rule__SubroutineCall__Group__06248 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__SubroutineCall__Group__1_in_rule__SubroutineCall__Group__06251 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_43_in_rule__SubroutineCall__Group__0__Impl6279 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SubroutineCall__Group__1__Impl_in_rule__SubroutineCall__Group__16310 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_rule__SubroutineCall__Group__2_in_rule__SubroutineCall__Group__16313 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SubroutineCall__SubroutineAssignment_1_in_rule__SubroutineCall__Group__1__Impl6340 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SubroutineCall__Group__2__Impl_in_rule__SubroutineCall__Group__26370 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_rule__SubroutineCall__Group__2__Impl6398 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSubroutine_in_rule__Model__SubroutinesAssignment_06440 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBrowser_in_rule__Model__BrowserAssignment_26471 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleGoto_in_rule__Model__FirstGoToAssignment_46502 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAction_in_rule__Model__ActionsAssignment_56533 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValue_in_rule__Goto__UrlAssignment_16564 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSelector_in_rule__ClickOn__SelectorAssignment_16595 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDomID_in_rule__Selector__SelAssignment_16626 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__DomID__NameAssignment_06657 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDomID_in_rule__DomID__NextAssignment_1_16688 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__SubroutineParam__NameAssignment_06719 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSubroutineParam_in_rule__SubroutineParam__NextAssignment_1_16750 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSelector_in_rule__Fill__FieldAssignment_16781 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValue_in_rule__Fill__ValueAssignment_36812 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSelector_in_rule__Check__CheckboxAssignment_16843 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSelector_in_rule__Uncheck__CheckboxAssignment_16874 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Let__NameAssignment_16905 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLetValue_in_rule__Let__ValueAssignment_36936 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSelector_in_rule__LetValue__SelectorAssignment_06967 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValue_in_rule__LetValue__ValueAssignment_16998 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Value__StringAssignment_07029 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__Value__IntAssignment_17060 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Value__LetAssignment_27095 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAction_in_rule__DoWhile__ActionsAssignment_27130 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBooleanExp_in_rule__DoWhile__ConditionAssignment_67161 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValue_in_rule__BooleanExp__LeftMemberAssignment_07192 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleOperator_in_rule__BooleanExp__OperatorAssignment_17223 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValue_in_rule__BooleanExp__RightMemberAssignment_27254 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBooleanExp_in_rule__IfThen__ConditionAssignment_27285 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAction_in_rule__IfThen__ThenActionsAssignment_67316 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAction_in_rule__IfThen__ElseActionsAssignment_8_27347 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Subroutine__NameAssignment_17378 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSubroutineParam_in_rule__Subroutine__ParamsAssignment_2_17409 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAction_in_rule__Subroutine__ActionsAssignment_47440 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__SubroutineCall__SubroutineAssignment_17475 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariableId_in_entryRuleVariableId1141 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleVariableId1148 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__VariableId__NameAssignment_in_ruleVariableId1174 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Browser__Alternatives_in_ruleBrowser1211 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Operator__Alternatives_in_ruleOperator1247 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleGoto_in_rule__Action__Alternatives1282 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleClickOn_in_rule__Action__Alternatives1299 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFill_in_rule__Action__Alternatives1316 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCheck_in_rule__Action__Alternatives1333 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleUncheck_in_rule__Action__Alternatives1350 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLet_in_rule__Action__Alternatives1367 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDoWhile_in_rule__Action__Alternatives1384 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIfThen_in_rule__Action__Alternatives1401 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSubroutineCall_in_rule__Action__Alternatives1418 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LetValue__SelectorAssignment_0_in_rule__LetValue__Alternatives1450 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LetValue__ValueAssignment_1_in_rule__LetValue__Alternatives1468 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Value__StringAssignment_0_in_rule__Value__Alternatives1501 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Value__IntAssignment_1_in_rule__Value__Alternatives1519 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Value__VariableAssignment_2_in_rule__Value__Alternatives1537 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_11_in_rule__Browser__Alternatives1571 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_12_in_rule__Browser__Alternatives1592 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_rule__Browser__Alternatives1613 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rule__Browser__Alternatives1634 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_rule__Browser__Alternatives1655 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__Operator__Alternatives1691 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_rule__Operator__Alternatives1712 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_rule__Operator__Alternatives1733 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_rule__Operator__Alternatives1754 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_rule__Operator__Alternatives1775 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__Group__0__Impl_in_rule__Model__Group__01808 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_rule__Model__Group__1_in_rule__Model__Group__01811 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__SubroutinesAssignment_0_in_rule__Model__Group__0__Impl1838 = new BitSet(new long[]{0x0000040000000002L});
+    public static final BitSet FOLLOW_rule__Model__Group__1__Impl_in_rule__Model__Group__11869 = new BitSet(new long[]{0x000000000000F800L});
+    public static final BitSet FOLLOW_rule__Model__Group__2_in_rule__Model__Group__11872 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_rule__Model__Group__1__Impl1900 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__Group__2__Impl_in_rule__Model__Group__21931 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_rule__Model__Group__3_in_rule__Model__Group__21934 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__BrowserAssignment_2_in_rule__Model__Group__2__Impl1961 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__Group__3__Impl_in_rule__Model__Group__31991 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_rule__Model__Group__4_in_rule__Model__Group__31994 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_rule__Model__Group__3__Impl2022 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__Group__4__Impl_in_rule__Model__Group__42053 = new BitSet(new long[]{0x00000885D1800000L});
+    public static final BitSet FOLLOW_rule__Model__Group__5_in_rule__Model__Group__42056 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__FirstGoToAssignment_4_in_rule__Model__Group__4__Impl2083 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__Group__5__Impl_in_rule__Model__Group__52113 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__ActionsAssignment_5_in_rule__Model__Group__5__Impl2140 = new BitSet(new long[]{0x00000885D1800002L});
+    public static final BitSet FOLLOW_rule__Goto__Group__0__Impl_in_rule__Goto__Group__02183 = new BitSet(new long[]{0x0000000000000070L});
+    public static final BitSet FOLLOW_rule__Goto__Group__1_in_rule__Goto__Group__02186 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__Goto__Group__0__Impl2214 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Goto__Group__1__Impl_in_rule__Goto__Group__12245 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_rule__Goto__Group__2_in_rule__Goto__Group__12248 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Goto__UrlAssignment_1_in_rule__Goto__Group__1__Impl2275 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Goto__Group__2__Impl_in_rule__Goto__Group__22305 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_rule__Goto__Group__2__Impl2333 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ClickOn__Group__0__Impl_in_rule__ClickOn__Group__02370 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_rule__ClickOn__Group__1_in_rule__ClickOn__Group__02373 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_rule__ClickOn__Group__0__Impl2401 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ClickOn__Group__1__Impl_in_rule__ClickOn__Group__12432 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_rule__ClickOn__Group__2_in_rule__ClickOn__Group__12435 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ClickOn__SelectorAssignment_1_in_rule__ClickOn__Group__1__Impl2462 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ClickOn__Group__2__Impl_in_rule__ClickOn__Group__22492 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_rule__ClickOn__Group__2__Impl2520 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Selector__Group__0__Impl_in_rule__Selector__Group__02557 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Selector__Group__1_in_rule__Selector__Group__02560 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_rule__Selector__Group__0__Impl2588 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Selector__Group__1__Impl_in_rule__Selector__Group__12619 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_rule__Selector__Group__2_in_rule__Selector__Group__12622 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Selector__SelAssignment_1_in_rule__Selector__Group__1__Impl2649 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Selector__Group__2__Impl_in_rule__Selector__Group__22679 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_rule__Selector__Group__2__Impl2707 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DomID__Group__0__Impl_in_rule__DomID__Group__02744 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_rule__DomID__Group__1_in_rule__DomID__Group__02747 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DomID__NameAssignment_0_in_rule__DomID__Group__0__Impl2774 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DomID__Group__1__Impl_in_rule__DomID__Group__12804 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DomID__Group_1__0_in_rule__DomID__Group__1__Impl2831 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DomID__Group_1__0__Impl_in_rule__DomID__Group_1__02866 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__DomID__Group_1__1_in_rule__DomID__Group_1__02869 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_rule__DomID__Group_1__0__Impl2897 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DomID__Group_1__1__Impl_in_rule__DomID__Group_1__12928 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DomID__NextAssignment_1_1_in_rule__DomID__Group_1__1__Impl2955 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SubroutineParam__Group__0__Impl_in_rule__SubroutineParam__Group__02989 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_rule__SubroutineParam__Group__1_in_rule__SubroutineParam__Group__02992 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SubroutineParam__NameAssignment_0_in_rule__SubroutineParam__Group__0__Impl3019 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SubroutineParam__Group__1__Impl_in_rule__SubroutineParam__Group__13049 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SubroutineParam__Group_1__0_in_rule__SubroutineParam__Group__1__Impl3076 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SubroutineParam__Group_1__0__Impl_in_rule__SubroutineParam__Group_1__03111 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_rule__SubroutineParam__Group_1__1_in_rule__SubroutineParam__Group_1__03114 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_rule__SubroutineParam__Group_1__0__Impl3142 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SubroutineParam__Group_1__1__Impl_in_rule__SubroutineParam__Group_1__13173 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SubroutineParam__NextAssignment_1_1_in_rule__SubroutineParam__Group_1__1__Impl3200 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Fill__Group__0__Impl_in_rule__Fill__Group__03234 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_rule__Fill__Group__1_in_rule__Fill__Group__03237 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_rule__Fill__Group__0__Impl3265 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Fill__Group__1__Impl_in_rule__Fill__Group__13296 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_rule__Fill__Group__2_in_rule__Fill__Group__13299 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Fill__FieldAssignment_1_in_rule__Fill__Group__1__Impl3326 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Fill__Group__2__Impl_in_rule__Fill__Group__23356 = new BitSet(new long[]{0x0000000000000070L});
+    public static final BitSet FOLLOW_rule__Fill__Group__3_in_rule__Fill__Group__23359 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_rule__Fill__Group__2__Impl3387 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Fill__Group__3__Impl_in_rule__Fill__Group__33418 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_rule__Fill__Group__4_in_rule__Fill__Group__33421 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Fill__ValueAssignment_3_in_rule__Fill__Group__3__Impl3448 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Fill__Group__4__Impl_in_rule__Fill__Group__43478 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_rule__Fill__Group__4__Impl3506 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Check__Group__0__Impl_in_rule__Check__Group__03547 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_rule__Check__Group__1_in_rule__Check__Group__03550 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_rule__Check__Group__0__Impl3578 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Check__Group__1__Impl_in_rule__Check__Group__13609 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_rule__Check__Group__2_in_rule__Check__Group__13612 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Check__CheckboxAssignment_1_in_rule__Check__Group__1__Impl3639 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Check__Group__2__Impl_in_rule__Check__Group__23669 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_rule__Check__Group__2__Impl3697 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Uncheck__Group__0__Impl_in_rule__Uncheck__Group__03734 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_rule__Uncheck__Group__1_in_rule__Uncheck__Group__03737 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_rule__Uncheck__Group__0__Impl3765 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Uncheck__Group__1__Impl_in_rule__Uncheck__Group__13796 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_rule__Uncheck__Group__2_in_rule__Uncheck__Group__13799 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Uncheck__CheckboxAssignment_1_in_rule__Uncheck__Group__1__Impl3826 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Uncheck__Group__2__Impl_in_rule__Uncheck__Group__23856 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_rule__Uncheck__Group__2__Impl3884 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Let__Group__0__Impl_in_rule__Let__Group__03921 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_rule__Let__Group__1_in_rule__Let__Group__03924 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_rule__Let__Group__0__Impl3952 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Let__Group__1__Impl_in_rule__Let__Group__13983 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_rule__Let__Group__2_in_rule__Let__Group__13986 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Let__NameAssignment_1_in_rule__Let__Group__1__Impl4013 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Let__Group__2__Impl_in_rule__Let__Group__24043 = new BitSet(new long[]{0x0000000002000070L});
+    public static final BitSet FOLLOW_rule__Let__Group__3_in_rule__Let__Group__24046 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_rule__Let__Group__2__Impl4074 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Let__Group__3__Impl_in_rule__Let__Group__34105 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_rule__Let__Group__4_in_rule__Let__Group__34108 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Let__ValueAssignment_3_in_rule__Let__Group__3__Impl4135 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Let__Group__4__Impl_in_rule__Let__Group__44165 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_rule__Let__Group__4__Impl4193 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DoWhile__Group__0__Impl_in_rule__DoWhile__Group__04234 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_rule__DoWhile__Group__1_in_rule__DoWhile__Group__04237 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_34_in_rule__DoWhile__Group__0__Impl4265 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DoWhile__Group__1__Impl_in_rule__DoWhile__Group__14296 = new BitSet(new long[]{0x00000895D1800000L});
+    public static final BitSet FOLLOW_rule__DoWhile__Group__2_in_rule__DoWhile__Group__14299 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_rule__DoWhile__Group__1__Impl4327 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DoWhile__Group__2__Impl_in_rule__DoWhile__Group__24358 = new BitSet(new long[]{0x00000895D1800000L});
+    public static final BitSet FOLLOW_rule__DoWhile__Group__3_in_rule__DoWhile__Group__24361 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DoWhile__ActionsAssignment_2_in_rule__DoWhile__Group__2__Impl4388 = new BitSet(new long[]{0x00000885D1800002L});
+    public static final BitSet FOLLOW_rule__DoWhile__Group__3__Impl_in_rule__DoWhile__Group__34419 = new BitSet(new long[]{0x0000002000000000L});
+    public static final BitSet FOLLOW_rule__DoWhile__Group__4_in_rule__DoWhile__Group__34422 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_rule__DoWhile__Group__3__Impl4450 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DoWhile__Group__4__Impl_in_rule__DoWhile__Group__44481 = new BitSet(new long[]{0x0000004000000000L});
+    public static final BitSet FOLLOW_rule__DoWhile__Group__5_in_rule__DoWhile__Group__44484 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_37_in_rule__DoWhile__Group__4__Impl4512 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DoWhile__Group__5__Impl_in_rule__DoWhile__Group__54543 = new BitSet(new long[]{0x0000000000000070L});
+    public static final BitSet FOLLOW_rule__DoWhile__Group__6_in_rule__DoWhile__Group__54546 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_rule__DoWhile__Group__5__Impl4574 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DoWhile__Group__6__Impl_in_rule__DoWhile__Group__64605 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_rule__DoWhile__Group__7_in_rule__DoWhile__Group__64608 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DoWhile__ConditionAssignment_6_in_rule__DoWhile__Group__6__Impl4635 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DoWhile__Group__7__Impl_in_rule__DoWhile__Group__74665 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_rule__DoWhile__Group__7__Impl4693 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BooleanExp__Group__0__Impl_in_rule__BooleanExp__Group__04740 = new BitSet(new long[]{0x00000000001F0000L});
+    public static final BitSet FOLLOW_rule__BooleanExp__Group__1_in_rule__BooleanExp__Group__04743 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BooleanExp__LeftMemberAssignment_0_in_rule__BooleanExp__Group__0__Impl4770 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BooleanExp__Group__1__Impl_in_rule__BooleanExp__Group__14800 = new BitSet(new long[]{0x0000000000000070L});
+    public static final BitSet FOLLOW_rule__BooleanExp__Group__2_in_rule__BooleanExp__Group__14803 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BooleanExp__OperatorAssignment_1_in_rule__BooleanExp__Group__1__Impl4830 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BooleanExp__Group__2__Impl_in_rule__BooleanExp__Group__24860 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BooleanExp__RightMemberAssignment_2_in_rule__BooleanExp__Group__2__Impl4887 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__IfThen__Group__0__Impl_in_rule__IfThen__Group__04923 = new BitSet(new long[]{0x0000004000000000L});
+    public static final BitSet FOLLOW_rule__IfThen__Group__1_in_rule__IfThen__Group__04926 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_39_in_rule__IfThen__Group__0__Impl4954 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__IfThen__Group__1__Impl_in_rule__IfThen__Group__14985 = new BitSet(new long[]{0x0000000000000070L});
+    public static final BitSet FOLLOW_rule__IfThen__Group__2_in_rule__IfThen__Group__14988 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_rule__IfThen__Group__1__Impl5016 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__IfThen__Group__2__Impl_in_rule__IfThen__Group__25047 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_rule__IfThen__Group__3_in_rule__IfThen__Group__25050 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__IfThen__ConditionAssignment_2_in_rule__IfThen__Group__2__Impl5077 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__IfThen__Group__3__Impl_in_rule__IfThen__Group__35107 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_rule__IfThen__Group__4_in_rule__IfThen__Group__35110 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_rule__IfThen__Group__3__Impl5138 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__IfThen__Group__4__Impl_in_rule__IfThen__Group__45169 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_rule__IfThen__Group__5_in_rule__IfThen__Group__45172 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_rule__IfThen__Group__4__Impl5200 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__IfThen__Group__5__Impl_in_rule__IfThen__Group__55231 = new BitSet(new long[]{0x00000895D1800000L});
+    public static final BitSet FOLLOW_rule__IfThen__Group__6_in_rule__IfThen__Group__55234 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_rule__IfThen__Group__5__Impl5262 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__IfThen__Group__6__Impl_in_rule__IfThen__Group__65293 = new BitSet(new long[]{0x00000895D1800000L});
+    public static final BitSet FOLLOW_rule__IfThen__Group__7_in_rule__IfThen__Group__65296 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__IfThen__ThenActionsAssignment_6_in_rule__IfThen__Group__6__Impl5323 = new BitSet(new long[]{0x00000885D1800002L});
+    public static final BitSet FOLLOW_rule__IfThen__Group__7__Impl_in_rule__IfThen__Group__75354 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_rule__IfThen__Group__8_in_rule__IfThen__Group__75357 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_rule__IfThen__Group__7__Impl5385 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__IfThen__Group__8__Impl_in_rule__IfThen__Group__85416 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__IfThen__Group_8__0_in_rule__IfThen__Group__8__Impl5443 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__IfThen__Group_8__0__Impl_in_rule__IfThen__Group_8__05492 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_rule__IfThen__Group_8__1_in_rule__IfThen__Group_8__05495 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_rule__IfThen__Group_8__0__Impl5523 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__IfThen__Group_8__1__Impl_in_rule__IfThen__Group_8__15554 = new BitSet(new long[]{0x00000895D1800000L});
+    public static final BitSet FOLLOW_rule__IfThen__Group_8__2_in_rule__IfThen__Group_8__15557 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_rule__IfThen__Group_8__1__Impl5585 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__IfThen__Group_8__2__Impl_in_rule__IfThen__Group_8__25616 = new BitSet(new long[]{0x00000895D1800000L});
+    public static final BitSet FOLLOW_rule__IfThen__Group_8__3_in_rule__IfThen__Group_8__25619 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__IfThen__ElseActionsAssignment_8_2_in_rule__IfThen__Group_8__2__Impl5646 = new BitSet(new long[]{0x00000885D1800002L});
+    public static final BitSet FOLLOW_rule__IfThen__Group_8__3__Impl_in_rule__IfThen__Group_8__35677 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_rule__IfThen__Group_8__3__Impl5705 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Subroutine__Group__0__Impl_in_rule__Subroutine__Group__05744 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_rule__Subroutine__Group__1_in_rule__Subroutine__Group__05747 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_42_in_rule__Subroutine__Group__0__Impl5775 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Subroutine__Group__1__Impl_in_rule__Subroutine__Group__15806 = new BitSet(new long[]{0x0000004800000000L});
+    public static final BitSet FOLLOW_rule__Subroutine__Group__2_in_rule__Subroutine__Group__15809 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Subroutine__NameAssignment_1_in_rule__Subroutine__Group__1__Impl5836 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Subroutine__Group__2__Impl_in_rule__Subroutine__Group__25866 = new BitSet(new long[]{0x0000004800000000L});
+    public static final BitSet FOLLOW_rule__Subroutine__Group__3_in_rule__Subroutine__Group__25869 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Subroutine__Group_2__0_in_rule__Subroutine__Group__2__Impl5896 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Subroutine__Group__3__Impl_in_rule__Subroutine__Group__35927 = new BitSet(new long[]{0x00000895D1800000L});
+    public static final BitSet FOLLOW_rule__Subroutine__Group__4_in_rule__Subroutine__Group__35930 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_rule__Subroutine__Group__3__Impl5958 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Subroutine__Group__4__Impl_in_rule__Subroutine__Group__45989 = new BitSet(new long[]{0x00000895D1800000L});
+    public static final BitSet FOLLOW_rule__Subroutine__Group__5_in_rule__Subroutine__Group__45992 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Subroutine__ActionsAssignment_4_in_rule__Subroutine__Group__4__Impl6019 = new BitSet(new long[]{0x00000885D1800002L});
+    public static final BitSet FOLLOW_rule__Subroutine__Group__5__Impl_in_rule__Subroutine__Group__56050 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_rule__Subroutine__Group__5__Impl6078 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Subroutine__Group_2__0__Impl_in_rule__Subroutine__Group_2__06121 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_rule__Subroutine__Group_2__1_in_rule__Subroutine__Group_2__06124 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_rule__Subroutine__Group_2__0__Impl6152 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Subroutine__Group_2__1__Impl_in_rule__Subroutine__Group_2__16183 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_rule__Subroutine__Group_2__2_in_rule__Subroutine__Group_2__16186 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Subroutine__ParamsAssignment_2_1_in_rule__Subroutine__Group_2__1__Impl6213 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Subroutine__Group_2__2__Impl_in_rule__Subroutine__Group_2__26243 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_rule__Subroutine__Group_2__2__Impl6271 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SubroutineCall__Group__0__Impl_in_rule__SubroutineCall__Group__06308 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_rule__SubroutineCall__Group__1_in_rule__SubroutineCall__Group__06311 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_43_in_rule__SubroutineCall__Group__0__Impl6339 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SubroutineCall__Group__1__Impl_in_rule__SubroutineCall__Group__16370 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_rule__SubroutineCall__Group__2_in_rule__SubroutineCall__Group__16373 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SubroutineCall__SubroutineAssignment_1_in_rule__SubroutineCall__Group__1__Impl6400 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SubroutineCall__Group__2__Impl_in_rule__SubroutineCall__Group__26430 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_rule__SubroutineCall__Group__2__Impl6458 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSubroutine_in_rule__Model__SubroutinesAssignment_06500 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBrowser_in_rule__Model__BrowserAssignment_26531 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleGoto_in_rule__Model__FirstGoToAssignment_46562 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAction_in_rule__Model__ActionsAssignment_56593 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValue_in_rule__Goto__UrlAssignment_16624 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSelector_in_rule__ClickOn__SelectorAssignment_16655 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDomID_in_rule__Selector__SelAssignment_16686 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__DomID__NameAssignment_06717 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDomID_in_rule__DomID__NextAssignment_1_16748 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariableId_in_rule__SubroutineParam__NameAssignment_06779 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSubroutineParam_in_rule__SubroutineParam__NextAssignment_1_16810 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSelector_in_rule__Fill__FieldAssignment_16841 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValue_in_rule__Fill__ValueAssignment_36872 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSelector_in_rule__Check__CheckboxAssignment_16903 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSelector_in_rule__Uncheck__CheckboxAssignment_16934 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariableId_in_rule__Let__NameAssignment_16965 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLetValue_in_rule__Let__ValueAssignment_36996 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSelector_in_rule__LetValue__SelectorAssignment_07027 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValue_in_rule__LetValue__ValueAssignment_17058 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Value__StringAssignment_07089 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__Value__IntAssignment_17120 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Value__VariableAssignment_27155 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAction_in_rule__DoWhile__ActionsAssignment_27190 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBooleanExp_in_rule__DoWhile__ConditionAssignment_67221 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValue_in_rule__BooleanExp__LeftMemberAssignment_07252 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleOperator_in_rule__BooleanExp__OperatorAssignment_17283 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValue_in_rule__BooleanExp__RightMemberAssignment_27314 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBooleanExp_in_rule__IfThen__ConditionAssignment_27345 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAction_in_rule__IfThen__ThenActionsAssignment_67376 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAction_in_rule__IfThen__ElseActionsAssignment_8_27407 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Subroutine__NameAssignment_17438 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSubroutineParam_in_rule__Subroutine__ParamsAssignment_2_17469 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAction_in_rule__Subroutine__ActionsAssignment_47500 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__SubroutineCall__SubroutineAssignment_17535 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__VariableId__NameAssignment7570 = new BitSet(new long[]{0x0000000000000002L});
 
 }

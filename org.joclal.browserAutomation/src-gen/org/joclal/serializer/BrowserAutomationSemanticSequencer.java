@@ -31,6 +31,7 @@ import org.joclal.browserAutomation.SubroutineCall;
 import org.joclal.browserAutomation.SubroutineParam;
 import org.joclal.browserAutomation.Uncheck;
 import org.joclal.browserAutomation.Value;
+import org.joclal.browserAutomation.VariableId;
 import org.joclal.services.BrowserAutomationGrammarAccess;
 
 @SuppressWarnings("all")
@@ -149,6 +150,12 @@ public class BrowserAutomationSemanticSequencer extends AbstractDelegatingSemant
 			case BrowserAutomationPackage.VALUE:
 				if(context == grammarAccess.getValueRule()) {
 					sequence_Value(context, (Value) semanticObject); 
+					return; 
+				}
+				else break;
+			case BrowserAutomationPackage.VARIABLE_ID:
+				if(context == grammarAccess.getVariableIdRule()) {
+					sequence_VariableId(context, (VariableId) semanticObject); 
 					return; 
 				}
 				else break;
@@ -283,7 +290,7 @@ public class BrowserAutomationSemanticSequencer extends AbstractDelegatingSemant
 	
 	/**
 	 * Constraint:
-	 *     (name=ID value=LetValue)
+	 *     (name=VariableId value=LetValue)
 	 */
 	protected void sequence_Let(EObject context, Let semanticObject) {
 		if(errorAcceptor != null) {
@@ -294,7 +301,7 @@ public class BrowserAutomationSemanticSequencer extends AbstractDelegatingSemant
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getLetAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getLetAccess().getNameVariableIdParserRuleCall_1_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getLetAccess().getValueLetValueParserRuleCall_3_0(), semanticObject.getValue());
 		feeder.finish();
 	}
@@ -343,7 +350,7 @@ public class BrowserAutomationSemanticSequencer extends AbstractDelegatingSemant
 	
 	/**
 	 * Constraint:
-	 *     (name=ID next=SubroutineParam?)
+	 *     (name=VariableId next=SubroutineParam?)
 	 */
 	protected void sequence_SubroutineParam(EObject context, SubroutineParam semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -352,7 +359,7 @@ public class BrowserAutomationSemanticSequencer extends AbstractDelegatingSemant
 	
 	/**
 	 * Constraint:
-	 *     (name=ID params+=SubroutineParam? actions+=Action*)
+	 *     (name=ID params=SubroutineParam? actions+=Action*)
 	 */
 	protected void sequence_Subroutine(EObject context, Subroutine semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -377,9 +384,25 @@ public class BrowserAutomationSemanticSequencer extends AbstractDelegatingSemant
 	
 	/**
 	 * Constraint:
-	 *     (string=STRING | int=INT | let=[Let|ID])
+	 *     (string=STRING | int=INT | variable=[VariableId|ID])
 	 */
 	protected void sequence_Value(EObject context, Value semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     name=ID
+	 */
+	protected void sequence_VariableId(EObject context, VariableId semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, BrowserAutomationPackage.Literals.VARIABLE_ID__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BrowserAutomationPackage.Literals.VARIABLE_ID__NAME));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getVariableIdAccess().getNameIDTerminalRuleCall_0(), semanticObject.getName());
+		feeder.finish();
 	}
 }

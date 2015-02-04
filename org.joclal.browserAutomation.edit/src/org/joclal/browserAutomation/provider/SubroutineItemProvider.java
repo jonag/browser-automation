@@ -102,6 +102,7 @@ public class SubroutineItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
+			childrenFeatures.add(BrowserAutomationPackage.Literals.SUBROUTINE__PARAMS);
 			childrenFeatures.add(BrowserAutomationPackage.Literals.SUBROUTINE__ACTIONS);
 		}
 		return childrenFeatures;
@@ -161,6 +162,7 @@ public class SubroutineItemProvider
 			case BrowserAutomationPackage.SUBROUTINE__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
+			case BrowserAutomationPackage.SUBROUTINE__PARAMS:
 			case BrowserAutomationPackage.SUBROUTINE__ACTIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -178,6 +180,11 @@ public class SubroutineItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(BrowserAutomationPackage.Literals.SUBROUTINE__PARAMS,
+				 BrowserAutomationFactory.eINSTANCE.createSubroutineParam()));
 
 		newChildDescriptors.add
 			(createChildParameter

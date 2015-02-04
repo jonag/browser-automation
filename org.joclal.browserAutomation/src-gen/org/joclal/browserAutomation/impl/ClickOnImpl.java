@@ -30,164 +30,157 @@ import org.joclal.browserAutomation.Selector;
 public class ClickOnImpl extends ActionImpl implements ClickOn
 {
   /**
-   * The cached value of the '{@link #getSelector() <em>Selector</em>}' containment reference.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getSelector() <em>Selector</em>}' containment reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getSelector()
-   * @generated
-   * @ordered
-   */
+	 * @see #getSelector()
+	 * @generated
+	 * @ordered
+	 */
   protected Selector selector;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected ClickOnImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return BrowserAutomationPackage.Literals.CLICK_ON;
-  }
+		return BrowserAutomationPackage.Literals.CLICK_ON;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Selector getSelector()
   {
-    return selector;
-  }
+		return selector;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public NotificationChain basicSetSelector(Selector newSelector, NotificationChain msgs)
   {
-    Selector oldSelector = selector;
-    selector = newSelector;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.CLICK_ON__SELECTOR, oldSelector, newSelector);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
+		Selector oldSelector = selector;
+		selector = newSelector;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.CLICK_ON__SELECTOR, oldSelector, newSelector);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public void setSelector(Selector newSelector)
   {
-    if (newSelector != selector)
-    {
-      NotificationChain msgs = null;
-      if (selector != null)
-        msgs = ((InternalEObject)selector).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BrowserAutomationPackage.CLICK_ON__SELECTOR, null, msgs);
-      if (newSelector != null)
-        msgs = ((InternalEObject)newSelector).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BrowserAutomationPackage.CLICK_ON__SELECTOR, null, msgs);
-      msgs = basicSetSelector(newSelector, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.CLICK_ON__SELECTOR, newSelector, newSelector));
-  }
+		if (newSelector != selector) {
+			NotificationChain msgs = null;
+			if (selector != null)
+				msgs = ((InternalEObject)selector).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BrowserAutomationPackage.CLICK_ON__SELECTOR, null, msgs);
+			if (newSelector != null)
+				msgs = ((InternalEObject)newSelector).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BrowserAutomationPackage.CLICK_ON__SELECTOR, null, msgs);
+			msgs = basicSetSelector(newSelector, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.CLICK_ON__SELECTOR, newSelector, newSelector));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
-    switch (featureID)
-    {
-      case BrowserAutomationPackage.CLICK_ON__SELECTOR:
-        return basicSetSelector(null, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
-  }
+		switch (featureID) {
+			case BrowserAutomationPackage.CLICK_ON__SELECTOR:
+				return basicSetSelector(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
-    switch (featureID)
-    {
-      case BrowserAutomationPackage.CLICK_ON__SELECTOR:
-        return getSelector();
-    }
-    return super.eGet(featureID, resolve, coreType);
-  }
+		switch (featureID) {
+			case BrowserAutomationPackage.CLICK_ON__SELECTOR:
+				return getSelector();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void eSet(int featureID, Object newValue)
   {
-    switch (featureID)
-    {
-      case BrowserAutomationPackage.CLICK_ON__SELECTOR:
-        setSelector((Selector)newValue);
-        return;
-    }
-    super.eSet(featureID, newValue);
-  }
+		switch (featureID) {
+			case BrowserAutomationPackage.CLICK_ON__SELECTOR:
+				setSelector((Selector)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void eUnset(int featureID)
   {
-    switch (featureID)
-    {
-      case BrowserAutomationPackage.CLICK_ON__SELECTOR:
-        setSelector((Selector)null);
-        return;
-    }
-    super.eUnset(featureID);
-  }
+		switch (featureID) {
+			case BrowserAutomationPackage.CLICK_ON__SELECTOR:
+				setSelector((Selector)null);
+				return;
+		}
+		super.eUnset(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public boolean eIsSet(int featureID)
   {
-    switch (featureID)
-    {
-      case BrowserAutomationPackage.CLICK_ON__SELECTOR:
-        return selector != null;
-    }
-    return super.eIsSet(featureID);
-  }
+		switch (featureID) {
+			case BrowserAutomationPackage.CLICK_ON__SELECTOR:
+				return selector != null;
+		}
+		return super.eIsSet(featureID);
+	}
 
 } //ClickOnImpl

@@ -82,7 +82,7 @@ public class BrowserAutomationParser extends AbstractContentAssistParser {
 					put(grammarAccess.getLetValueAccess().getValueAssignment_1(), "rule__LetValue__ValueAssignment_1");
 					put(grammarAccess.getValueAccess().getStringAssignment_0(), "rule__Value__StringAssignment_0");
 					put(grammarAccess.getValueAccess().getIntAssignment_1(), "rule__Value__IntAssignment_1");
-					put(grammarAccess.getValueAccess().getLetAssignment_2(), "rule__Value__LetAssignment_2");
+					put(grammarAccess.getValueAccess().getVariableAssignment_2(), "rule__Value__VariableAssignment_2");
 					put(grammarAccess.getDoWhileAccess().getActionsAssignment_2(), "rule__DoWhile__ActionsAssignment_2");
 					put(grammarAccess.getDoWhileAccess().getConditionAssignment_6(), "rule__DoWhile__ConditionAssignment_6");
 					put(grammarAccess.getBooleanExpAccess().getLeftMemberAssignment_0(), "rule__BooleanExp__LeftMemberAssignment_0");
@@ -95,6 +95,7 @@ public class BrowserAutomationParser extends AbstractContentAssistParser {
 					put(grammarAccess.getSubroutineAccess().getParamsAssignment_2_1(), "rule__Subroutine__ParamsAssignment_2_1");
 					put(grammarAccess.getSubroutineAccess().getActionsAssignment_4(), "rule__Subroutine__ActionsAssignment_4");
 					put(grammarAccess.getSubroutineCallAccess().getSubroutineAssignment_1(), "rule__SubroutineCall__SubroutineAssignment_1");
+					put(grammarAccess.getVariableIdAccess().getNameAssignment(), "rule__VariableId__NameAssignment");
 				}
 			};
 		}

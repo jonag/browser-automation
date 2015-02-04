@@ -9,31 +9,44 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.util.ResourceLocator;
+
 import org.eclipse.emf.ecore.EStructuralFeature;
 
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
+import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
+import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.IItemPropertySource;
+import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
+import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.joclal.browserAutomation.BrowserAutomationFactory;
 import org.joclal.browserAutomation.BrowserAutomationPackage;
-import org.joclal.browserAutomation.Let;
+import org.joclal.browserAutomation.SubroutineParam;
 
 /**
- * This is the item provider adapter for a {@link org.joclal.browserAutomation.Let} object.
+ * This is the item provider adapter for a {@link org.joclal.browserAutomation.SubroutineParam} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class LetItemProvider extends ActionItemProvider {
+public class SubroutineParamItemProvider 
+	extends ItemProviderAdapter
+	implements
+		IEditingDomainItemProvider,
+		IStructuredItemContentProvider,
+		ITreeItemContentProvider,
+		IItemLabelProvider,
+		IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LetItemProvider(AdapterFactory adapterFactory) {
+	public SubroutineParamItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -64,8 +77,8 @@ public class LetItemProvider extends ActionItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(BrowserAutomationPackage.Literals.LET__NAME);
-			childrenFeatures.add(BrowserAutomationPackage.Literals.LET__VALUE);
+			childrenFeatures.add(BrowserAutomationPackage.Literals.SUBROUTINE_PARAM__NAME);
+			childrenFeatures.add(BrowserAutomationPackage.Literals.SUBROUTINE_PARAM__NEXT);
 		}
 		return childrenFeatures;
 	}
@@ -84,14 +97,14 @@ public class LetItemProvider extends ActionItemProvider {
 	}
 
 	/**
-	 * This returns Let.gif.
+	 * This returns SubroutineParam.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Let"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/SubroutineParam"));
 	}
 
 	/**
@@ -102,7 +115,7 @@ public class LetItemProvider extends ActionItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Let_type");
+		return getString("_UI_SubroutineParam_type");
 	}
 	
 
@@ -117,9 +130,9 @@ public class LetItemProvider extends ActionItemProvider {
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Let.class)) {
-			case BrowserAutomationPackage.LET__NAME:
-			case BrowserAutomationPackage.LET__VALUE:
+		switch (notification.getFeatureID(SubroutineParam.class)) {
+			case BrowserAutomationPackage.SUBROUTINE_PARAM__NAME:
+			case BrowserAutomationPackage.SUBROUTINE_PARAM__NEXT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -139,13 +152,24 @@ public class LetItemProvider extends ActionItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(BrowserAutomationPackage.Literals.LET__NAME,
+				(BrowserAutomationPackage.Literals.SUBROUTINE_PARAM__NAME,
 				 BrowserAutomationFactory.eINSTANCE.createVariableId()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(BrowserAutomationPackage.Literals.LET__VALUE,
-				 BrowserAutomationFactory.eINSTANCE.createLetValue()));
+				(BrowserAutomationPackage.Literals.SUBROUTINE_PARAM__NEXT,
+				 BrowserAutomationFactory.eINSTANCE.createSubroutineParam()));
+	}
+
+	/**
+	 * Return the resource locator for this item provider's resources.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ResourceLocator getResourceLocator() {
+		return BrowserAutomationEditPlugin.INSTANCE;
 	}
 
 }

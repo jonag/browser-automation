@@ -28,90 +28,90 @@ import org.eclipse.emf.ecore.EObject;
 public interface Model extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Subroutines</b></em>' containment reference list.
-   * The list contents are of type {@link org.joclal.browserAutomation.Subroutine}.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Subroutines</b></em>' containment reference list.
+	 * The list contents are of type {@link org.joclal.browserAutomation.Subroutine}.
+	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Subroutines</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Subroutines</em>' containment reference list.
-   * @see org.joclal.browserAutomation.BrowserAutomationPackage#getModel_Subroutines()
-   * @model containment="true"
-   * @generated
-   */
+	 * @return the value of the '<em>Subroutines</em>' containment reference list.
+	 * @see org.joclal.browserAutomation.BrowserAutomationPackage#getModel_Subroutines()
+	 * @model containment="true"
+	 * @generated
+	 */
   EList<Subroutine> getSubroutines();
 
   /**
-   * Returns the value of the '<em><b>Browser</b></em>' attribute.
-   * The literals are from the enumeration {@link org.joclal.browserAutomation.Browser}.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Browser</b></em>' attribute.
+	 * The literals are from the enumeration {@link org.joclal.browserAutomation.Browser}.
+	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Browser</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Browser</em>' attribute.
-   * @see org.joclal.browserAutomation.Browser
-   * @see #setBrowser(Browser)
-   * @see org.joclal.browserAutomation.BrowserAutomationPackage#getModel_Browser()
-   * @model
-   * @generated
-   */
+	 * @return the value of the '<em>Browser</em>' attribute.
+	 * @see org.joclal.browserAutomation.Browser
+	 * @see #setBrowser(Browser)
+	 * @see org.joclal.browserAutomation.BrowserAutomationPackage#getModel_Browser()
+	 * @model
+	 * @generated
+	 */
   Browser getBrowser();
 
   /**
-   * Sets the value of the '{@link org.joclal.browserAutomation.Model#getBrowser <em>Browser</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * Sets the value of the '{@link org.joclal.browserAutomation.Model#getBrowser <em>Browser</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Browser</em>' attribute.
-   * @see org.joclal.browserAutomation.Browser
-   * @see #getBrowser()
-   * @generated
-   */
+	 * @param value the new value of the '<em>Browser</em>' attribute.
+	 * @see org.joclal.browserAutomation.Browser
+	 * @see #getBrowser()
+	 * @generated
+	 */
   void setBrowser(Browser value);
 
   /**
-   * Returns the value of the '<em><b>First Go To</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>First Go To</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>First Go To</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>First Go To</em>' containment reference.
-   * @see #setFirstGoTo(Goto)
-   * @see org.joclal.browserAutomation.BrowserAutomationPackage#getModel_FirstGoTo()
-   * @model containment="true"
-   * @generated
-   */
+	 * @return the value of the '<em>First Go To</em>' containment reference.
+	 * @see #setFirstGoTo(Goto)
+	 * @see org.joclal.browserAutomation.BrowserAutomationPackage#getModel_FirstGoTo()
+	 * @model containment="true"
+	 * @generated
+	 */
   Goto getFirstGoTo();
 
   /**
-   * Sets the value of the '{@link org.joclal.browserAutomation.Model#getFirstGoTo <em>First Go To</em>}' containment reference.
-   * <!-- begin-user-doc -->
+	 * Sets the value of the '{@link org.joclal.browserAutomation.Model#getFirstGoTo <em>First Go To</em>}' containment reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>First Go To</em>' containment reference.
-   * @see #getFirstGoTo()
-   * @generated
-   */
+	 * @param value the new value of the '<em>First Go To</em>' containment reference.
+	 * @see #getFirstGoTo()
+	 * @generated
+	 */
   void setFirstGoTo(Goto value);
 
   /**
-   * Returns the value of the '<em><b>Actions</b></em>' containment reference list.
-   * The list contents are of type {@link org.joclal.browserAutomation.Action}.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Actions</b></em>' containment reference list.
+	 * The list contents are of type {@link org.joclal.browserAutomation.Action}.
+	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Actions</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Actions</em>' containment reference list.
-   * @see org.joclal.browserAutomation.BrowserAutomationPackage#getModel_Actions()
-   * @model containment="true"
-   * @generated
-   */
+	 * @return the value of the '<em>Actions</em>' containment reference list.
+	 * @see org.joclal.browserAutomation.BrowserAutomationPackage#getModel_Actions()
+	 * @model containment="true"
+	 * @generated
+	 */
   EList<Action> getActions();
 
 } // Model

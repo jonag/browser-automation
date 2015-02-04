@@ -22,29 +22,29 @@ package org.joclal.browserAutomation;
 public interface Uncheck extends Action
 {
   /**
-   * Returns the value of the '<em><b>Checkbox</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Checkbox</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Checkbox</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Checkbox</em>' containment reference.
-   * @see #setCheckbox(Selector)
-   * @see org.joclal.browserAutomation.BrowserAutomationPackage#getUncheck_Checkbox()
-   * @model containment="true"
-   * @generated
-   */
+	 * @return the value of the '<em>Checkbox</em>' containment reference.
+	 * @see #setCheckbox(Selector)
+	 * @see org.joclal.browserAutomation.BrowserAutomationPackage#getUncheck_Checkbox()
+	 * @model containment="true"
+	 * @generated
+	 */
   Selector getCheckbox();
 
   /**
-   * Sets the value of the '{@link org.joclal.browserAutomation.Uncheck#getCheckbox <em>Checkbox</em>}' containment reference.
-   * <!-- begin-user-doc -->
+	 * Sets the value of the '{@link org.joclal.browserAutomation.Uncheck#getCheckbox <em>Checkbox</em>}' containment reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Checkbox</em>' containment reference.
-   * @see #getCheckbox()
-   * @generated
-   */
+	 * @param value the new value of the '<em>Checkbox</em>' containment reference.
+	 * @see #getCheckbox()
+	 * @generated
+	 */
   void setCheckbox(Selector value);
 
 } // Uncheck

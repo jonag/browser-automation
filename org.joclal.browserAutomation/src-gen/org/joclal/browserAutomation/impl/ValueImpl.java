@@ -11,8 +11,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.joclal.browserAutomation.BrowserAutomationPackage;
-import org.joclal.browserAutomation.Let;
 import org.joclal.browserAutomation.Value;
+import org.joclal.browserAutomation.VariableId;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,7 +23,7 @@ import org.joclal.browserAutomation.Value;
  * <ul>
  *   <li>{@link org.joclal.browserAutomation.impl.ValueImpl#getString <em>String</em>}</li>
  *   <li>{@link org.joclal.browserAutomation.impl.ValueImpl#getInt <em>Int</em>}</li>
- *   <li>{@link org.joclal.browserAutomation.impl.ValueImpl#getLet <em>Let</em>}</li>
+ *   <li>{@link org.joclal.browserAutomation.impl.ValueImpl#getVariable <em>Variable</em>}</li>
  * </ul>
  * </p>
  *
@@ -32,269 +32,263 @@ import org.joclal.browserAutomation.Value;
 public class ValueImpl extends MinimalEObjectImpl.Container implements Value
 {
   /**
-   * The default value of the '{@link #getString() <em>String</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The default value of the '{@link #getString() <em>String</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getString()
-   * @generated
-   * @ordered
-   */
+	 * @see #getString()
+	 * @generated
+	 * @ordered
+	 */
   protected static final String STRING_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getString() <em>String</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getString() <em>String</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getString()
-   * @generated
-   * @ordered
-   */
+	 * @see #getString()
+	 * @generated
+	 * @ordered
+	 */
   protected String string = STRING_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getInt() <em>Int</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The default value of the '{@link #getInt() <em>Int</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getInt()
-   * @generated
-   * @ordered
-   */
+	 * @see #getInt()
+	 * @generated
+	 * @ordered
+	 */
   protected static final int INT_EDEFAULT = 0;
 
   /**
-   * The cached value of the '{@link #getInt() <em>Int</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getInt() <em>Int</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getInt()
-   * @generated
-   * @ordered
-   */
+	 * @see #getInt()
+	 * @generated
+	 * @ordered
+	 */
   protected int int_ = INT_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getLet() <em>Let</em>}' reference.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getVariable() <em>Variable</em>}' reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getLet()
-   * @generated
-   * @ordered
-   */
-  protected Let let;
+	 * @see #getVariable()
+	 * @generated
+	 * @ordered
+	 */
+  protected VariableId variable;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected ValueImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return BrowserAutomationPackage.Literals.VALUE;
-  }
+		return BrowserAutomationPackage.Literals.VALUE;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public String getString()
   {
-    return string;
-  }
+		return string;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public void setString(String newString)
   {
-    String oldString = string;
-    string = newString;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.VALUE__STRING, oldString, string));
-  }
+		String oldString = string;
+		string = newString;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.VALUE__STRING, oldString, string));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public int getInt()
   {
-    return int_;
-  }
+		return int_;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public void setInt(int newInt)
   {
-    int oldInt = int_;
-    int_ = newInt;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.VALUE__INT, oldInt, int_));
-  }
+		int oldInt = int_;
+		int_ = newInt;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.VALUE__INT, oldInt, int_));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public Let getLet()
+	 * @generated
+	 */
+  public VariableId getVariable()
   {
-    if (let != null && let.eIsProxy())
-    {
-      InternalEObject oldLet = (InternalEObject)let;
-      let = (Let)eResolveProxy(oldLet);
-      if (let != oldLet)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, BrowserAutomationPackage.VALUE__LET, oldLet, let));
-      }
-    }
-    return let;
-  }
+		if (variable != null && variable.eIsProxy()) {
+			InternalEObject oldVariable = (InternalEObject)variable;
+			variable = (VariableId)eResolveProxy(oldVariable);
+			if (variable != oldVariable) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, BrowserAutomationPackage.VALUE__VARIABLE, oldVariable, variable));
+			}
+		}
+		return variable;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public Let basicGetLet()
+	 * @generated
+	 */
+  public VariableId basicGetVariable()
   {
-    return let;
-  }
+		return variable;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setLet(Let newLet)
+	 * @generated
+	 */
+  public void setVariable(VariableId newVariable)
   {
-    Let oldLet = let;
-    let = newLet;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.VALUE__LET, oldLet, let));
-  }
+		VariableId oldVariable = variable;
+		variable = newVariable;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.VALUE__VARIABLE, oldVariable, variable));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
-    switch (featureID)
-    {
-      case BrowserAutomationPackage.VALUE__STRING:
-        return getString();
-      case BrowserAutomationPackage.VALUE__INT:
-        return getInt();
-      case BrowserAutomationPackage.VALUE__LET:
-        if (resolve) return getLet();
-        return basicGetLet();
-    }
-    return super.eGet(featureID, resolve, coreType);
-  }
+		switch (featureID) {
+			case BrowserAutomationPackage.VALUE__STRING:
+				return getString();
+			case BrowserAutomationPackage.VALUE__INT:
+				return getInt();
+			case BrowserAutomationPackage.VALUE__VARIABLE:
+				if (resolve) return getVariable();
+				return basicGetVariable();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void eSet(int featureID, Object newValue)
   {
-    switch (featureID)
-    {
-      case BrowserAutomationPackage.VALUE__STRING:
-        setString((String)newValue);
-        return;
-      case BrowserAutomationPackage.VALUE__INT:
-        setInt((Integer)newValue);
-        return;
-      case BrowserAutomationPackage.VALUE__LET:
-        setLet((Let)newValue);
-        return;
-    }
-    super.eSet(featureID, newValue);
-  }
+		switch (featureID) {
+			case BrowserAutomationPackage.VALUE__STRING:
+				setString((String)newValue);
+				return;
+			case BrowserAutomationPackage.VALUE__INT:
+				setInt((Integer)newValue);
+				return;
+			case BrowserAutomationPackage.VALUE__VARIABLE:
+				setVariable((VariableId)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void eUnset(int featureID)
   {
-    switch (featureID)
-    {
-      case BrowserAutomationPackage.VALUE__STRING:
-        setString(STRING_EDEFAULT);
-        return;
-      case BrowserAutomationPackage.VALUE__INT:
-        setInt(INT_EDEFAULT);
-        return;
-      case BrowserAutomationPackage.VALUE__LET:
-        setLet((Let)null);
-        return;
-    }
-    super.eUnset(featureID);
-  }
+		switch (featureID) {
+			case BrowserAutomationPackage.VALUE__STRING:
+				setString(STRING_EDEFAULT);
+				return;
+			case BrowserAutomationPackage.VALUE__INT:
+				setInt(INT_EDEFAULT);
+				return;
+			case BrowserAutomationPackage.VALUE__VARIABLE:
+				setVariable((VariableId)null);
+				return;
+		}
+		super.eUnset(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public boolean eIsSet(int featureID)
   {
-    switch (featureID)
-    {
-      case BrowserAutomationPackage.VALUE__STRING:
-        return STRING_EDEFAULT == null ? string != null : !STRING_EDEFAULT.equals(string);
-      case BrowserAutomationPackage.VALUE__INT:
-        return int_ != INT_EDEFAULT;
-      case BrowserAutomationPackage.VALUE__LET:
-        return let != null;
-    }
-    return super.eIsSet(featureID);
-  }
+		switch (featureID) {
+			case BrowserAutomationPackage.VALUE__STRING:
+				return STRING_EDEFAULT == null ? string != null : !STRING_EDEFAULT.equals(string);
+			case BrowserAutomationPackage.VALUE__INT:
+				return int_ != INT_EDEFAULT;
+			case BrowserAutomationPackage.VALUE__VARIABLE:
+				return variable != null;
+		}
+		return super.eIsSet(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public String toString()
   {
-    if (eIsProxy()) return super.toString();
+		if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (string: ");
-    result.append(string);
-    result.append(", int: ");
-    result.append(int_);
-    result.append(')');
-    return result.toString();
-  }
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (string: ");
+		result.append(string);
+		result.append(", int: ");
+		result.append(int_);
+		result.append(')');
+		return result.toString();
+	}
 
 } //ValueImpl

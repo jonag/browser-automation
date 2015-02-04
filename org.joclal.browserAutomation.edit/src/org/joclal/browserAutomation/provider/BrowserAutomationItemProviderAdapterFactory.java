@@ -210,6 +210,29 @@ public class BrowserAutomationItemProviderAdapterFactory extends BrowserAutomati
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.joclal.browserAutomation.SubroutineParam} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SubroutineParamItemProvider subroutineParamItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.joclal.browserAutomation.SubroutineParam}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSubroutineParamAdapter() {
+		if (subroutineParamItemProvider == null) {
+			subroutineParamItemProvider = new SubroutineParamItemProvider(this);
+		}
+
+		return subroutineParamItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.joclal.browserAutomation.Fill} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -463,6 +486,29 @@ public class BrowserAutomationItemProviderAdapterFactory extends BrowserAutomati
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.joclal.browserAutomation.VariableId} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected VariableIdItemProvider variableIdItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.joclal.browserAutomation.VariableId}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createVariableIdAdapter() {
+		if (variableIdItemProvider == null) {
+			variableIdItemProvider = new VariableIdItemProvider(this);
+		}
+
+		return variableIdItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -567,6 +613,7 @@ public class BrowserAutomationItemProviderAdapterFactory extends BrowserAutomati
 		if (clickOnItemProvider != null) clickOnItemProvider.dispose();
 		if (selectorItemProvider != null) selectorItemProvider.dispose();
 		if (domIDItemProvider != null) domIDItemProvider.dispose();
+		if (subroutineParamItemProvider != null) subroutineParamItemProvider.dispose();
 		if (fillItemProvider != null) fillItemProvider.dispose();
 		if (checkItemProvider != null) checkItemProvider.dispose();
 		if (uncheckItemProvider != null) uncheckItemProvider.dispose();
@@ -578,6 +625,7 @@ public class BrowserAutomationItemProviderAdapterFactory extends BrowserAutomati
 		if (ifThenItemProvider != null) ifThenItemProvider.dispose();
 		if (subroutineItemProvider != null) subroutineItemProvider.dispose();
 		if (subroutineCallItemProvider != null) subroutineCallItemProvider.dispose();
+		if (variableIdItemProvider != null) variableIdItemProvider.dispose();
 	}
 
 }

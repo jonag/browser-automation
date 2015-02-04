@@ -62,7 +62,7 @@ public class ValueItemProvider
 
 			addStringPropertyDescriptor(object);
 			addIntPropertyDescriptor(object);
-			addLetPropertyDescriptor(object);
+			addVariablePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -112,19 +112,19 @@ public class ValueItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Let feature.
+	 * This adds a property descriptor for the Variable feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addLetPropertyDescriptor(Object object) {
+	protected void addVariablePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Value_let_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Value_let_feature", "_UI_Value_type"),
-				 BrowserAutomationPackage.Literals.VALUE__LET,
+				 getString("_UI_Value_variable_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Value_variable_feature", "_UI_Value_type"),
+				 BrowserAutomationPackage.Literals.VALUE__VARIABLE,
 				 true,
 				 false,
 				 true,
