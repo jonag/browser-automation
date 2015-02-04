@@ -3,7 +3,79 @@ grammar org.joclal.BrowserAutomation with org.eclipse.xtext.common.Terminals
 generate browserAutomation "http://www.joclal.org/BrowserAutomation"
 
 Model:
-	greetings+=Greeting*;
+	'browser' browser=Browser ';'
+	firstGoTo=Goto
+	actions+=Action*
+;
 	
-Greeting:
-	'Hello' name=ID '!';
+enum Browser:
+	chrome='Chrome' | safari='Safari' | opera='Opera' | firefox='Firefox' | ie='Internet Explorer'
+;
+
+Action:
+	Goto | ClickOn | Fill | Check | Uncheck | Let
+;
+
+Goto:
+	'GoTo' url=Value ';'
+;
+
+ClickOn:
+	'Click' selector=Selector ';'
+;
+
+Selector:
+	'select(' id=STRING ')'
+;
+
+Fill:
+	'Fill' field=Selector 'with' value=Value ';'
+;
+
+Check:
+	'Check' checkbox=Selector ';'
+;
+
+Uncheck:
+	'Uncheck' checkbox=Selector ';'
+;
+
+Let:
+	'Let' name=ID '=' value=LetValue ';'
+;
+
+LetValue:
+	selector=Selector | value=Value
+;
+
+Value:
+	string=STRING | int=INT | let=[Let]
+;
+
+DoWhile:
+	'Do {' 
+		actions+=Action* 
+	'} While (' 
+		condition=BooleanExp 
+	')' 
+;
+
+BooleanExp:
+	leftMember=Value operator=Operator rightMember=Value
+;
+
+enum Operator:
+	equals='=' | gt='>' | lt='<' | gte='>=' | lte='<=' 
+;
+
+IfThen:
+	'If (' 
+		condition=BooleanExp
+	') Then {'
+		thenActions+=Action*
+	'}'
+	('Else {'
+		elseActions+=Action*
+	'}')?
+;
+

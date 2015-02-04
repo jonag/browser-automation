@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated BrowserAutomation -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.joclal.browserAutomation.presentation.BrowserAutomationModelWizardID"
+            name="%_UI_BrowserAutomationModelWizard_label"
+            class="org.joclal.browserAutomation.presentation.BrowserAutomationModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/BrowserAutomationModelFile.gif">
+         <description>%_UI_BrowserAutomationModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated BrowserAutomation -->
+      <editor
+            id="org.joclal.browserAutomation.presentation.BrowserAutomationEditorID"
+            name="%_UI_BrowserAutomationEditor_label"
+            icon="icons/full/obj16/BrowserAutomationModelFile.gif"
+            extensions="ba"
+            class="org.joclal.browserAutomation.presentation.BrowserAutomationEditor"
+            contributorClass="org.joclal.browserAutomation.presentation.BrowserAutomationActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
