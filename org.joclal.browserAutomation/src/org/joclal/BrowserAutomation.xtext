@@ -65,7 +65,7 @@ BooleanExp:
 ;
 
 enum Operator:
-	equals='=' | gt='>' | lt='<' | gte='>=' | lte='<=' 
+	equals='==' | gt='>' | lt='<' | gte='>=' | lte='<=' 
 ;
 
 IfThen:
