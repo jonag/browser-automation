@@ -9,26 +9,26 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.joclal.browserAutomation.BrowserAutomationPackage;
-import org.joclal.browserAutomation.Let;
-import org.joclal.browserAutomation.LetValue;
+import org.joclal.browserAutomation.SubroutineParam;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Let</b></em>'.
+ * An implementation of the model object '<em><b>Subroutine Param</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.joclal.browserAutomation.impl.LetImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.joclal.browserAutomation.impl.LetImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link org.joclal.browserAutomation.impl.SubroutineParamImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.joclal.browserAutomation.impl.SubroutineParamImpl#getNext <em>Next</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class LetImpl extends ActionImpl implements Let
+public class SubroutineParamImpl extends MinimalEObjectImpl.Container implements SubroutineParam
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -51,21 +51,21 @@ public class LetImpl extends ActionImpl implements Let
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getValue() <em>Value</em>}' containment reference.
+   * The cached value of the '{@link #getNext() <em>Next</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getValue()
+   * @see #getNext()
    * @generated
    * @ordered
    */
-  protected LetValue value;
+  protected SubroutineParam next;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected LetImpl()
+  protected SubroutineParamImpl()
   {
     super();
   }
@@ -78,7 +78,7 @@ public class LetImpl extends ActionImpl implements Let
   @Override
   protected EClass eStaticClass()
   {
-    return BrowserAutomationPackage.Literals.LET;
+    return BrowserAutomationPackage.Literals.SUBROUTINE_PARAM;
   }
 
   /**
@@ -101,7 +101,7 @@ public class LetImpl extends ActionImpl implements Let
     String oldName = name;
     name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.LET__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.SUBROUTINE_PARAM__NAME, oldName, name));
   }
 
   /**
@@ -109,9 +109,9 @@ public class LetImpl extends ActionImpl implements Let
    * <!-- end-user-doc -->
    * @generated
    */
-  public LetValue getValue()
+  public SubroutineParam getNext()
   {
-    return value;
+    return next;
   }
 
   /**
@@ -119,13 +119,13 @@ public class LetImpl extends ActionImpl implements Let
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetValue(LetValue newValue, NotificationChain msgs)
+  public NotificationChain basicSetNext(SubroutineParam newNext, NotificationChain msgs)
   {
-    LetValue oldValue = value;
-    value = newValue;
+    SubroutineParam oldNext = next;
+    next = newNext;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.LET__VALUE, oldValue, newValue);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.SUBROUTINE_PARAM__NEXT, oldNext, newNext);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -136,20 +136,20 @@ public class LetImpl extends ActionImpl implements Let
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setValue(LetValue newValue)
+  public void setNext(SubroutineParam newNext)
   {
-    if (newValue != value)
+    if (newNext != next)
     {
       NotificationChain msgs = null;
-      if (value != null)
-        msgs = ((InternalEObject)value).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BrowserAutomationPackage.LET__VALUE, null, msgs);
-      if (newValue != null)
-        msgs = ((InternalEObject)newValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BrowserAutomationPackage.LET__VALUE, null, msgs);
-      msgs = basicSetValue(newValue, msgs);
+      if (next != null)
+        msgs = ((InternalEObject)next).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BrowserAutomationPackage.SUBROUTINE_PARAM__NEXT, null, msgs);
+      if (newNext != null)
+        msgs = ((InternalEObject)newNext).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BrowserAutomationPackage.SUBROUTINE_PARAM__NEXT, null, msgs);
+      msgs = basicSetNext(newNext, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.LET__VALUE, newValue, newValue));
+      eNotify(new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.SUBROUTINE_PARAM__NEXT, newNext, newNext));
   }
 
   /**
@@ -162,8 +162,8 @@ public class LetImpl extends ActionImpl implements Let
   {
     switch (featureID)
     {
-      case BrowserAutomationPackage.LET__VALUE:
-        return basicSetValue(null, msgs);
+      case BrowserAutomationPackage.SUBROUTINE_PARAM__NEXT:
+        return basicSetNext(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -178,10 +178,10 @@ public class LetImpl extends ActionImpl implements Let
   {
     switch (featureID)
     {
-      case BrowserAutomationPackage.LET__NAME:
+      case BrowserAutomationPackage.SUBROUTINE_PARAM__NAME:
         return getName();
-      case BrowserAutomationPackage.LET__VALUE:
-        return getValue();
+      case BrowserAutomationPackage.SUBROUTINE_PARAM__NEXT:
+        return getNext();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -196,11 +196,11 @@ public class LetImpl extends ActionImpl implements Let
   {
     switch (featureID)
     {
-      case BrowserAutomationPackage.LET__NAME:
+      case BrowserAutomationPackage.SUBROUTINE_PARAM__NAME:
         setName((String)newValue);
         return;
-      case BrowserAutomationPackage.LET__VALUE:
-        setValue((LetValue)newValue);
+      case BrowserAutomationPackage.SUBROUTINE_PARAM__NEXT:
+        setNext((SubroutineParam)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -216,11 +216,11 @@ public class LetImpl extends ActionImpl implements Let
   {
     switch (featureID)
     {
-      case BrowserAutomationPackage.LET__NAME:
+      case BrowserAutomationPackage.SUBROUTINE_PARAM__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case BrowserAutomationPackage.LET__VALUE:
-        setValue((LetValue)null);
+      case BrowserAutomationPackage.SUBROUTINE_PARAM__NEXT:
+        setNext((SubroutineParam)null);
         return;
     }
     super.eUnset(featureID);
@@ -236,10 +236,10 @@ public class LetImpl extends ActionImpl implements Let
   {
     switch (featureID)
     {
-      case BrowserAutomationPackage.LET__NAME:
+      case BrowserAutomationPackage.SUBROUTINE_PARAM__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case BrowserAutomationPackage.LET__VALUE:
-        return value != null;
+      case BrowserAutomationPackage.SUBROUTINE_PARAM__NEXT:
+        return next != null;
     }
     return super.eIsSet(featureID);
   }
@@ -261,4 +261,4 @@ public class LetImpl extends ActionImpl implements Let
     return result.toString();
   }
 
-} //LetImpl
+} //SubroutineParamImpl

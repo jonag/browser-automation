@@ -44,300 +44,309 @@ import org.joclal.browserAutomation.Subroutine;
 public class ModelImpl extends MinimalEObjectImpl.Container implements Model
 {
   /**
-	 * The cached value of the '{@link #getSubroutines() <em>Subroutines</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getSubroutines() <em>Subroutines</em>}' containment reference list.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getSubroutines()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getSubroutines()
+   * @generated
+   * @ordered
+   */
   protected EList<Subroutine> subroutines;
 
   /**
-	 * The default value of the '{@link #getBrowser() <em>Browser</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * The default value of the '{@link #getBrowser() <em>Browser</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getBrowser()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getBrowser()
+   * @generated
+   * @ordered
+   */
   protected static final Browser BROWSER_EDEFAULT = Browser.CHROME;
 
   /**
-	 * The cached value of the '{@link #getBrowser() <em>Browser</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getBrowser() <em>Browser</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getBrowser()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getBrowser()
+   * @generated
+   * @ordered
+   */
   protected Browser browser = BROWSER_EDEFAULT;
 
   /**
-	 * The cached value of the '{@link #getFirstGoTo() <em>First Go To</em>}' containment reference.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getFirstGoTo() <em>First Go To</em>}' containment reference.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getFirstGoTo()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getFirstGoTo()
+   * @generated
+   * @ordered
+   */
   protected Goto firstGoTo;
 
   /**
-	 * The cached value of the '{@link #getActions() <em>Actions</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getActions() <em>Actions</em>}' containment reference list.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getActions()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getActions()
+   * @generated
+   * @ordered
+   */
   protected EList<Action> actions;
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   protected ModelImpl()
   {
-		super();
-	}
+    super();
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   protected EClass eStaticClass()
   {
-		return BrowserAutomationPackage.Literals.MODEL;
-	}
+    return BrowserAutomationPackage.Literals.MODEL;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public EList<Subroutine> getSubroutines()
   {
-		if (subroutines == null) {
-			subroutines = new EObjectContainmentEList<Subroutine>(Subroutine.class, this, BrowserAutomationPackage.MODEL__SUBROUTINES);
-		}
-		return subroutines;
-	}
+    if (subroutines == null)
+    {
+      subroutines = new EObjectContainmentEList<Subroutine>(Subroutine.class, this, BrowserAutomationPackage.MODEL__SUBROUTINES);
+    }
+    return subroutines;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public Browser getBrowser()
   {
-		return browser;
-	}
+    return browser;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public void setBrowser(Browser newBrowser)
   {
-		Browser oldBrowser = browser;
-		browser = newBrowser == null ? BROWSER_EDEFAULT : newBrowser;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.MODEL__BROWSER, oldBrowser, browser));
-	}
+    Browser oldBrowser = browser;
+    browser = newBrowser == null ? BROWSER_EDEFAULT : newBrowser;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.MODEL__BROWSER, oldBrowser, browser));
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public Goto getFirstGoTo()
   {
-		return firstGoTo;
-	}
+    return firstGoTo;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public NotificationChain basicSetFirstGoTo(Goto newFirstGoTo, NotificationChain msgs)
   {
-		Goto oldFirstGoTo = firstGoTo;
-		firstGoTo = newFirstGoTo;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.MODEL__FIRST_GO_TO, oldFirstGoTo, newFirstGoTo);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
+    Goto oldFirstGoTo = firstGoTo;
+    firstGoTo = newFirstGoTo;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.MODEL__FIRST_GO_TO, oldFirstGoTo, newFirstGoTo);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public void setFirstGoTo(Goto newFirstGoTo)
   {
-		if (newFirstGoTo != firstGoTo) {
-			NotificationChain msgs = null;
-			if (firstGoTo != null)
-				msgs = ((InternalEObject)firstGoTo).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BrowserAutomationPackage.MODEL__FIRST_GO_TO, null, msgs);
-			if (newFirstGoTo != null)
-				msgs = ((InternalEObject)newFirstGoTo).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BrowserAutomationPackage.MODEL__FIRST_GO_TO, null, msgs);
-			msgs = basicSetFirstGoTo(newFirstGoTo, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.MODEL__FIRST_GO_TO, newFirstGoTo, newFirstGoTo));
-	}
+    if (newFirstGoTo != firstGoTo)
+    {
+      NotificationChain msgs = null;
+      if (firstGoTo != null)
+        msgs = ((InternalEObject)firstGoTo).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BrowserAutomationPackage.MODEL__FIRST_GO_TO, null, msgs);
+      if (newFirstGoTo != null)
+        msgs = ((InternalEObject)newFirstGoTo).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BrowserAutomationPackage.MODEL__FIRST_GO_TO, null, msgs);
+      msgs = basicSetFirstGoTo(newFirstGoTo, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.MODEL__FIRST_GO_TO, newFirstGoTo, newFirstGoTo));
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public EList<Action> getActions()
   {
-		if (actions == null) {
-			actions = new EObjectContainmentEList<Action>(Action.class, this, BrowserAutomationPackage.MODEL__ACTIONS);
-		}
-		return actions;
-	}
+    if (actions == null)
+    {
+      actions = new EObjectContainmentEList<Action>(Action.class, this, BrowserAutomationPackage.MODEL__ACTIONS);
+    }
+    return actions;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
-		switch (featureID) {
-			case BrowserAutomationPackage.MODEL__SUBROUTINES:
-				return ((InternalEList<?>)getSubroutines()).basicRemove(otherEnd, msgs);
-			case BrowserAutomationPackage.MODEL__FIRST_GO_TO:
-				return basicSetFirstGoTo(null, msgs);
-			case BrowserAutomationPackage.MODEL__ACTIONS:
-				return ((InternalEList<?>)getActions()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
+    switch (featureID)
+    {
+      case BrowserAutomationPackage.MODEL__SUBROUTINES:
+        return ((InternalEList<?>)getSubroutines()).basicRemove(otherEnd, msgs);
+      case BrowserAutomationPackage.MODEL__FIRST_GO_TO:
+        return basicSetFirstGoTo(null, msgs);
+      case BrowserAutomationPackage.MODEL__ACTIONS:
+        return ((InternalEList<?>)getActions()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
-		switch (featureID) {
-			case BrowserAutomationPackage.MODEL__SUBROUTINES:
-				return getSubroutines();
-			case BrowserAutomationPackage.MODEL__BROWSER:
-				return getBrowser();
-			case BrowserAutomationPackage.MODEL__FIRST_GO_TO:
-				return getFirstGoTo();
-			case BrowserAutomationPackage.MODEL__ACTIONS:
-				return getActions();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    switch (featureID)
+    {
+      case BrowserAutomationPackage.MODEL__SUBROUTINES:
+        return getSubroutines();
+      case BrowserAutomationPackage.MODEL__BROWSER:
+        return getBrowser();
+      case BrowserAutomationPackage.MODEL__FIRST_GO_TO:
+        return getFirstGoTo();
+      case BrowserAutomationPackage.MODEL__ACTIONS:
+        return getActions();
+    }
+    return super.eGet(featureID, resolve, coreType);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
-		switch (featureID) {
-			case BrowserAutomationPackage.MODEL__SUBROUTINES:
-				getSubroutines().clear();
-				getSubroutines().addAll((Collection<? extends Subroutine>)newValue);
-				return;
-			case BrowserAutomationPackage.MODEL__BROWSER:
-				setBrowser((Browser)newValue);
-				return;
-			case BrowserAutomationPackage.MODEL__FIRST_GO_TO:
-				setFirstGoTo((Goto)newValue);
-				return;
-			case BrowserAutomationPackage.MODEL__ACTIONS:
-				getActions().clear();
-				getActions().addAll((Collection<? extends Action>)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    switch (featureID)
+    {
+      case BrowserAutomationPackage.MODEL__SUBROUTINES:
+        getSubroutines().clear();
+        getSubroutines().addAll((Collection<? extends Subroutine>)newValue);
+        return;
+      case BrowserAutomationPackage.MODEL__BROWSER:
+        setBrowser((Browser)newValue);
+        return;
+      case BrowserAutomationPackage.MODEL__FIRST_GO_TO:
+        setFirstGoTo((Goto)newValue);
+        return;
+      case BrowserAutomationPackage.MODEL__ACTIONS:
+        getActions().clear();
+        getActions().addAll((Collection<? extends Action>)newValue);
+        return;
+    }
+    super.eSet(featureID, newValue);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public void eUnset(int featureID)
   {
-		switch (featureID) {
-			case BrowserAutomationPackage.MODEL__SUBROUTINES:
-				getSubroutines().clear();
-				return;
-			case BrowserAutomationPackage.MODEL__BROWSER:
-				setBrowser(BROWSER_EDEFAULT);
-				return;
-			case BrowserAutomationPackage.MODEL__FIRST_GO_TO:
-				setFirstGoTo((Goto)null);
-				return;
-			case BrowserAutomationPackage.MODEL__ACTIONS:
-				getActions().clear();
-				return;
-		}
-		super.eUnset(featureID);
-	}
+    switch (featureID)
+    {
+      case BrowserAutomationPackage.MODEL__SUBROUTINES:
+        getSubroutines().clear();
+        return;
+      case BrowserAutomationPackage.MODEL__BROWSER:
+        setBrowser(BROWSER_EDEFAULT);
+        return;
+      case BrowserAutomationPackage.MODEL__FIRST_GO_TO:
+        setFirstGoTo((Goto)null);
+        return;
+      case BrowserAutomationPackage.MODEL__ACTIONS:
+        getActions().clear();
+        return;
+    }
+    super.eUnset(featureID);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public boolean eIsSet(int featureID)
   {
-		switch (featureID) {
-			case BrowserAutomationPackage.MODEL__SUBROUTINES:
-				return subroutines != null && !subroutines.isEmpty();
-			case BrowserAutomationPackage.MODEL__BROWSER:
-				return browser != BROWSER_EDEFAULT;
-			case BrowserAutomationPackage.MODEL__FIRST_GO_TO:
-				return firstGoTo != null;
-			case BrowserAutomationPackage.MODEL__ACTIONS:
-				return actions != null && !actions.isEmpty();
-		}
-		return super.eIsSet(featureID);
-	}
+    switch (featureID)
+    {
+      case BrowserAutomationPackage.MODEL__SUBROUTINES:
+        return subroutines != null && !subroutines.isEmpty();
+      case BrowserAutomationPackage.MODEL__BROWSER:
+        return browser != BROWSER_EDEFAULT;
+      case BrowserAutomationPackage.MODEL__FIRST_GO_TO:
+        return firstGoTo != null;
+      case BrowserAutomationPackage.MODEL__ACTIONS:
+        return actions != null && !actions.isEmpty();
+    }
+    return super.eIsSet(featureID);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public String toString()
   {
-		if (eIsProxy()) return super.toString();
+    if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (browser: ");
-		result.append(browser);
-		result.append(')');
-		return result.toString();
-	}
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (browser: ");
+    result.append(browser);
+    result.append(')');
+    return result.toString();
+  }
 
 } //ModelImpl

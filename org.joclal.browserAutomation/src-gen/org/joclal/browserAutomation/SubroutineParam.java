@@ -6,22 +6,22 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Dom ID</b></em>'.
+ * A representation of the model object '<em><b>Subroutine Param</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.joclal.browserAutomation.DomID#getName <em>Name</em>}</li>
- *   <li>{@link org.joclal.browserAutomation.DomID#getNext <em>Next</em>}</li>
+ *   <li>{@link org.joclal.browserAutomation.SubroutineParam#getName <em>Name</em>}</li>
+ *   <li>{@link org.joclal.browserAutomation.SubroutineParam#getNext <em>Next</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.joclal.browserAutomation.BrowserAutomationPackage#getDomID()
+ * @see org.joclal.browserAutomation.BrowserAutomationPackage#getSubroutineParam()
  * @model
  * @generated
  */
-public interface DomID extends EObject
+public interface SubroutineParam extends EObject
 {
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -33,14 +33,14 @@ public interface DomID extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Name</em>' attribute.
    * @see #setName(String)
-   * @see org.joclal.browserAutomation.BrowserAutomationPackage#getDomID_Name()
+   * @see org.joclal.browserAutomation.BrowserAutomationPackage#getSubroutineParam_Name()
    * @model
    * @generated
    */
   String getName();
 
   /**
-   * Sets the value of the '{@link org.joclal.browserAutomation.DomID#getName <em>Name</em>}' attribute.
+   * Sets the value of the '{@link org.joclal.browserAutomation.SubroutineParam#getName <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Name</em>' attribute.
@@ -58,21 +58,21 @@ public interface DomID extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Next</em>' containment reference.
-   * @see #setNext(DomID)
-   * @see org.joclal.browserAutomation.BrowserAutomationPackage#getDomID_Next()
+   * @see #setNext(SubroutineParam)
+   * @see org.joclal.browserAutomation.BrowserAutomationPackage#getSubroutineParam_Next()
    * @model containment="true"
    * @generated
    */
-  DomID getNext();
+  SubroutineParam getNext();
 
   /**
-   * Sets the value of the '{@link org.joclal.browserAutomation.DomID#getNext <em>Next</em>}' containment reference.
+   * Sets the value of the '{@link org.joclal.browserAutomation.SubroutineParam#getNext <em>Next</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Next</em>' containment reference.
    * @see #getNext()
    * @generated
    */
-  void setNext(DomID value);
+  void setNext(SubroutineParam value);
 
-} // DomID
+} // SubroutineParam

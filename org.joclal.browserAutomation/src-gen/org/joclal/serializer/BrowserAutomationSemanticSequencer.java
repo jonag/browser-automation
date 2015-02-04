@@ -28,6 +28,7 @@ import org.joclal.browserAutomation.Model;
 import org.joclal.browserAutomation.Selector;
 import org.joclal.browserAutomation.Subroutine;
 import org.joclal.browserAutomation.SubroutineCall;
+import org.joclal.browserAutomation.SubroutineParam;
 import org.joclal.browserAutomation.Uncheck;
 import org.joclal.browserAutomation.Value;
 import org.joclal.services.BrowserAutomationGrammarAccess;
@@ -129,6 +130,12 @@ public class BrowserAutomationSemanticSequencer extends AbstractDelegatingSemant
 				if(context == grammarAccess.getActionRule() ||
 				   context == grammarAccess.getSubroutineCallRule()) {
 					sequence_SubroutineCall(context, (SubroutineCall) semanticObject); 
+					return; 
+				}
+				else break;
+			case BrowserAutomationPackage.SUBROUTINE_PARAM:
+				if(context == grammarAccess.getSubroutineParamRule()) {
+					sequence_SubroutineParam(context, (SubroutineParam) semanticObject); 
 					return; 
 				}
 				else break;
@@ -336,7 +343,16 @@ public class BrowserAutomationSemanticSequencer extends AbstractDelegatingSemant
 	
 	/**
 	 * Constraint:
-	 *     (name=ID actions+=Action*)
+	 *     (name=ID next=SubroutineParam?)
+	 */
+	protected void sequence_SubroutineParam(EObject context, SubroutineParam semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=ID params+=SubroutineParam? actions+=Action*)
 	 */
 	protected void sequence_Subroutine(EObject context, Subroutine semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

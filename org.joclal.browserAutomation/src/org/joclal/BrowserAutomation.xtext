@@ -33,6 +33,10 @@ DomID:
 	name=STRING (',' next=DomID)?
 ;
 
+SubroutineParam:
+	name=ID (',' next=SubroutineParam)?
+;
+
 Fill:
 	'Fill' field=Selector 'with' value=Value ';'
 ;
@@ -84,7 +88,11 @@ IfThen:
 ;
 
 Subroutine:
-	'Def' name=ID '{'
+	'Def' name=ID 
+	('(' 
+		params+=SubroutineParam
+	')')?
+	'{'
 		(actions+=Action)*
 	'}'
 ;

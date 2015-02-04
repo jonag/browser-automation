@@ -48,6 +48,8 @@ public class BrowserAutomationParser extends AbstractContentAssistParser {
 					put(grammarAccess.getSelectorAccess().getGroup(), "rule__Selector__Group__0");
 					put(grammarAccess.getDomIDAccess().getGroup(), "rule__DomID__Group__0");
 					put(grammarAccess.getDomIDAccess().getGroup_1(), "rule__DomID__Group_1__0");
+					put(grammarAccess.getSubroutineParamAccess().getGroup(), "rule__SubroutineParam__Group__0");
+					put(grammarAccess.getSubroutineParamAccess().getGroup_1(), "rule__SubroutineParam__Group_1__0");
 					put(grammarAccess.getFillAccess().getGroup(), "rule__Fill__Group__0");
 					put(grammarAccess.getCheckAccess().getGroup(), "rule__Check__Group__0");
 					put(grammarAccess.getUncheckAccess().getGroup(), "rule__Uncheck__Group__0");
@@ -57,6 +59,7 @@ public class BrowserAutomationParser extends AbstractContentAssistParser {
 					put(grammarAccess.getIfThenAccess().getGroup(), "rule__IfThen__Group__0");
 					put(grammarAccess.getIfThenAccess().getGroup_8(), "rule__IfThen__Group_8__0");
 					put(grammarAccess.getSubroutineAccess().getGroup(), "rule__Subroutine__Group__0");
+					put(grammarAccess.getSubroutineAccess().getGroup_2(), "rule__Subroutine__Group_2__0");
 					put(grammarAccess.getSubroutineCallAccess().getGroup(), "rule__SubroutineCall__Group__0");
 					put(grammarAccess.getModelAccess().getSubroutinesAssignment_0(), "rule__Model__SubroutinesAssignment_0");
 					put(grammarAccess.getModelAccess().getBrowserAssignment_2(), "rule__Model__BrowserAssignment_2");
@@ -67,6 +70,8 @@ public class BrowserAutomationParser extends AbstractContentAssistParser {
 					put(grammarAccess.getSelectorAccess().getSelAssignment_1(), "rule__Selector__SelAssignment_1");
 					put(grammarAccess.getDomIDAccess().getNameAssignment_0(), "rule__DomID__NameAssignment_0");
 					put(grammarAccess.getDomIDAccess().getNextAssignment_1_1(), "rule__DomID__NextAssignment_1_1");
+					put(grammarAccess.getSubroutineParamAccess().getNameAssignment_0(), "rule__SubroutineParam__NameAssignment_0");
+					put(grammarAccess.getSubroutineParamAccess().getNextAssignment_1_1(), "rule__SubroutineParam__NextAssignment_1_1");
 					put(grammarAccess.getFillAccess().getFieldAssignment_1(), "rule__Fill__FieldAssignment_1");
 					put(grammarAccess.getFillAccess().getValueAssignment_3(), "rule__Fill__ValueAssignment_3");
 					put(grammarAccess.getCheckAccess().getCheckboxAssignment_1(), "rule__Check__CheckboxAssignment_1");
@@ -87,7 +92,8 @@ public class BrowserAutomationParser extends AbstractContentAssistParser {
 					put(grammarAccess.getIfThenAccess().getThenActionsAssignment_6(), "rule__IfThen__ThenActionsAssignment_6");
 					put(grammarAccess.getIfThenAccess().getElseActionsAssignment_8_2(), "rule__IfThen__ElseActionsAssignment_8_2");
 					put(grammarAccess.getSubroutineAccess().getNameAssignment_1(), "rule__Subroutine__NameAssignment_1");
-					put(grammarAccess.getSubroutineAccess().getActionsAssignment_3(), "rule__Subroutine__ActionsAssignment_3");
+					put(grammarAccess.getSubroutineAccess().getParamsAssignment_2_1(), "rule__Subroutine__ParamsAssignment_2_1");
+					put(grammarAccess.getSubroutineAccess().getActionsAssignment_4(), "rule__Subroutine__ActionsAssignment_4");
 					put(grammarAccess.getSubroutineCallAccess().getSubroutineAssignment_1(), "rule__SubroutineCall__SubroutineAssignment_1");
 				}
 			};

@@ -41,6 +41,10 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserAutomation.ecore#//DomID/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//DomID/next"/>
     </genClasses>
+    <genClasses ecoreClass="BrowserAutomation.ecore#//SubroutineParam">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserAutomation.ecore#//SubroutineParam/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//SubroutineParam/next"/>
+    </genClasses>
     <genClasses ecoreClass="BrowserAutomation.ecore#//Fill">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//Fill/field"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//Fill/value"/>
@@ -80,6 +84,7 @@
     </genClasses>
     <genClasses ecoreClass="BrowserAutomation.ecore#//Subroutine">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserAutomation.ecore#//Subroutine/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//Subroutine/params"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//Subroutine/actions"/>
     </genClasses>
     <genClasses ecoreClass="BrowserAutomation.ecore#//SubroutineCall">

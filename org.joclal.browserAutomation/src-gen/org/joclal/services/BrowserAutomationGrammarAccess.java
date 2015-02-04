@@ -238,6 +238,42 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 		public RuleCall getNextDomIDParserRuleCall_1_1_0() { return cNextDomIDParserRuleCall_1_1_0; }
 	}
 
+	public class SubroutineParamElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SubroutineParam");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameIDTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cCommaKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cNextAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cNextSubroutineParamParserRuleCall_1_1_0 = (RuleCall)cNextAssignment_1_1.eContents().get(0);
+		
+		//SubroutineParam:
+		//	name=ID ("," next=SubroutineParam)?;
+		public ParserRule getRule() { return rule; }
+
+		//name=ID ("," next=SubroutineParam)?
+		public Group getGroup() { return cGroup; }
+
+		//name=ID
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_0_0() { return cNameIDTerminalRuleCall_0_0; }
+
+		//("," next=SubroutineParam)?
+		public Group getGroup_1() { return cGroup_1; }
+
+		//","
+		public Keyword getCommaKeyword_1_0() { return cCommaKeyword_1_0; }
+
+		//next=SubroutineParam
+		public Assignment getNextAssignment_1_1() { return cNextAssignment_1_1; }
+
+		//SubroutineParam
+		public RuleCall getNextSubroutineParamParserRuleCall_1_1_0() { return cNextSubroutineParamParserRuleCall_1_1_0; }
+	}
+
 	public class FillElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Fill");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -612,16 +648,21 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 		private final Keyword cDefKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cActionsAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cActionsActionParserRuleCall_3_0 = (RuleCall)cActionsAssignment_3.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cLeftParenthesisKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Assignment cParamsAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final RuleCall cParamsSubroutineParamParserRuleCall_2_1_0 = (RuleCall)cParamsAssignment_2_1.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_2_2 = (Keyword)cGroup_2.eContents().get(2);
+		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cActionsAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cActionsActionParserRuleCall_4_0 = (RuleCall)cActionsAssignment_4.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//Subroutine:
-		//	"Def" name=ID "{" actions+=Action* "}";
+		//	"Def" name=ID ("(" params+=SubroutineParam ")")? "{" actions+=Action* "}";
 		public ParserRule getRule() { return rule; }
 
-		//"Def" name=ID "{" actions+=Action* "}"
+		//"Def" name=ID ("(" params+=SubroutineParam ")")? "{" actions+=Action* "}"
 		public Group getGroup() { return cGroup; }
 
 		//"Def"
@@ -633,17 +674,32 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
+		//("(" params+=SubroutineParam ")")?
+		public Group getGroup_2() { return cGroup_2; }
+
+		//"("
+		public Keyword getLeftParenthesisKeyword_2_0() { return cLeftParenthesisKeyword_2_0; }
+
+		//params+=SubroutineParam
+		public Assignment getParamsAssignment_2_1() { return cParamsAssignment_2_1; }
+
+		//SubroutineParam
+		public RuleCall getParamsSubroutineParamParserRuleCall_2_1_0() { return cParamsSubroutineParamParserRuleCall_2_1_0; }
+
+		//")"
+		public Keyword getRightParenthesisKeyword_2_2() { return cRightParenthesisKeyword_2_2; }
+
 		//"{"
-		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 
 		//actions+=Action*
-		public Assignment getActionsAssignment_3() { return cActionsAssignment_3; }
+		public Assignment getActionsAssignment_4() { return cActionsAssignment_4; }
 
 		//Action
-		public RuleCall getActionsActionParserRuleCall_3_0() { return cActionsActionParserRuleCall_3_0; }
+		public RuleCall getActionsActionParserRuleCall_4_0() { return cActionsActionParserRuleCall_4_0; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
+		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 
 	public class SubroutineCallElements extends AbstractParserRuleElementFinder {
@@ -790,6 +846,7 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 	private final ClickOnElements pClickOn;
 	private final SelectorElements pSelector;
 	private final DomIDElements pDomID;
+	private final SubroutineParamElements pSubroutineParam;
 	private final FillElements pFill;
 	private final CheckElements pCheck;
 	private final UncheckElements pUncheck;
@@ -819,6 +876,7 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 		this.pClickOn = new ClickOnElements();
 		this.pSelector = new SelectorElements();
 		this.pDomID = new DomIDElements();
+		this.pSubroutineParam = new SubroutineParamElements();
 		this.pFill = new FillElements();
 		this.pCheck = new CheckElements();
 		this.pUncheck = new UncheckElements();
@@ -930,6 +988,16 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 		return getDomIDAccess().getRule();
 	}
 
+	//SubroutineParam:
+	//	name=ID ("," next=SubroutineParam)?;
+	public SubroutineParamElements getSubroutineParamAccess() {
+		return pSubroutineParam;
+	}
+	
+	public ParserRule getSubroutineParamRule() {
+		return getSubroutineParamAccess().getRule();
+	}
+
 	//Fill:
 	//	"Fill" field=Selector "with" value=Value ";";
 	public FillElements getFillAccess() {
@@ -1031,7 +1099,7 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 	}
 
 	//Subroutine:
-	//	"Def" name=ID "{" actions+=Action* "}";
+	//	"Def" name=ID ("(" params+=SubroutineParam ")")? "{" actions+=Action* "}";
 	public SubroutineElements getSubroutineAccess() {
 		return pSubroutine;
 	}

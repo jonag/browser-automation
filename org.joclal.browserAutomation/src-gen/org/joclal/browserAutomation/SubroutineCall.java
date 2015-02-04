@@ -22,29 +22,29 @@ package org.joclal.browserAutomation;
 public interface SubroutineCall extends Action
 {
   /**
-	 * Returns the value of the '<em><b>Subroutine</b></em>' reference.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Subroutine</b></em>' reference.
+   * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Subroutine</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>Subroutine</em>' reference.
-	 * @see #setSubroutine(Subroutine)
-	 * @see org.joclal.browserAutomation.BrowserAutomationPackage#getSubroutineCall_Subroutine()
-	 * @model
-	 * @generated
-	 */
+   * @return the value of the '<em>Subroutine</em>' reference.
+   * @see #setSubroutine(Subroutine)
+   * @see org.joclal.browserAutomation.BrowserAutomationPackage#getSubroutineCall_Subroutine()
+   * @model
+   * @generated
+   */
   Subroutine getSubroutine();
 
   /**
-	 * Sets the value of the '{@link org.joclal.browserAutomation.SubroutineCall#getSubroutine <em>Subroutine</em>}' reference.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link org.joclal.browserAutomation.SubroutineCall#getSubroutine <em>Subroutine</em>}' reference.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Subroutine</em>' reference.
-	 * @see #getSubroutine()
-	 * @generated
-	 */
+   * @param value the new value of the '<em>Subroutine</em>' reference.
+   * @see #getSubroutine()
+   * @generated
+   */
   void setSubroutine(Subroutine value);
 
 } // SubroutineCall
