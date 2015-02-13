@@ -22,378 +22,360 @@ import org.joclal.browserAutomation.*;
 public class BrowserAutomationFactoryImpl extends EFactoryImpl implements BrowserAutomationFactory
 {
   /**
-	 * Creates the default factory implementation.
-	 * <!-- begin-user-doc -->
+   * Creates the default factory implementation.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public static BrowserAutomationFactory init()
   {
-		try {
-			BrowserAutomationFactory theBrowserAutomationFactory = (BrowserAutomationFactory)EPackage.Registry.INSTANCE.getEFactory(BrowserAutomationPackage.eNS_URI);
-			if (theBrowserAutomationFactory != null) {
-				return theBrowserAutomationFactory;
-			}
-		}
-		catch (Exception exception) {
-			EcorePlugin.INSTANCE.log(exception);
-		}
-		return new BrowserAutomationFactoryImpl();
-	}
+    try
+    {
+      BrowserAutomationFactory theBrowserAutomationFactory = (BrowserAutomationFactory)EPackage.Registry.INSTANCE.getEFactory(BrowserAutomationPackage.eNS_URI);
+      if (theBrowserAutomationFactory != null)
+      {
+        return theBrowserAutomationFactory;
+      }
+    }
+    catch (Exception exception)
+    {
+      EcorePlugin.INSTANCE.log(exception);
+    }
+    return new BrowserAutomationFactoryImpl();
+  }
 
   /**
-	 * Creates an instance of the factory.
-	 * <!-- begin-user-doc -->
+   * Creates an instance of the factory.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public BrowserAutomationFactoryImpl()
   {
-		super();
-	}
+    super();
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public EObject create(EClass eClass)
   {
-		switch (eClass.getClassifierID()) {
-			case BrowserAutomationPackage.MODEL: return createModel();
-			case BrowserAutomationPackage.ACTION: return createAction();
-			case BrowserAutomationPackage.GOTO: return createGoto();
-			case BrowserAutomationPackage.CLICK_ON: return createClickOn();
-			case BrowserAutomationPackage.SELECTOR: return createSelector();
-			case BrowserAutomationPackage.DOM_ID: return createDomID();
-			case BrowserAutomationPackage.SUBROUTINE_PARAM: return createSubroutineParam();
-			case BrowserAutomationPackage.FILL: return createFill();
-			case BrowserAutomationPackage.CHECK: return createCheck();
-			case BrowserAutomationPackage.UNCHECK: return createUncheck();
-			case BrowserAutomationPackage.LET: return createLet();
-			case BrowserAutomationPackage.LET_VALUE: return createLetValue();
-			case BrowserAutomationPackage.VALUE: return createValue();
-			case BrowserAutomationPackage.DO_WHILE: return createDoWhile();
-			case BrowserAutomationPackage.BOOLEAN_EXP: return createBooleanExp();
-			case BrowserAutomationPackage.IF_THEN: return createIfThen();
-			case BrowserAutomationPackage.SUBROUTINE: return createSubroutine();
-			case BrowserAutomationPackage.SUBROUTINE_CALL: return createSubroutineCall();
-			case BrowserAutomationPackage.VARIABLE_ID: return createVariableId();
-			default:
-				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
-		}
-	}
+    switch (eClass.getClassifierID())
+    {
+      case BrowserAutomationPackage.BROWSER_AUTOMATION: return createBrowserAutomation();
+      case BrowserAutomationPackage.ACTION: return createAction();
+      case BrowserAutomationPackage.GOTO: return createGoto();
+      case BrowserAutomationPackage.CLICK_ON: return createClickOn();
+      case BrowserAutomationPackage.SELECTOR: return createSelector();
+      case BrowserAutomationPackage.FILL: return createFill();
+      case BrowserAutomationPackage.CHECK: return createCheck();
+      case BrowserAutomationPackage.UNCHECK: return createUncheck();
+      case BrowserAutomationPackage.LET: return createLet();
+      case BrowserAutomationPackage.LET_VALUE: return createLetValue();
+      case BrowserAutomationPackage.VALUE: return createValue();
+      case BrowserAutomationPackage.DO_WHILE: return createDoWhile();
+      case BrowserAutomationPackage.BOOLEAN_EXP: return createBooleanExp();
+      case BrowserAutomationPackage.IF_THEN: return createIfThen();
+      case BrowserAutomationPackage.SUBROUTINE: return createSubroutine();
+      case BrowserAutomationPackage.SUBROUTINE_CALL: return createSubroutineCall();
+      case BrowserAutomationPackage.VARIABLE_ID: return createVariableId();
+      default:
+        throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+    }
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public Object createFromString(EDataType eDataType, String initialValue)
   {
-		switch (eDataType.getClassifierID()) {
-			case BrowserAutomationPackage.BROWSER:
-				return createBrowserFromString(eDataType, initialValue);
-			case BrowserAutomationPackage.OPERATOR:
-				return createOperatorFromString(eDataType, initialValue);
-			default:
-				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
-		}
-	}
+    switch (eDataType.getClassifierID())
+    {
+      case BrowserAutomationPackage.BROWSER:
+        return createBrowserFromString(eDataType, initialValue);
+      case BrowserAutomationPackage.OPERATOR:
+        return createOperatorFromString(eDataType, initialValue);
+      default:
+        throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+    }
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public String convertToString(EDataType eDataType, Object instanceValue)
   {
-		switch (eDataType.getClassifierID()) {
-			case BrowserAutomationPackage.BROWSER:
-				return convertBrowserToString(eDataType, instanceValue);
-			case BrowserAutomationPackage.OPERATOR:
-				return convertOperatorToString(eDataType, instanceValue);
-			default:
-				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
-		}
-	}
+    switch (eDataType.getClassifierID())
+    {
+      case BrowserAutomationPackage.BROWSER:
+        return convertBrowserToString(eDataType, instanceValue);
+      case BrowserAutomationPackage.OPERATOR:
+        return convertOperatorToString(eDataType, instanceValue);
+      default:
+        throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+    }
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public Model createModel()
+   * @generated
+   */
+  public BrowserAutomation createBrowserAutomation()
   {
-		ModelImpl model = new ModelImpl();
-		return model;
-	}
+    BrowserAutomationImpl browserAutomation = new BrowserAutomationImpl();
+    return browserAutomation;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public Action createAction()
   {
-		ActionImpl action = new ActionImpl();
-		return action;
-	}
+    ActionImpl action = new ActionImpl();
+    return action;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public Goto createGoto()
   {
-		GotoImpl goto_ = new GotoImpl();
-		return goto_;
-	}
+    GotoImpl goto_ = new GotoImpl();
+    return goto_;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public ClickOn createClickOn()
   {
-		ClickOnImpl clickOn = new ClickOnImpl();
-		return clickOn;
-	}
+    ClickOnImpl clickOn = new ClickOnImpl();
+    return clickOn;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public Selector createSelector()
   {
-		SelectorImpl selector = new SelectorImpl();
-		return selector;
-	}
+    SelectorImpl selector = new SelectorImpl();
+    return selector;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public DomID createDomID()
-  {
-		DomIDImpl domID = new DomIDImpl();
-		return domID;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public SubroutineParam createSubroutineParam()
-  {
-		SubroutineParamImpl subroutineParam = new SubroutineParamImpl();
-		return subroutineParam;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public Fill createFill()
   {
-		FillImpl fill = new FillImpl();
-		return fill;
-	}
+    FillImpl fill = new FillImpl();
+    return fill;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public Check createCheck()
   {
-		CheckImpl check = new CheckImpl();
-		return check;
-	}
+    CheckImpl check = new CheckImpl();
+    return check;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public Uncheck createUncheck()
   {
-		UncheckImpl uncheck = new UncheckImpl();
-		return uncheck;
-	}
+    UncheckImpl uncheck = new UncheckImpl();
+    return uncheck;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public Let createLet()
   {
-		LetImpl let = new LetImpl();
-		return let;
-	}
+    LetImpl let = new LetImpl();
+    return let;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public LetValue createLetValue()
   {
-		LetValueImpl letValue = new LetValueImpl();
-		return letValue;
-	}
+    LetValueImpl letValue = new LetValueImpl();
+    return letValue;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public Value createValue()
   {
-		ValueImpl value = new ValueImpl();
-		return value;
-	}
+    ValueImpl value = new ValueImpl();
+    return value;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public DoWhile createDoWhile()
   {
-		DoWhileImpl doWhile = new DoWhileImpl();
-		return doWhile;
-	}
+    DoWhileImpl doWhile = new DoWhileImpl();
+    return doWhile;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public BooleanExp createBooleanExp()
   {
-		BooleanExpImpl booleanExp = new BooleanExpImpl();
-		return booleanExp;
-	}
+    BooleanExpImpl booleanExp = new BooleanExpImpl();
+    return booleanExp;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public IfThen createIfThen()
   {
-		IfThenImpl ifThen = new IfThenImpl();
-		return ifThen;
-	}
+    IfThenImpl ifThen = new IfThenImpl();
+    return ifThen;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public Subroutine createSubroutine()
   {
-		SubroutineImpl subroutine = new SubroutineImpl();
-		return subroutine;
-	}
+    SubroutineImpl subroutine = new SubroutineImpl();
+    return subroutine;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public SubroutineCall createSubroutineCall()
   {
-		SubroutineCallImpl subroutineCall = new SubroutineCallImpl();
-		return subroutineCall;
-	}
+    SubroutineCallImpl subroutineCall = new SubroutineCallImpl();
+    return subroutineCall;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public VariableId createVariableId()
   {
-		VariableIdImpl variableId = new VariableIdImpl();
-		return variableId;
-	}
+    VariableIdImpl variableId = new VariableIdImpl();
+    return variableId;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public Browser createBrowserFromString(EDataType eDataType, String initialValue)
   {
-		Browser result = Browser.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
+    Browser result = Browser.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public String convertBrowserToString(EDataType eDataType, Object instanceValue)
   {
-		return instanceValue == null ? null : instanceValue.toString();
-	}
+    return instanceValue == null ? null : instanceValue.toString();
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public Operator createOperatorFromString(EDataType eDataType, String initialValue)
   {
-		Operator result = Operator.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
+    Operator result = Operator.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public String convertOperatorToString(EDataType eDataType, Object instanceValue)
   {
-		return instanceValue == null ? null : instanceValue.toString();
-	}
+    return instanceValue == null ? null : instanceValue.toString();
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public BrowserAutomationPackage getBrowserAutomationPackage()
   {
-		return (BrowserAutomationPackage)getEPackage();
-	}
+    return (BrowserAutomationPackage)getEPackage();
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @deprecated
-	 * @generated
-	 */
+   * @deprecated
+   * @generated
+   */
   @Deprecated
   public static BrowserAutomationPackage getPackage()
   {
-		return BrowserAutomationPackage.eINSTANCE;
-	}
+    return BrowserAutomationPackage.eINSTANCE;
+  }
 
 } //BrowserAutomationFactoryImpl

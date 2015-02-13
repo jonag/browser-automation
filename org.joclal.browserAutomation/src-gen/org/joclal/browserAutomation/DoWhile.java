@@ -24,45 +24,45 @@ import org.eclipse.emf.common.util.EList;
 public interface DoWhile extends Action
 {
   /**
-	 * Returns the value of the '<em><b>Actions</b></em>' containment reference list.
-	 * The list contents are of type {@link org.joclal.browserAutomation.Action}.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Actions</b></em>' containment reference list.
+   * The list contents are of type {@link org.joclal.browserAutomation.Action}.
+   * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Actions</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>Actions</em>' containment reference list.
-	 * @see org.joclal.browserAutomation.BrowserAutomationPackage#getDoWhile_Actions()
-	 * @model containment="true"
-	 * @generated
-	 */
+   * @return the value of the '<em>Actions</em>' containment reference list.
+   * @see org.joclal.browserAutomation.BrowserAutomationPackage#getDoWhile_Actions()
+   * @model containment="true"
+   * @generated
+   */
   EList<Action> getActions();
 
   /**
-	 * Returns the value of the '<em><b>Condition</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Condition</b></em>' containment reference.
+   * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Condition</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>Condition</em>' containment reference.
-	 * @see #setCondition(BooleanExp)
-	 * @see org.joclal.browserAutomation.BrowserAutomationPackage#getDoWhile_Condition()
-	 * @model containment="true"
-	 * @generated
-	 */
+   * @return the value of the '<em>Condition</em>' containment reference.
+   * @see #setCondition(BooleanExp)
+   * @see org.joclal.browserAutomation.BrowserAutomationPackage#getDoWhile_Condition()
+   * @model containment="true"
+   * @generated
+   */
   BooleanExp getCondition();
 
   /**
-	 * Sets the value of the '{@link org.joclal.browserAutomation.DoWhile#getCondition <em>Condition</em>}' containment reference.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link org.joclal.browserAutomation.DoWhile#getCondition <em>Condition</em>}' containment reference.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Condition</em>' containment reference.
-	 * @see #getCondition()
-	 * @generated
-	 */
+   * @param value the new value of the '<em>Condition</em>' containment reference.
+   * @see #getCondition()
+   * @generated
+   */
   void setCondition(BooleanExp value);
 
 } // DoWhile

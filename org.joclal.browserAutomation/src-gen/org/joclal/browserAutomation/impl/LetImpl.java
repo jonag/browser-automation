@@ -19,24 +19,24 @@ import org.joclal.browserAutomation.Let;
 public class LetImpl extends ActionImpl implements Let
 {
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   protected LetImpl()
   {
-		super();
-	}
+    super();
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   protected EClass eStaticClass()
   {
-		return BrowserAutomationPackage.Literals.LET;
-	}
+    return BrowserAutomationPackage.Literals.LET;
+  }
 
 } //LetImpl

@@ -18,8 +18,8 @@ import org.eclipse.xtext.common.services.TerminalsGrammarAccess;
 public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder {
 	
 	
-	public class ModelElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Model");
+	public class BrowserAutomationElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "BrowserAutomation");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cSubroutinesAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cSubroutinesSubroutineParserRuleCall_0_0 = (RuleCall)cSubroutinesAssignment_0.eContents().get(0);
@@ -32,7 +32,7 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 		private final Assignment cActionsAssignment_5 = (Assignment)cGroup.eContents().get(5);
 		private final RuleCall cActionsActionParserRuleCall_5_0 = (RuleCall)cActionsAssignment_5.eContents().get(0);
 		
-		//Model:
+		//BrowserAutomation:
 		//	subroutines+=Subroutine* "browser" browser=Browser ";" firstGoTo=Goto actions+=Action*;
 		public ParserRule getRule() { return rule; }
 
@@ -178,96 +178,44 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Selector");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cSelectKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cSelAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cSelDomIDParserRuleCall_1_0 = (RuleCall)cSelAssignment_1.eContents().get(0);
-		private final Keyword cRightParenthesisKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cHaydiesAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cHaydiesSTRINGTerminalRuleCall_1_0 = (RuleCall)cHaydiesAssignment_1.eContents().get(0);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cCommaKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Assignment cHaydiesAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final RuleCall cHaydiesSTRINGTerminalRuleCall_2_1_0 = (RuleCall)cHaydiesAssignment_2_1.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//Selector:
-		//	"select(" sel=DomID ")";
+		//	"select(" haydies+=STRING ("," haydies+=STRING)? ")";
 		public ParserRule getRule() { return rule; }
 
-		//"select(" sel=DomID ")"
+		//"select(" haydies+=STRING ("," haydies+=STRING)? ")"
 		public Group getGroup() { return cGroup; }
 
 		//"select("
 		public Keyword getSelectKeyword_0() { return cSelectKeyword_0; }
 
-		//sel=DomID
-		public Assignment getSelAssignment_1() { return cSelAssignment_1; }
-
-		//DomID
-		public RuleCall getSelDomIDParserRuleCall_1_0() { return cSelDomIDParserRuleCall_1_0; }
-
-		//")"
-		public Keyword getRightParenthesisKeyword_2() { return cRightParenthesisKeyword_2; }
-	}
-
-	public class DomIDElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "DomID");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cNameSTRINGTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
-		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Keyword cCommaKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
-		private final Assignment cNextAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final RuleCall cNextDomIDParserRuleCall_1_1_0 = (RuleCall)cNextAssignment_1_1.eContents().get(0);
-		
-		//DomID:
-		//	name=STRING ("," next=DomID)?;
-		public ParserRule getRule() { return rule; }
-
-		//name=STRING ("," next=DomID)?
-		public Group getGroup() { return cGroup; }
-
-		//name=STRING
-		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+		//haydies+=STRING
+		public Assignment getHaydiesAssignment_1() { return cHaydiesAssignment_1; }
 
 		//STRING
-		public RuleCall getNameSTRINGTerminalRuleCall_0_0() { return cNameSTRINGTerminalRuleCall_0_0; }
+		public RuleCall getHaydiesSTRINGTerminalRuleCall_1_0() { return cHaydiesSTRINGTerminalRuleCall_1_0; }
 
-		//("," next=DomID)?
-		public Group getGroup_1() { return cGroup_1; }
-
-		//","
-		public Keyword getCommaKeyword_1_0() { return cCommaKeyword_1_0; }
-
-		//next=DomID
-		public Assignment getNextAssignment_1_1() { return cNextAssignment_1_1; }
-
-		//DomID
-		public RuleCall getNextDomIDParserRuleCall_1_1_0() { return cNextDomIDParserRuleCall_1_1_0; }
-	}
-
-	public class SubroutineParamElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SubroutineParam");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final RuleCall cVariableIdParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
-		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Keyword cCommaKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
-		private final Assignment cNextAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final RuleCall cNextSubroutineParamParserRuleCall_1_1_0 = (RuleCall)cNextAssignment_1_1.eContents().get(0);
-		
-		//SubroutineParam:
-		//	VariableId ("," next=SubroutineParam)?;
-		public ParserRule getRule() { return rule; }
-
-		//VariableId ("," next=SubroutineParam)?
-		public Group getGroup() { return cGroup; }
-
-		//VariableId
-		public RuleCall getVariableIdParserRuleCall_0() { return cVariableIdParserRuleCall_0; }
-
-		//("," next=SubroutineParam)?
-		public Group getGroup_1() { return cGroup_1; }
+		//("," haydies+=STRING)?
+		public Group getGroup_2() { return cGroup_2; }
 
 		//","
-		public Keyword getCommaKeyword_1_0() { return cCommaKeyword_1_0; }
+		public Keyword getCommaKeyword_2_0() { return cCommaKeyword_2_0; }
 
-		//next=SubroutineParam
-		public Assignment getNextAssignment_1_1() { return cNextAssignment_1_1; }
+		//haydies+=STRING
+		public Assignment getHaydiesAssignment_2_1() { return cHaydiesAssignment_2_1; }
 
-		//SubroutineParam
-		public RuleCall getNextSubroutineParamParserRuleCall_1_1_0() { return cNextSubroutineParamParserRuleCall_1_1_0; }
+		//STRING
+		public RuleCall getHaydiesSTRINGTerminalRuleCall_2_1_0() { return cHaydiesSTRINGTerminalRuleCall_2_1_0; }
+
+		//")"
+		public Keyword getRightParenthesisKeyword_3() { return cRightParenthesisKeyword_3; }
 	}
 
 	public class FillElements extends AbstractParserRuleElementFinder {
@@ -435,17 +383,15 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final Assignment cStringAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
 		private final RuleCall cStringSTRINGTerminalRuleCall_0_0 = (RuleCall)cStringAssignment_0.eContents().get(0);
-		private final Assignment cIntAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
-		private final RuleCall cIntINTTerminalRuleCall_1_0 = (RuleCall)cIntAssignment_1.eContents().get(0);
-		private final Assignment cVariableAssignment_2 = (Assignment)cAlternatives.eContents().get(2);
-		private final CrossReference cVariableVariableIdCrossReference_2_0 = (CrossReference)cVariableAssignment_2.eContents().get(0);
-		private final RuleCall cVariableVariableIdIDTerminalRuleCall_2_0_1 = (RuleCall)cVariableVariableIdCrossReference_2_0.eContents().get(1);
+		private final Assignment cVariableAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
+		private final CrossReference cVariableVariableIdCrossReference_1_0 = (CrossReference)cVariableAssignment_1.eContents().get(0);
+		private final RuleCall cVariableVariableIdIDTerminalRuleCall_1_0_1 = (RuleCall)cVariableVariableIdCrossReference_1_0.eContents().get(1);
 		
 		//Value:
-		//	string=STRING | int=INT | variable=[VariableId];
+		//	string=STRING | variable=[VariableId];
 		public ParserRule getRule() { return rule; }
 
-		//string=STRING | int=INT | variable=[VariableId]
+		//string=STRING | variable=[VariableId]
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//string=STRING
@@ -454,20 +400,14 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 		//STRING
 		public RuleCall getStringSTRINGTerminalRuleCall_0_0() { return cStringSTRINGTerminalRuleCall_0_0; }
 
-		//int=INT
-		public Assignment getIntAssignment_1() { return cIntAssignment_1; }
-
-		//INT
-		public RuleCall getIntINTTerminalRuleCall_1_0() { return cIntINTTerminalRuleCall_1_0; }
-
 		//variable=[VariableId]
-		public Assignment getVariableAssignment_2() { return cVariableAssignment_2; }
+		public Assignment getVariableAssignment_1() { return cVariableAssignment_1; }
 
 		//[VariableId]
-		public CrossReference getVariableVariableIdCrossReference_2_0() { return cVariableVariableIdCrossReference_2_0; }
+		public CrossReference getVariableVariableIdCrossReference_1_0() { return cVariableVariableIdCrossReference_1_0; }
 
 		//ID
-		public RuleCall getVariableVariableIdIDTerminalRuleCall_2_0_1() { return cVariableVariableIdIDTerminalRuleCall_2_0_1; }
+		public RuleCall getVariableVariableIdIDTerminalRuleCall_1_0_1() { return cVariableVariableIdIDTerminalRuleCall_1_0_1; }
 	}
 
 	public class DoWhileElements extends AbstractParserRuleElementFinder {
@@ -643,18 +583,22 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
 		private final Keyword cLeftParenthesisKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
 		private final Assignment cParamsAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cParamsSubroutineParamParserRuleCall_2_1_0 = (RuleCall)cParamsAssignment_2_1.eContents().get(0);
-		private final Keyword cRightParenthesisKeyword_2_2 = (Keyword)cGroup_2.eContents().get(2);
+		private final RuleCall cParamsVariableIdParserRuleCall_2_1_0 = (RuleCall)cParamsAssignment_2_1.eContents().get(0);
+		private final Group cGroup_2_2 = (Group)cGroup_2.eContents().get(2);
+		private final Keyword cCommaKeyword_2_2_0 = (Keyword)cGroup_2_2.eContents().get(0);
+		private final Assignment cParamsAssignment_2_2_1 = (Assignment)cGroup_2_2.eContents().get(1);
+		private final RuleCall cParamsVariableIdParserRuleCall_2_2_1_0 = (RuleCall)cParamsAssignment_2_2_1.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_2_3 = (Keyword)cGroup_2.eContents().get(3);
 		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cActionsAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cActionsActionParserRuleCall_4_0 = (RuleCall)cActionsAssignment_4.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//Subroutine:
-		//	"Def" name=ID ("(" params=SubroutineParam ")")? "{" actions+=Action* "}";
+		//	"Def" name=ID ("(" params+=VariableId ("," params+=VariableId)? ")")? "{" actions+=Action* "}";
 		public ParserRule getRule() { return rule; }
 
-		//"Def" name=ID ("(" params=SubroutineParam ")")? "{" actions+=Action* "}"
+		//"Def" name=ID ("(" params+=VariableId ("," params+=VariableId)? ")")? "{" actions+=Action* "}"
 		public Group getGroup() { return cGroup; }
 
 		//"Def"
@@ -666,20 +610,32 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//("(" params=SubroutineParam ")")?
+		//("(" params+=VariableId ("," params+=VariableId)? ")")?
 		public Group getGroup_2() { return cGroup_2; }
 
 		//"("
 		public Keyword getLeftParenthesisKeyword_2_0() { return cLeftParenthesisKeyword_2_0; }
 
-		//params=SubroutineParam
+		//params+=VariableId
 		public Assignment getParamsAssignment_2_1() { return cParamsAssignment_2_1; }
 
-		//SubroutineParam
-		public RuleCall getParamsSubroutineParamParserRuleCall_2_1_0() { return cParamsSubroutineParamParserRuleCall_2_1_0; }
+		//VariableId
+		public RuleCall getParamsVariableIdParserRuleCall_2_1_0() { return cParamsVariableIdParserRuleCall_2_1_0; }
+
+		//("," params+=VariableId)?
+		public Group getGroup_2_2() { return cGroup_2_2; }
+
+		//","
+		public Keyword getCommaKeyword_2_2_0() { return cCommaKeyword_2_2_0; }
+
+		//params+=VariableId
+		public Assignment getParamsAssignment_2_2_1() { return cParamsAssignment_2_2_1; }
+
+		//VariableId
+		public RuleCall getParamsVariableIdParserRuleCall_2_2_1_0() { return cParamsVariableIdParserRuleCall_2_2_1_0; }
 
 		//")"
-		public Keyword getRightParenthesisKeyword_2_2() { return cRightParenthesisKeyword_2_2; }
+		public Keyword getRightParenthesisKeyword_2_3() { return cRightParenthesisKeyword_2_3; }
 
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
@@ -729,17 +685,17 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 	public class VariableIdElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "VariableId");
 		private final Assignment cNameAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_0 = (RuleCall)cNameAssignment.eContents().get(0);
+		private final RuleCall cNameSTRINGTerminalRuleCall_0 = (RuleCall)cNameAssignment.eContents().get(0);
 		
 		//VariableId:
-		//	name=ID;
+		//	name=STRING;
 		public ParserRule getRule() { return rule; }
 
-		//name=ID
+		//name=STRING
 		public Assignment getNameAssignment() { return cNameAssignment; }
 
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_0() { return cNameIDTerminalRuleCall_0; }
+		//STRING
+		public RuleCall getNameSTRINGTerminalRuleCall_0() { return cNameSTRINGTerminalRuleCall_0; }
 	}
 	
 	
@@ -847,14 +803,12 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 		public Keyword getLteLessThanSignEqualsSignKeyword_4_0() { return cLteLessThanSignEqualsSignKeyword_4_0; }
 	}
 	
-	private final ModelElements pModel;
+	private final BrowserAutomationElements pBrowserAutomation;
 	private final BrowserElements unknownRuleBrowser;
 	private final ActionElements pAction;
 	private final GotoElements pGoto;
 	private final ClickOnElements pClickOn;
 	private final SelectorElements pSelector;
-	private final DomIDElements pDomID;
-	private final SubroutineParamElements pSubroutineParam;
 	private final FillElements pFill;
 	private final CheckElements pCheck;
 	private final UncheckElements pUncheck;
@@ -878,14 +832,12 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 		TerminalsGrammarAccess gaTerminals) {
 		this.grammar = internalFindGrammar(grammarProvider);
 		this.gaTerminals = gaTerminals;
-		this.pModel = new ModelElements();
+		this.pBrowserAutomation = new BrowserAutomationElements();
 		this.unknownRuleBrowser = new BrowserElements();
 		this.pAction = new ActionElements();
 		this.pGoto = new GotoElements();
 		this.pClickOn = new ClickOnElements();
 		this.pSelector = new SelectorElements();
-		this.pDomID = new DomIDElements();
-		this.pSubroutineParam = new SubroutineParamElements();
 		this.pFill = new FillElements();
 		this.pCheck = new CheckElements();
 		this.pUncheck = new UncheckElements();
@@ -928,14 +880,14 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 	}
 
 	
-	//Model:
+	//BrowserAutomation:
 	//	subroutines+=Subroutine* "browser" browser=Browser ";" firstGoTo=Goto actions+=Action*;
-	public ModelElements getModelAccess() {
-		return pModel;
+	public BrowserAutomationElements getBrowserAutomationAccess() {
+		return pBrowserAutomation;
 	}
 	
-	public ParserRule getModelRule() {
-		return getModelAccess().getRule();
+	public ParserRule getBrowserAutomationRule() {
+		return getBrowserAutomationAccess().getRule();
 	}
 
 	//enum Browser:
@@ -979,33 +931,13 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 	}
 
 	//Selector:
-	//	"select(" sel=DomID ")";
+	//	"select(" haydies+=STRING ("," haydies+=STRING)? ")";
 	public SelectorElements getSelectorAccess() {
 		return pSelector;
 	}
 	
 	public ParserRule getSelectorRule() {
 		return getSelectorAccess().getRule();
-	}
-
-	//DomID:
-	//	name=STRING ("," next=DomID)?;
-	public DomIDElements getDomIDAccess() {
-		return pDomID;
-	}
-	
-	public ParserRule getDomIDRule() {
-		return getDomIDAccess().getRule();
-	}
-
-	//SubroutineParam:
-	//	VariableId ("," next=SubroutineParam)?;
-	public SubroutineParamElements getSubroutineParamAccess() {
-		return pSubroutineParam;
-	}
-	
-	public ParserRule getSubroutineParamRule() {
-		return getSubroutineParamAccess().getRule();
 	}
 
 	//Fill:
@@ -1059,7 +991,7 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 	}
 
 	//Value:
-	//	string=STRING | int=INT | variable=[VariableId];
+	//	string=STRING | variable=[VariableId];
 	public ValueElements getValueAccess() {
 		return pValue;
 	}
@@ -1109,7 +1041,7 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 	}
 
 	//Subroutine:
-	//	"Def" name=ID ("(" params=SubroutineParam ")")? "{" actions+=Action* "}";
+	//	"Def" name=ID ("(" params+=VariableId ("," params+=VariableId)? ")")? "{" actions+=Action* "}";
 	public SubroutineElements getSubroutineAccess() {
 		return pSubroutine;
 	}
@@ -1129,7 +1061,7 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 	}
 
 	//VariableId:
-	//	name=ID;
+	//	name=STRING;
 	public VariableIdElements getVariableIdAccess() {
 		return pVariableId;
 	}

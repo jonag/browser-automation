@@ -11,7 +11,6 @@ package org.joclal.browserAutomation;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.joclal.browserAutomation.VariableId#getNext <em>Next</em>}</li>
  *   <li>{@link org.joclal.browserAutomation.VariableId#getValue <em>Value</em>}</li>
  *   <li>{@link org.joclal.browserAutomation.VariableId#getName <em>Name</em>}</li>
  * </ul>
@@ -21,84 +20,58 @@ package org.joclal.browserAutomation;
  * @model
  * @generated
  */
-public interface VariableId extends SubroutineParam, Let
+public interface VariableId extends Let
 {
   /**
-	 * Returns the value of the '<em><b>Next</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Next</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-	 * @return the value of the '<em>Next</em>' containment reference.
-	 * @see #setNext(SubroutineParam)
-	 * @see org.joclal.browserAutomation.BrowserAutomationPackage#getVariableId_Next()
-	 * @model containment="true"
-	 * @generated
-	 */
-  SubroutineParam getNext();
-
-  /**
-	 * Sets the value of the '{@link org.joclal.browserAutomation.VariableId#getNext <em>Next</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Next</em>' containment reference.
-	 * @see #getNext()
-	 * @generated
-	 */
-  void setNext(SubroutineParam value);
-
-  /**
-	 * Returns the value of the '<em><b>Value</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Value</b></em>' containment reference.
+   * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Value</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>Value</em>' containment reference.
-	 * @see #setValue(LetValue)
-	 * @see org.joclal.browserAutomation.BrowserAutomationPackage#getVariableId_Value()
-	 * @model containment="true"
-	 * @generated
-	 */
+   * @return the value of the '<em>Value</em>' containment reference.
+   * @see #setValue(LetValue)
+   * @see org.joclal.browserAutomation.BrowserAutomationPackage#getVariableId_Value()
+   * @model containment="true"
+   * @generated
+   */
   LetValue getValue();
 
   /**
-	 * Sets the value of the '{@link org.joclal.browserAutomation.VariableId#getValue <em>Value</em>}' containment reference.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link org.joclal.browserAutomation.VariableId#getValue <em>Value</em>}' containment reference.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Value</em>' containment reference.
-	 * @see #getValue()
-	 * @generated
-	 */
+   * @param value the new value of the '<em>Value</em>' containment reference.
+   * @see #getValue()
+   * @generated
+   */
   void setValue(LetValue value);
 
   /**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Name</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see org.joclal.browserAutomation.BrowserAutomationPackage#getVariableId_Name()
-	 * @model
-	 * @generated
-	 */
+   * @return the value of the '<em>Name</em>' attribute.
+   * @see #setName(String)
+   * @see org.joclal.browserAutomation.BrowserAutomationPackage#getVariableId_Name()
+   * @model
+   * @generated
+   */
   String getName();
 
   /**
-	 * Sets the value of the '{@link org.joclal.browserAutomation.VariableId#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link org.joclal.browserAutomation.VariableId#getName <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
+   * @param value the new value of the '<em>Name</em>' attribute.
+   * @see #getName()
+   * @generated
+   */
   void setName(String value);
 
 } // VariableId

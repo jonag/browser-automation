@@ -2,7 +2,7 @@ grammar org.joclal.BrowserAutomation with org.eclipse.xtext.common.Terminals
 
 generate browserAutomation "http://www.joclal.org/BrowserAutomation"
 
-Model:
+BrowserAutomation:
 	subroutines+=Subroutine*
 	'browser' browser=Browser ';'
 	firstGoTo=Goto
@@ -26,15 +26,7 @@ ClickOn:
 ;
 
 Selector:
-	'select(' sel=DomID ')'
-;
-
-DomID:
-	name=STRING (',' next=DomID)?
-;
-
-SubroutineParam:
-	name=VariableId (',' next=SubroutineParam)?
+	'select(' haydies+=STRING (',' haydies+=STRING)? ')'
 ;
 
 Fill:
@@ -58,7 +50,7 @@ LetValue:
 ;
 
 Value:
-	string=STRING | int=INT | variable=[VariableId]
+	string=STRING | variable=[VariableId]
 ;
 
 DoWhile:
@@ -90,7 +82,7 @@ IfThen:
 Subroutine:
 	'Def' name=ID 
 	('(' 
-		params=SubroutineParam
+		params+=VariableId (',' params+=VariableId)?
 	')')?
 	'{'
 		(actions+=Action)*
@@ -102,5 +94,5 @@ SubroutineCall:
 ;
 
 VariableId:
-	name=ID
+	name=STRING
 ;

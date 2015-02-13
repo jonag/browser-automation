@@ -21,11 +21,11 @@
       <genEnumLiterals ecoreEnumLiteral="BrowserAutomation.ecore#//Operator/gte"/>
       <genEnumLiterals ecoreEnumLiteral="BrowserAutomation.ecore#//Operator/lte"/>
     </genEnums>
-    <genClasses ecoreClass="BrowserAutomation.ecore#//Model">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//Model/subroutines"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserAutomation.ecore#//Model/browser"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//Model/firstGoTo"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//Model/actions"/>
+    <genClasses ecoreClass="BrowserAutomation.ecore#//BrowserAutomation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//BrowserAutomation/subroutines"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserAutomation.ecore#//BrowserAutomation/browser"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//BrowserAutomation/firstGoTo"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//BrowserAutomation/actions"/>
     </genClasses>
     <genClasses ecoreClass="BrowserAutomation.ecore#//Action"/>
     <genClasses ecoreClass="BrowserAutomation.ecore#//Goto">
@@ -35,13 +35,8 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//ClickOn/selector"/>
     </genClasses>
     <genClasses ecoreClass="BrowserAutomation.ecore#//Selector">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//Selector/sel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserAutomation.ecore#//Selector/haydies"/>
     </genClasses>
-    <genClasses ecoreClass="BrowserAutomation.ecore#//DomID">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserAutomation.ecore#//DomID/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//DomID/next"/>
-    </genClasses>
-    <genClasses ecoreClass="BrowserAutomation.ecore#//SubroutineParam"/>
     <genClasses ecoreClass="BrowserAutomation.ecore#//Fill">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//Fill/field"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//Fill/value"/>
@@ -59,7 +54,6 @@
     </genClasses>
     <genClasses ecoreClass="BrowserAutomation.ecore#//Value">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserAutomation.ecore#//Value/string"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserAutomation.ecore#//Value/int"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//Value/variable"/>
     </genClasses>
     <genClasses ecoreClass="BrowserAutomation.ecore#//DoWhile">
@@ -85,7 +79,6 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//SubroutineCall/subroutine"/>
     </genClasses>
     <genClasses ecoreClass="BrowserAutomation.ecore#//VariableId">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//VariableId/next"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//VariableId/value"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserAutomation.ecore#//VariableId/name"/>
     </genClasses>

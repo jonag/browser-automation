@@ -3,13 +3,14 @@
 
 <plugin>
 
-  <extension point="org.eclipse.emf.ecore.generated_package">
+    <extension point="org.eclipse.emf.ecore.generated_package">
     <package 
        uri = "http://www.joclal.org/BrowserAutomation" 
        class = "org.joclal.browserAutomation.BrowserAutomationPackage"
        genModel = "model/generated/BrowserAutomation.genmodel" /> 
 	
   </extension>
+
 
 
 

@@ -2,6 +2,8 @@
  */
 package org.joclal.browserAutomation;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -12,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.joclal.browserAutomation.Selector#getSel <em>Sel</em>}</li>
+ *   <li>{@link org.joclal.browserAutomation.Selector#getHaydies <em>Haydies</em>}</li>
  * </ul>
  * </p>
  *
@@ -23,29 +25,19 @@ import org.eclipse.emf.ecore.EObject;
 public interface Selector extends EObject
 {
   /**
-	 * Returns the value of the '<em><b>Sel</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Haydies</b></em>' attribute list.
+   * The list contents are of type {@link java.lang.String}.
+   * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Sel</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Haydies</em>' attribute list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>Sel</em>' containment reference.
-	 * @see #setSel(DomID)
-	 * @see org.joclal.browserAutomation.BrowserAutomationPackage#getSelector_Sel()
-	 * @model containment="true"
-	 * @generated
-	 */
-  DomID getSel();
-
-  /**
-	 * Sets the value of the '{@link org.joclal.browserAutomation.Selector#getSel <em>Sel</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Sel</em>' containment reference.
-	 * @see #getSel()
-	 * @generated
-	 */
-  void setSel(DomID value);
+   * @return the value of the '<em>Haydies</em>' attribute list.
+   * @see org.joclal.browserAutomation.BrowserAutomationPackage#getSelector_Haydies()
+   * @model unique="false"
+   * @generated
+   */
+  EList<String> getHaydies();
 
 } // Selector

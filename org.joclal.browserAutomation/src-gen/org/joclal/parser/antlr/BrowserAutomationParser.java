@@ -25,7 +25,7 @@ public class BrowserAutomationParser extends org.eclipse.xtext.parser.antlr.Abst
 	
 	@Override 
 	protected String getDefaultRuleName() {
-		return "Model";
+		return "BrowserAutomation";
 	}
 	
 	public BrowserAutomationGrammarAccess getGrammarAccess() {

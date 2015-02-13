@@ -14,16 +14,15 @@ import org.eclipse.xtext.serializer.sequencer.ISemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 import org.joclal.browserAutomation.BooleanExp;
+import org.joclal.browserAutomation.BrowserAutomation;
 import org.joclal.browserAutomation.BrowserAutomationPackage;
 import org.joclal.browserAutomation.Check;
 import org.joclal.browserAutomation.ClickOn;
 import org.joclal.browserAutomation.DoWhile;
-import org.joclal.browserAutomation.DomID;
 import org.joclal.browserAutomation.Fill;
 import org.joclal.browserAutomation.Goto;
 import org.joclal.browserAutomation.IfThen;
 import org.joclal.browserAutomation.LetValue;
-import org.joclal.browserAutomation.Model;
 import org.joclal.browserAutomation.Selector;
 import org.joclal.browserAutomation.Subroutine;
 import org.joclal.browserAutomation.SubroutineCall;
@@ -46,6 +45,12 @@ public class BrowserAutomationSemanticSequencer extends AbstractDelegatingSemant
 					return; 
 				}
 				else break;
+			case BrowserAutomationPackage.BROWSER_AUTOMATION:
+				if(context == grammarAccess.getBrowserAutomationRule()) {
+					sequence_BrowserAutomation(context, (BrowserAutomation) semanticObject); 
+					return; 
+				}
+				else break;
 			case BrowserAutomationPackage.CHECK:
 				if(context == grammarAccess.getActionRule() ||
 				   context == grammarAccess.getCheckRule()) {
@@ -64,12 +69,6 @@ public class BrowserAutomationSemanticSequencer extends AbstractDelegatingSemant
 				if(context == grammarAccess.getActionRule() ||
 				   context == grammarAccess.getDoWhileRule()) {
 					sequence_DoWhile(context, (DoWhile) semanticObject); 
-					return; 
-				}
-				else break;
-			case BrowserAutomationPackage.DOM_ID:
-				if(context == grammarAccess.getDomIDRule()) {
-					sequence_DomID(context, (DomID) semanticObject); 
 					return; 
 				}
 				else break;
@@ -97,12 +96,6 @@ public class BrowserAutomationSemanticSequencer extends AbstractDelegatingSemant
 			case BrowserAutomationPackage.LET_VALUE:
 				if(context == grammarAccess.getLetValueRule()) {
 					sequence_LetValue(context, (LetValue) semanticObject); 
-					return; 
-				}
-				else break;
-			case BrowserAutomationPackage.MODEL:
-				if(context == grammarAccess.getModelRule()) {
-					sequence_Model(context, (Model) semanticObject); 
 					return; 
 				}
 				else break;
@@ -144,10 +137,6 @@ public class BrowserAutomationSemanticSequencer extends AbstractDelegatingSemant
 					sequence_Let_VariableId(context, (VariableId) semanticObject); 
 					return; 
 				}
-				else if(context == grammarAccess.getSubroutineParamRule()) {
-					sequence_SubroutineParam_VariableId(context, (VariableId) semanticObject); 
-					return; 
-				}
 				else if(context == grammarAccess.getVariableIdRule()) {
 					sequence_VariableId(context, (VariableId) semanticObject); 
 					return; 
@@ -176,6 +165,15 @@ public class BrowserAutomationSemanticSequencer extends AbstractDelegatingSemant
 		feeder.accept(grammarAccess.getBooleanExpAccess().getOperatorOperatorEnumRuleCall_1_0(), semanticObject.getOperator());
 		feeder.accept(grammarAccess.getBooleanExpAccess().getRightMemberValueParserRuleCall_2_0(), semanticObject.getRightMember());
 		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (subroutines+=Subroutine* browser=Browser firstGoTo=Goto actions+=Action*)
+	 */
+	protected void sequence_BrowserAutomation(EObject context, BrowserAutomation semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -216,15 +214,6 @@ public class BrowserAutomationSemanticSequencer extends AbstractDelegatingSemant
 	 *     (actions+=Action* condition=BooleanExp)
 	 */
 	protected void sequence_DoWhile(EObject context, DoWhile semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (name=STRING next=DomID?)
-	 */
-	protected void sequence_DomID(EObject context, DomID semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -284,35 +273,29 @@ public class BrowserAutomationSemanticSequencer extends AbstractDelegatingSemant
 	
 	/**
 	 * Constraint:
-	 *     (name=ID value=LetValue)
+	 *     (name=STRING value=LetValue)
 	 */
 	protected void sequence_Let_VariableId(EObject context, VariableId semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (subroutines+=Subroutine* browser=Browser firstGoTo=Goto actions+=Action*)
-	 */
-	protected void sequence_Model(EObject context, Model semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     sel=DomID
-	 */
-	protected void sequence_Selector(EObject context, Selector semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, BrowserAutomationPackage.Literals.SELECTOR__SEL) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BrowserAutomationPackage.Literals.SELECTOR__SEL));
+			if(transientValues.isValueTransient(semanticObject, BrowserAutomationPackage.Literals.VARIABLE_ID__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BrowserAutomationPackage.Literals.VARIABLE_ID__VALUE));
+			if(transientValues.isValueTransient(semanticObject, BrowserAutomationPackage.Literals.VARIABLE_ID__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BrowserAutomationPackage.Literals.VARIABLE_ID__NAME));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getSelectorAccess().getSelDomIDParserRuleCall_1_0(), semanticObject.getSel());
+		feeder.accept(grammarAccess.getVariableIdAccess().getNameSTRINGTerminalRuleCall_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getLetAccess().getValueLetValueParserRuleCall_3_0(), semanticObject.getValue());
 		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (haydies+=STRING haydies+=STRING?)
+	 */
+	protected void sequence_Selector(EObject context, Selector semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -334,16 +317,7 @@ public class BrowserAutomationSemanticSequencer extends AbstractDelegatingSemant
 	
 	/**
 	 * Constraint:
-	 *     (name=ID next=SubroutineParam?)
-	 */
-	protected void sequence_SubroutineParam_VariableId(EObject context, VariableId semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (name=ID params=SubroutineParam? actions+=Action*)
+	 *     (name=ID (params+=VariableId params+=VariableId?)? actions+=Action*)
 	 */
 	protected void sequence_Subroutine(EObject context, Subroutine semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -368,7 +342,7 @@ public class BrowserAutomationSemanticSequencer extends AbstractDelegatingSemant
 	
 	/**
 	 * Constraint:
-	 *     (string=STRING | int=INT | variable=[VariableId|ID])
+	 *     (string=STRING | variable=[VariableId|ID])
 	 */
 	protected void sequence_Value(EObject context, Value semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -377,7 +351,7 @@ public class BrowserAutomationSemanticSequencer extends AbstractDelegatingSemant
 	
 	/**
 	 * Constraint:
-	 *     name=ID
+	 *     name=STRING
 	 */
 	protected void sequence_VariableId(EObject context, VariableId semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

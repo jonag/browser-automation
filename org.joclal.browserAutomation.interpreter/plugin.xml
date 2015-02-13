@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   
+        <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            label="Browser Automation Action Set"
+            visible="true"
+            id="BrowserAutomation.interpreter.actionSet">
+         <menu
+               label="BrowserAutomation"
+               id="BrowserAutomationMenu">
+            <separator
+                  name="browserAutomationGroup">
+            </separator>
+         </menu>
+         <action
+               label="Execute Browser Automation"
+               icon="icons/sample.gif"
+               class="org.joclal.browserautomation.interpreter.actions.InterpreterAction"
+               tooltip="Execute the currently selected browser automation script"
+               menubarPath="browserautomation/browserAutomationGroup"
+               toolbarPath="browserAutomationGroup"
+               id="org.joclal.browserautomation.interpreter.actions.InterpreterAction">
+         </action>
+      </actionSet>
+   </extension>
+
+</plugin>
