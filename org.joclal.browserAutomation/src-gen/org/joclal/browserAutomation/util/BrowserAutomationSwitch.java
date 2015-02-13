@@ -190,6 +190,9 @@ public class BrowserAutomationSwitch<T> extends Switch<T>
 			case BrowserAutomationPackage.VARIABLE_ID: {
 				VariableId variableId = (VariableId)theEObject;
 				T result = caseVariableId(variableId);
+				if (result == null) result = caseSubroutineParam(variableId);
+				if (result == null) result = caseLet(variableId);
+				if (result == null) result = caseAction(variableId);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

@@ -263,31 +263,13 @@ public interface BrowserAutomationPackage extends EPackage
   int SUBROUTINE_PARAM = 6;
 
   /**
-	 * The feature id for the '<em><b>Name</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int SUBROUTINE_PARAM__NAME = 0;
-
-  /**
-	 * The feature id for the '<em><b>Next</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int SUBROUTINE_PARAM__NEXT = 1;
-
-  /**
 	 * The number of structural features of the '<em>Subroutine Param</em>' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int SUBROUTINE_PARAM_FEATURE_COUNT = 2;
+  int SUBROUTINE_PARAM_FEATURE_COUNT = 0;
 
   /**
 	 * The meta object id for the '{@link org.joclal.browserAutomation.impl.FillImpl <em>Fill</em>}' class.
@@ -393,31 +375,13 @@ public interface BrowserAutomationPackage extends EPackage
   int LET = 10;
 
   /**
-	 * The feature id for the '<em><b>Name</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int LET__NAME = ACTION_FEATURE_COUNT + 0;
-
-  /**
-	 * The feature id for the '<em><b>Value</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int LET__VALUE = ACTION_FEATURE_COUNT + 1;
-
-  /**
 	 * The number of structural features of the '<em>Let</em>' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int LET_FEATURE_COUNT = ACTION_FEATURE_COUNT + 2;
+  int LET_FEATURE_COUNT = ACTION_FEATURE_COUNT + 0;
 
   /**
 	 * The meta object id for the '{@link org.joclal.browserAutomation.impl.LetValueImpl <em>Let Value</em>}' class.
@@ -716,13 +680,31 @@ public interface BrowserAutomationPackage extends EPackage
   int VARIABLE_ID = 18;
 
   /**
+	 * The feature id for the '<em><b>Next</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int VARIABLE_ID__NEXT = SUBROUTINE_PARAM_FEATURE_COUNT + 0;
+
+  /**
+	 * The feature id for the '<em><b>Value</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int VARIABLE_ID__VALUE = SUBROUTINE_PARAM_FEATURE_COUNT + 1;
+
+  /**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int VARIABLE_ID__NAME = 0;
+  int VARIABLE_ID__NAME = SUBROUTINE_PARAM_FEATURE_COUNT + 2;
 
   /**
 	 * The number of structural features of the '<em>Variable Id</em>' class.
@@ -731,7 +713,7 @@ public interface BrowserAutomationPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int VARIABLE_ID_FEATURE_COUNT = 1;
+  int VARIABLE_ID_FEATURE_COUNT = SUBROUTINE_PARAM_FEATURE_COUNT + 3;
 
   /**
 	 * The meta object id for the '{@link org.joclal.browserAutomation.Browser <em>Browser</em>}' enum.
@@ -924,28 +906,6 @@ public interface BrowserAutomationPackage extends EPackage
   EClass getSubroutineParam();
 
   /**
-	 * Returns the meta object for the containment reference '{@link org.joclal.browserAutomation.SubroutineParam#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Name</em>'.
-	 * @see org.joclal.browserAutomation.SubroutineParam#getName()
-	 * @see #getSubroutineParam()
-	 * @generated
-	 */
-  EReference getSubroutineParam_Name();
-
-  /**
-	 * Returns the meta object for the containment reference '{@link org.joclal.browserAutomation.SubroutineParam#getNext <em>Next</em>}'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Next</em>'.
-	 * @see org.joclal.browserAutomation.SubroutineParam#getNext()
-	 * @see #getSubroutineParam()
-	 * @generated
-	 */
-  EReference getSubroutineParam_Next();
-
-  /**
 	 * Returns the meta object for class '{@link org.joclal.browserAutomation.Fill <em>Fill</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1028,28 +988,6 @@ public interface BrowserAutomationPackage extends EPackage
 	 * @generated
 	 */
   EClass getLet();
-
-  /**
-	 * Returns the meta object for the containment reference '{@link org.joclal.browserAutomation.Let#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Name</em>'.
-	 * @see org.joclal.browserAutomation.Let#getName()
-	 * @see #getLet()
-	 * @generated
-	 */
-  EReference getLet_Name();
-
-  /**
-	 * Returns the meta object for the containment reference '{@link org.joclal.browserAutomation.Let#getValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Value</em>'.
-	 * @see org.joclal.browserAutomation.Let#getValue()
-	 * @see #getLet()
-	 * @generated
-	 */
-  EReference getLet_Value();
 
   /**
 	 * Returns the meta object for class '{@link org.joclal.browserAutomation.LetValue <em>Let Value</em>}'.
@@ -1319,6 +1257,28 @@ public interface BrowserAutomationPackage extends EPackage
   EClass getVariableId();
 
   /**
+	 * Returns the meta object for the containment reference '{@link org.joclal.browserAutomation.VariableId#getNext <em>Next</em>}'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Next</em>'.
+	 * @see org.joclal.browserAutomation.VariableId#getNext()
+	 * @see #getVariableId()
+	 * @generated
+	 */
+  EReference getVariableId_Next();
+
+  /**
+	 * Returns the meta object for the containment reference '{@link org.joclal.browserAutomation.VariableId#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Value</em>'.
+	 * @see org.joclal.browserAutomation.VariableId#getValue()
+	 * @see #getVariableId()
+	 * @generated
+	 */
+  EReference getVariableId_Value();
+
+  /**
 	 * Returns the meta object for the attribute '{@link org.joclal.browserAutomation.VariableId#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1515,22 +1475,6 @@ public interface BrowserAutomationPackage extends EPackage
     EClass SUBROUTINE_PARAM = eINSTANCE.getSubroutineParam();
 
     /**
-		 * The meta object literal for the '<em><b>Name</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @generated
-		 */
-    EReference SUBROUTINE_PARAM__NAME = eINSTANCE.getSubroutineParam_Name();
-
-    /**
-		 * The meta object literal for the '<em><b>Next</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @generated
-		 */
-    EReference SUBROUTINE_PARAM__NEXT = eINSTANCE.getSubroutineParam_Next();
-
-    /**
 		 * The meta object literal for the '{@link org.joclal.browserAutomation.impl.FillImpl <em>Fill</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1601,22 +1545,6 @@ public interface BrowserAutomationPackage extends EPackage
 		 * @generated
 		 */
     EClass LET = eINSTANCE.getLet();
-
-    /**
-		 * The meta object literal for the '<em><b>Name</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @generated
-		 */
-    EReference LET__NAME = eINSTANCE.getLet_Name();
-
-    /**
-		 * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @generated
-		 */
-    EReference LET__VALUE = eINSTANCE.getLet_Value();
 
     /**
 		 * The meta object literal for the '{@link org.joclal.browserAutomation.impl.LetValueImpl <em>Let Value</em>}' class.
@@ -1833,6 +1761,22 @@ public interface BrowserAutomationPackage extends EPackage
 		 * @generated
 		 */
     EClass VARIABLE_ID = eINSTANCE.getVariableId();
+
+    /**
+		 * The meta object literal for the '<em><b>Next</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+		 * @generated
+		 */
+    EReference VARIABLE_ID__NEXT = eINSTANCE.getVariableId_Next();
+
+    /**
+		 * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+		 * @generated
+		 */
+    EReference VARIABLE_ID__VALUE = eINSTANCE.getVariableId_Value();
 
     /**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.

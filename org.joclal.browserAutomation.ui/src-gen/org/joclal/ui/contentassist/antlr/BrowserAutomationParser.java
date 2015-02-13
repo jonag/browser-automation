@@ -70,13 +70,11 @@ public class BrowserAutomationParser extends AbstractContentAssistParser {
 					put(grammarAccess.getSelectorAccess().getSelAssignment_1(), "rule__Selector__SelAssignment_1");
 					put(grammarAccess.getDomIDAccess().getNameAssignment_0(), "rule__DomID__NameAssignment_0");
 					put(grammarAccess.getDomIDAccess().getNextAssignment_1_1(), "rule__DomID__NextAssignment_1_1");
-					put(grammarAccess.getSubroutineParamAccess().getNameAssignment_0(), "rule__SubroutineParam__NameAssignment_0");
 					put(grammarAccess.getSubroutineParamAccess().getNextAssignment_1_1(), "rule__SubroutineParam__NextAssignment_1_1");
 					put(grammarAccess.getFillAccess().getFieldAssignment_1(), "rule__Fill__FieldAssignment_1");
 					put(grammarAccess.getFillAccess().getValueAssignment_3(), "rule__Fill__ValueAssignment_3");
 					put(grammarAccess.getCheckAccess().getCheckboxAssignment_1(), "rule__Check__CheckboxAssignment_1");
 					put(grammarAccess.getUncheckAccess().getCheckboxAssignment_1(), "rule__Uncheck__CheckboxAssignment_1");
-					put(grammarAccess.getLetAccess().getNameAssignment_1(), "rule__Let__NameAssignment_1");
 					put(grammarAccess.getLetAccess().getValueAssignment_3(), "rule__Let__ValueAssignment_3");
 					put(grammarAccess.getLetValueAccess().getSelectorAssignment_0(), "rule__LetValue__SelectorAssignment_0");
 					put(grammarAccess.getLetValueAccess().getValueAssignment_1(), "rule__LetValue__ValueAssignment_1");

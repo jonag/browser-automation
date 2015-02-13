@@ -491,25 +491,16 @@ ruleSubroutineParam returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-((
 (
-		{ 
-	        newCompositeNode(grammarAccess.getSubroutineParamAccess().getNameVariableIdParserRuleCall_0_0()); 
-	    }
-		lv_name_0_0=ruleVariableId		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getSubroutineParamRule());
-	        }
-       		set(
-       			$current, 
-       			"name",
-        		lv_name_0_0, 
-        		"VariableId");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)(	otherlv_1=',' 
+    { 
+        newCompositeNode(grammarAccess.getSubroutineParamAccess().getVariableIdParserRuleCall_0()); 
+    }
+    this_VariableId_0=ruleVariableId
+    { 
+        $current = $this_VariableId_0.current; 
+        afterParserOrEnumRuleCall();
+    }
+(	otherlv_1=',' 
     {
     	newLeafNode(otherlv_1, grammarAccess.getSubroutineParamAccess().getCommaKeyword_1_0());
     }
@@ -719,25 +710,16 @@ ruleLet returns [EObject current=null]
     {
     	newLeafNode(otherlv_0, grammarAccess.getLetAccess().getLetKeyword_0());
     }
-(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getLetAccess().getNameVariableIdParserRuleCall_1_0()); 
-	    }
-		lv_name_1_0=ruleVariableId		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getLetRule());
-	        }
-       		set(
-       			$current, 
-       			"name",
-        		lv_name_1_0, 
-        		"VariableId");
-	        afterParserOrEnumRuleCall();
-	    }
 
-)
-)	otherlv_2='=' 
+    { 
+        newCompositeNode(grammarAccess.getLetAccess().getVariableIdParserRuleCall_1()); 
+    }
+    this_VariableId_1=ruleVariableId
+    { 
+        $current = $this_VariableId_1.current; 
+        afterParserOrEnumRuleCall();
+    }
+	otherlv_2='=' 
     {
     	newLeafNode(otherlv_2, grammarAccess.getLetAccess().getEqualsSignKeyword_2());
     }

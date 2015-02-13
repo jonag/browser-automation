@@ -201,6 +201,11 @@ public class IfThenItemProvider extends ActionItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
+				(BrowserAutomationPackage.Literals.IF_THEN__THEN_ACTIONS,
+				 BrowserAutomationFactory.eINSTANCE.createVariableId()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(BrowserAutomationPackage.Literals.IF_THEN__ELSE_ACTIONS,
 				 BrowserAutomationFactory.eINSTANCE.createAction()));
 
@@ -248,6 +253,11 @@ public class IfThenItemProvider extends ActionItemProvider {
 			(createChildParameter
 				(BrowserAutomationPackage.Literals.IF_THEN__ELSE_ACTIONS,
 				 BrowserAutomationFactory.eINSTANCE.createSubroutineCall()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(BrowserAutomationPackage.Literals.IF_THEN__ELSE_ACTIONS,
+				 BrowserAutomationFactory.eINSTANCE.createVariableId()));
 	}
 
 	/**

@@ -50,7 +50,7 @@ Uncheck:
 ;
 
 Let:
-	'Let' name=VariableId '=' value=LetValue ';'
+	'Let' VariableId '=' value=LetValue ';'
 ;
 
 LetValue:

@@ -194,6 +194,11 @@ public class DoWhileItemProvider extends ActionItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
+				(BrowserAutomationPackage.Literals.DO_WHILE__ACTIONS,
+				 BrowserAutomationFactory.eINSTANCE.createVariableId()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(BrowserAutomationPackage.Literals.DO_WHILE__CONDITION,
 				 BrowserAutomationFactory.eINSTANCE.createBooleanExp()));
 	}

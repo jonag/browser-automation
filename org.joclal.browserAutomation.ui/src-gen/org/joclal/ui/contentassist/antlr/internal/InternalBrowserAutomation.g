@@ -1452,9 +1452,9 @@ rule__SubroutineParam__Group__0__Impl
     }
 :
 (
-{ before(grammarAccess.getSubroutineParamAccess().getNameAssignment_0()); }
-(rule__SubroutineParam__NameAssignment_0)
-{ after(grammarAccess.getSubroutineParamAccess().getNameAssignment_0()); }
+{ before(grammarAccess.getSubroutineParamAccess().getVariableIdParserRuleCall_0()); }
+	ruleVariableId
+{ after(grammarAccess.getSubroutineParamAccess().getVariableIdParserRuleCall_0()); }
 )
 
 ;
@@ -1959,9 +1959,9 @@ rule__Let__Group__1__Impl
     }
 :
 (
-{ before(grammarAccess.getLetAccess().getNameAssignment_1()); }
-(rule__Let__NameAssignment_1)
-{ after(grammarAccess.getLetAccess().getNameAssignment_1()); }
+{ before(grammarAccess.getLetAccess().getVariableIdParserRuleCall_1()); }
+	ruleVariableId
+{ after(grammarAccess.getLetAccess().getVariableIdParserRuleCall_1()); }
 )
 
 ;
@@ -3359,21 +3359,6 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__SubroutineParam__NameAssignment_0
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getSubroutineParamAccess().getNameVariableIdParserRuleCall_0_0()); }
-	ruleVariableId{ after(grammarAccess.getSubroutineParamAccess().getNameVariableIdParserRuleCall_0_0()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
 rule__SubroutineParam__NextAssignment_1_1
     @init {
 		int stackSize = keepStackSize();
@@ -3442,21 +3427,6 @@ rule__Uncheck__CheckboxAssignment_1
 (
 { before(grammarAccess.getUncheckAccess().getCheckboxSelectorParserRuleCall_1_0()); }
 	ruleSelector{ after(grammarAccess.getUncheckAccess().getCheckboxSelectorParserRuleCall_1_0()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Let__NameAssignment_1
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getLetAccess().getNameVariableIdParserRuleCall_1_0()); }
-	ruleVariableId{ after(grammarAccess.getLetAccess().getNameVariableIdParserRuleCall_1_0()); }
 )
 
 ;

@@ -241,25 +241,21 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 	public class SubroutineParamElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SubroutineParam");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cNameVariableIdParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final RuleCall cVariableIdParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
 		private final Keyword cCommaKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
 		private final Assignment cNextAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
 		private final RuleCall cNextSubroutineParamParserRuleCall_1_1_0 = (RuleCall)cNextAssignment_1_1.eContents().get(0);
 		
 		//SubroutineParam:
-		//	name=VariableId ("," next=SubroutineParam)?;
+		//	VariableId ("," next=SubroutineParam)?;
 		public ParserRule getRule() { return rule; }
 
-		//name=VariableId ("," next=SubroutineParam)?
+		//VariableId ("," next=SubroutineParam)?
 		public Group getGroup() { return cGroup; }
 
-		//name=VariableId
-		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
-
 		//VariableId
-		public RuleCall getNameVariableIdParserRuleCall_0_0() { return cNameVariableIdParserRuleCall_0_0; }
+		public RuleCall getVariableIdParserRuleCall_0() { return cVariableIdParserRuleCall_0; }
 
 		//("," next=SubroutineParam)?
 		public Group getGroup_1() { return cGroup_1; }
@@ -374,28 +370,24 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Let");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cLetKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameVariableIdParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final RuleCall cVariableIdParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
 		private final Keyword cEqualsSignKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cValueAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cValueLetValueParserRuleCall_3_0 = (RuleCall)cValueAssignment_3.eContents().get(0);
 		private final Keyword cSemicolonKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//Let:
-		//	"Let" name=VariableId "=" value=LetValue ";";
+		//	"Let" VariableId "=" value=LetValue ";";
 		public ParserRule getRule() { return rule; }
 
-		//"Let" name=VariableId "=" value=LetValue ";"
+		//"Let" VariableId "=" value=LetValue ";"
 		public Group getGroup() { return cGroup; }
 
 		//"Let"
 		public Keyword getLetKeyword_0() { return cLetKeyword_0; }
 
-		//name=VariableId
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
-
 		//VariableId
-		public RuleCall getNameVariableIdParserRuleCall_1_0() { return cNameVariableIdParserRuleCall_1_0; }
+		public RuleCall getVariableIdParserRuleCall_1() { return cVariableIdParserRuleCall_1; }
 
 		//"="
 		public Keyword getEqualsSignKeyword_2() { return cEqualsSignKeyword_2; }
@@ -1007,7 +999,7 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 	}
 
 	//SubroutineParam:
-	//	name=VariableId ("," next=SubroutineParam)?;
+	//	VariableId ("," next=SubroutineParam)?;
 	public SubroutineParamElements getSubroutineParamAccess() {
 		return pSubroutineParam;
 	}
@@ -1047,7 +1039,7 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 	}
 
 	//Let:
-	//	"Let" name=VariableId "=" value=LetValue ";";
+	//	"Let" VariableId "=" value=LetValue ";";
 	public LetElements getLetAccess() {
 		return pLet;
 	}

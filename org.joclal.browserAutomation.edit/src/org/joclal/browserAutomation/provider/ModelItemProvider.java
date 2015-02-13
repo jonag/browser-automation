@@ -244,6 +244,11 @@ public class ModelItemProvider
 			(createChildParameter
 				(BrowserAutomationPackage.Literals.MODEL__ACTIONS,
 				 BrowserAutomationFactory.eINSTANCE.createSubroutineCall()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(BrowserAutomationPackage.Literals.MODEL__ACTIONS,
+				 BrowserAutomationFactory.eINSTANCE.createVariableId()));
 	}
 
 	/**
