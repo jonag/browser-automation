@@ -318,24 +318,28 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Let");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cLetKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final RuleCall cVariableIdParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cIdAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cIdVariableIdParserRuleCall_1_0 = (RuleCall)cIdAssignment_1.eContents().get(0);
 		private final Keyword cEqualsSignKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cValueAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cValueLetValueParserRuleCall_3_0 = (RuleCall)cValueAssignment_3.eContents().get(0);
 		private final Keyword cSemicolonKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//Let:
-		//	"Let" VariableId "=" value=LetValue ";";
+		//	"Let" id=VariableId "=" value=LetValue ";";
 		public ParserRule getRule() { return rule; }
 
-		//"Let" VariableId "=" value=LetValue ";"
+		//"Let" id=VariableId "=" value=LetValue ";"
 		public Group getGroup() { return cGroup; }
 
 		//"Let"
 		public Keyword getLetKeyword_0() { return cLetKeyword_0; }
 
+		//id=VariableId
+		public Assignment getIdAssignment_1() { return cIdAssignment_1; }
+
 		//VariableId
-		public RuleCall getVariableIdParserRuleCall_1() { return cVariableIdParserRuleCall_1; }
+		public RuleCall getIdVariableIdParserRuleCall_1_0() { return cIdVariableIdParserRuleCall_1_0; }
 
 		//"="
 		public Keyword getEqualsSignKeyword_2() { return cEqualsSignKeyword_2; }
@@ -971,7 +975,7 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 	}
 
 	//Let:
-	//	"Let" VariableId "=" value=LetValue ";";
+	//	"Let" id=VariableId "=" value=LetValue ";";
 	public LetElements getLetAccess() {
 		return pLet;
 	}

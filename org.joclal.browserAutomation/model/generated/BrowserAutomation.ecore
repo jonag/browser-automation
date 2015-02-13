@@ -44,7 +44,12 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="checkbox" eType="#//Selector"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Let" eSuperTypes="#//Action"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Let" eSuperTypes="#//Action">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="id" eType="#//VariableId"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//LetValue"
+        containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LetValue">
     <eStructuralFeatures xsi:type="ecore:EReference" name="selector" eType="#//Selector"
         containment="true"/>
@@ -93,9 +98,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="SubroutineCall" eSuperTypes="#//Action">
     <eStructuralFeatures xsi:type="ecore:EReference" name="subroutine" eType="#//Subroutine"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="VariableId" eSuperTypes="#//Let">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//LetValue"
-        containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VariableId">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>

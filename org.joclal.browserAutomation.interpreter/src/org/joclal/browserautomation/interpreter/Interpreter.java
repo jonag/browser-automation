@@ -1,6 +1,8 @@
 package org.joclal.browserautomation.interpreter;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.joclal.browserAutomation.*;
 import org.joclal.browserautomation.interpreter.utils.InterpreterUtils;
@@ -96,18 +98,30 @@ public class Interpreter {
 	}
 
 	private void processLet(Let a) {
-		// TODO Auto-generated method stub
+		InterpreterUtils.setVar(a);
 		
 	}
 
 	private void processUncheck(Uncheck a) {
-		// TODO Auto-generated method stub
-		
+		Selector s = a.getCheckbox();
+		List<String> sels = s.getHaydies();
+		for(String sel : sels){
+			WebElement element = this.getWebElement(sel);
+			if(element.getTagName().equalsIgnoreCase("input") && element.getAttribute("type").equalsIgnoreCase("checkbox") && element.getAttribute("selected").equalsIgnoreCase("selected")){
+				element.click();
+			}
+		}
 	}
 
 	private void processCheck(Check a) {
-		// TODO Auto-generated method stub
-		
+		Selector s = a.getCheckbox();
+		List<String> sels = s.getHaydies();
+		for(String sel : sels){
+			WebElement element = this.getWebElement(sel);
+			if(element.getTagName().equalsIgnoreCase("input") && element.getAttribute("type").equalsIgnoreCase("checkbox") && !element.getAttribute("selected").equalsIgnoreCase("selected")){
+				element.click();
+			}
+		}
 	}
 
 	private void processFill(Fill a) {

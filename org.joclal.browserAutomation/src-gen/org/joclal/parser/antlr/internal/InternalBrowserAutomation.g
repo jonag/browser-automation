@@ -619,16 +619,25 @@ ruleLet returns [EObject current=null]
     {
     	newLeafNode(otherlv_0, grammarAccess.getLetAccess().getLetKeyword_0());
     }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getLetAccess().getIdVariableIdParserRuleCall_1_0()); 
+	    }
+		lv_id_1_0=ruleVariableId		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getLetRule());
+	        }
+       		set(
+       			$current, 
+       			"id",
+        		lv_id_1_0, 
+        		"VariableId");
+	        afterParserOrEnumRuleCall();
+	    }
 
-    { 
-        newCompositeNode(grammarAccess.getLetAccess().getVariableIdParserRuleCall_1()); 
-    }
-    this_VariableId_1=ruleVariableId
-    { 
-        $current = $this_VariableId_1.current; 
-        afterParserOrEnumRuleCall();
-    }
-	otherlv_2='=' 
+)
+)	otherlv_2='=' 
     {
     	newLeafNode(otherlv_2, grammarAccess.getLetAccess().getEqualsSignKeyword_2());
     }

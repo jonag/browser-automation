@@ -2,6 +2,7 @@
  */
 package org.joclal.browserAutomation;
 
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -11,7 +12,6 @@ package org.joclal.browserAutomation;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.joclal.browserAutomation.VariableId#getValue <em>Value</em>}</li>
  *   <li>{@link org.joclal.browserAutomation.VariableId#getName <em>Name</em>}</li>
  * </ul>
  * </p>
@@ -20,34 +20,8 @@ package org.joclal.browserAutomation;
  * @model
  * @generated
  */
-public interface VariableId extends Let
+public interface VariableId extends EObject
 {
-  /**
-   * Returns the value of the '<em><b>Value</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Value</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Value</em>' containment reference.
-   * @see #setValue(LetValue)
-   * @see org.joclal.browserAutomation.BrowserAutomationPackage#getVariableId_Value()
-   * @model containment="true"
-   * @generated
-   */
-  LetValue getValue();
-
-  /**
-   * Sets the value of the '{@link org.joclal.browserAutomation.VariableId#getValue <em>Value</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Value</em>' containment reference.
-   * @see #getValue()
-   * @generated
-   */
-  void setValue(LetValue value);
-
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->

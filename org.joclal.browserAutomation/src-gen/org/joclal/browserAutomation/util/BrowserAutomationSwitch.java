@@ -197,8 +197,6 @@ public class BrowserAutomationSwitch<T> extends Switch<T>
       {
         VariableId variableId = (VariableId)theEObject;
         T result = caseVariableId(variableId);
-        if (result == null) result = caseLet(variableId);
-        if (result == null) result = caseAction(variableId);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }

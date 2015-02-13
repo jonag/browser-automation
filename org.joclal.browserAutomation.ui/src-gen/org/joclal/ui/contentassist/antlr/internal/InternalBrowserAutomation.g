@@ -1743,9 +1743,9 @@ rule__Let__Group__1__Impl
     }
 :
 (
-{ before(grammarAccess.getLetAccess().getVariableIdParserRuleCall_1()); }
-	ruleVariableId
-{ after(grammarAccess.getLetAccess().getVariableIdParserRuleCall_1()); }
+{ before(grammarAccess.getLetAccess().getIdAssignment_1()); }
+(rule__Let__IdAssignment_1)
+{ after(grammarAccess.getLetAccess().getIdAssignment_1()); }
 )
 
 ;
@@ -3275,6 +3275,21 @@ rule__Uncheck__CheckboxAssignment_1
 (
 { before(grammarAccess.getUncheckAccess().getCheckboxSelectorParserRuleCall_1_0()); }
 	ruleSelector{ after(grammarAccess.getUncheckAccess().getCheckboxSelectorParserRuleCall_1_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Let__IdAssignment_1
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getLetAccess().getIdVariableIdParserRuleCall_1_0()); }
+	ruleVariableId{ after(grammarAccess.getLetAccess().getIdVariableIdParserRuleCall_1_0()); }
 )
 
 ;

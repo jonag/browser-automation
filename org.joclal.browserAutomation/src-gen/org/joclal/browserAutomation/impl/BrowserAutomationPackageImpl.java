@@ -441,6 +441,26 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getLet_Id()
+  {
+    return (EReference)letEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getLet_Value()
+  {
+    return (EReference)letEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getLetValue()
   {
     return letValueEClass;
@@ -681,19 +701,9 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getVariableId_Value()
-  {
-    return (EReference)variableIdEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EAttribute getVariableId_Name()
   {
-    return (EAttribute)variableIdEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)variableIdEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -774,6 +784,8 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
     createEReference(uncheckEClass, UNCHECK__CHECKBOX);
 
     letEClass = createEClass(LET);
+    createEReference(letEClass, LET__ID);
+    createEReference(letEClass, LET__VALUE);
 
     letValueEClass = createEClass(LET_VALUE);
     createEReference(letValueEClass, LET_VALUE__SELECTOR);
@@ -806,7 +818,6 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
     createEReference(subroutineCallEClass, SUBROUTINE_CALL__SUBROUTINE);
 
     variableIdEClass = createEClass(VARIABLE_ID);
-    createEReference(variableIdEClass, VARIABLE_ID__VALUE);
     createEAttribute(variableIdEClass, VARIABLE_ID__NAME);
 
     // Create enums
@@ -852,7 +863,6 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
     doWhileEClass.getESuperTypes().add(this.getAction());
     ifThenEClass.getESuperTypes().add(this.getAction());
     subroutineCallEClass.getESuperTypes().add(this.getAction());
-    variableIdEClass.getESuperTypes().add(this.getLet());
 
     // Initialize classes and features; add operations and parameters
     initEClass(browserAutomationEClass, BrowserAutomation.class, "BrowserAutomation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -883,6 +893,8 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
     initEReference(getUncheck_Checkbox(), this.getSelector(), null, "checkbox", null, 0, 1, Uncheck.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(letEClass, Let.class, "Let", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getLet_Id(), this.getVariableId(), null, "id", null, 0, 1, Let.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getLet_Value(), this.getLetValue(), null, "value", null, 0, 1, Let.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(letValueEClass, LetValue.class, "LetValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getLetValue_Selector(), this.getSelector(), null, "selector", null, 0, 1, LetValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -915,7 +927,6 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
     initEReference(getSubroutineCall_Subroutine(), this.getSubroutine(), null, "subroutine", null, 0, 1, SubroutineCall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(variableIdEClass, VariableId.class, "VariableId", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getVariableId_Value(), this.getLetValue(), null, "value", null, 0, 1, VariableId.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getVariableId_Name(), ecorePackage.getEString(), "name", null, 0, 1, VariableId.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Initialize enums and add enum literals
