@@ -295,10 +295,17 @@ public class BrowserAutomationSemanticSequencer extends AbstractDelegatingSemant
 	
 	/**
 	 * Constraint:
-	 *     (haydies+=STRING haydies+=STRING?)
+	 *     id=STRING
 	 */
 	protected void sequence_Selector(EObject context, Selector semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, BrowserAutomationPackage.Literals.SELECTOR__ID) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BrowserAutomationPackage.Literals.SELECTOR__ID));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getSelectorAccess().getIdSTRINGTerminalRuleCall_1_0(), semanticObject.getId());
+		feeder.finish();
 	}
 	
 	

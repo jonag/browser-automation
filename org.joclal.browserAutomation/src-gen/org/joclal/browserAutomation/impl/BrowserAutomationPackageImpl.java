@@ -351,7 +351,7 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getSelector_Haydies()
+  public EAttribute getSelector_Id()
   {
     return (EAttribute)selectorEClass.getEStructuralFeatures().get(0);
   }
@@ -771,7 +771,7 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
     createEReference(clickOnEClass, CLICK_ON__SELECTOR);
 
     selectorEClass = createEClass(SELECTOR);
-    createEAttribute(selectorEClass, SELECTOR__HAYDIES);
+    createEAttribute(selectorEClass, SELECTOR__ID);
 
     fillEClass = createEClass(FILL);
     createEReference(fillEClass, FILL__FIELD);
@@ -880,7 +880,7 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
     initEReference(getClickOn_Selector(), this.getSelector(), null, "selector", null, 0, 1, ClickOn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(selectorEClass, Selector.class, "Selector", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getSelector_Haydies(), ecorePackage.getEString(), "haydies", null, 0, -1, Selector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getSelector_Id(), ecorePackage.getEString(), "id", null, 0, 1, Selector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(fillEClass, Fill.class, "Fill", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getFill_Field(), this.getSelector(), null, "field", null, 0, 1, Fill.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

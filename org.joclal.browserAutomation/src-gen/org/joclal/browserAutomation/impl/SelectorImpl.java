@@ -2,15 +2,12 @@
  */
 package org.joclal.browserAutomation.impl;
 
-import java.util.Collection;
-
-import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EDataTypeEList;
 
 import org.joclal.browserAutomation.BrowserAutomationPackage;
 import org.joclal.browserAutomation.Selector;
@@ -22,7 +19,7 @@ import org.joclal.browserAutomation.Selector;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.joclal.browserAutomation.impl.SelectorImpl#getHaydies <em>Haydies</em>}</li>
+ *   <li>{@link org.joclal.browserAutomation.impl.SelectorImpl#getId <em>Id</em>}</li>
  * </ul>
  * </p>
  *
@@ -31,14 +28,24 @@ import org.joclal.browserAutomation.Selector;
 public class SelectorImpl extends MinimalEObjectImpl.Container implements Selector
 {
   /**
-   * The cached value of the '{@link #getHaydies() <em>Haydies</em>}' attribute list.
+   * The default value of the '{@link #getId() <em>Id</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getHaydies()
+   * @see #getId()
    * @generated
    * @ordered
    */
-  protected EList<String> haydies;
+  protected static final String ID_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getId()
+   * @generated
+   * @ordered
+   */
+  protected String id = ID_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -66,13 +73,22 @@ public class SelectorImpl extends MinimalEObjectImpl.Container implements Select
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<String> getHaydies()
+  public String getId()
   {
-    if (haydies == null)
-    {
-      haydies = new EDataTypeEList<String>(String.class, this, BrowserAutomationPackage.SELECTOR__HAYDIES);
-    }
-    return haydies;
+    return id;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setId(String newId)
+  {
+    String oldId = id;
+    id = newId;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.SELECTOR__ID, oldId, id));
   }
 
   /**
@@ -85,8 +101,8 @@ public class SelectorImpl extends MinimalEObjectImpl.Container implements Select
   {
     switch (featureID)
     {
-      case BrowserAutomationPackage.SELECTOR__HAYDIES:
-        return getHaydies();
+      case BrowserAutomationPackage.SELECTOR__ID:
+        return getId();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -96,15 +112,13 @@ public class SelectorImpl extends MinimalEObjectImpl.Container implements Select
    * <!-- end-user-doc -->
    * @generated
    */
-  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case BrowserAutomationPackage.SELECTOR__HAYDIES:
-        getHaydies().clear();
-        getHaydies().addAll((Collection<? extends String>)newValue);
+      case BrowserAutomationPackage.SELECTOR__ID:
+        setId((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -120,8 +134,8 @@ public class SelectorImpl extends MinimalEObjectImpl.Container implements Select
   {
     switch (featureID)
     {
-      case BrowserAutomationPackage.SELECTOR__HAYDIES:
-        getHaydies().clear();
+      case BrowserAutomationPackage.SELECTOR__ID:
+        setId(ID_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -137,8 +151,8 @@ public class SelectorImpl extends MinimalEObjectImpl.Container implements Select
   {
     switch (featureID)
     {
-      case BrowserAutomationPackage.SELECTOR__HAYDIES:
-        return haydies != null && !haydies.isEmpty();
+      case BrowserAutomationPackage.SELECTOR__ID:
+        return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
     }
     return super.eIsSet(featureID);
   }
@@ -154,8 +168,8 @@ public class SelectorImpl extends MinimalEObjectImpl.Container implements Select
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (haydies: ");
-    result.append(haydies);
+    result.append(" (id: ");
+    result.append(id);
     result.append(')');
     return result.toString();
   }

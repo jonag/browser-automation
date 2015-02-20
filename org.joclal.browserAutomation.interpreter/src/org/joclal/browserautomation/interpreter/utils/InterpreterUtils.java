@@ -1,10 +1,13 @@
 package org.joclal.browserautomation.interpreter.utils;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Stack;
 
 import org.joclal.browserAutomation.*;
+import org.openqa.selenium.WebElement;
 
 public class InterpreterUtils {
 	
@@ -27,9 +30,9 @@ public class InterpreterUtils {
 
 	public static void setVar(Let let) {
 	Value v = null;
-		if(let.getValue().getSelector() != null && currentVars.containsKey(let.getValue().getSelector().getHaydies().get(0))){
+		if(let.getValue().getSelector() != null && currentVars.containsKey(let.getValue().getSelector().getId())){
 			//referenced value
-			v = currentVars.get(let.getValue().getSelector().getHaydies().get(0));
+			v = currentVars.get(let.getValue().getSelector().getId());
 		}else{
 			//classical value
 			v = let.getValue().getValue();

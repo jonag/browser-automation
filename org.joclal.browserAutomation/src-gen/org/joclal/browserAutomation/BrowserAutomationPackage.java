@@ -198,13 +198,13 @@ public interface BrowserAutomationPackage extends EPackage
   int SELECTOR = 4;
 
   /**
-   * The feature id for the '<em><b>Haydies</b></em>' attribute list.
+   * The feature id for the '<em><b>Id</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SELECTOR__HAYDIES = 0;
+  int SELECTOR__ID = 0;
 
   /**
    * The number of structural features of the '<em>Selector</em>' class.
@@ -788,15 +788,15 @@ public interface BrowserAutomationPackage extends EPackage
   EClass getSelector();
 
   /**
-   * Returns the meta object for the attribute list '{@link org.joclal.browserAutomation.Selector#getHaydies <em>Haydies</em>}'.
+   * Returns the meta object for the attribute '{@link org.joclal.browserAutomation.Selector#getId <em>Id</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Haydies</em>'.
-   * @see org.joclal.browserAutomation.Selector#getHaydies()
+   * @return the meta object for the attribute '<em>Id</em>'.
+   * @see org.joclal.browserAutomation.Selector#getId()
    * @see #getSelector()
    * @generated
    */
-  EAttribute getSelector_Haydies();
+  EAttribute getSelector_Id();
 
   /**
    * Returns the meta object for class '{@link org.joclal.browserAutomation.Fill <em>Fill</em>}'.
@@ -1313,12 +1313,12 @@ public interface BrowserAutomationPackage extends EPackage
     EClass SELECTOR = eINSTANCE.getSelector();
 
     /**
-     * The meta object literal for the '<em><b>Haydies</b></em>' attribute list feature.
+     * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute SELECTOR__HAYDIES = eINSTANCE.getSelector_Haydies();
+    EAttribute SELECTOR__ID = eINSTANCE.getSelector_Id();
 
     /**
      * The meta object literal for the '{@link org.joclal.browserAutomation.impl.FillImpl <em>Fill</em>}' class.

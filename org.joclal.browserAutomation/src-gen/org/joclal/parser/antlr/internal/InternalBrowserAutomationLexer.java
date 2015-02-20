@@ -177,10 +177,10 @@ public class InternalBrowserAutomationLexer extends Lexer {
         try {
             int _type = T__16;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:16:7: ( ',' )
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:16:9: ','
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:16:7: ( ')' )
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:16:9: ')'
             {
-            match(','); 
+            match(')'); 
 
             }
 
@@ -197,10 +197,11 @@ public class InternalBrowserAutomationLexer extends Lexer {
         try {
             int _type = T__17;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:17:7: ( ')' )
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:17:9: ')'
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:17:7: ( 'Fill' )
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:17:9: 'Fill'
             {
-            match(')'); 
+            match("Fill"); 
+
 
             }
 
@@ -217,10 +218,10 @@ public class InternalBrowserAutomationLexer extends Lexer {
         try {
             int _type = T__18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:18:7: ( 'Fill' )
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:18:9: 'Fill'
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:18:7: ( 'with' )
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:18:9: 'with'
             {
-            match("Fill"); 
+            match("with"); 
 
 
             }
@@ -238,10 +239,10 @@ public class InternalBrowserAutomationLexer extends Lexer {
         try {
             int _type = T__19;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:19:7: ( 'with' )
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:19:9: 'with'
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:19:7: ( 'Check' )
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:19:9: 'Check'
             {
-            match("with"); 
+            match("Check"); 
 
 
             }
@@ -259,10 +260,10 @@ public class InternalBrowserAutomationLexer extends Lexer {
         try {
             int _type = T__20;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:20:7: ( 'Check' )
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:20:9: 'Check'
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:20:7: ( 'Uncheck' )
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:20:9: 'Uncheck'
             {
-            match("Check"); 
+            match("Uncheck"); 
 
 
             }
@@ -280,10 +281,10 @@ public class InternalBrowserAutomationLexer extends Lexer {
         try {
             int _type = T__21;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:21:7: ( 'Uncheck' )
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:21:9: 'Uncheck'
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:21:7: ( 'Let' )
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:21:9: 'Let'
             {
-            match("Uncheck"); 
+            match("Let"); 
 
 
             }
@@ -301,11 +302,10 @@ public class InternalBrowserAutomationLexer extends Lexer {
         try {
             int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:22:7: ( 'Let' )
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:22:9: 'Let'
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:22:7: ( '=' )
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:22:9: '='
             {
-            match("Let"); 
-
+            match('='); 
 
             }
 
@@ -322,10 +322,11 @@ public class InternalBrowserAutomationLexer extends Lexer {
         try {
             int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:23:7: ( '=' )
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:23:9: '='
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:23:7: ( 'Do' )
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:23:9: 'Do'
             {
-            match('='); 
+            match("Do"); 
+
 
             }
 
@@ -342,11 +343,10 @@ public class InternalBrowserAutomationLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:24:7: ( 'Do' )
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:24:9: 'Do'
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:24:7: ( '{' )
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:24:9: '{'
             {
-            match("Do"); 
-
+            match('{'); 
 
             }
 
@@ -363,10 +363,10 @@ public class InternalBrowserAutomationLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:25:7: ( '{' )
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:25:9: '{'
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:25:7: ( '}' )
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:25:9: '}'
             {
-            match('{'); 
+            match('}'); 
 
             }
 
@@ -383,10 +383,11 @@ public class InternalBrowserAutomationLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:26:7: ( '}' )
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:26:9: '}'
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:26:7: ( 'While' )
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:26:9: 'While'
             {
-            match('}'); 
+            match("While"); 
+
 
             }
 
@@ -403,11 +404,10 @@ public class InternalBrowserAutomationLexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:27:7: ( 'While' )
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:27:9: 'While'
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:27:7: ( '(' )
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:27:9: '('
             {
-            match("While"); 
-
+            match('('); 
 
             }
 
@@ -424,10 +424,11 @@ public class InternalBrowserAutomationLexer extends Lexer {
         try {
             int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:28:7: ( '(' )
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:28:9: '('
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:28:7: ( 'If' )
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:28:9: 'If'
             {
-            match('('); 
+            match("If"); 
+
 
             }
 
@@ -444,10 +445,10 @@ public class InternalBrowserAutomationLexer extends Lexer {
         try {
             int _type = T__29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:29:7: ( 'If' )
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:29:9: 'If'
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:29:7: ( 'Then' )
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:29:9: 'Then'
             {
-            match("If"); 
+            match("Then"); 
 
 
             }
@@ -465,10 +466,10 @@ public class InternalBrowserAutomationLexer extends Lexer {
         try {
             int _type = T__30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:30:7: ( 'Then' )
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:30:9: 'Then'
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:30:7: ( 'Else' )
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:30:9: 'Else'
             {
-            match("Then"); 
+            match("Else"); 
 
 
             }
@@ -486,10 +487,10 @@ public class InternalBrowserAutomationLexer extends Lexer {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:31:7: ( 'Else' )
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:31:9: 'Else'
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:31:7: ( 'Def' )
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:31:9: 'Def'
             {
-            match("Else"); 
+            match("Def"); 
 
 
             }
@@ -507,11 +508,10 @@ public class InternalBrowserAutomationLexer extends Lexer {
         try {
             int _type = T__32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:32:7: ( 'Def' )
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:32:9: 'Def'
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:32:7: ( ',' )
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:32:9: ','
             {
-            match("Def"); 
-
+            match(','); 
 
             }
 
@@ -778,10 +778,10 @@ public class InternalBrowserAutomationLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1329:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1329:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1307:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1307:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1329:11: ( '^' )?
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1307:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -790,7 +790,7 @@ public class InternalBrowserAutomationLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1329:11: '^'
+                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1307:11: '^'
                     {
                     match('^'); 
 
@@ -808,7 +808,7 @@ public class InternalBrowserAutomationLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1329:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1307:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -857,10 +857,10 @@ public class InternalBrowserAutomationLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1331:10: ( ( '0' .. '9' )+ )
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1331:12: ( '0' .. '9' )+
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1309:10: ( ( '0' .. '9' )+ )
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1309:12: ( '0' .. '9' )+
             {
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1331:12: ( '0' .. '9' )+
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1309:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -874,7 +874,7 @@ public class InternalBrowserAutomationLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1331:13: '0' .. '9'
+            	    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1309:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -906,10 +906,10 @@ public class InternalBrowserAutomationLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1333:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1333:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1311:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1311:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1333:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1311:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -927,10 +927,10 @@ public class InternalBrowserAutomationLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1333:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1311:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1333:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1311:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -946,7 +946,7 @@ public class InternalBrowserAutomationLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1333:21: '\\\\' .
+                    	    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1311:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -954,7 +954,7 @@ public class InternalBrowserAutomationLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1333:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1311:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -979,10 +979,10 @@ public class InternalBrowserAutomationLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1333:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1311:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1333:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1311:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -998,7 +998,7 @@ public class InternalBrowserAutomationLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1333:54: '\\\\' .
+                    	    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1311:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1006,7 +1006,7 @@ public class InternalBrowserAutomationLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1333:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1311:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1049,12 +1049,12 @@ public class InternalBrowserAutomationLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1335:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1335:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1313:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1313:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1335:24: ( options {greedy=false; } : . )*
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1313:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -1079,7 +1079,7 @@ public class InternalBrowserAutomationLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1335:52: .
+            	    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1313:52: .
             	    {
             	    matchAny(); 
 
@@ -1109,12 +1109,12 @@ public class InternalBrowserAutomationLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1337:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1337:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1315:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1315:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1337:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1315:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -1127,7 +1127,7 @@ public class InternalBrowserAutomationLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1337:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1315:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1147,7 +1147,7 @@ public class InternalBrowserAutomationLexer extends Lexer {
                 }
             } while (true);
 
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1337:40: ( ( '\\r' )? '\\n' )?
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1315:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -1156,9 +1156,9 @@ public class InternalBrowserAutomationLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1337:41: ( '\\r' )? '\\n'
+                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1315:41: ( '\\r' )? '\\n'
                     {
-                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1337:41: ( '\\r' )?
+                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1315:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -1167,7 +1167,7 @@ public class InternalBrowserAutomationLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1337:41: '\\r'
+                            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1315:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1199,10 +1199,10 @@ public class InternalBrowserAutomationLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1339:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1339:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1317:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1317:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1339:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1317:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -1256,8 +1256,8 @@ public class InternalBrowserAutomationLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1341:16: ( . )
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1341:18: .
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1319:16: ( . )
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1319:18: .
             {
             matchAny(); 
 
@@ -1571,39 +1571,39 @@ public class InternalBrowserAutomationLexer extends Lexer {
 
     protected DFA12 dfa12 = new DFA12(this);
     static final String DFA12_eotS =
-        "\1\uffff\1\43\1\uffff\3\43\2\uffff\4\43\1\61\1\43\2\uffff\1\43\1\uffff\5\43\1\41\1\100\1\102\1\41\2\uffff\3\41\2\uffff\1\43\2\uffff\5\43\2\uffff\4\43\2\uffff\1\124\1\43\2\uffff\1\43\1\uffff\1\127\5\43\12\uffff\13\43\1\150\1\uffff\1\151\1\43\1\uffff\6\43\1\161\3\43\1\165\1\43\1\167\1\43\1\171\1\43\2\uffff\2\43\1\175\1\176\3\43\1\uffff\1\u0082\1\u0083\1\43\1\uffff\1\43\1\uffff\1\43\1\uffff\1\43\1\u0088\1\43\2\uffff\1\43\1\u008b\1\43\2\uffff\1\u008d\3\43\1\uffff\1\43\1\u0092\1\uffff\1\u0093\2\uffff\1\u0094\1\u0095\1\43\4\uffff\1\43\1\uffff";
+        "\1\uffff\1\43\1\uffff\3\43\1\uffff\4\43\1\60\1\43\2\uffff\1\43\1\uffff\3\43\1\uffff\2\43\1\41\1\100\1\102\1\41\2\uffff\3\41\2\uffff\1\43\2\uffff\5\43\1\uffff\4\43\2\uffff\1\124\1\43\2\uffff\1\43\1\uffff\1\127\3\43\1\uffff\2\43\12\uffff\13\43\1\150\1\uffff\1\151\1\43\1\uffff\6\43\1\161\3\43\1\165\1\43\1\167\1\43\1\171\1\43\2\uffff\2\43\1\175\1\176\3\43\1\uffff\1\u0082\1\u0083\1\43\1\uffff\1\43\1\uffff\1\43\1\uffff\1\43\1\u0088\1\43\2\uffff\1\43\1\u008b\1\43\2\uffff\1\u008d\3\43\1\uffff\1\43\1\u0092\1\uffff\1\u0093\2\uffff\1\u0094\1\u0095\1\43\4\uffff\1\43\1\uffff";
     static final String DFA12_eofS =
         "\u0098\uffff";
     static final String DFA12_minS =
-        "\1\0\1\162\1\uffff\1\157\1\141\1\145\2\uffff\2\151\1\156\1\145\1\75\1\145\2\uffff\1\150\1\uffff\1\146\1\150\1\154\1\141\1\160\3\75\1\101\2\uffff\2\0\1\52\2\uffff\1\157\2\uffff\1\124\1\151\1\145\2\154\2\uffff\1\154\1\164\1\143\1\164\2\uffff\1\60\1\146\2\uffff\1\151\1\uffff\1\60\1\164\1\145\1\163\1\146\1\145\12\uffff\1\167\1\157\2\143\1\157\1\154\1\145\1\154\1\145\2\150\1\60\1\uffff\1\60\1\154\1\uffff\1\145\1\156\1\145\1\141\1\162\1\163\1\60\2\153\1\155\1\60\1\143\1\60\1\146\1\60\1\145\2\uffff\1\145\1\162\2\60\1\162\1\141\1\145\1\uffff\2\60\1\145\1\uffff\1\164\1\uffff\1\157\1\uffff\1\143\1\60\1\156\2\uffff\1\151\1\60\1\162\2\uffff\1\60\1\50\1\170\1\153\1\uffff\1\145\1\60\1\uffff\1\60\2\uffff\2\60\1\164\4\uffff\1\40\1\uffff";
+        "\1\0\1\162\1\uffff\1\157\1\141\1\145\1\uffff\2\151\1\156\1\145\1\75\1\145\2\uffff\1\150\1\uffff\1\146\1\150\1\154\1\uffff\1\141\1\160\3\75\1\101\2\uffff\2\0\1\52\2\uffff\1\157\2\uffff\1\124\1\151\1\145\2\154\1\uffff\1\154\1\164\1\143\1\164\2\uffff\1\60\1\146\2\uffff\1\151\1\uffff\1\60\1\164\1\145\1\163\1\uffff\1\146\1\145\12\uffff\1\167\1\157\2\143\1\157\1\154\1\145\1\154\1\145\2\150\1\60\1\uffff\1\60\1\154\1\uffff\1\145\1\156\1\145\1\141\1\162\1\163\1\60\2\153\1\155\1\60\1\143\1\60\1\146\1\60\1\145\2\uffff\1\145\1\162\2\60\1\162\1\141\1\145\1\uffff\2\60\1\145\1\uffff\1\164\1\uffff\1\157\1\uffff\1\143\1\60\1\156\2\uffff\1\151\1\60\1\162\2\uffff\1\60\1\50\1\170\1\153\1\uffff\1\145\1\60\1\uffff\1\60\2\uffff\2\60\1\164\4\uffff\1\40\1\uffff";
     static final String DFA12_maxS =
-        "\1\uffff\1\162\1\uffff\1\157\1\154\1\145\2\uffff\2\151\1\156\1\145\1\75\1\157\2\uffff\1\150\1\uffff\1\156\1\150\1\154\1\141\1\160\3\75\1\172\2\uffff\2\uffff\1\57\2\uffff\1\157\2\uffff\1\124\1\151\1\162\2\154\2\uffff\1\162\1\164\1\143\1\164\2\uffff\1\172\1\146\2\uffff\1\151\1\uffff\1\172\1\164\1\145\1\163\1\146\1\145\12\uffff\1\167\1\157\2\143\1\157\1\154\1\145\1\154\1\145\2\150\1\172\1\uffff\1\172\1\154\1\uffff\1\145\1\156\1\145\1\141\1\162\1\163\1\172\2\153\1\155\1\172\1\143\1\172\1\146\1\172\1\145\2\uffff\1\145\1\162\2\172\1\162\1\141\1\145\1\uffff\2\172\1\145\1\uffff\1\164\1\uffff\1\157\1\uffff\1\143\1\172\1\156\2\uffff\1\151\1\172\1\162\2\uffff\1\172\1\50\1\170\1\153\1\uffff\1\145\1\172\1\uffff\1\172\2\uffff\2\172\1\164\4\uffff\1\40\1\uffff";
+        "\1\uffff\1\162\1\uffff\1\157\1\154\1\145\1\uffff\2\151\1\156\1\145\1\75\1\157\2\uffff\1\150\1\uffff\1\156\1\150\1\154\1\uffff\1\141\1\160\3\75\1\172\2\uffff\2\uffff\1\57\2\uffff\1\157\2\uffff\1\124\1\151\1\162\2\154\1\uffff\1\162\1\164\1\143\1\164\2\uffff\1\172\1\146\2\uffff\1\151\1\uffff\1\172\1\164\1\145\1\163\1\uffff\1\146\1\145\12\uffff\1\167\1\157\2\143\1\157\1\154\1\145\1\154\1\145\2\150\1\172\1\uffff\1\172\1\154\1\uffff\1\145\1\156\1\145\1\141\1\162\1\163\1\172\2\153\1\155\1\172\1\143\1\172\1\146\1\172\1\145\2\uffff\1\145\1\162\2\172\1\162\1\141\1\145\1\uffff\2\172\1\145\1\uffff\1\164\1\uffff\1\157\1\uffff\1\143\1\172\1\156\2\uffff\1\151\1\172\1\162\2\uffff\1\172\1\50\1\170\1\153\1\uffff\1\145\1\172\1\uffff\1\172\2\uffff\2\172\1\164\4\uffff\1\40\1\uffff";
     static final String DFA12_acceptS =
-        "\2\uffff\1\2\3\uffff\1\6\1\7\6\uffff\1\17\1\20\1\uffff\1\22\11\uffff\1\43\1\44\3\uffff\1\50\1\51\1\uffff\1\43\1\2\5\uffff\1\6\1\7\4\uffff\1\35\1\15\2\uffff\1\17\1\20\1\uffff\1\22\6\uffff\1\36\1\41\1\37\1\42\1\40\1\44\1\45\1\46\1\47\1\50\14\uffff\1\16\2\uffff\1\23\20\uffff\1\14\1\26\7\uffff\1\3\3\uffff\1\27\1\uffff\1\10\1\uffff\1\11\3\uffff\1\24\1\25\3\uffff\1\4\1\12\4\uffff\1\21\2\uffff\1\32\1\uffff\1\30\1\5\3\uffff\1\31\1\1\1\33\1\13\1\uffff\1\34";
+        "\2\uffff\1\2\3\uffff\1\6\6\uffff\1\16\1\17\1\uffff\1\21\3\uffff\1\26\6\uffff\1\43\1\44\3\uffff\1\50\1\51\1\uffff\1\43\1\2\5\uffff\1\6\4\uffff\1\35\1\14\2\uffff\1\16\1\17\1\uffff\1\21\4\uffff\1\26\2\uffff\1\36\1\41\1\37\1\42\1\40\1\44\1\45\1\46\1\47\1\50\14\uffff\1\15\2\uffff\1\22\20\uffff\1\13\1\25\7\uffff\1\3\3\uffff\1\27\1\uffff\1\7\1\uffff\1\10\3\uffff\1\23\1\24\3\uffff\1\4\1\11\4\uffff\1\20\2\uffff\1\32\1\uffff\1\30\1\5\3\uffff\1\31\1\1\1\33\1\12\1\uffff\1\34";
     static final String DFA12_specialS =
-        "\1\1\34\uffff\1\2\1\0\171\uffff}>";
+        "\1\2\34\uffff\1\1\1\0\171\uffff}>";
     static final String[] DFA12_transitionS = {
-            "\11\41\2\40\2\41\1\40\22\41\1\40\1\27\1\35\4\41\1\36\1\21\1\7\2\41\1\6\2\41\1\37\12\34\1\41\1\2\1\31\1\14\1\30\2\41\2\33\1\4\1\15\1\24\1\10\1\3\1\33\1\22\2\33\1\13\2\33\1\26\3\33\1\25\1\23\1\12\1\33\1\20\3\33\3\41\1\32\1\33\1\41\1\33\1\1\20\33\1\5\3\33\1\11\3\33\1\16\1\41\1\17\uff82\41",
+            "\11\41\2\40\2\41\1\40\22\41\1\40\1\27\1\35\4\41\1\36\1\20\1\6\2\41\1\24\2\41\1\37\12\34\1\41\1\2\1\31\1\13\1\30\2\41\2\33\1\4\1\14\1\23\1\7\1\3\1\33\1\21\2\33\1\12\2\33\1\26\3\33\1\25\1\22\1\11\1\33\1\17\3\33\3\41\1\32\1\33\1\41\1\33\1\1\20\33\1\5\3\33\1\10\3\33\1\15\1\41\1\16\uff82\41",
             "\1\42",
             "",
             "\1\45",
             "\1\50\6\uffff\1\47\3\uffff\1\46",
             "\1\51",
             "",
-            "",
+            "\1\53",
             "\1\54",
             "\1\55",
             "\1\56",
             "\1\57",
-            "\1\60",
-            "\1\63\11\uffff\1\62",
+            "\1\62\11\uffff\1\61",
             "",
             "",
-            "\1\66",
+            "\1\65",
             "",
-            "\1\70\7\uffff\1\71",
+            "\1\67\7\uffff\1\70",
+            "\1\71",
             "\1\72",
-            "\1\73",
+            "",
             "\1\74",
             "\1\75",
             "\1\76",
@@ -1626,7 +1626,6 @@ public class InternalBrowserAutomationLexer extends Lexer {
             "\1\115",
             "\1\116",
             "",
-            "",
             "\1\117\5\uffff\1\120",
             "\1\121",
             "\1\122",
@@ -1643,6 +1642,7 @@ public class InternalBrowserAutomationLexer extends Lexer {
             "\1\130",
             "\1\131",
             "\1\132",
+            "",
             "\1\133",
             "\1\134",
             "",
@@ -1784,6 +1784,16 @@ public class InternalBrowserAutomationLexer extends Lexer {
                         if ( s>=0 ) return s;
                         break;
                     case 1 : 
+                        int LA12_29 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA12_29>='\u0000' && LA12_29<='\uFFFF')) ) {s = 68;}
+
+                        else s = 33;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 2 : 
                         int LA12_0 = input.LA(1);
 
                         s = -1;
@@ -1797,35 +1807,35 @@ public class InternalBrowserAutomationLexer extends Lexer {
 
                         else if ( (LA12_0=='s') ) {s = 5;}
 
-                        else if ( (LA12_0==',') ) {s = 6;}
+                        else if ( (LA12_0==')') ) {s = 6;}
 
-                        else if ( (LA12_0==')') ) {s = 7;}
+                        else if ( (LA12_0=='F') ) {s = 7;}
 
-                        else if ( (LA12_0=='F') ) {s = 8;}
+                        else if ( (LA12_0=='w') ) {s = 8;}
 
-                        else if ( (LA12_0=='w') ) {s = 9;}
+                        else if ( (LA12_0=='U') ) {s = 9;}
 
-                        else if ( (LA12_0=='U') ) {s = 10;}
+                        else if ( (LA12_0=='L') ) {s = 10;}
 
-                        else if ( (LA12_0=='L') ) {s = 11;}
+                        else if ( (LA12_0=='=') ) {s = 11;}
 
-                        else if ( (LA12_0=='=') ) {s = 12;}
+                        else if ( (LA12_0=='D') ) {s = 12;}
 
-                        else if ( (LA12_0=='D') ) {s = 13;}
+                        else if ( (LA12_0=='{') ) {s = 13;}
 
-                        else if ( (LA12_0=='{') ) {s = 14;}
+                        else if ( (LA12_0=='}') ) {s = 14;}
 
-                        else if ( (LA12_0=='}') ) {s = 15;}
+                        else if ( (LA12_0=='W') ) {s = 15;}
 
-                        else if ( (LA12_0=='W') ) {s = 16;}
+                        else if ( (LA12_0=='(') ) {s = 16;}
 
-                        else if ( (LA12_0=='(') ) {s = 17;}
+                        else if ( (LA12_0=='I') ) {s = 17;}
 
-                        else if ( (LA12_0=='I') ) {s = 18;}
+                        else if ( (LA12_0=='T') ) {s = 18;}
 
-                        else if ( (LA12_0=='T') ) {s = 19;}
+                        else if ( (LA12_0=='E') ) {s = 19;}
 
-                        else if ( (LA12_0=='E') ) {s = 20;}
+                        else if ( (LA12_0==',') ) {s = 20;}
 
                         else if ( (LA12_0=='S') ) {s = 21;}
 
@@ -1852,16 +1862,6 @@ public class InternalBrowserAutomationLexer extends Lexer {
                         else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 32;}
 
                         else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||(LA12_0>='#' && LA12_0<='&')||(LA12_0>='*' && LA12_0<='+')||(LA12_0>='-' && LA12_0<='.')||LA12_0==':'||(LA12_0>='?' && LA12_0<='@')||(LA12_0>='[' && LA12_0<=']')||LA12_0=='`'||LA12_0=='|'||(LA12_0>='~' && LA12_0<='\uFFFF')) ) {s = 33;}
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 2 : 
-                        int LA12_29 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA12_29>='\u0000' && LA12_29<='\uFFFF')) ) {s = 68;}
-
-                        else s = 33;
 
                         if ( s>=0 ) return s;
                         break;

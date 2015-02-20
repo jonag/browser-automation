@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.joclal.browserAutomation.*;
+import org.joclal.browserautomation.interpreter.utils.DriverFacade;
 import org.joclal.browserautomation.interpreter.utils.InterpreterUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -15,11 +16,9 @@ import org.openqa.selenium.safari.SafariDriver;
 
 public class Interpreter {
 
-	WebDriver driver;
+	
 
 	public void execute(BrowserAutomation script) {
-
-		init();
 
 		// processing subroutines
 		for (Subroutine s : script.getSubroutines()) {
@@ -28,25 +27,12 @@ public class Interpreter {
 
 		// browser opening
 		Browser b = script.getBrowser();
-		switch (b.getLiteral()) {
-//		case "Chrome":
-//			driver = new ChromeDriver();
-//			break;
-//		case "Safari":
-//			driver = new SafariDriver();
-//			break;
-		case "Firefox":
-			driver = new FirefoxDriver();
-			break;
-		default:
-			driver = new FirefoxDriver();
-			break;
-		}
+		DriverFacade.openBrowser(b.getLiteral());
 
 		// first goto
 		Value urlValue = script.getFirstGoTo().getUrl();
 		String url = InterpreterUtils.getValue(urlValue);
-		driver.get(url);
+		DriverFacade.goTo(url);
 		
 		// actions
 		for(Action a :script.getActions()){
@@ -55,11 +41,6 @@ public class Interpreter {
 
 	}
 
-	private void init() {
-		// browser props
-		System.setProperty("webdriver.chrome.driver", "res/chromedriver");
-	}
-	
 	private void processAction(Action a){
 		if(a instanceof Goto){
 			processGoto((Goto) a);
@@ -120,9 +101,8 @@ public class Interpreter {
 
 	private void processUncheck(Uncheck a) {
 		Selector s = a.getCheckbox();
-		List<String> sels = s.getHaydies();
-		for(String sel : sels){
-			WebElement element = this.getWebElement(sel);
+		List<WebElement> elements = DriverFacade.getWebElement(s.getId());
+		for(WebElement element : elements){
 			if(element.getTagName().equalsIgnoreCase("input") && element.getAttribute("type").equalsIgnoreCase("checkbox") && element.getAttribute("selected").equalsIgnoreCase("selected")){
 				element.click();
 			}
@@ -131,9 +111,8 @@ public class Interpreter {
 
 	private void processCheck(Check a) {
 		Selector s = a.getCheckbox();
-		List<String> sels = s.getHaydies();
-		for(String sel : sels){
-			WebElement element = this.getWebElement(sel);
+		List<WebElement> elements = DriverFacade.getWebElement(s.getId());
+		for(WebElement element : elements){
 			if(element.getTagName().equalsIgnoreCase("input") && element.getAttribute("type").equalsIgnoreCase("checkbox") && !element.getAttribute("selected").equalsIgnoreCase("selected")){
 				element.click();
 			}
@@ -142,9 +121,8 @@ public class Interpreter {
 
 	private void processFill(Fill a) {
 		Selector s = a.getField();
-		List<String> sels = s.getHaydies();
-		for(String sel : sels){
-			WebElement element = this.getWebElement(sel);
+		List<WebElement> elements = DriverFacade.getWebElement(s.getId());
+		for(WebElement element : elements){
 			element.sendKeys(InterpreterUtils.getValue(a.getValue()));
 		}
 		
@@ -152,9 +130,8 @@ public class Interpreter {
 
 	private void processClickOn(ClickOn a) {
 		Selector s = a.getSelector();
-		List<String> sels = s.getHaydies();
-		for(String sel : sels){
-			WebElement element = this.getWebElement(sel);
+		List<WebElement> elements = DriverFacade.getWebElement(s.getId());
+		for(WebElement element : elements){
 			element.click();
 		}
 	}
@@ -162,12 +139,12 @@ public class Interpreter {
 	private void processGoto(Goto a){
 		Value urlValue = a.getUrl();
 		String url = InterpreterUtils.getValue(urlValue);
-		driver.get(url);
+		DriverFacade.goTo(url);
 	}
 
 	
-	private WebElement getWebElement(String sel) {
-		return driver.findElement(By.name(sel));
-	}
+	/*private WebElement getWebElement(String sel) {
+		return DriverFacade.findElement(By.name(sel));
+	}*/
 	
 }

@@ -389,47 +389,25 @@ ruleSelector returns [EObject current=null]
     }
 (
 (
-		lv_haydies_1_0=RULE_STRING
+		lv_id_1_0=RULE_STRING
 		{
-			newLeafNode(lv_haydies_1_0, grammarAccess.getSelectorAccess().getHaydiesSTRINGTerminalRuleCall_1_0()); 
+			newLeafNode(lv_id_1_0, grammarAccess.getSelectorAccess().getIdSTRINGTerminalRuleCall_1_0()); 
 		}
 		{
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getSelectorRule());
 	        }
-       		addWithLastConsumed(
+       		setWithLastConsumed(
        			$current, 
-       			"haydies",
-        		lv_haydies_1_0, 
+       			"id",
+        		lv_id_1_0, 
         		"STRING");
 	    }
 
 )
-)(	otherlv_2=',' 
+)	otherlv_2=')' 
     {
-    	newLeafNode(otherlv_2, grammarAccess.getSelectorAccess().getCommaKeyword_2_0());
-    }
-(
-(
-		lv_haydies_3_0=RULE_STRING
-		{
-			newLeafNode(lv_haydies_3_0, grammarAccess.getSelectorAccess().getHaydiesSTRINGTerminalRuleCall_2_1_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getSelectorRule());
-	        }
-       		addWithLastConsumed(
-       			$current, 
-       			"haydies",
-        		lv_haydies_3_0, 
-        		"STRING");
-	    }
-
-)
-))?	otherlv_4=')' 
-    {
-    	newLeafNode(otherlv_4, grammarAccess.getSelectorAccess().getRightParenthesisKeyword_3());
+    	newLeafNode(otherlv_2, grammarAccess.getSelectorAccess().getRightParenthesisKeyword_2());
     }
 )
 ;

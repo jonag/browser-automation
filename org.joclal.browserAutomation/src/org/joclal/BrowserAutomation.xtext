@@ -26,7 +26,7 @@ ClickOn:
 ;
 
 Selector:
-	'select(' haydies+=STRING (',' haydies+=STRING)? ')'
+	'select(' id=STRING ')'
 ;
 
 Fill:

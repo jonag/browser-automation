@@ -178,44 +178,28 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Selector");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cSelectKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cHaydiesAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cHaydiesSTRINGTerminalRuleCall_1_0 = (RuleCall)cHaydiesAssignment_1.eContents().get(0);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cCommaKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Assignment cHaydiesAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cHaydiesSTRINGTerminalRuleCall_2_1_0 = (RuleCall)cHaydiesAssignment_2_1.eContents().get(0);
-		private final Keyword cRightParenthesisKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cIdAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cIdSTRINGTerminalRuleCall_1_0 = (RuleCall)cIdAssignment_1.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
 		//Selector:
-		//	"select(" haydies+=STRING ("," haydies+=STRING)? ")";
+		//	"select(" id=STRING ")";
 		public ParserRule getRule() { return rule; }
 
-		//"select(" haydies+=STRING ("," haydies+=STRING)? ")"
+		//"select(" id=STRING ")"
 		public Group getGroup() { return cGroup; }
 
 		//"select("
 		public Keyword getSelectKeyword_0() { return cSelectKeyword_0; }
 
-		//haydies+=STRING
-		public Assignment getHaydiesAssignment_1() { return cHaydiesAssignment_1; }
+		//id=STRING
+		public Assignment getIdAssignment_1() { return cIdAssignment_1; }
 
 		//STRING
-		public RuleCall getHaydiesSTRINGTerminalRuleCall_1_0() { return cHaydiesSTRINGTerminalRuleCall_1_0; }
-
-		//("," haydies+=STRING)?
-		public Group getGroup_2() { return cGroup_2; }
-
-		//","
-		public Keyword getCommaKeyword_2_0() { return cCommaKeyword_2_0; }
-
-		//haydies+=STRING
-		public Assignment getHaydiesAssignment_2_1() { return cHaydiesAssignment_2_1; }
-
-		//STRING
-		public RuleCall getHaydiesSTRINGTerminalRuleCall_2_1_0() { return cHaydiesSTRINGTerminalRuleCall_2_1_0; }
+		public RuleCall getIdSTRINGTerminalRuleCall_1_0() { return cIdSTRINGTerminalRuleCall_1_0; }
 
 		//")"
-		public Keyword getRightParenthesisKeyword_3() { return cRightParenthesisKeyword_3; }
+		public Keyword getRightParenthesisKeyword_2() { return cRightParenthesisKeyword_2; }
 	}
 
 	public class FillElements extends AbstractParserRuleElementFinder {
@@ -943,7 +927,7 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 	}
 
 	//Selector:
-	//	"select(" haydies+=STRING ("," haydies+=STRING)? ")";
+	//	"select(" id=STRING ")";
 	public SelectorElements getSelectorAccess() {
 		return pSelector;
 	}

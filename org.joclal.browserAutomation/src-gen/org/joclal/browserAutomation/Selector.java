@@ -2,8 +2,6 @@
  */
 package org.joclal.browserAutomation;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -14,7 +12,7 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.joclal.browserAutomation.Selector#getHaydies <em>Haydies</em>}</li>
+ *   <li>{@link org.joclal.browserAutomation.Selector#getId <em>Id</em>}</li>
  * </ul>
  * </p>
  *
@@ -25,19 +23,29 @@ import org.eclipse.emf.ecore.EObject;
 public interface Selector extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Haydies</b></em>' attribute list.
-   * The list contents are of type {@link java.lang.String}.
+   * Returns the value of the '<em><b>Id</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Haydies</em>' attribute list isn't clear,
+   * If the meaning of the '<em>Id</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Haydies</em>' attribute list.
-   * @see org.joclal.browserAutomation.BrowserAutomationPackage#getSelector_Haydies()
-   * @model unique="false"
+   * @return the value of the '<em>Id</em>' attribute.
+   * @see #setId(String)
+   * @see org.joclal.browserAutomation.BrowserAutomationPackage#getSelector_Id()
+   * @model
    * @generated
    */
-  EList<String> getHaydies();
+  String getId();
+
+  /**
+   * Sets the value of the '{@link org.joclal.browserAutomation.Selector#getId <em>Id</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Id</em>' attribute.
+   * @see #getId()
+   * @generated
+   */
+  void setId(String value);
 
 } // Selector

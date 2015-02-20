@@ -36,7 +36,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//ClickOn/selector"/>
     </genClasses>
     <genClasses ecoreClass="BrowserAutomation.ecore#//Selector">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserAutomation.ecore#//Selector/haydies"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserAutomation.ecore#//Selector/id"/>
     </genClasses>
     <genClasses ecoreClass="BrowserAutomation.ecore#//Fill">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//Fill/field"/>
