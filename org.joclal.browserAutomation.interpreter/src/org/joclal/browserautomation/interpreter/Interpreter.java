@@ -87,14 +87,30 @@ public class Interpreter {
 		
 	}
 
-	private void processIfThen(IfThen a) {
-		// TODO Auto-generated method stub
-		
+	private void processIfThen(IfThen truc) {
+		InterpreterUtils.newClosure();
+		if(InterpreterUtils.processCondition(truc.getCondition())){
+			for(Action a: truc.getThenActions()){
+				processAction(a);
+			}
+		}else{
+			for(Action a: truc.getElseActions()){
+				processAction(a);
+			}
+		}
+		InterpreterUtils.finishClosure();
 	}
 
-	private void processDoWhile(DoWhile a) {
-		// TODO Auto-generated method stub
-		
+	private void processDoWhile(DoWhile truc) {
+		InterpreterUtils.newClosure();
+		Boolean condition = true;
+		while(condition){
+			for(Action a : truc.getActions()){
+				processAction(a);
+			}
+			condition = InterpreterUtils.processCondition(truc.getCondition());
+		}
+		InterpreterUtils.finishClosure();
 	}
 
 	private void processLet(Let a) {

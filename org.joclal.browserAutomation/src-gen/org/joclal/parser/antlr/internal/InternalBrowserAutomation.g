@@ -1293,28 +1293,34 @@ ruleOperator returns [Enumerator current=null]
         newLeafNode(enumLiteral_0, grammarAccess.getOperatorAccess().getEqualsEnumLiteralDeclaration_0()); 
     }
 )
-    |(	enumLiteral_1='>' 
+    |(	enumLiteral_1='!=' 
 	{
-        $current = grammarAccess.getOperatorAccess().getGtEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
-        newLeafNode(enumLiteral_1, grammarAccess.getOperatorAccess().getGtEnumLiteralDeclaration_1()); 
+        $current = grammarAccess.getOperatorAccess().getNotEqualsEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_1, grammarAccess.getOperatorAccess().getNotEqualsEnumLiteralDeclaration_1()); 
     }
 )
-    |(	enumLiteral_2='<' 
+    |(	enumLiteral_2='>' 
 	{
-        $current = grammarAccess.getOperatorAccess().getLtEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
-        newLeafNode(enumLiteral_2, grammarAccess.getOperatorAccess().getLtEnumLiteralDeclaration_2()); 
+        $current = grammarAccess.getOperatorAccess().getGtEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_2, grammarAccess.getOperatorAccess().getGtEnumLiteralDeclaration_2()); 
     }
 )
-    |(	enumLiteral_3='>=' 
+    |(	enumLiteral_3='<' 
 	{
-        $current = grammarAccess.getOperatorAccess().getGteEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
-        newLeafNode(enumLiteral_3, grammarAccess.getOperatorAccess().getGteEnumLiteralDeclaration_3()); 
+        $current = grammarAccess.getOperatorAccess().getLtEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_3, grammarAccess.getOperatorAccess().getLtEnumLiteralDeclaration_3()); 
     }
 )
-    |(	enumLiteral_4='<=' 
+    |(	enumLiteral_4='>=' 
 	{
-        $current = grammarAccess.getOperatorAccess().getLteEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
-        newLeafNode(enumLiteral_4, grammarAccess.getOperatorAccess().getLteEnumLiteralDeclaration_4()); 
+        $current = grammarAccess.getOperatorAccess().getGteEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_4, grammarAccess.getOperatorAccess().getGteEnumLiteralDeclaration_4()); 
+    }
+)
+    |(	enumLiteral_5='<=' 
+	{
+        $current = grammarAccess.getOperatorAccess().getLteEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_5, grammarAccess.getOperatorAccess().getLteEnumLiteralDeclaration_5()); 
     }
 ));
 

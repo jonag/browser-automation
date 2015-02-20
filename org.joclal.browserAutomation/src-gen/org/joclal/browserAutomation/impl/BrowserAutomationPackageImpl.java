@@ -939,6 +939,7 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
 
     initEEnum(operatorEEnum, Operator.class, "Operator");
     addEEnumLiteral(operatorEEnum, Operator.EQUALS);
+    addEEnumLiteral(operatorEEnum, Operator.NOT_EQUALS);
     addEEnumLiteral(operatorEEnum, Operator.GT);
     addEEnumLiteral(operatorEEnum, Operator.LT);
     addEEnumLiteral(operatorEEnum, Operator.GTE);

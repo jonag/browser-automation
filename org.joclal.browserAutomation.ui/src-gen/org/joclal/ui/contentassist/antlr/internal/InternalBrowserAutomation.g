@@ -737,31 +737,38 @@ rule__Operator__Alternatives
 )
 
     |(
-{ before(grammarAccess.getOperatorAccess().getGtEnumLiteralDeclaration_1()); }
+{ before(grammarAccess.getOperatorAccess().getNotEqualsEnumLiteralDeclaration_1()); }
+(	'!=' 
+)
+{ after(grammarAccess.getOperatorAccess().getNotEqualsEnumLiteralDeclaration_1()); }
+)
+
+    |(
+{ before(grammarAccess.getOperatorAccess().getGtEnumLiteralDeclaration_2()); }
 (	'>' 
 )
-{ after(grammarAccess.getOperatorAccess().getGtEnumLiteralDeclaration_1()); }
+{ after(grammarAccess.getOperatorAccess().getGtEnumLiteralDeclaration_2()); }
 )
 
     |(
-{ before(grammarAccess.getOperatorAccess().getLtEnumLiteralDeclaration_2()); }
+{ before(grammarAccess.getOperatorAccess().getLtEnumLiteralDeclaration_3()); }
 (	'<' 
 )
-{ after(grammarAccess.getOperatorAccess().getLtEnumLiteralDeclaration_2()); }
+{ after(grammarAccess.getOperatorAccess().getLtEnumLiteralDeclaration_3()); }
 )
 
     |(
-{ before(grammarAccess.getOperatorAccess().getGteEnumLiteralDeclaration_3()); }
+{ before(grammarAccess.getOperatorAccess().getGteEnumLiteralDeclaration_4()); }
 (	'>=' 
 )
-{ after(grammarAccess.getOperatorAccess().getGteEnumLiteralDeclaration_3()); }
+{ after(grammarAccess.getOperatorAccess().getGteEnumLiteralDeclaration_4()); }
 )
 
     |(
-{ before(grammarAccess.getOperatorAccess().getLteEnumLiteralDeclaration_4()); }
+{ before(grammarAccess.getOperatorAccess().getLteEnumLiteralDeclaration_5()); }
 (	'<=' 
 )
-{ after(grammarAccess.getOperatorAccess().getLteEnumLiteralDeclaration_4()); }
+{ after(grammarAccess.getOperatorAccess().getLteEnumLiteralDeclaration_5()); }
 )
 
 ;

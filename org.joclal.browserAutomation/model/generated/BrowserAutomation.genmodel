@@ -16,6 +16,7 @@
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="BrowserAutomation.ecore#//Operator">
       <genEnumLiterals ecoreEnumLiteral="BrowserAutomation.ecore#//Operator/equals"/>
+      <genEnumLiterals ecoreEnumLiteral="BrowserAutomation.ecore#//Operator/notEquals"/>
       <genEnumLiterals ecoreEnumLiteral="BrowserAutomation.ecore#//Operator/gt"/>
       <genEnumLiterals ecoreEnumLiteral="BrowserAutomation.ecore#//Operator/lt"/>
       <genEnumLiterals ecoreEnumLiteral="BrowserAutomation.ecore#//Operator/gte"/>

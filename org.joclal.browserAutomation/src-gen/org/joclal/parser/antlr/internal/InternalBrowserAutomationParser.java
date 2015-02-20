@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'browser'", "';'", "'GoTo'", "'Click'", "'select('", "','", "')'", "'Fill'", "'with'", "'Check'", "'Uncheck'", "'Let'", "'='", "'Do'", "'{'", "'}'", "'While'", "'('", "'If'", "'Then'", "'Else'", "'Def'", "'Call'", "'Chrome'", "'Safari'", "'Opera'", "'Firefox'", "'Internet Explorer'", "'=='", "'>'", "'<'", "'>='", "'<='"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'browser'", "';'", "'GoTo'", "'Click'", "'select('", "','", "')'", "'Fill'", "'with'", "'Check'", "'Uncheck'", "'Let'", "'='", "'Do'", "'{'", "'}'", "'While'", "'('", "'If'", "'Then'", "'Else'", "'Def'", "'Call'", "'Chrome'", "'Safari'", "'Opera'", "'Firefox'", "'Internet Explorer'", "'=='", "'!='", "'>'", "'<'", "'>='", "'<='"
     };
     public static final int T__19=19;
     public static final int T__15=15;
@@ -61,6 +61,7 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
     public static final int T__32=32;
     public static final int RULE_WS=9;
     public static final int RULE_ANY_OTHER=10;
+    public static final int T__44=44;
     public static final int T__40=40;
     public static final int T__41=41;
     public static final int T__42=42;
@@ -3138,7 +3139,7 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
 
 
     // $ANTLR start "ruleOperator"
-    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1287:1: ruleOperator returns [Enumerator current=null] : ( (enumLiteral_0= '==' ) | (enumLiteral_1= '>' ) | (enumLiteral_2= '<' ) | (enumLiteral_3= '>=' ) | (enumLiteral_4= '<=' ) ) ;
+    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1287:1: ruleOperator returns [Enumerator current=null] : ( (enumLiteral_0= '==' ) | (enumLiteral_1= '!=' ) | (enumLiteral_2= '>' ) | (enumLiteral_3= '<' ) | (enumLiteral_4= '>=' ) | (enumLiteral_5= '<=' ) ) ;
     public final Enumerator ruleOperator() throws RecognitionException {
         Enumerator current = null;
 
@@ -3147,14 +3148,15 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
         Token enumLiteral_2=null;
         Token enumLiteral_3=null;
         Token enumLiteral_4=null;
+        Token enumLiteral_5=null;
 
          enterRule(); 
         try {
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1289:28: ( ( (enumLiteral_0= '==' ) | (enumLiteral_1= '>' ) | (enumLiteral_2= '<' ) | (enumLiteral_3= '>=' ) | (enumLiteral_4= '<=' ) ) )
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1290:1: ( (enumLiteral_0= '==' ) | (enumLiteral_1= '>' ) | (enumLiteral_2= '<' ) | (enumLiteral_3= '>=' ) | (enumLiteral_4= '<=' ) )
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1289:28: ( ( (enumLiteral_0= '==' ) | (enumLiteral_1= '!=' ) | (enumLiteral_2= '>' ) | (enumLiteral_3= '<' ) | (enumLiteral_4= '>=' ) | (enumLiteral_5= '<=' ) ) )
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1290:1: ( (enumLiteral_0= '==' ) | (enumLiteral_1= '!=' ) | (enumLiteral_2= '>' ) | (enumLiteral_3= '<' ) | (enumLiteral_4= '>=' ) | (enumLiteral_5= '<=' ) )
             {
-            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1290:1: ( (enumLiteral_0= '==' ) | (enumLiteral_1= '>' ) | (enumLiteral_2= '<' ) | (enumLiteral_3= '>=' ) | (enumLiteral_4= '<=' ) )
-            int alt15=5;
+            // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1290:1: ( (enumLiteral_0= '==' ) | (enumLiteral_1= '!=' ) | (enumLiteral_2= '>' ) | (enumLiteral_3= '<' ) | (enumLiteral_4= '>=' ) | (enumLiteral_5= '<=' ) )
+            int alt15=6;
             switch ( input.LA(1) ) {
             case 39:
                 {
@@ -3179,6 +3181,11 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
             case 43:
                 {
                 alt15=5;
+                }
+                break;
+            case 44:
+                {
+                alt15=6;
                 }
                 break;
             default:
@@ -3207,15 +3214,15 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
                     }
                     break;
                 case 2 :
-                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1296:6: (enumLiteral_1= '>' )
+                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1296:6: (enumLiteral_1= '!=' )
                     {
-                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1296:6: (enumLiteral_1= '>' )
-                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1296:8: enumLiteral_1= '>'
+                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1296:6: (enumLiteral_1= '!=' )
+                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1296:8: enumLiteral_1= '!='
                     {
                     enumLiteral_1=(Token)match(input,40,FOLLOW_40_in_ruleOperator2870); 
 
-                            current = grammarAccess.getOperatorAccess().getGtEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
-                            newLeafNode(enumLiteral_1, grammarAccess.getOperatorAccess().getGtEnumLiteralDeclaration_1()); 
+                            current = grammarAccess.getOperatorAccess().getNotEqualsEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+                            newLeafNode(enumLiteral_1, grammarAccess.getOperatorAccess().getNotEqualsEnumLiteralDeclaration_1()); 
                         
 
                     }
@@ -3224,15 +3231,15 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
                     }
                     break;
                 case 3 :
-                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1302:6: (enumLiteral_2= '<' )
+                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1302:6: (enumLiteral_2= '>' )
                     {
-                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1302:6: (enumLiteral_2= '<' )
-                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1302:8: enumLiteral_2= '<'
+                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1302:6: (enumLiteral_2= '>' )
+                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1302:8: enumLiteral_2= '>'
                     {
                     enumLiteral_2=(Token)match(input,41,FOLLOW_41_in_ruleOperator2887); 
 
-                            current = grammarAccess.getOperatorAccess().getLtEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
-                            newLeafNode(enumLiteral_2, grammarAccess.getOperatorAccess().getLtEnumLiteralDeclaration_2()); 
+                            current = grammarAccess.getOperatorAccess().getGtEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+                            newLeafNode(enumLiteral_2, grammarAccess.getOperatorAccess().getGtEnumLiteralDeclaration_2()); 
                         
 
                     }
@@ -3241,15 +3248,15 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
                     }
                     break;
                 case 4 :
-                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1308:6: (enumLiteral_3= '>=' )
+                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1308:6: (enumLiteral_3= '<' )
                     {
-                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1308:6: (enumLiteral_3= '>=' )
-                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1308:8: enumLiteral_3= '>='
+                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1308:6: (enumLiteral_3= '<' )
+                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1308:8: enumLiteral_3= '<'
                     {
                     enumLiteral_3=(Token)match(input,42,FOLLOW_42_in_ruleOperator2904); 
 
-                            current = grammarAccess.getOperatorAccess().getGteEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
-                            newLeafNode(enumLiteral_3, grammarAccess.getOperatorAccess().getGteEnumLiteralDeclaration_3()); 
+                            current = grammarAccess.getOperatorAccess().getLtEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
+                            newLeafNode(enumLiteral_3, grammarAccess.getOperatorAccess().getLtEnumLiteralDeclaration_3()); 
                         
 
                     }
@@ -3258,15 +3265,32 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
                     }
                     break;
                 case 5 :
-                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1314:6: (enumLiteral_4= '<=' )
+                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1314:6: (enumLiteral_4= '>=' )
                     {
-                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1314:6: (enumLiteral_4= '<=' )
-                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1314:8: enumLiteral_4= '<='
+                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1314:6: (enumLiteral_4= '>=' )
+                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1314:8: enumLiteral_4= '>='
                     {
                     enumLiteral_4=(Token)match(input,43,FOLLOW_43_in_ruleOperator2921); 
 
-                            current = grammarAccess.getOperatorAccess().getLteEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
-                            newLeafNode(enumLiteral_4, grammarAccess.getOperatorAccess().getLteEnumLiteralDeclaration_4()); 
+                            current = grammarAccess.getOperatorAccess().getGteEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
+                            newLeafNode(enumLiteral_4, grammarAccess.getOperatorAccess().getGteEnumLiteralDeclaration_4()); 
+                        
+
+                    }
+
+
+                    }
+                    break;
+                case 6 :
+                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1320:6: (enumLiteral_5= '<=' )
+                    {
+                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1320:6: (enumLiteral_5= '<=' )
+                    // ../org.joclal.browserAutomation/src-gen/org/joclal/parser/antlr/internal/InternalBrowserAutomation.g:1320:8: enumLiteral_5= '<='
+                    {
+                    enumLiteral_5=(Token)match(input,44,FOLLOW_44_in_ruleOperator2938); 
+
+                            current = grammarAccess.getOperatorAccess().getLteEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
+                            newLeafNode(enumLiteral_5, grammarAccess.getOperatorAccess().getLteEnumLiteralDeclaration_5()); 
                         
 
                     }
@@ -3378,7 +3402,7 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
     public static final BitSet FOLLOW_17_in_ruleDoWhile1868 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleBooleanExp_in_entryRuleBooleanExp1904 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleBooleanExp1914 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValue_in_ruleBooleanExp1960 = new BitSet(new long[]{0x00000F8000000000L});
+    public static final BitSet FOLLOW_ruleValue_in_ruleBooleanExp1960 = new BitSet(new long[]{0x00001F8000000000L});
     public static final BitSet FOLLOW_ruleOperator_in_ruleBooleanExp1981 = new BitSet(new long[]{0x0000000000000030L});
     public static final BitSet FOLLOW_ruleValue_in_ruleBooleanExp2002 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleIfThen_in_entryRuleIfThen2038 = new BitSet(new long[]{0x0000000000000000L});
@@ -3425,5 +3449,6 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
     public static final BitSet FOLLOW_41_in_ruleOperator2887 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_42_in_ruleOperator2904 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_43_in_ruleOperator2921 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_44_in_ruleOperator2938 = new BitSet(new long[]{0x0000000000000002L});
 
 }

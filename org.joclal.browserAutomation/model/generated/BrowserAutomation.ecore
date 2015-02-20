@@ -75,10 +75,11 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Operator">
     <eLiterals name="equals" literal="=="/>
-    <eLiterals name="gt" value="1" literal=">"/>
-    <eLiterals name="lt" value="2" literal="&lt;"/>
-    <eLiterals name="gte" value="3" literal=">="/>
-    <eLiterals name="lte" value="4" literal="&lt;="/>
+    <eLiterals name="notEquals" value="1" literal="!="/>
+    <eLiterals name="gt" value="2" literal=">"/>
+    <eLiterals name="lt" value="3" literal="&lt;"/>
+    <eLiterals name="gte" value="4" literal=">="/>
+    <eLiterals name="lte" value="5" literal="&lt;="/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IfThen" eSuperTypes="#//Action">
     <eStructuralFeatures xsi:type="ecore:EReference" name="condition" eType="#//BooleanExp"

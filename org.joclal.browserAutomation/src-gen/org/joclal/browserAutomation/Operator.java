@@ -30,6 +30,16 @@ public enum Operator implements Enumerator
   EQUALS(0, "equals", "=="),
 
   /**
+   * The '<em><b>Not Equals</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #NOT_EQUALS_VALUE
+   * @generated
+   * @ordered
+   */
+  NOT_EQUALS(1, "notEquals", "!="),
+
+  /**
    * The '<em><b>Gt</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -37,7 +47,7 @@ public enum Operator implements Enumerator
    * @generated
    * @ordered
    */
-  GT(1, "gt", ">"),
+  GT(2, "gt", ">"),
 
   /**
    * The '<em><b>Lt</b></em>' literal object.
@@ -47,7 +57,7 @@ public enum Operator implements Enumerator
    * @generated
    * @ordered
    */
-  LT(2, "lt", "<"),
+  LT(3, "lt", "<"),
 
   /**
    * The '<em><b>Gte</b></em>' literal object.
@@ -57,7 +67,7 @@ public enum Operator implements Enumerator
    * @generated
    * @ordered
    */
-  GTE(3, "gte", ">="),
+  GTE(4, "gte", ">="),
 
   /**
    * The '<em><b>Lte</b></em>' literal object.
@@ -67,7 +77,7 @@ public enum Operator implements Enumerator
    * @generated
    * @ordered
    */
-  LTE(4, "lte", "<=");
+  LTE(5, "lte", "<=");
 
   /**
    * The '<em><b>Equals</b></em>' literal value.
@@ -85,6 +95,21 @@ public enum Operator implements Enumerator
   public static final int EQUALS_VALUE = 0;
 
   /**
+   * The '<em><b>Not Equals</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Not Equals</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #NOT_EQUALS
+   * @model name="notEquals" literal="!="
+   * @generated
+   * @ordered
+   */
+  public static final int NOT_EQUALS_VALUE = 1;
+
+  /**
    * The '<em><b>Gt</b></em>' literal value.
    * <!-- begin-user-doc -->
    * <p>
@@ -97,7 +122,7 @@ public enum Operator implements Enumerator
    * @generated
    * @ordered
    */
-  public static final int GT_VALUE = 1;
+  public static final int GT_VALUE = 2;
 
   /**
    * The '<em><b>Lt</b></em>' literal value.
@@ -112,7 +137,7 @@ public enum Operator implements Enumerator
    * @generated
    * @ordered
    */
-  public static final int LT_VALUE = 2;
+  public static final int LT_VALUE = 3;
 
   /**
    * The '<em><b>Gte</b></em>' literal value.
@@ -127,7 +152,7 @@ public enum Operator implements Enumerator
    * @generated
    * @ordered
    */
-  public static final int GTE_VALUE = 3;
+  public static final int GTE_VALUE = 4;
 
   /**
    * The '<em><b>Lte</b></em>' literal value.
@@ -142,7 +167,7 @@ public enum Operator implements Enumerator
    * @generated
    * @ordered
    */
-  public static final int LTE_VALUE = 4;
+  public static final int LTE_VALUE = 5;
 
   /**
    * An array of all the '<em><b>Operator</b></em>' enumerators.
@@ -154,6 +179,7 @@ public enum Operator implements Enumerator
     new Operator[]
     {
       EQUALS,
+      NOT_EQUALS,
       GT,
       LT,
       GTE,
@@ -217,6 +243,7 @@ public enum Operator implements Enumerator
     switch (value)
     {
       case EQUALS_VALUE: return EQUALS;
+      case NOT_EQUALS_VALUE: return NOT_EQUALS;
       case GT_VALUE: return GT;
       case LT_VALUE: return LT;
       case GTE_VALUE: return GTE;

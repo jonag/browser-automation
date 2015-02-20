@@ -760,20 +760,22 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cEqualsEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cEqualsEqualsSignEqualsSignKeyword_0_0 = (Keyword)cEqualsEnumLiteralDeclaration_0.eContents().get(0);
-		private final EnumLiteralDeclaration cGtEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
-		private final Keyword cGtGreaterThanSignKeyword_1_0 = (Keyword)cGtEnumLiteralDeclaration_1.eContents().get(0);
-		private final EnumLiteralDeclaration cLtEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
-		private final Keyword cLtLessThanSignKeyword_2_0 = (Keyword)cLtEnumLiteralDeclaration_2.eContents().get(0);
-		private final EnumLiteralDeclaration cGteEnumLiteralDeclaration_3 = (EnumLiteralDeclaration)cAlternatives.eContents().get(3);
-		private final Keyword cGteGreaterThanSignEqualsSignKeyword_3_0 = (Keyword)cGteEnumLiteralDeclaration_3.eContents().get(0);
-		private final EnumLiteralDeclaration cLteEnumLiteralDeclaration_4 = (EnumLiteralDeclaration)cAlternatives.eContents().get(4);
-		private final Keyword cLteLessThanSignEqualsSignKeyword_4_0 = (Keyword)cLteEnumLiteralDeclaration_4.eContents().get(0);
+		private final EnumLiteralDeclaration cNotEqualsEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cNotEqualsExclamationMarkEqualsSignKeyword_1_0 = (Keyword)cNotEqualsEnumLiteralDeclaration_1.eContents().get(0);
+		private final EnumLiteralDeclaration cGtEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
+		private final Keyword cGtGreaterThanSignKeyword_2_0 = (Keyword)cGtEnumLiteralDeclaration_2.eContents().get(0);
+		private final EnumLiteralDeclaration cLtEnumLiteralDeclaration_3 = (EnumLiteralDeclaration)cAlternatives.eContents().get(3);
+		private final Keyword cLtLessThanSignKeyword_3_0 = (Keyword)cLtEnumLiteralDeclaration_3.eContents().get(0);
+		private final EnumLiteralDeclaration cGteEnumLiteralDeclaration_4 = (EnumLiteralDeclaration)cAlternatives.eContents().get(4);
+		private final Keyword cGteGreaterThanSignEqualsSignKeyword_4_0 = (Keyword)cGteEnumLiteralDeclaration_4.eContents().get(0);
+		private final EnumLiteralDeclaration cLteEnumLiteralDeclaration_5 = (EnumLiteralDeclaration)cAlternatives.eContents().get(5);
+		private final Keyword cLteLessThanSignEqualsSignKeyword_5_0 = (Keyword)cLteEnumLiteralDeclaration_5.eContents().get(0);
 		
 		//enum Operator:
-		//	equals="==" | gt=">" | lt="<" | gte=">=" | lte="<=";
+		//	equals="==" | notEquals="!=" | gt=">" | lt="<" | gte=">=" | lte="<=";
 		public EnumRule getRule() { return rule; }
 
-		//equals="==" | gt=">" | lt="<" | gte=">=" | lte="<="
+		//equals="==" | notEquals="!=" | gt=">" | lt="<" | gte=">=" | lte="<="
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//equals="=="
@@ -782,29 +784,35 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 		//"=="
 		public Keyword getEqualsEqualsSignEqualsSignKeyword_0_0() { return cEqualsEqualsSignEqualsSignKeyword_0_0; }
 
+		//notEquals="!="
+		public EnumLiteralDeclaration getNotEqualsEnumLiteralDeclaration_1() { return cNotEqualsEnumLiteralDeclaration_1; }
+
+		//"!="
+		public Keyword getNotEqualsExclamationMarkEqualsSignKeyword_1_0() { return cNotEqualsExclamationMarkEqualsSignKeyword_1_0; }
+
 		//gt=">"
-		public EnumLiteralDeclaration getGtEnumLiteralDeclaration_1() { return cGtEnumLiteralDeclaration_1; }
+		public EnumLiteralDeclaration getGtEnumLiteralDeclaration_2() { return cGtEnumLiteralDeclaration_2; }
 
 		//">"
-		public Keyword getGtGreaterThanSignKeyword_1_0() { return cGtGreaterThanSignKeyword_1_0; }
+		public Keyword getGtGreaterThanSignKeyword_2_0() { return cGtGreaterThanSignKeyword_2_0; }
 
 		//lt="<"
-		public EnumLiteralDeclaration getLtEnumLiteralDeclaration_2() { return cLtEnumLiteralDeclaration_2; }
+		public EnumLiteralDeclaration getLtEnumLiteralDeclaration_3() { return cLtEnumLiteralDeclaration_3; }
 
 		//"<"
-		public Keyword getLtLessThanSignKeyword_2_0() { return cLtLessThanSignKeyword_2_0; }
+		public Keyword getLtLessThanSignKeyword_3_0() { return cLtLessThanSignKeyword_3_0; }
 
 		//gte=">="
-		public EnumLiteralDeclaration getGteEnumLiteralDeclaration_3() { return cGteEnumLiteralDeclaration_3; }
+		public EnumLiteralDeclaration getGteEnumLiteralDeclaration_4() { return cGteEnumLiteralDeclaration_4; }
 
 		//">="
-		public Keyword getGteGreaterThanSignEqualsSignKeyword_3_0() { return cGteGreaterThanSignEqualsSignKeyword_3_0; }
+		public Keyword getGteGreaterThanSignEqualsSignKeyword_4_0() { return cGteGreaterThanSignEqualsSignKeyword_4_0; }
 
 		//lte="<="
-		public EnumLiteralDeclaration getLteEnumLiteralDeclaration_4() { return cLteEnumLiteralDeclaration_4; }
+		public EnumLiteralDeclaration getLteEnumLiteralDeclaration_5() { return cLteEnumLiteralDeclaration_5; }
 
 		//"<="
-		public Keyword getLteLessThanSignEqualsSignKeyword_4_0() { return cLteLessThanSignEqualsSignKeyword_4_0; }
+		public Keyword getLteLessThanSignEqualsSignKeyword_5_0() { return cLteLessThanSignEqualsSignKeyword_5_0; }
 	}
 	
 	private final BrowserAutomationElements pBrowserAutomation;
@@ -1025,7 +1033,7 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 	}
 
 	//enum Operator:
-	//	equals="==" | gt=">" | lt="<" | gte=">=" | lte="<=";
+	//	equals="==" | notEquals="!=" | gt=">" | lt="<" | gte=">=" | lte="<=";
 	public OperatorElements getOperatorAccess() {
 		return unknownRuleOperator;
 	}
