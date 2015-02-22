@@ -108,6 +108,7 @@ public class Interpreter {
 		for(WebElement element : elements){
 			if(element.getTagName().equalsIgnoreCase("input") && element.getAttribute("type").equalsIgnoreCase("checkbox") && element.getAttribute("selected").equalsIgnoreCase("selected")){
 				element.click();
+				if(DriverFacade.hasUrlChanged()) break;
 			}
 		}
 	}
@@ -118,6 +119,7 @@ public class Interpreter {
 		for(WebElement element : elements){
 			if(element.getTagName().equalsIgnoreCase("input") && element.getAttribute("type").equalsIgnoreCase("checkbox") && !element.getAttribute("selected").equalsIgnoreCase("selected")){
 				element.click();
+				if(DriverFacade.hasUrlChanged()) break;
 			}
 		}
 	}
@@ -127,6 +129,7 @@ public class Interpreter {
 		List<WebElement> elements = DriverFacade.getWebElement(s.getId());
 		for(WebElement element : elements){
 			element.sendKeys(InterpreterUtils.getValue(a.getValue()));
+			if(DriverFacade.hasUrlChanged()) break;
 		}
 		
 	}
@@ -136,6 +139,7 @@ public class Interpreter {
 		List<WebElement> elements = DriverFacade.getWebElement(s.getId());
 		for(WebElement element : elements){
 			element.click();
+			if(DriverFacade.hasUrlChanged()) break;
 		}
 	}
 
@@ -152,12 +156,8 @@ public class Interpreter {
 		for (WebElement webElement : elements) {
 			Select select = new Select(webElement);
 			select.selectByValue(value);
+			if(DriverFacade.hasUrlChanged()) break;
 		}
 	}
-
-	
-	/*private WebElement getWebElement(String sel) {
-		return DriverFacade.findElement(By.name(sel));
-	}*/
 	
 }

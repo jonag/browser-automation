@@ -14,6 +14,8 @@ public class DriverFacade {
 
 	private static WebDriver driver;
 	
+	private static String currentURL = "";
+	
 	public static void openBrowser(String browser){
 		switch (browser) {
 //		case "Chrome":
@@ -33,6 +35,7 @@ public class DriverFacade {
 	
 	public static void goTo(String url){
 		driver.get(url);
+		currentURL = driver.getCurrentUrl();
 	}
 	
 	/**
@@ -114,6 +117,18 @@ public class DriverFacade {
 		System.out.println("Aucun résultat trouvé :/");
 		
 		return result;
+	}
+	
+	public static Boolean hasUrlChanged(){
+		String url = driver.getCurrentUrl();
+		if(!url.equalsIgnoreCase(currentURL)){
+			//url has changed
+			currentURL = url;
+			return true;
+		}else{
+			//same page
+			return false;
+		}
 	}
 	
 }
