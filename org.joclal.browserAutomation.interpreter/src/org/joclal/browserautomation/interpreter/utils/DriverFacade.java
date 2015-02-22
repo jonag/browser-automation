@@ -45,7 +45,7 @@ public class DriverFacade {
 		if(chevronPos != -1){
 			String initSelector = selector.substring(0, chevronPos);
 			List<WebElement> stepResult = toto(initSelector, driver);
-			return getWebElement(selector.substring(chevronPos+1, selector.length()-1), stepResult);
+			return getWebElement(selector.substring(chevronPos+1, selector.length()), stepResult);
 		}else{
 			return toto(selector, driver);
 		}
@@ -65,7 +65,7 @@ public class DriverFacade {
 			for(WebElement we : root){
 				stepResult.addAll(toto(stepSelector, we));
 			}
-			return getWebElement(selector.substring(chevronPos+1, selector.length()-1), stepResult);
+			return getWebElement(selector.substring(chevronPos+1, selector.length()), stepResult);
 		}else{
 			List<WebElement> finalResult = new ArrayList<WebElement>();
 			for(WebElement we : root){
@@ -97,6 +97,11 @@ public class DriverFacade {
 		}
 		
 		result = root.findElements(By.cssSelector("img[src='"+selector+"']"));
+		if (result.size() > 0) {
+			return result;
+		}
+		
+		result = root.findElements(By.className(selector));
 		if (result.size() > 0) {
 			return result;
 		}

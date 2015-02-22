@@ -95,6 +95,15 @@ public interface BrowserAutomationFactory extends EFactory
   Uncheck createUncheck();
 
   /**
+   * Returns a new object of class '<em>Select Option</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Select Option</em>'.
+   * @generated
+   */
+  SelectOption createSelectOption();
+
+  /**
    * Returns a new object of class '<em>Let</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

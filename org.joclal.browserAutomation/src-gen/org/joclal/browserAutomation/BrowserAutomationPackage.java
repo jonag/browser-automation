@@ -309,6 +309,43 @@ public interface BrowserAutomationPackage extends EPackage
   int UNCHECK_FEATURE_COUNT = ACTION_FEATURE_COUNT + 1;
 
   /**
+   * The meta object id for the '{@link org.joclal.browserAutomation.impl.SelectOptionImpl <em>Select Option</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.joclal.browserAutomation.impl.SelectOptionImpl
+   * @see org.joclal.browserAutomation.impl.BrowserAutomationPackageImpl#getSelectOption()
+   * @generated
+   */
+  int SELECT_OPTION = 8;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SELECT_OPTION__VALUE = ACTION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Select</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SELECT_OPTION__SELECT = ACTION_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Select Option</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SELECT_OPTION_FEATURE_COUNT = ACTION_FEATURE_COUNT + 2;
+
+  /**
    * The meta object id for the '{@link org.joclal.browserAutomation.impl.LetImpl <em>Let</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -316,7 +353,7 @@ public interface BrowserAutomationPackage extends EPackage
    * @see org.joclal.browserAutomation.impl.BrowserAutomationPackageImpl#getLet()
    * @generated
    */
-  int LET = 8;
+  int LET = 9;
 
   /**
    * The feature id for the '<em><b>Id</b></em>' containment reference.
@@ -353,7 +390,7 @@ public interface BrowserAutomationPackage extends EPackage
    * @see org.joclal.browserAutomation.impl.BrowserAutomationPackageImpl#getLetValue()
    * @generated
    */
-  int LET_VALUE = 9;
+  int LET_VALUE = 10;
 
   /**
    * The feature id for the '<em><b>Selector</b></em>' containment reference.
@@ -390,7 +427,7 @@ public interface BrowserAutomationPackage extends EPackage
    * @see org.joclal.browserAutomation.impl.BrowserAutomationPackageImpl#getValue()
    * @generated
    */
-  int VALUE = 10;
+  int VALUE = 11;
 
   /**
    * The feature id for the '<em><b>String</b></em>' attribute.
@@ -427,7 +464,7 @@ public interface BrowserAutomationPackage extends EPackage
    * @see org.joclal.browserAutomation.impl.BrowserAutomationPackageImpl#getDoWhile()
    * @generated
    */
-  int DO_WHILE = 11;
+  int DO_WHILE = 12;
 
   /**
    * The feature id for the '<em><b>Actions</b></em>' containment reference list.
@@ -464,7 +501,7 @@ public interface BrowserAutomationPackage extends EPackage
    * @see org.joclal.browserAutomation.impl.BrowserAutomationPackageImpl#getBooleanExp()
    * @generated
    */
-  int BOOLEAN_EXP = 12;
+  int BOOLEAN_EXP = 13;
 
   /**
    * The feature id for the '<em><b>Left Member</b></em>' containment reference.
@@ -510,7 +547,7 @@ public interface BrowserAutomationPackage extends EPackage
    * @see org.joclal.browserAutomation.impl.BrowserAutomationPackageImpl#getIfThen()
    * @generated
    */
-  int IF_THEN = 13;
+  int IF_THEN = 14;
 
   /**
    * The feature id for the '<em><b>Condition</b></em>' containment reference.
@@ -556,7 +593,7 @@ public interface BrowserAutomationPackage extends EPackage
    * @see org.joclal.browserAutomation.impl.BrowserAutomationPackageImpl#getSubroutine()
    * @generated
    */
-  int SUBROUTINE = 14;
+  int SUBROUTINE = 15;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -602,7 +639,7 @@ public interface BrowserAutomationPackage extends EPackage
    * @see org.joclal.browserAutomation.impl.BrowserAutomationPackageImpl#getSubroutineCall()
    * @generated
    */
-  int SUBROUTINE_CALL = 15;
+  int SUBROUTINE_CALL = 16;
 
   /**
    * The feature id for the '<em><b>Subroutine</b></em>' reference.
@@ -630,7 +667,7 @@ public interface BrowserAutomationPackage extends EPackage
    * @see org.joclal.browserAutomation.impl.BrowserAutomationPackageImpl#getVariableId()
    * @generated
    */
-  int VARIABLE_ID = 16;
+  int VARIABLE_ID = 17;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -658,7 +695,7 @@ public interface BrowserAutomationPackage extends EPackage
    * @see org.joclal.browserAutomation.impl.BrowserAutomationPackageImpl#getBrowser()
    * @generated
    */
-  int BROWSER = 17;
+  int BROWSER = 18;
 
   /**
    * The meta object id for the '{@link org.joclal.browserAutomation.Operator <em>Operator</em>}' enum.
@@ -668,7 +705,7 @@ public interface BrowserAutomationPackage extends EPackage
    * @see org.joclal.browserAutomation.impl.BrowserAutomationPackageImpl#getOperator()
    * @generated
    */
-  int OPERATOR = 18;
+  int OPERATOR = 19;
 
 
   /**
@@ -871,6 +908,38 @@ public interface BrowserAutomationPackage extends EPackage
    * @generated
    */
   EReference getUncheck_Checkbox();
+
+  /**
+   * Returns the meta object for class '{@link org.joclal.browserAutomation.SelectOption <em>Select Option</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Select Option</em>'.
+   * @see org.joclal.browserAutomation.SelectOption
+   * @generated
+   */
+  EClass getSelectOption();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.joclal.browserAutomation.SelectOption#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.joclal.browserAutomation.SelectOption#getValue()
+   * @see #getSelectOption()
+   * @generated
+   */
+  EAttribute getSelectOption_Value();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.joclal.browserAutomation.SelectOption#getSelect <em>Select</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Select</em>'.
+   * @see org.joclal.browserAutomation.SelectOption#getSelect()
+   * @see #getSelectOption()
+   * @generated
+   */
+  EReference getSelectOption_Select();
 
   /**
    * Returns the meta object for class '{@link org.joclal.browserAutomation.Let <em>Let</em>}'.
@@ -1381,6 +1450,32 @@ public interface BrowserAutomationPackage extends EPackage
      * @generated
      */
     EReference UNCHECK__CHECKBOX = eINSTANCE.getUncheck_Checkbox();
+
+    /**
+     * The meta object literal for the '{@link org.joclal.browserAutomation.impl.SelectOptionImpl <em>Select Option</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.joclal.browserAutomation.impl.SelectOptionImpl
+     * @see org.joclal.browserAutomation.impl.BrowserAutomationPackageImpl#getSelectOption()
+     * @generated
+     */
+    EClass SELECT_OPTION = eINSTANCE.getSelectOption();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SELECT_OPTION__VALUE = eINSTANCE.getSelectOption_Value();
+
+    /**
+     * The meta object literal for the '<em><b>Select</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SELECT_OPTION__SELECT = eINSTANCE.getSelectOption_Select();
 
     /**
      * The meta object literal for the '{@link org.joclal.browserAutomation.impl.LetImpl <em>Let</em>}' class.

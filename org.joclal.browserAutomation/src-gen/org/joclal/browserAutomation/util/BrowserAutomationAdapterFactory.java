@@ -115,6 +115,11 @@ public class BrowserAutomationAdapterFactory extends AdapterFactoryImpl
         return createUncheckAdapter();
       }
       @Override
+      public Adapter caseSelectOption(SelectOption object)
+      {
+        return createSelectOptionAdapter();
+      }
+      @Override
       public Adapter caseLet(Let object)
       {
         return createLetAdapter();
@@ -297,6 +302,21 @@ public class BrowserAutomationAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createUncheckAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.joclal.browserAutomation.SelectOption <em>Select Option</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.joclal.browserAutomation.SelectOption
+   * @generated
+   */
+  public Adapter createSelectOptionAdapter()
   {
     return null;
   }

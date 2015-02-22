@@ -24,6 +24,7 @@ import org.joclal.browserAutomation.Goto;
 import org.joclal.browserAutomation.IfThen;
 import org.joclal.browserAutomation.Let;
 import org.joclal.browserAutomation.LetValue;
+import org.joclal.browserAutomation.SelectOption;
 import org.joclal.browserAutomation.Selector;
 import org.joclal.browserAutomation.Subroutine;
 import org.joclal.browserAutomation.SubroutineCall;
@@ -104,6 +105,13 @@ public class BrowserAutomationSemanticSequencer extends AbstractDelegatingSemant
 			case BrowserAutomationPackage.LET_VALUE:
 				if(context == grammarAccess.getLetValueRule()) {
 					sequence_LetValue(context, (LetValue) semanticObject); 
+					return; 
+				}
+				else break;
+			case BrowserAutomationPackage.SELECT_OPTION:
+				if(context == grammarAccess.getActionRule() ||
+				   context == grammarAccess.getSelectOptionRule()) {
+					sequence_SelectOption(context, (SelectOption) semanticObject); 
 					return; 
 				}
 				else break;
@@ -289,6 +297,25 @@ public class BrowserAutomationSemanticSequencer extends AbstractDelegatingSemant
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getLetAccess().getIdVariableIdParserRuleCall_1_0(), semanticObject.getId());
 		feeder.accept(grammarAccess.getLetAccess().getValueLetValueParserRuleCall_3_0(), semanticObject.getValue());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (value=STRING select=Selector)
+	 */
+	protected void sequence_SelectOption(EObject context, SelectOption semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, BrowserAutomationPackage.Literals.SELECT_OPTION__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BrowserAutomationPackage.Literals.SELECT_OPTION__VALUE));
+			if(transientValues.isValueTransient(semanticObject, BrowserAutomationPackage.Literals.SELECT_OPTION__SELECT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BrowserAutomationPackage.Literals.SELECT_OPTION__SELECT));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getSelectOptionAccess().getValueSTRINGTerminalRuleCall_1_0(), semanticObject.getValue());
+		feeder.accept(grammarAccess.getSelectOptionAccess().getSelectSelectorParserRuleCall_3_0(), semanticObject.getSelect());
 		feeder.finish();
 	}
 	

@@ -13,6 +13,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.support.ui.Select;
 
 public class Interpreter {
 
@@ -52,6 +53,8 @@ public class Interpreter {
 			processCheck((Check) a);
 		}else if(a instanceof Uncheck){
 			processUncheck((Uncheck) a);
+		}else if (a instanceof SelectOption){
+			processSelectOption((SelectOption) a);
 		}else if(a instanceof Let){
 			processLet((Let) a);
 		}else if(a instanceof DoWhile){
@@ -140,6 +143,16 @@ public class Interpreter {
 		Value urlValue = a.getUrl();
 		String url = InterpreterUtils.getValue(urlValue);
 		DriverFacade.goTo(url);
+	}
+	
+	private void processSelectOption(SelectOption a) {
+		String value = a.getValue();
+		Selector s = a.getSelect();
+		List<WebElement> elements = DriverFacade.getWebElement(s.getId());
+		for (WebElement webElement : elements) {
+			Select select = new Select(webElement);
+			select.selectByValue(value);
+		}
 	}
 
 	

@@ -25,6 +25,7 @@ import org.joclal.browserAutomation.IfThen;
 import org.joclal.browserAutomation.Let;
 import org.joclal.browserAutomation.LetValue;
 import org.joclal.browserAutomation.Operator;
+import org.joclal.browserAutomation.SelectOption;
 import org.joclal.browserAutomation.Selector;
 import org.joclal.browserAutomation.Subroutine;
 import org.joclal.browserAutomation.SubroutineCall;
@@ -95,6 +96,13 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
    * @generated
    */
   private EClass uncheckEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass selectOptionEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -424,6 +432,36 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
   public EReference getUncheck_Checkbox()
   {
     return (EReference)uncheckEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getSelectOption()
+  {
+    return selectOptionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getSelectOption_Value()
+  {
+    return (EAttribute)selectOptionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getSelectOption_Select()
+  {
+    return (EReference)selectOptionEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -783,6 +821,10 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
     uncheckEClass = createEClass(UNCHECK);
     createEReference(uncheckEClass, UNCHECK__CHECKBOX);
 
+    selectOptionEClass = createEClass(SELECT_OPTION);
+    createEAttribute(selectOptionEClass, SELECT_OPTION__VALUE);
+    createEReference(selectOptionEClass, SELECT_OPTION__SELECT);
+
     letEClass = createEClass(LET);
     createEReference(letEClass, LET__ID);
     createEReference(letEClass, LET__VALUE);
@@ -859,6 +901,7 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
     fillEClass.getESuperTypes().add(this.getAction());
     checkEClass.getESuperTypes().add(this.getAction());
     uncheckEClass.getESuperTypes().add(this.getAction());
+    selectOptionEClass.getESuperTypes().add(this.getAction());
     letEClass.getESuperTypes().add(this.getAction());
     doWhileEClass.getESuperTypes().add(this.getAction());
     ifThenEClass.getESuperTypes().add(this.getAction());
@@ -891,6 +934,10 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
 
     initEClass(uncheckEClass, Uncheck.class, "Uncheck", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getUncheck_Checkbox(), this.getSelector(), null, "checkbox", null, 0, 1, Uncheck.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(selectOptionEClass, SelectOption.class, "SelectOption", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getSelectOption_Value(), ecorePackage.getEString(), "value", null, 0, 1, SelectOption.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getSelectOption_Select(), this.getSelector(), null, "select", null, 0, 1, SelectOption.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(letEClass, Let.class, "Let", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getLet_Id(), this.getVariableId(), null, "id", null, 0, 1, Let.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

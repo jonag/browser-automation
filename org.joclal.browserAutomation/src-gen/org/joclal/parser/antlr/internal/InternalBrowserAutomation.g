@@ -231,41 +231,51 @@ ruleAction returns [EObject current=null]
 
     |
     { 
-        newCompositeNode(grammarAccess.getActionAccess().getLetParserRuleCall_5()); 
+        newCompositeNode(grammarAccess.getActionAccess().getSelectOptionParserRuleCall_5()); 
     }
-    this_Let_5=ruleLet
+    this_SelectOption_5=ruleSelectOption
     { 
-        $current = $this_Let_5.current; 
+        $current = $this_SelectOption_5.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getActionAccess().getDoWhileParserRuleCall_6()); 
+        newCompositeNode(grammarAccess.getActionAccess().getLetParserRuleCall_6()); 
     }
-    this_DoWhile_6=ruleDoWhile
+    this_Let_6=ruleLet
     { 
-        $current = $this_DoWhile_6.current; 
+        $current = $this_Let_6.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getActionAccess().getIfThenParserRuleCall_7()); 
+        newCompositeNode(grammarAccess.getActionAccess().getDoWhileParserRuleCall_7()); 
     }
-    this_IfThen_7=ruleIfThen
+    this_DoWhile_7=ruleDoWhile
     { 
-        $current = $this_IfThen_7.current; 
+        $current = $this_DoWhile_7.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getActionAccess().getSubroutineCallParserRuleCall_8()); 
+        newCompositeNode(grammarAccess.getActionAccess().getIfThenParserRuleCall_8()); 
     }
-    this_SubroutineCall_8=ruleSubroutineCall
+    this_IfThen_8=ruleIfThen
     { 
-        $current = $this_SubroutineCall_8.current; 
+        $current = $this_IfThen_8.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getActionAccess().getSubroutineCallParserRuleCall_9()); 
+    }
+    this_SubroutineCall_9=ruleSubroutineCall
+    { 
+        $current = $this_SubroutineCall_9.current; 
         afterParserOrEnumRuleCall();
     }
 )
@@ -571,6 +581,75 @@ ruleUncheck returns [EObject current=null]
 )	otherlv_2=';' 
     {
     	newLeafNode(otherlv_2, grammarAccess.getUncheckAccess().getSemicolonKeyword_2());
+    }
+)
+;
+
+
+
+
+
+// Entry rule entryRuleSelectOption
+entryRuleSelectOption returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getSelectOptionRule()); }
+	 iv_ruleSelectOption=ruleSelectOption 
+	 { $current=$iv_ruleSelectOption.current; } 
+	 EOF 
+;
+
+// Rule SelectOption
+ruleSelectOption returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='Select' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getSelectOptionAccess().getSelectKeyword_0());
+    }
+(
+(
+		lv_value_1_0=RULE_STRING
+		{
+			newLeafNode(lv_value_1_0, grammarAccess.getSelectOptionAccess().getValueSTRINGTerminalRuleCall_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getSelectOptionRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"value",
+        		lv_value_1_0, 
+        		"STRING");
+	    }
+
+)
+)	otherlv_2='in' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getSelectOptionAccess().getInKeyword_2());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getSelectOptionAccess().getSelectSelectorParserRuleCall_3_0()); 
+	    }
+		lv_select_3_0=ruleSelector		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getSelectOptionRule());
+	        }
+       		set(
+       			$current, 
+       			"select",
+        		lv_select_3_0, 
+        		"Selector");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)	otherlv_4=';' 
+    {
+    	newLeafNode(otherlv_4, grammarAccess.getSelectOptionAccess().getSemicolonKeyword_4());
     }
 )
 ;
