@@ -729,6 +729,16 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getSubroutineCall_Params()
+  {
+    return (EReference)subroutineCallEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getVariableId()
   {
     return variableIdEClass;
@@ -858,6 +868,7 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
 
     subroutineCallEClass = createEClass(SUBROUTINE_CALL);
     createEReference(subroutineCallEClass, SUBROUTINE_CALL__SUBROUTINE);
+    createEReference(subroutineCallEClass, SUBROUTINE_CALL__PARAMS);
 
     variableIdEClass = createEClass(VARIABLE_ID);
     createEAttribute(variableIdEClass, VARIABLE_ID__NAME);
@@ -972,6 +983,7 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
 
     initEClass(subroutineCallEClass, SubroutineCall.class, "SubroutineCall", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getSubroutineCall_Subroutine(), this.getSubroutine(), null, "subroutine", null, 0, 1, SubroutineCall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getSubroutineCall_Params(), this.getValue(), null, "params", null, 0, -1, SubroutineCall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(variableIdEClass, VariableId.class, "VariableId", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getVariableId_Name(), ecorePackage.getEString(), "name", null, 0, 1, VariableId.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

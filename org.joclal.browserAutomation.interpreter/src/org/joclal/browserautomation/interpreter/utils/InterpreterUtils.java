@@ -1,18 +1,15 @@
 package org.joclal.browserautomation.interpreter.utils;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Stack;
 
 import org.joclal.browserAutomation.*;
-import org.openqa.selenium.WebElement;
 
 public class InterpreterUtils {
 	
 	private static Stack<Map<String, Value>> varStack = new Stack<>();
-	public static HashMap<String, Value> currentVars = new HashMap<>();
+	private static HashMap<String, Value> currentVars = new HashMap<>();
 
 	public static String getValue(Value v){
 		if(v.getString() != null){
@@ -29,7 +26,7 @@ public class InterpreterUtils {
 	}
 
 	public static void setVar(Let let) {
-	Value v = null;
+		Value v = null;
 		if(let.getValue().getSelector() != null && currentVars.containsKey(let.getValue().getSelector().getId())){
 			//referenced value
 			v = currentVars.get(let.getValue().getSelector().getId());
@@ -37,7 +34,20 @@ public class InterpreterUtils {
 			//classical value
 			v = let.getValue().getValue();
 		}
-		currentVars.put(let.getId().getName(), v);
+		//currentVars.put(let.getId().getName(), v);
+		setVar(let.getId().getName(), v);
+	}
+	
+	public static void setVar(String name, Value value){
+		/*Value v = null;
+		if(value.getVariable() != null && currentVars.containsKey(value.getVariable().getName())){
+			//referenced value
+			v = currentVars.get(value.getVariable().getName());
+		}else{
+			//classical value
+			v = value;
+		}*/
+		currentVars.put(name, value);
 	}
 	
 	public static void newClosure(){
@@ -76,5 +86,5 @@ public class InterpreterUtils {
 				break;*/
 		}
 	}
-	
+
 }

@@ -338,23 +338,16 @@ public class BrowserAutomationSemanticSequencer extends AbstractDelegatingSemant
 	
 	/**
 	 * Constraint:
-	 *     subroutine=[Subroutine|ID]
+	 *     (subroutine=[Subroutine|ID] (params+=Value params+=Value*)?)
 	 */
 	protected void sequence_SubroutineCall(EObject context, SubroutineCall semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, BrowserAutomationPackage.Literals.SUBROUTINE_CALL__SUBROUTINE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BrowserAutomationPackage.Literals.SUBROUTINE_CALL__SUBROUTINE));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getSubroutineCallAccess().getSubroutineSubroutineIDTerminalRuleCall_1_0_1(), semanticObject.getSubroutine());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (name=ID (params+=VariableId params+=VariableId?)? actions+=Action*)
+	 *     (name=ID (params+=VariableId params+=VariableId*)? actions+=Action*)
 	 */
 	protected void sequence_Subroutine(EObject context, Subroutine semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -388,7 +381,7 @@ public class BrowserAutomationSemanticSequencer extends AbstractDelegatingSemant
 	
 	/**
 	 * Constraint:
-	 *     name=STRING
+	 *     name=ID
 	 */
 	protected void sequence_VariableId(EObject context, VariableId semanticObject) {
 		if(errorAcceptor != null) {
@@ -397,7 +390,7 @@ public class BrowserAutomationSemanticSequencer extends AbstractDelegatingSemant
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getVariableIdAccess().getNameSTRINGTerminalRuleCall_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getVariableIdAccess().getNameIDTerminalRuleCall_0(), semanticObject.getName());
 		feeder.finish();
 	}
 }

@@ -651,13 +651,22 @@ public interface BrowserAutomationPackage extends EPackage
   int SUBROUTINE_CALL__SUBROUTINE = ACTION_FEATURE_COUNT + 0;
 
   /**
+   * The feature id for the '<em><b>Params</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SUBROUTINE_CALL__PARAMS = ACTION_FEATURE_COUNT + 1;
+
+  /**
    * The number of structural features of the '<em>Subroutine Call</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SUBROUTINE_CALL_FEATURE_COUNT = ACTION_FEATURE_COUNT + 1;
+  int SUBROUTINE_CALL_FEATURE_COUNT = ACTION_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link org.joclal.browserAutomation.impl.VariableIdImpl <em>Variable Id</em>}' class.
@@ -1220,6 +1229,17 @@ public interface BrowserAutomationPackage extends EPackage
   EReference getSubroutineCall_Subroutine();
 
   /**
+   * Returns the meta object for the containment reference list '{@link org.joclal.browserAutomation.SubroutineCall#getParams <em>Params</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Params</em>'.
+   * @see org.joclal.browserAutomation.SubroutineCall#getParams()
+   * @see #getSubroutineCall()
+   * @generated
+   */
+  EReference getSubroutineCall_Params();
+
+  /**
    * Returns the meta object for class '{@link org.joclal.browserAutomation.VariableId <em>Variable Id</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1700,6 +1720,14 @@ public interface BrowserAutomationPackage extends EPackage
      * @generated
      */
     EReference SUBROUTINE_CALL__SUBROUTINE = eINSTANCE.getSubroutineCall_Subroutine();
+
+    /**
+     * The meta object literal for the '<em><b>Params</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SUBROUTINE_CALL__PARAMS = eINSTANCE.getSubroutineCall_Params();
 
     /**
      * The meta object literal for the '{@link org.joclal.browserAutomation.impl.VariableIdImpl <em>Variable Id</em>}' class.

@@ -19,11 +19,13 @@ public class BrowserAutomationSyntacticSequencer extends AbstractSyntacticSequen
 
 	protected BrowserAutomationGrammarAccess grammarAccess;
 	protected AbstractElementAlias match_IfThen___ElseKeyword_8_0_LeftCurlyBracketKeyword_8_1_RightCurlyBracketKeyword_8_3__q;
+	protected AbstractElementAlias match_Subroutine___LeftParenthesisKeyword_2_0_RightParenthesisKeyword_2_2__q;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (BrowserAutomationGrammarAccess) access;
 		match_IfThen___ElseKeyword_8_0_LeftCurlyBracketKeyword_8_1_RightCurlyBracketKeyword_8_3__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getIfThenAccess().getElseKeyword_8_0()), new TokenAlias(false, false, grammarAccess.getIfThenAccess().getLeftCurlyBracketKeyword_8_1()), new TokenAlias(false, false, grammarAccess.getIfThenAccess().getRightCurlyBracketKeyword_8_3()));
+		match_Subroutine___LeftParenthesisKeyword_2_0_RightParenthesisKeyword_2_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getSubroutineAccess().getLeftParenthesisKeyword_2_0()), new TokenAlias(false, false, grammarAccess.getSubroutineAccess().getRightParenthesisKeyword_2_2()));
 	}
 	
 	@Override
@@ -40,6 +42,8 @@ public class BrowserAutomationSyntacticSequencer extends AbstractSyntacticSequen
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
 			if(match_IfThen___ElseKeyword_8_0_LeftCurlyBracketKeyword_8_1_RightCurlyBracketKeyword_8_3__q.equals(syntax))
 				emit_IfThen___ElseKeyword_8_0_LeftCurlyBracketKeyword_8_1_RightCurlyBracketKeyword_8_3__q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_Subroutine___LeftParenthesisKeyword_2_0_RightParenthesisKeyword_2_2__q.equals(syntax))
+				emit_Subroutine___LeftParenthesisKeyword_2_0_RightParenthesisKeyword_2_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
@@ -49,6 +53,14 @@ public class BrowserAutomationSyntacticSequencer extends AbstractSyntacticSequen
 	 *     ('Else' '{' '}')?
 	 */
 	protected void emit_IfThen___ElseKeyword_8_0_LeftCurlyBracketKeyword_8_1_RightCurlyBracketKeyword_8_3__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Syntax:
+	 *     ('(' ')')?
+	 */
+	protected void emit_Subroutine___LeftParenthesisKeyword_2_0_RightParenthesisKeyword_2_2__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

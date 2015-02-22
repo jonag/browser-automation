@@ -1,18 +1,15 @@
 package org.joclal.browserautomation.interpreter;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import org.joclal.browserAutomation.*;
 import org.joclal.browserautomation.interpreter.utils.DriverFacade;
 import org.joclal.browserautomation.interpreter.utils.InterpreterUtils;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.Select;
 
 public class Interpreter {
@@ -21,10 +18,7 @@ public class Interpreter {
 
 	public void execute(BrowserAutomation script) {
 
-		// processing subroutines
-		for (Subroutine s : script.getSubroutines()) {
-
-		}
+		// no need to process subroutine defs
 
 		// browser opening
 		Browser b = script.getBrowser();
@@ -66,9 +60,34 @@ public class Interpreter {
 		}
 	}
 	
-	private void processSubroutineCall(SubroutineCall a) {
-		// TODO Auto-generated method stub
+	private void processSubroutineCall(SubroutineCall subCall) {
+		//store parameters values
+		int expected = subCall.getSubroutine().getParams().size();
+		int received = subCall.getParams().size();
+		if(expected != received){
+			System.err.println(String.format("Incoherent number of parameters for subroutine %s. Expected %d, Given %d.", subCall.getSubroutine().getName(), expected, received));
+		}
+		int paramNumber = expected < received ? expected : received;
+		Map<String, Value> params = new HashMap<String, Value>();
+		for(int i = 0; i < paramNumber; i++){
+			params.put("",subCall.getParams().get(i));
+		}
 		
+		//create new context
+		InterpreterUtils.newClosure();
+		
+		//push parameters in new context
+		for(Entry<String, Value> entry : params.entrySet()){
+			InterpreterUtils.setVar(entry.getKey(), entry.getValue());
+		}
+			
+		//execute actions
+		for(Action a : subCall.getSubroutine().getActions()){
+			processAction(a);
+		}
+		
+		//close context
+		InterpreterUtils.finishClosure();
 	}
 
 	private void processIfThen(IfThen truc) {

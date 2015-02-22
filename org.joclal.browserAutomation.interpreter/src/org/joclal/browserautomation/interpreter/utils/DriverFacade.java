@@ -3,7 +3,7 @@ package org.joclal.browserautomation.interpreter.utils;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.joclal.browserAutomation.Browser;
+import org.joclal.browserautomation.interpreter.exception.InterpreterException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebDriver;
@@ -44,13 +44,17 @@ public class DriverFacade {
 	 * @return
 	 */
 	public static List<WebElement> getWebElement(String selector){
-		int chevronPos = selector.indexOf(">");
-		if(chevronPos != -1){
-			String initSelector = selector.substring(0, chevronPos);
-			List<WebElement> stepResult = toto(initSelector, driver);
-			return getWebElement(selector.substring(chevronPos+1, selector.length()), stepResult);
-		}else{
-			return toto(selector, driver);
+		try{
+			int chevronPos = selector.indexOf(">");
+			if(chevronPos != -1){
+				String initSelector = selector.substring(0, chevronPos);
+				List<WebElement> stepResult = findWebElement(initSelector, driver);
+				return getWebElement(selector.substring(chevronPos+1, selector.length()), stepResult);
+			}else{
+				return findWebElement(selector, driver);
+			}
+		}catch(Exception e){
+			throw new InterpreterException(String.format("Impossible to find element %s in page %s", selector, currentURL));
 		}
 	}
 	
@@ -64,21 +68,21 @@ public class DriverFacade {
 		int chevronPos = selector.indexOf(">");
 		if(chevronPos != -1){
 			String stepSelector = selector.substring(0, chevronPos);
-			List<WebElement> stepResult = toto(stepSelector, driver);
+			List<WebElement> stepResult = findWebElement(stepSelector, driver);
 			for(WebElement we : root){
-				stepResult.addAll(toto(stepSelector, we));
+				stepResult.addAll(findWebElement(stepSelector, we));
 			}
 			return getWebElement(selector.substring(chevronPos+1, selector.length()), stepResult);
 		}else{
 			List<WebElement> finalResult = new ArrayList<WebElement>();
 			for(WebElement we : root){
-				finalResult.addAll(toto(selector, we));
+				finalResult.addAll(findWebElement(selector, we));
 			}
 			return finalResult;
 		}
 	}
 	
-	private static List<WebElement> toto(String selector, SearchContext root){
+	private static List<WebElement> findWebElement(String selector, SearchContext root){
 		
 		System.out.println("Recherche " + selector);
 		

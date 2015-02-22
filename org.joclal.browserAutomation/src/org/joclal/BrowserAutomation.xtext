@@ -86,7 +86,7 @@ IfThen:
 Subroutine:
 	'Def' name=ID 
 	('(' 
-		params+=VariableId (',' params+=VariableId)?
+		(params+=VariableId (',' params+=VariableId)*)?
 	')')?
 	'{'
 		(actions+=Action)*
@@ -94,9 +94,9 @@ Subroutine:
 ;
 
 SubroutineCall:
-	'Call' subroutine=[Subroutine] ';'
+	'Call' subroutine=[Subroutine] '(' (params+=Value (',' params+=Value)*)? ')'';'
 ;
 
 VariableId:
-	name=STRING
+	name=ID
 ;

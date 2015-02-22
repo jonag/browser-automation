@@ -102,6 +102,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SubroutineCall" eSuperTypes="#//Action">
     <eStructuralFeatures xsi:type="ecore:EReference" name="subroutine" eType="#//Subroutine"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="params" upperBound="-1"
+        eType="#//Value" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VariableId">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
