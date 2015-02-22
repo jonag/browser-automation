@@ -77,10 +77,33 @@ public class DriverFacade {
 	
 	private static List<WebElement> toto(String selector, SearchContext root){
 		
+		System.out.println("Recherche " + selector);
 		
+		List<WebElement> result;
 		
+		result = root.findElements(By.id(selector));
+		if (result.size() > 0) {
+			return result;
+		}
 		
-		return root.findElements(By.name(selector));
+		result = root.findElements(By.name(selector));
+		if (result.size() > 0) {
+			return result;
+		}
+		
+		result = root.findElements(By.linkText(selector));
+		if (result.size() > 0) {
+			return result;
+		}
+		
+		result = root.findElements(By.cssSelector("img[src='"+selector+"']"));
+		if (result.size() > 0) {
+			return result;
+		}
+		
+		System.out.println("Aucun résultat trouvé :/");
+		
+		return result;
 	}
 	
 }
