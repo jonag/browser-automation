@@ -100,8 +100,13 @@ public class DriverFacade {
 		if (result.size() > 0) {
 			return result;
 		}
-		
+
 		result = root.findElements(By.className(selector));
+		if (result.size() > 0) {
+			return result;
+		}
+		
+		result = root.findElements(By.tagName(selector));
 		if (result.size() > 0) {
 			return result;
 		}
