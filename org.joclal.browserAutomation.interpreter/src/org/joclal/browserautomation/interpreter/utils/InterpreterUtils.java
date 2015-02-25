@@ -127,4 +127,14 @@ public class InterpreterUtils {
 		return null;
 	}
 
+	public static String toString(Object value) {
+		if (value instanceof String){
+			return ((String) value);
+		} else if (value instanceof Integer){
+			return (Integer.toString((Integer) value));
+		} else {
+			throw new UnsupportedOperationException("You can't cast value to String");
+		}
+	}
+
 }

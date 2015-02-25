@@ -71,7 +71,7 @@ public class Interpreter {
 		int paramNumber = expected < received ? expected : received;
 		Map<String, Value> params = new HashMap<String, Value>();
 		for(int i = 0; i < paramNumber; i++){
-			params.put("",subCall.getParams().get(i));
+			params.put(subCall.getSubroutine().getParams().get(i).getName(),subCall.getParams().get(i));
 		}
 		
 		//create new context
@@ -148,7 +148,7 @@ public class Interpreter {
 		Selector s = a.getField();
 		List<WebElement> elements = DriverFacade.getWebElement(s.getId());
 		for(WebElement element : elements){
-			element.sendKeys((String) InterpreterUtils.getValue(a.getValue()));
+			element.sendKeys(InterpreterUtils.toString(InterpreterUtils.getValue(a.getValue())));
 			if(DriverFacade.hasUrlChanged()) break;
 		}
 		
