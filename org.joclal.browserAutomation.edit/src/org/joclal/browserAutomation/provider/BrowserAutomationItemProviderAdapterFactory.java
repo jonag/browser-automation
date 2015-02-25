@@ -72,26 +72,26 @@ public class BrowserAutomationItemProviderAdapterFactory extends BrowserAutomati
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.joclal.browserAutomation.Model} instances.
+	 * This keeps track of the one adapter used for all {@link org.joclal.browserAutomation.BrowserAutomation} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ModelItemProvider modelItemProvider;
+	protected BrowserAutomationItemProvider browserAutomationItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.joclal.browserAutomation.Model}.
+	 * This creates an adapter for a {@link org.joclal.browserAutomation.BrowserAutomation}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createModelAdapter() {
-		if (modelItemProvider == null) {
-			modelItemProvider = new ModelItemProvider(this);
+	public Adapter createBrowserAutomationAdapter() {
+		if (browserAutomationItemProvider == null) {
+			browserAutomationItemProvider = new BrowserAutomationItemProvider(this);
 		}
 
-		return modelItemProvider;
+		return browserAutomationItemProvider;
 	}
 
 	/**
@@ -187,52 +187,6 @@ public class BrowserAutomationItemProviderAdapterFactory extends BrowserAutomati
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.joclal.browserAutomation.DomID} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected DomIDItemProvider domIDItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.joclal.browserAutomation.DomID}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createDomIDAdapter() {
-		if (domIDItemProvider == null) {
-			domIDItemProvider = new DomIDItemProvider(this);
-		}
-
-		return domIDItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.joclal.browserAutomation.SubroutineParam} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SubroutineParamItemProvider subroutineParamItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.joclal.browserAutomation.SubroutineParam}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSubroutineParamAdapter() {
-		if (subroutineParamItemProvider == null) {
-			subroutineParamItemProvider = new SubroutineParamItemProvider(this);
-		}
-
-		return subroutineParamItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link org.joclal.browserAutomation.Fill} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -299,6 +253,29 @@ public class BrowserAutomationItemProviderAdapterFactory extends BrowserAutomati
 		}
 
 		return uncheckItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.joclal.browserAutomation.Pick} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PickItemProvider pickItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.joclal.browserAutomation.Pick}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPickAdapter() {
+		if (pickItemProvider == null) {
+			pickItemProvider = new PickItemProvider(this);
+		}
+
+		return pickItemProvider;
 	}
 
 	/**
@@ -414,6 +391,52 @@ public class BrowserAutomationItemProviderAdapterFactory extends BrowserAutomati
 		}
 
 		return booleanExpItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.joclal.browserAutomation.Operation} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected OperationItemProvider operationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.joclal.browserAutomation.Operation}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createOperationAdapter() {
+		if (operationItemProvider == null) {
+			operationItemProvider = new OperationItemProvider(this);
+		}
+
+		return operationItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.joclal.browserAutomation.ArithmeticExp} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ArithmeticExpItemProvider arithmeticExpItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.joclal.browserAutomation.ArithmeticExp}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createArithmeticExpAdapter() {
+		if (arithmeticExpItemProvider == null) {
+			arithmeticExpItemProvider = new ArithmeticExpItemProvider(this);
+		}
+
+		return arithmeticExpItemProvider;
 	}
 
 	/**
@@ -607,21 +630,22 @@ public class BrowserAutomationItemProviderAdapterFactory extends BrowserAutomati
 	 * @generated
 	 */
 	public void dispose() {
-		if (modelItemProvider != null) modelItemProvider.dispose();
+		if (browserAutomationItemProvider != null) browserAutomationItemProvider.dispose();
 		if (actionItemProvider != null) actionItemProvider.dispose();
 		if (gotoItemProvider != null) gotoItemProvider.dispose();
 		if (clickOnItemProvider != null) clickOnItemProvider.dispose();
 		if (selectorItemProvider != null) selectorItemProvider.dispose();
-		if (domIDItemProvider != null) domIDItemProvider.dispose();
-		if (subroutineParamItemProvider != null) subroutineParamItemProvider.dispose();
 		if (fillItemProvider != null) fillItemProvider.dispose();
 		if (checkItemProvider != null) checkItemProvider.dispose();
 		if (uncheckItemProvider != null) uncheckItemProvider.dispose();
+		if (pickItemProvider != null) pickItemProvider.dispose();
 		if (letItemProvider != null) letItemProvider.dispose();
 		if (letValueItemProvider != null) letValueItemProvider.dispose();
 		if (valueItemProvider != null) valueItemProvider.dispose();
 		if (doWhileItemProvider != null) doWhileItemProvider.dispose();
 		if (booleanExpItemProvider != null) booleanExpItemProvider.dispose();
+		if (operationItemProvider != null) operationItemProvider.dispose();
+		if (arithmeticExpItemProvider != null) arithmeticExpItemProvider.dispose();
 		if (ifThenItemProvider != null) ifThenItemProvider.dispose();
 		if (subroutineItemProvider != null) subroutineItemProvider.dispose();
 		if (subroutineCallItemProvider != null) subroutineCallItemProvider.dispose();

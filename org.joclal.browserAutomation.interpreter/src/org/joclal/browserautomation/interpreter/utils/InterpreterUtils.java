@@ -21,6 +21,16 @@ public class InterpreterUtils {
 		}
 	}
 	
+	public static void setValue(Value v, Object val){
+		if(v.getString() != null && val instanceof String){
+			v.setString((String) val);
+		}else if(v.getVariable() != null){
+			setValue(currentVars.get(v.getVariable().getName()), val);
+		}else{
+			v.setInt((int) val);
+		}
+	}
+	
 	public static Object getValue(VariableId v){
 		return getValue(currentVars.get(v.getName()));
 	}
@@ -74,17 +84,57 @@ public class InterpreterUtils {
 				return getValue(left).equals(getValue(right));
 			case Operator.NOT_EQUALS_VALUE:
 				return !getValue(left).equals(getValue(right));
-			default:
-				throw new UnsupportedOperationException("You can't compare String orders");
-			/*case Operator.GT_VALUE:
-				break;
-			case Operator.GTE_VALUE:
-				break;
+			case Operator.GT_VALUE:
+				if (getValue(left) instanceof Integer && getValue(right) instanceof Integer){
+					return (Integer) getValue(left) > (Integer) getValue(right);
+				} else {
+					throw new UnsupportedOperationException("You can't compare those objects");
+				}
 			case Operator.LT_VALUE:
-				break;
+				if (getValue(left) instanceof Integer && getValue(right) instanceof Integer){
+					return (Integer) getValue(left) < (Integer) getValue(right);
+				} else {
+					throw new UnsupportedOperationException("You can't compare those objects");
+				}
+			case Operator.GTE_VALUE:
+				if (getValue(left) instanceof Integer && getValue(right) instanceof Integer){
+					return (Integer) getValue(left) >= (Integer) getValue(right);
+				} else {
+					throw new UnsupportedOperationException("You can't compare those objects");
+				}
 			case Operator.LTE_VALUE:
-				break;*/
+				if (getValue(left) instanceof Integer && getValue(right) instanceof Integer){
+					return (Integer) getValue(left) <= (Integer) getValue(right);
+				} else {
+					throw new UnsupportedOperationException("You can't compare those objects");
+				}
+			default:
+				throw new UnsupportedOperationException("You can't compare those objects");
 		}
 	}
+	
+	public static Object processArithmeticExp(ArithmeticExp operation) {
+		return processArithmeticExp(operation.getLeftMember(), operation.getArithmetic(), operation.getRightMember());
+	}
+
+	private static Object processArithmeticExp(Value leftMember, Arithmetic arithmetic, Value rightMember) {
+		switch(arithmetic.getValue()){
+		case Arithmetic.SUM_VALUE:
+			return (Integer) getValue(leftMember) + (Integer) getValue(rightMember);
+		case Arithmetic.SUB_VALUE:
+			return (Integer) getValue(leftMember) - (Integer) getValue(rightMember);
+		}
+		return null;
+	}
+
+	public static String toString(Object value) {
+		if (value instanceof String){
+			return ((String) value);
+		} else if (value instanceof Integer){
+			return (Integer.toString((Integer) value));
+		} else {
+			throw new UnsupportedOperationException("You can't cast value to String");
+ 		}
+ 	}
 
 }

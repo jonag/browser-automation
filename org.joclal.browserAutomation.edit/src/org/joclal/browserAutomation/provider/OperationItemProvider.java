@@ -11,29 +11,27 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.joclal.browserAutomation.BrowserAutomationFactory;
 import org.joclal.browserAutomation.BrowserAutomationPackage;
-import org.joclal.browserAutomation.Let;
+import org.joclal.browserAutomation.Operation;
 
 /**
- * This is the item provider adapter for a {@link org.joclal.browserAutomation.Let} object.
+ * This is the item provider adapter for a {@link org.joclal.browserAutomation.Operation} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class LetItemProvider extends ActionItemProvider {
+public class OperationItemProvider extends ActionItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LetItemProvider(AdapterFactory adapterFactory) {
+	public OperationItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -64,8 +62,8 @@ public class LetItemProvider extends ActionItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(BrowserAutomationPackage.Literals.LET__ID);
-			childrenFeatures.add(BrowserAutomationPackage.Literals.LET__VALUE);
+			childrenFeatures.add(BrowserAutomationPackage.Literals.OPERATION__LEFT_VALUE);
+			childrenFeatures.add(BrowserAutomationPackage.Literals.OPERATION__OPERATION);
 		}
 		return childrenFeatures;
 	}
@@ -84,14 +82,14 @@ public class LetItemProvider extends ActionItemProvider {
 	}
 
 	/**
-	 * This returns Let.gif.
+	 * This returns Operation.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Let"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Operation"));
 	}
 
 	/**
@@ -102,7 +100,7 @@ public class LetItemProvider extends ActionItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Let_type");
+		return getString("_UI_Operation_type");
 	}
 	
 
@@ -117,9 +115,9 @@ public class LetItemProvider extends ActionItemProvider {
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Let.class)) {
-			case BrowserAutomationPackage.LET__ID:
-			case BrowserAutomationPackage.LET__VALUE:
+		switch (notification.getFeatureID(Operation.class)) {
+			case BrowserAutomationPackage.OPERATION__LEFT_VALUE:
+			case BrowserAutomationPackage.OPERATION__OPERATION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -139,13 +137,13 @@ public class LetItemProvider extends ActionItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(BrowserAutomationPackage.Literals.LET__ID,
-				 BrowserAutomationFactory.eINSTANCE.createVariableId()));
+				(BrowserAutomationPackage.Literals.OPERATION__LEFT_VALUE,
+				 BrowserAutomationFactory.eINSTANCE.createValue()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(BrowserAutomationPackage.Literals.LET__VALUE,
-				 BrowserAutomationFactory.eINSTANCE.createLetValue()));
+				(BrowserAutomationPackage.Literals.OPERATION__OPERATION,
+				 BrowserAutomationFactory.eINSTANCE.createArithmeticExp()));
 	}
 
 }

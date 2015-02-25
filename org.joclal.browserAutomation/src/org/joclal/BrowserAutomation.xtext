@@ -14,7 +14,7 @@ enum Browser:
 ;
 
 Action:
-	Goto | ClickOn | Fill | Check | Uncheck | Pick | Let | DoWhile | IfThen | SubroutineCall
+	Goto | ClickOn | Fill | Check | Uncheck | Pick | Let | DoWhile | IfThen | SubroutineCall | Operation
 ;
 
 Goto:
@@ -72,6 +72,19 @@ BooleanExp:
 enum Operator:
 	equals='==' | notEquals='!=' | gt='>' | lt='<' | gte='>=' | lte='<=' 
 ;
+
+Operation:
+	leftValue=Value '=' operation=ArithmeticExp 
+;
+
+ArithmeticExp:
+	leftMember=Value arithmetic=Arithmetic rightMember=Value ';'
+;
+
+enum Arithmetic:
+	sum='+' | sub='-'
+;
+
 
 IfThen:
 	'If' '(' 

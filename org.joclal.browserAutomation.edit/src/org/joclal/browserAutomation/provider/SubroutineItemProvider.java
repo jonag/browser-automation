@@ -184,11 +184,6 @@ public class SubroutineItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(BrowserAutomationPackage.Literals.SUBROUTINE__PARAMS,
-				 BrowserAutomationFactory.eINSTANCE.createSubroutineParam()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(BrowserAutomationPackage.Literals.SUBROUTINE__PARAMS,
 				 BrowserAutomationFactory.eINSTANCE.createVariableId()));
 
 		newChildDescriptors.add
@@ -224,6 +219,11 @@ public class SubroutineItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(BrowserAutomationPackage.Literals.SUBROUTINE__ACTIONS,
+				 BrowserAutomationFactory.eINSTANCE.createPick()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(BrowserAutomationPackage.Literals.SUBROUTINE__ACTIONS,
 				 BrowserAutomationFactory.eINSTANCE.createLet()));
 
 		newChildDescriptors.add
@@ -234,40 +234,17 @@ public class SubroutineItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(BrowserAutomationPackage.Literals.SUBROUTINE__ACTIONS,
+				 BrowserAutomationFactory.eINSTANCE.createOperation()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(BrowserAutomationPackage.Literals.SUBROUTINE__ACTIONS,
 				 BrowserAutomationFactory.eINSTANCE.createIfThen()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(BrowserAutomationPackage.Literals.SUBROUTINE__ACTIONS,
 				 BrowserAutomationFactory.eINSTANCE.createSubroutineCall()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(BrowserAutomationPackage.Literals.SUBROUTINE__ACTIONS,
-				 BrowserAutomationFactory.eINSTANCE.createVariableId()));
-	}
-
-	/**
-	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
-		Object childFeature = feature;
-		Object childObject = child;
-
-		boolean qualify =
-			childFeature == BrowserAutomationPackage.Literals.SUBROUTINE__PARAMS ||
-			childFeature == BrowserAutomationPackage.Literals.SUBROUTINE__ACTIONS;
-
-		if (qualify) {
-			return getString
-				("_UI_CreateChild_text2",
-				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
-		}
-		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 	/**

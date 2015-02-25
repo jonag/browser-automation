@@ -6,6 +6,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import org.joclal.browserAutomation.Action;
+import org.joclal.browserAutomation.ArithmeticExp;
 import org.joclal.browserAutomation.Browser;
 import org.joclal.browserAutomation.BrowserAutomation;
 import org.joclal.browserAutomation.Check;
@@ -15,6 +16,7 @@ import org.joclal.browserAutomation.Fill;
 import org.joclal.browserAutomation.Goto;
 import org.joclal.browserAutomation.IfThen;
 import org.joclal.browserAutomation.Let;
+import org.joclal.browserAutomation.Operation;
 import org.joclal.browserAutomation.Pick;
 import org.joclal.browserAutomation.Selector;
 import org.joclal.browserAutomation.SubroutineCall;
@@ -70,7 +72,9 @@ public class Interpreter {
 			processIfThen((IfThen) a);
 		}else if(a instanceof SubroutineCall){
 			processSubroutineCall((SubroutineCall) a);
-		}
+		}else if(a instanceof Operation){
+			processOperation((Operation) a);
+ 		}
 	}
 	
 	private void processSubroutineCall(SubroutineCall subCall) {
@@ -83,7 +87,7 @@ public class Interpreter {
 		int paramNumber = expected < received ? expected : received;
 		Map<String, Value> params = new HashMap<String, Value>();
 		for(int i = 0; i < paramNumber; i++){
-			params.put("",subCall.getParams().get(i));
+			params.put(subCall.getSubroutine().getParams().get(i).getName(),subCall.getParams().get(i));
 		}
 		
 		//create new context
@@ -160,7 +164,7 @@ public class Interpreter {
 		Selector s = a.getField();
 		List<WebElement> elements = DriverFacade.getWebElement(s.getId());
 		for(WebElement element : elements){
-			element.sendKeys((String) InterpreterUtils.getValue(a.getValue()));
+			element.sendKeys(InterpreterUtils.toString(InterpreterUtils.getValue(a.getValue())));
 			if(DriverFacade.hasUrlChanged()) break;
 		}
 		
@@ -190,6 +194,12 @@ public class Interpreter {
 			select.selectByValue(value);
 			if(DriverFacade.hasUrlChanged()) break;
 		}
+	}
+	
+	private void processOperation(Operation o){
+		Value val = o.getLeftValue();
+		ArithmeticExp operation = o.getOperation();
+		InterpreterUtils.setValue(val, InterpreterUtils.processArithmeticExp(operation));
 	}
 	
 }

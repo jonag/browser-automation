@@ -18,22 +18,22 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.joclal.browserAutomation.BrowserAutomationFactory;
 import org.joclal.browserAutomation.BrowserAutomationPackage;
-import org.joclal.browserAutomation.Let;
+import org.joclal.browserAutomation.Pick;
 
 /**
- * This is the item provider adapter for a {@link org.joclal.browserAutomation.Let} object.
+ * This is the item provider adapter for a {@link org.joclal.browserAutomation.Pick} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class LetItemProvider extends ActionItemProvider {
+public class PickItemProvider extends ActionItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LetItemProvider(AdapterFactory adapterFactory) {
+	public PickItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -48,8 +48,31 @@ public class LetItemProvider extends ActionItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addValuePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Value feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addValuePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Pick_value_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Pick_value_feature", "_UI_Pick_type"),
+				 BrowserAutomationPackage.Literals.PICK__VALUE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -64,8 +87,7 @@ public class LetItemProvider extends ActionItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(BrowserAutomationPackage.Literals.LET__ID);
-			childrenFeatures.add(BrowserAutomationPackage.Literals.LET__VALUE);
+			childrenFeatures.add(BrowserAutomationPackage.Literals.PICK__SELECT);
 		}
 		return childrenFeatures;
 	}
@@ -84,14 +106,14 @@ public class LetItemProvider extends ActionItemProvider {
 	}
 
 	/**
-	 * This returns Let.gif.
+	 * This returns Pick.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Let"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Pick"));
 	}
 
 	/**
@@ -102,7 +124,10 @@ public class LetItemProvider extends ActionItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Let_type");
+		String label = ((Pick)object).getValue();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Pick_type") :
+			getString("_UI_Pick_type") + " " + label;
 	}
 	
 
@@ -117,9 +142,11 @@ public class LetItemProvider extends ActionItemProvider {
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Let.class)) {
-			case BrowserAutomationPackage.LET__ID:
-			case BrowserAutomationPackage.LET__VALUE:
+		switch (notification.getFeatureID(Pick.class)) {
+			case BrowserAutomationPackage.PICK__VALUE:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+			case BrowserAutomationPackage.PICK__SELECT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -139,13 +166,8 @@ public class LetItemProvider extends ActionItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(BrowserAutomationPackage.Literals.LET__ID,
-				 BrowserAutomationFactory.eINSTANCE.createVariableId()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(BrowserAutomationPackage.Literals.LET__VALUE,
-				 BrowserAutomationFactory.eINSTANCE.createLetValue()));
+				(BrowserAutomationPackage.Literals.PICK__SELECT,
+				 BrowserAutomationFactory.eINSTANCE.createSelector()));
 	}
 
 }

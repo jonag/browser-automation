@@ -11,6 +11,8 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
+import org.eclipse.emf.ecore.EStructuralFeature;
+
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -22,16 +24,18 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.joclal.browserAutomation.Arithmetic;
+import org.joclal.browserAutomation.ArithmeticExp;
+import org.joclal.browserAutomation.BrowserAutomationFactory;
 import org.joclal.browserAutomation.BrowserAutomationPackage;
-import org.joclal.browserAutomation.Value;
 
 /**
- * This is the item provider adapter for a {@link org.joclal.browserAutomation.Value} object.
+ * This is the item provider adapter for a {@link org.joclal.browserAutomation.ArithmeticExp} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class ValueItemProvider 
+public class ArithmeticExpItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -45,7 +49,7 @@ public class ValueItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ValueItemProvider(AdapterFactory adapterFactory) {
+	public ArithmeticExpItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -60,27 +64,25 @@ public class ValueItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addIntPropertyDescriptor(object);
-			addStringPropertyDescriptor(object);
-			addVariablePropertyDescriptor(object);
+			addArithmeticPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the String feature.
+	 * This adds a property descriptor for the Arithmetic feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addStringPropertyDescriptor(Object object) {
+	protected void addArithmeticPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Value_string_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Value_string_feature", "_UI_Value_type"),
-				 BrowserAutomationPackage.Literals.VALUE__STRING,
+				 getString("_UI_ArithmeticExp_arithmetic_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ArithmeticExp_arithmetic_feature", "_UI_ArithmeticExp_type"),
+				 BrowserAutomationPackage.Literals.ARITHMETIC_EXP__ARITHMETIC,
 				 true,
 				 false,
 				 false,
@@ -90,58 +92,45 @@ public class ValueItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Int feature.
+	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addIntPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Value_int_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Value_int_feature", "_UI_Value_type"),
-				 BrowserAutomationPackage.Literals.VALUE__INT,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
-				 null));
+	@Override
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
+		if (childrenFeatures == null) {
+			super.getChildrenFeatures(object);
+			childrenFeatures.add(BrowserAutomationPackage.Literals.ARITHMETIC_EXP__LEFT_MEMBER);
+			childrenFeatures.add(BrowserAutomationPackage.Literals.ARITHMETIC_EXP__RIGHT_MEMBER);
+		}
+		return childrenFeatures;
 	}
 
 	/**
-	 * This adds a property descriptor for the Variable feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addVariablePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Value_variable_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Value_variable_feature", "_UI_Value_type"),
-				 BrowserAutomationPackage.Literals.VALUE__VARIABLE,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
+	@Override
+	protected EStructuralFeature getChildFeature(Object object, Object child) {
+		// Check the type of the specified child object and return the proper feature to use for
+		// adding (see {@link AddCommand}) it as a child.
+
+		return super.getChildFeature(object, child);
 	}
 
 	/**
-	 * This returns Value.gif.
+	 * This returns ArithmeticExp.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Value"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ArithmeticExp"));
 	}
 
 	/**
@@ -152,8 +141,11 @@ public class ValueItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		Value value = (Value)object;
-		return getString("_UI_Value_type") + " " + value.getInt();
+		Arithmetic labelValue = ((ArithmeticExp)object).getArithmetic();
+		String label = labelValue == null ? null : labelValue.toString();
+		return label == null || label.length() == 0 ?
+			getString("_UI_ArithmeticExp_type") :
+			getString("_UI_ArithmeticExp_type") + " " + label;
 	}
 	
 
@@ -168,10 +160,13 @@ public class ValueItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Value.class)) {
-			case BrowserAutomationPackage.VALUE__INT:
-			case BrowserAutomationPackage.VALUE__STRING:
+		switch (notification.getFeatureID(ArithmeticExp.class)) {
+			case BrowserAutomationPackage.ARITHMETIC_EXP__ARITHMETIC:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+			case BrowserAutomationPackage.ARITHMETIC_EXP__LEFT_MEMBER:
+			case BrowserAutomationPackage.ARITHMETIC_EXP__RIGHT_MEMBER:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
 		super.notifyChanged(notification);
@@ -187,6 +182,39 @@ public class ValueItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(BrowserAutomationPackage.Literals.ARITHMETIC_EXP__LEFT_MEMBER,
+				 BrowserAutomationFactory.eINSTANCE.createValue()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(BrowserAutomationPackage.Literals.ARITHMETIC_EXP__RIGHT_MEMBER,
+				 BrowserAutomationFactory.eINSTANCE.createValue()));
+	}
+
+	/**
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+		Object childFeature = feature;
+		Object childObject = child;
+
+		boolean qualify =
+			childFeature == BrowserAutomationPackage.Literals.ARITHMETIC_EXP__LEFT_MEMBER ||
+			childFeature == BrowserAutomationPackage.Literals.ARITHMETIC_EXP__RIGHT_MEMBER;
+
+		if (qualify) {
+			return getString
+				("_UI_CreateChild_text2",
+				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 	/**

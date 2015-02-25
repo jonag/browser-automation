@@ -175,6 +175,11 @@ public class DoWhileItemProvider extends ActionItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(BrowserAutomationPackage.Literals.DO_WHILE__ACTIONS,
+				 BrowserAutomationFactory.eINSTANCE.createPick()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(BrowserAutomationPackage.Literals.DO_WHILE__ACTIONS,
 				 BrowserAutomationFactory.eINSTANCE.createLet()));
 
 		newChildDescriptors.add
@@ -185,17 +190,17 @@ public class DoWhileItemProvider extends ActionItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(BrowserAutomationPackage.Literals.DO_WHILE__ACTIONS,
+				 BrowserAutomationFactory.eINSTANCE.createOperation()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(BrowserAutomationPackage.Literals.DO_WHILE__ACTIONS,
 				 BrowserAutomationFactory.eINSTANCE.createIfThen()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(BrowserAutomationPackage.Literals.DO_WHILE__ACTIONS,
 				 BrowserAutomationFactory.eINSTANCE.createSubroutineCall()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(BrowserAutomationPackage.Literals.DO_WHILE__ACTIONS,
-				 BrowserAutomationFactory.eINSTANCE.createVariableId()));
 
 		newChildDescriptors.add
 			(createChildParameter

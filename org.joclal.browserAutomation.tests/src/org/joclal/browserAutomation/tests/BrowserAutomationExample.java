@@ -19,9 +19,9 @@ import org.eclipse.emf.ecore.util.Diagnostician;
 
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 
+import org.joclal.browserAutomation.BrowserAutomation;
 import org.joclal.browserAutomation.BrowserAutomationFactory;
 import org.joclal.browserAutomation.BrowserAutomationPackage;
-import org.joclal.browserAutomation.Model;
 
 /**
  * <!-- begin-user-doc -->
@@ -60,7 +60,7 @@ public class BrowserAutomationExample {
 			System.out.println("Enter a list of file paths or URIs that have content like this:");
 			try {
 				Resource resource = resourceSet.createResource(URI.createURI("http:///My.ba"));
-				Model root = BrowserAutomationFactory.eINSTANCE.createModel();
+				BrowserAutomation root = BrowserAutomationFactory.eINSTANCE.createBrowserAutomation();
 				resource.getContents().add(root);
 				resource.save(System.out, null);
 			}
