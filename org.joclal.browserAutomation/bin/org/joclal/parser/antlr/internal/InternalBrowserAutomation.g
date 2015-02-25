@@ -231,11 +231,11 @@ ruleAction returns [EObject current=null]
 
     |
     { 
-        newCompositeNode(grammarAccess.getActionAccess().getSelectOptionParserRuleCall_5()); 
+        newCompositeNode(grammarAccess.getActionAccess().getPickParserRuleCall_5()); 
     }
-    this_SelectOption_5=ruleSelectOption
+    this_Pick_5=rulePick
     { 
-        $current = $this_SelectOption_5.current; 
+        $current = $this_Pick_5.current; 
         afterParserOrEnumRuleCall();
     }
 
@@ -589,33 +589,33 @@ ruleUncheck returns [EObject current=null]
 
 
 
-// Entry rule entryRuleSelectOption
-entryRuleSelectOption returns [EObject current=null] 
+// Entry rule entryRulePick
+entryRulePick returns [EObject current=null] 
 	:
-	{ newCompositeNode(grammarAccess.getSelectOptionRule()); }
-	 iv_ruleSelectOption=ruleSelectOption 
-	 { $current=$iv_ruleSelectOption.current; } 
+	{ newCompositeNode(grammarAccess.getPickRule()); }
+	 iv_rulePick=rulePick 
+	 { $current=$iv_rulePick.current; } 
 	 EOF 
 ;
 
-// Rule SelectOption
-ruleSelectOption returns [EObject current=null] 
+// Rule Pick
+rulePick returns [EObject current=null] 
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(	otherlv_0='Select' 
+(	otherlv_0='Pick' 
     {
-    	newLeafNode(otherlv_0, grammarAccess.getSelectOptionAccess().getSelectKeyword_0());
+    	newLeafNode(otherlv_0, grammarAccess.getPickAccess().getPickKeyword_0());
     }
 (
 (
 		lv_value_1_0=RULE_STRING
 		{
-			newLeafNode(lv_value_1_0, grammarAccess.getSelectOptionAccess().getValueSTRINGTerminalRuleCall_1_0()); 
+			newLeafNode(lv_value_1_0, grammarAccess.getPickAccess().getValueSTRINGTerminalRuleCall_1_0()); 
 		}
 		{
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getSelectOptionRule());
+	            $current = createModelElement(grammarAccess.getPickRule());
 	        }
        		setWithLastConsumed(
        			$current, 
@@ -627,16 +627,16 @@ ruleSelectOption returns [EObject current=null]
 )
 )	otherlv_2='in' 
     {
-    	newLeafNode(otherlv_2, grammarAccess.getSelectOptionAccess().getInKeyword_2());
+    	newLeafNode(otherlv_2, grammarAccess.getPickAccess().getInKeyword_2());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getSelectOptionAccess().getSelectSelectorParserRuleCall_3_0()); 
+	        newCompositeNode(grammarAccess.getPickAccess().getSelectSelectorParserRuleCall_3_0()); 
 	    }
 		lv_select_3_0=ruleSelector		{
 	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getSelectOptionRule());
+	            $current = createModelElementForParent(grammarAccess.getPickRule());
 	        }
        		set(
        			$current, 
@@ -649,7 +649,7 @@ ruleSelectOption returns [EObject current=null]
 )
 )	otherlv_4=';' 
     {
-    	newLeafNode(otherlv_4, grammarAccess.getSelectOptionAccess().getSemicolonKeyword_4());
+    	newLeafNode(otherlv_4, grammarAccess.getPickAccess().getSemicolonKeyword_4());
     }
 )
 ;

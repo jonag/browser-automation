@@ -24,7 +24,7 @@ import org.joclal.browserAutomation.Goto;
 import org.joclal.browserAutomation.IfThen;
 import org.joclal.browserAutomation.Let;
 import org.joclal.browserAutomation.LetValue;
-import org.joclal.browserAutomation.SelectOption;
+import org.joclal.browserAutomation.Pick;
 import org.joclal.browserAutomation.Selector;
 import org.joclal.browserAutomation.Subroutine;
 import org.joclal.browserAutomation.SubroutineCall;
@@ -108,10 +108,10 @@ public class BrowserAutomationSemanticSequencer extends AbstractDelegatingSemant
 					return; 
 				}
 				else break;
-			case BrowserAutomationPackage.SELECT_OPTION:
+			case BrowserAutomationPackage.PICK:
 				if(context == grammarAccess.getActionRule() ||
-				   context == grammarAccess.getSelectOptionRule()) {
-					sequence_SelectOption(context, (SelectOption) semanticObject); 
+				   context == grammarAccess.getPickRule()) {
+					sequence_Pick(context, (Pick) semanticObject); 
 					return; 
 				}
 				else break;
@@ -305,17 +305,17 @@ public class BrowserAutomationSemanticSequencer extends AbstractDelegatingSemant
 	 * Constraint:
 	 *     (value=STRING select=Selector)
 	 */
-	protected void sequence_SelectOption(EObject context, SelectOption semanticObject) {
+	protected void sequence_Pick(EObject context, Pick semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, BrowserAutomationPackage.Literals.SELECT_OPTION__VALUE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BrowserAutomationPackage.Literals.SELECT_OPTION__VALUE));
-			if(transientValues.isValueTransient(semanticObject, BrowserAutomationPackage.Literals.SELECT_OPTION__SELECT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BrowserAutomationPackage.Literals.SELECT_OPTION__SELECT));
+			if(transientValues.isValueTransient(semanticObject, BrowserAutomationPackage.Literals.PICK__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BrowserAutomationPackage.Literals.PICK__VALUE));
+			if(transientValues.isValueTransient(semanticObject, BrowserAutomationPackage.Literals.PICK__SELECT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BrowserAutomationPackage.Literals.PICK__SELECT));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getSelectOptionAccess().getValueSTRINGTerminalRuleCall_1_0(), semanticObject.getValue());
-		feeder.accept(grammarAccess.getSelectOptionAccess().getSelectSelectorParserRuleCall_3_0(), semanticObject.getSelect());
+		feeder.accept(grammarAccess.getPickAccess().getValueSTRINGTerminalRuleCall_1_0(), semanticObject.getValue());
+		feeder.accept(grammarAccess.getPickAccess().getSelectSelectorParserRuleCall_3_0(), semanticObject.getSelect());
 		feeder.finish();
 	}
 	

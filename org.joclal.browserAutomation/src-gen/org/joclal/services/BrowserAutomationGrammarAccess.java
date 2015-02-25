@@ -78,17 +78,17 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 		private final RuleCall cFillParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		private final RuleCall cCheckParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		private final RuleCall cUncheckParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
-		private final RuleCall cSelectOptionParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
+		private final RuleCall cPickParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
 		private final RuleCall cLetParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
 		private final RuleCall cDoWhileParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
 		private final RuleCall cIfThenParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
 		private final RuleCall cSubroutineCallParserRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
 		
 		//Action:
-		//	Goto | ClickOn | Fill | Check | Uncheck | SelectOption | Let | DoWhile | IfThen | SubroutineCall;
+		//	Goto | ClickOn | Fill | Check | Uncheck | Pick | Let | DoWhile | IfThen | SubroutineCall;
 		public ParserRule getRule() { return rule; }
 
-		//Goto | ClickOn | Fill | Check | Uncheck | SelectOption | Let | DoWhile | IfThen | SubroutineCall
+		//Goto | ClickOn | Fill | Check | Uncheck | Pick | Let | DoWhile | IfThen | SubroutineCall
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//Goto
@@ -106,8 +106,8 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 		//Uncheck
 		public RuleCall getUncheckParserRuleCall_4() { return cUncheckParserRuleCall_4; }
 
-		//SelectOption
-		public RuleCall getSelectOptionParserRuleCall_5() { return cSelectOptionParserRuleCall_5; }
+		//Pick
+		public RuleCall getPickParserRuleCall_5() { return cPickParserRuleCall_5; }
 
 		//Let
 		public RuleCall getLetParserRuleCall_6() { return cLetParserRuleCall_6; }
@@ -302,10 +302,10 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 		public Keyword getSemicolonKeyword_2() { return cSemicolonKeyword_2; }
 	}
 
-	public class SelectOptionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SelectOption");
+	public class PickElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Pick");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cSelectKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cPickKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cValueAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cValueSTRINGTerminalRuleCall_1_0 = (RuleCall)cValueAssignment_1.eContents().get(0);
 		private final Keyword cInKeyword_2 = (Keyword)cGroup.eContents().get(2);
@@ -313,15 +313,15 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 		private final RuleCall cSelectSelectorParserRuleCall_3_0 = (RuleCall)cSelectAssignment_3.eContents().get(0);
 		private final Keyword cSemicolonKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
-		//SelectOption:
-		//	"Select" value=STRING "in" select=Selector ";";
+		//Pick:
+		//	"Pick" value=STRING "in" select=Selector ";";
 		public ParserRule getRule() { return rule; }
 
-		//"Select" value=STRING "in" select=Selector ";"
+		//"Pick" value=STRING "in" select=Selector ";"
 		public Group getGroup() { return cGroup; }
 
-		//"Select"
-		public Keyword getSelectKeyword_0() { return cSelectKeyword_0; }
+		//"Pick"
+		public Keyword getPickKeyword_0() { return cPickKeyword_0; }
 
 		//value=STRING
 		public Assignment getValueAssignment_1() { return cValueAssignment_1; }
@@ -892,7 +892,7 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 	private final FillElements pFill;
 	private final CheckElements pCheck;
 	private final UncheckElements pUncheck;
-	private final SelectOptionElements pSelectOption;
+	private final PickElements pPick;
 	private final LetElements pLet;
 	private final LetValueElements pLetValue;
 	private final ValueElements pValue;
@@ -922,7 +922,7 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 		this.pFill = new FillElements();
 		this.pCheck = new CheckElements();
 		this.pUncheck = new UncheckElements();
-		this.pSelectOption = new SelectOptionElements();
+		this.pPick = new PickElements();
 		this.pLet = new LetElements();
 		this.pLetValue = new LetValueElements();
 		this.pValue = new ValueElements();
@@ -983,7 +983,7 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 	}
 
 	//Action:
-	//	Goto | ClickOn | Fill | Check | Uncheck | SelectOption | Let | DoWhile | IfThen | SubroutineCall;
+	//	Goto | ClickOn | Fill | Check | Uncheck | Pick | Let | DoWhile | IfThen | SubroutineCall;
 	public ActionElements getActionAccess() {
 		return pAction;
 	}
@@ -1052,14 +1052,14 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 		return getUncheckAccess().getRule();
 	}
 
-	//SelectOption:
-	//	"Select" value=STRING "in" select=Selector ";";
-	public SelectOptionElements getSelectOptionAccess() {
-		return pSelectOption;
+	//Pick:
+	//	"Pick" value=STRING "in" select=Selector ";";
+	public PickElements getPickAccess() {
+		return pPick;
 	}
 	
-	public ParserRule getSelectOptionRule() {
-		return getSelectOptionAccess().getRule();
+	public ParserRule getPickRule() {
+		return getPickAccess().getRule();
 	}
 
 	//Let:

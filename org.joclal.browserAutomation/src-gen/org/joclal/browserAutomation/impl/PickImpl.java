@@ -11,24 +11,24 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.joclal.browserAutomation.BrowserAutomationPackage;
-import org.joclal.browserAutomation.SelectOption;
+import org.joclal.browserAutomation.Pick;
 import org.joclal.browserAutomation.Selector;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Select Option</b></em>'.
+ * An implementation of the model object '<em><b>Pick</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.joclal.browserAutomation.impl.SelectOptionImpl#getValue <em>Value</em>}</li>
- *   <li>{@link org.joclal.browserAutomation.impl.SelectOptionImpl#getSelect <em>Select</em>}</li>
+ *   <li>{@link org.joclal.browserAutomation.impl.PickImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link org.joclal.browserAutomation.impl.PickImpl#getSelect <em>Select</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class SelectOptionImpl extends ActionImpl implements SelectOption
+public class PickImpl extends ActionImpl implements Pick
 {
   /**
    * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
@@ -65,7 +65,7 @@ public class SelectOptionImpl extends ActionImpl implements SelectOption
    * <!-- end-user-doc -->
    * @generated
    */
-  protected SelectOptionImpl()
+  protected PickImpl()
   {
     super();
   }
@@ -78,7 +78,7 @@ public class SelectOptionImpl extends ActionImpl implements SelectOption
   @Override
   protected EClass eStaticClass()
   {
-    return BrowserAutomationPackage.Literals.SELECT_OPTION;
+    return BrowserAutomationPackage.Literals.PICK;
   }
 
   /**
@@ -101,7 +101,7 @@ public class SelectOptionImpl extends ActionImpl implements SelectOption
     String oldValue = value;
     value = newValue;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.SELECT_OPTION__VALUE, oldValue, value));
+      eNotify(new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.PICK__VALUE, oldValue, value));
   }
 
   /**
@@ -125,7 +125,7 @@ public class SelectOptionImpl extends ActionImpl implements SelectOption
     select = newSelect;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.SELECT_OPTION__SELECT, oldSelect, newSelect);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.PICK__SELECT, oldSelect, newSelect);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -142,14 +142,14 @@ public class SelectOptionImpl extends ActionImpl implements SelectOption
     {
       NotificationChain msgs = null;
       if (select != null)
-        msgs = ((InternalEObject)select).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BrowserAutomationPackage.SELECT_OPTION__SELECT, null, msgs);
+        msgs = ((InternalEObject)select).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BrowserAutomationPackage.PICK__SELECT, null, msgs);
       if (newSelect != null)
-        msgs = ((InternalEObject)newSelect).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BrowserAutomationPackage.SELECT_OPTION__SELECT, null, msgs);
+        msgs = ((InternalEObject)newSelect).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BrowserAutomationPackage.PICK__SELECT, null, msgs);
       msgs = basicSetSelect(newSelect, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.SELECT_OPTION__SELECT, newSelect, newSelect));
+      eNotify(new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.PICK__SELECT, newSelect, newSelect));
   }
 
   /**
@@ -162,7 +162,7 @@ public class SelectOptionImpl extends ActionImpl implements SelectOption
   {
     switch (featureID)
     {
-      case BrowserAutomationPackage.SELECT_OPTION__SELECT:
+      case BrowserAutomationPackage.PICK__SELECT:
         return basicSetSelect(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -178,9 +178,9 @@ public class SelectOptionImpl extends ActionImpl implements SelectOption
   {
     switch (featureID)
     {
-      case BrowserAutomationPackage.SELECT_OPTION__VALUE:
+      case BrowserAutomationPackage.PICK__VALUE:
         return getValue();
-      case BrowserAutomationPackage.SELECT_OPTION__SELECT:
+      case BrowserAutomationPackage.PICK__SELECT:
         return getSelect();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -196,10 +196,10 @@ public class SelectOptionImpl extends ActionImpl implements SelectOption
   {
     switch (featureID)
     {
-      case BrowserAutomationPackage.SELECT_OPTION__VALUE:
+      case BrowserAutomationPackage.PICK__VALUE:
         setValue((String)newValue);
         return;
-      case BrowserAutomationPackage.SELECT_OPTION__SELECT:
+      case BrowserAutomationPackage.PICK__SELECT:
         setSelect((Selector)newValue);
         return;
     }
@@ -216,10 +216,10 @@ public class SelectOptionImpl extends ActionImpl implements SelectOption
   {
     switch (featureID)
     {
-      case BrowserAutomationPackage.SELECT_OPTION__VALUE:
+      case BrowserAutomationPackage.PICK__VALUE:
         setValue(VALUE_EDEFAULT);
         return;
-      case BrowserAutomationPackage.SELECT_OPTION__SELECT:
+      case BrowserAutomationPackage.PICK__SELECT:
         setSelect((Selector)null);
         return;
     }
@@ -236,9 +236,9 @@ public class SelectOptionImpl extends ActionImpl implements SelectOption
   {
     switch (featureID)
     {
-      case BrowserAutomationPackage.SELECT_OPTION__VALUE:
+      case BrowserAutomationPackage.PICK__VALUE:
         return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
-      case BrowserAutomationPackage.SELECT_OPTION__SELECT:
+      case BrowserAutomationPackage.PICK__SELECT:
         return select != null;
     }
     return super.eIsSet(featureID);
@@ -261,4 +261,4 @@ public class SelectOptionImpl extends ActionImpl implements SelectOption
     return result.toString();
   }
 
-} //SelectOptionImpl
+} //PickImpl

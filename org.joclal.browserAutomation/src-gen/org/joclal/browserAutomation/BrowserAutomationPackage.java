@@ -309,14 +309,14 @@ public interface BrowserAutomationPackage extends EPackage
   int UNCHECK_FEATURE_COUNT = ACTION_FEATURE_COUNT + 1;
 
   /**
-   * The meta object id for the '{@link org.joclal.browserAutomation.impl.SelectOptionImpl <em>Select Option</em>}' class.
+   * The meta object id for the '{@link org.joclal.browserAutomation.impl.PickImpl <em>Pick</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.joclal.browserAutomation.impl.SelectOptionImpl
-   * @see org.joclal.browserAutomation.impl.BrowserAutomationPackageImpl#getSelectOption()
+   * @see org.joclal.browserAutomation.impl.PickImpl
+   * @see org.joclal.browserAutomation.impl.BrowserAutomationPackageImpl#getPick()
    * @generated
    */
-  int SELECT_OPTION = 8;
+  int PICK = 8;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -325,7 +325,7 @@ public interface BrowserAutomationPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SELECT_OPTION__VALUE = ACTION_FEATURE_COUNT + 0;
+  int PICK__VALUE = ACTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Select</b></em>' containment reference.
@@ -334,16 +334,16 @@ public interface BrowserAutomationPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SELECT_OPTION__SELECT = ACTION_FEATURE_COUNT + 1;
+  int PICK__SELECT = ACTION_FEATURE_COUNT + 1;
 
   /**
-   * The number of structural features of the '<em>Select Option</em>' class.
+   * The number of structural features of the '<em>Pick</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SELECT_OPTION_FEATURE_COUNT = ACTION_FEATURE_COUNT + 2;
+  int PICK_FEATURE_COUNT = ACTION_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link org.joclal.browserAutomation.impl.LetImpl <em>Let</em>}' class.
@@ -919,36 +919,36 @@ public interface BrowserAutomationPackage extends EPackage
   EReference getUncheck_Checkbox();
 
   /**
-   * Returns the meta object for class '{@link org.joclal.browserAutomation.SelectOption <em>Select Option</em>}'.
+   * Returns the meta object for class '{@link org.joclal.browserAutomation.Pick <em>Pick</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Select Option</em>'.
-   * @see org.joclal.browserAutomation.SelectOption
+   * @return the meta object for class '<em>Pick</em>'.
+   * @see org.joclal.browserAutomation.Pick
    * @generated
    */
-  EClass getSelectOption();
+  EClass getPick();
 
   /**
-   * Returns the meta object for the attribute '{@link org.joclal.browserAutomation.SelectOption#getValue <em>Value</em>}'.
+   * Returns the meta object for the attribute '{@link org.joclal.browserAutomation.Pick#getValue <em>Value</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Value</em>'.
-   * @see org.joclal.browserAutomation.SelectOption#getValue()
-   * @see #getSelectOption()
+   * @see org.joclal.browserAutomation.Pick#getValue()
+   * @see #getPick()
    * @generated
    */
-  EAttribute getSelectOption_Value();
+  EAttribute getPick_Value();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.joclal.browserAutomation.SelectOption#getSelect <em>Select</em>}'.
+   * Returns the meta object for the containment reference '{@link org.joclal.browserAutomation.Pick#getSelect <em>Select</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Select</em>'.
-   * @see org.joclal.browserAutomation.SelectOption#getSelect()
-   * @see #getSelectOption()
+   * @see org.joclal.browserAutomation.Pick#getSelect()
+   * @see #getPick()
    * @generated
    */
-  EReference getSelectOption_Select();
+  EReference getPick_Select();
 
   /**
    * Returns the meta object for class '{@link org.joclal.browserAutomation.Let <em>Let</em>}'.
@@ -1472,14 +1472,14 @@ public interface BrowserAutomationPackage extends EPackage
     EReference UNCHECK__CHECKBOX = eINSTANCE.getUncheck_Checkbox();
 
     /**
-     * The meta object literal for the '{@link org.joclal.browserAutomation.impl.SelectOptionImpl <em>Select Option</em>}' class.
+     * The meta object literal for the '{@link org.joclal.browserAutomation.impl.PickImpl <em>Pick</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.joclal.browserAutomation.impl.SelectOptionImpl
-     * @see org.joclal.browserAutomation.impl.BrowserAutomationPackageImpl#getSelectOption()
+     * @see org.joclal.browserAutomation.impl.PickImpl
+     * @see org.joclal.browserAutomation.impl.BrowserAutomationPackageImpl#getPick()
      * @generated
      */
-    EClass SELECT_OPTION = eINSTANCE.getSelectOption();
+    EClass PICK = eINSTANCE.getPick();
 
     /**
      * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
@@ -1487,7 +1487,7 @@ public interface BrowserAutomationPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute SELECT_OPTION__VALUE = eINSTANCE.getSelectOption_Value();
+    EAttribute PICK__VALUE = eINSTANCE.getPick_Value();
 
     /**
      * The meta object literal for the '<em><b>Select</b></em>' containment reference feature.
@@ -1495,7 +1495,7 @@ public interface BrowserAutomationPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference SELECT_OPTION__SELECT = eINSTANCE.getSelectOption_Select();
+    EReference PICK__SELECT = eINSTANCE.getPick_Select();
 
     /**
      * The meta object literal for the '{@link org.joclal.browserAutomation.impl.LetImpl <em>Let</em>}' class.

@@ -14,7 +14,7 @@ enum Browser:
 ;
 
 Action:
-	Goto | ClickOn | Fill | Check | Uncheck | SelectOption | Let | DoWhile | IfThen | SubroutineCall
+	Goto | ClickOn | Fill | Check | Uncheck | Pick | Let | DoWhile | IfThen | SubroutineCall
 ;
 
 Goto:
@@ -41,8 +41,8 @@ Uncheck:
 	'Uncheck' checkbox=Selector ';'
 ;
 
-SelectOption:
-	'Select' value=STRING 'in' select=Selector ";"
+Pick:
+	'Pick' value=STRING 'in' select=Selector ";"
 ;
 
 Let:

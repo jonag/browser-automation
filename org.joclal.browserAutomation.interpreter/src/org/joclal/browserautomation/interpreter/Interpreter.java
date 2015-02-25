@@ -1,12 +1,25 @@
 package org.joclal.browserautomation.interpreter;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import org.joclal.browserAutomation.*;
+import org.joclal.browserAutomation.Action;
+import org.joclal.browserAutomation.Browser;
+import org.joclal.browserAutomation.BrowserAutomation;
+import org.joclal.browserAutomation.Check;
+import org.joclal.browserAutomation.ClickOn;
+import org.joclal.browserAutomation.DoWhile;
+import org.joclal.browserAutomation.Fill;
+import org.joclal.browserAutomation.Goto;
+import org.joclal.browserAutomation.IfThen;
+import org.joclal.browserAutomation.Let;
+import org.joclal.browserAutomation.Pick;
+import org.joclal.browserAutomation.Selector;
+import org.joclal.browserAutomation.SubroutineCall;
+import org.joclal.browserAutomation.Uncheck;
+import org.joclal.browserAutomation.Value;
 import org.joclal.browserautomation.interpreter.utils.DriverFacade;
 import org.joclal.browserautomation.interpreter.utils.InterpreterUtils;
 import org.openqa.selenium.WebElement;
@@ -47,8 +60,8 @@ public class Interpreter {
 			processCheck((Check) a);
 		}else if(a instanceof Uncheck){
 			processUncheck((Uncheck) a);
-		}else if (a instanceof SelectOption){
-			processSelectOption((SelectOption) a);
+		}else if (a instanceof Pick){
+			processPick((Pick) a);
 		}else if(a instanceof Let){
 			processLet((Let) a);
 		}else if(a instanceof DoWhile){
@@ -168,7 +181,7 @@ public class Interpreter {
 		DriverFacade.goTo(url);
 	}
 	
-	private void processSelectOption(SelectOption a) {
+	private void processPick(Pick a) {
 		String value = a.getValue();
 		Selector s = a.getSelect();
 		List<WebElement> elements = DriverFacade.getWebElement(s.getId());

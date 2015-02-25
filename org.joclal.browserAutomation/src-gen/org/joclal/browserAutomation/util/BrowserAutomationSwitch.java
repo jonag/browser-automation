@@ -133,11 +133,11 @@ public class BrowserAutomationSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case BrowserAutomationPackage.SELECT_OPTION:
+      case BrowserAutomationPackage.PICK:
       {
-        SelectOption selectOption = (SelectOption)theEObject;
-        T result = caseSelectOption(selectOption);
-        if (result == null) result = caseAction(selectOption);
+        Pick pick = (Pick)theEObject;
+        T result = casePick(pick);
+        if (result == null) result = caseAction(pick);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -341,17 +341,17 @@ public class BrowserAutomationSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Select Option</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Pick</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Select Option</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Pick</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseSelectOption(SelectOption object)
+  public T casePick(Pick object)
   {
     return null;
   }

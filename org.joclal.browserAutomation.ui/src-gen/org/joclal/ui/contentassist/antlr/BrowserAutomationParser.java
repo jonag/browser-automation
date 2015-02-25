@@ -49,7 +49,7 @@ public class BrowserAutomationParser extends AbstractContentAssistParser {
 					put(grammarAccess.getFillAccess().getGroup(), "rule__Fill__Group__0");
 					put(grammarAccess.getCheckAccess().getGroup(), "rule__Check__Group__0");
 					put(grammarAccess.getUncheckAccess().getGroup(), "rule__Uncheck__Group__0");
-					put(grammarAccess.getSelectOptionAccess().getGroup(), "rule__SelectOption__Group__0");
+					put(grammarAccess.getPickAccess().getGroup(), "rule__Pick__Group__0");
 					put(grammarAccess.getLetAccess().getGroup(), "rule__Let__Group__0");
 					put(grammarAccess.getDoWhileAccess().getGroup(), "rule__DoWhile__Group__0");
 					put(grammarAccess.getBooleanExpAccess().getGroup(), "rule__BooleanExp__Group__0");
@@ -73,8 +73,8 @@ public class BrowserAutomationParser extends AbstractContentAssistParser {
 					put(grammarAccess.getFillAccess().getValueAssignment_3(), "rule__Fill__ValueAssignment_3");
 					put(grammarAccess.getCheckAccess().getCheckboxAssignment_1(), "rule__Check__CheckboxAssignment_1");
 					put(grammarAccess.getUncheckAccess().getCheckboxAssignment_1(), "rule__Uncheck__CheckboxAssignment_1");
-					put(grammarAccess.getSelectOptionAccess().getValueAssignment_1(), "rule__SelectOption__ValueAssignment_1");
-					put(grammarAccess.getSelectOptionAccess().getSelectAssignment_3(), "rule__SelectOption__SelectAssignment_3");
+					put(grammarAccess.getPickAccess().getValueAssignment_1(), "rule__Pick__ValueAssignment_1");
+					put(grammarAccess.getPickAccess().getSelectAssignment_3(), "rule__Pick__SelectAssignment_3");
 					put(grammarAccess.getLetAccess().getIdAssignment_1(), "rule__Let__IdAssignment_1");
 					put(grammarAccess.getLetAccess().getValueAssignment_3(), "rule__Let__ValueAssignment_3");
 					put(grammarAccess.getLetValueAccess().getSelectorAssignment_0(), "rule__LetValue__SelectorAssignment_0");

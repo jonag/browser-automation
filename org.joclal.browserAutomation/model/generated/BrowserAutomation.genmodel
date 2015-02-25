@@ -48,9 +48,9 @@
     <genClasses ecoreClass="BrowserAutomation.ecore#//Uncheck">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//Uncheck/checkbox"/>
     </genClasses>
-    <genClasses ecoreClass="BrowserAutomation.ecore#//SelectOption">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserAutomation.ecore#//SelectOption/value"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//SelectOption/select"/>
+    <genClasses ecoreClass="BrowserAutomation.ecore#//Pick">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserAutomation.ecore#//Pick/value"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//Pick/select"/>
     </genClasses>
     <genClasses ecoreClass="BrowserAutomation.ecore#//Let">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//Let/id"/>

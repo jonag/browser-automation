@@ -280,25 +280,25 @@ finally {
 
 
 
-// Entry rule entryRuleSelectOption
-entryRuleSelectOption 
+// Entry rule entryRulePick
+entryRulePick 
 :
-{ before(grammarAccess.getSelectOptionRule()); }
-	 ruleSelectOption
-{ after(grammarAccess.getSelectOptionRule()); } 
+{ before(grammarAccess.getPickRule()); }
+	 rulePick
+{ after(grammarAccess.getPickRule()); } 
 	 EOF 
 ;
 
-// Rule SelectOption
-ruleSelectOption
+// Rule Pick
+rulePick
     @init {
 		int stackSize = keepStackSize();
     }
 	:
 (
-{ before(grammarAccess.getSelectOptionAccess().getGroup()); }
-(rule__SelectOption__Group__0)
-{ after(grammarAccess.getSelectOptionAccess().getGroup()); }
+{ before(grammarAccess.getPickAccess().getGroup()); }
+(rule__Pick__Group__0)
+{ after(grammarAccess.getPickAccess().getGroup()); }
 )
 
 ;
@@ -635,9 +635,9 @@ rule__Action__Alternatives
 )
 
     |(
-{ before(grammarAccess.getActionAccess().getSelectOptionParserRuleCall_5()); }
-	ruleSelectOption
-{ after(grammarAccess.getActionAccess().getSelectOptionParserRuleCall_5()); }
+{ before(grammarAccess.getActionAccess().getPickParserRuleCall_5()); }
+	rulePick
+{ after(grammarAccess.getActionAccess().getPickParserRuleCall_5()); }
 )
 
     |(
@@ -1641,29 +1641,29 @@ finally {
 
 
 
-rule__SelectOption__Group__0
+rule__Pick__Group__0
     @init {
 		int stackSize = keepStackSize();
     }
 :
-	rule__SelectOption__Group__0__Impl
-	rule__SelectOption__Group__1
+	rule__Pick__Group__0__Impl
+	rule__Pick__Group__1
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__SelectOption__Group__0__Impl
+rule__Pick__Group__0__Impl
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getSelectOptionAccess().getSelectKeyword_0()); }
+{ before(grammarAccess.getPickAccess().getPickKeyword_0()); }
 
-	'Select' 
+	'Pick' 
 
-{ after(grammarAccess.getSelectOptionAccess().getSelectKeyword_0()); }
+{ after(grammarAccess.getPickAccess().getPickKeyword_0()); }
 )
 
 ;
@@ -1672,27 +1672,27 @@ finally {
 }
 
 
-rule__SelectOption__Group__1
+rule__Pick__Group__1
     @init {
 		int stackSize = keepStackSize();
     }
 :
-	rule__SelectOption__Group__1__Impl
-	rule__SelectOption__Group__2
+	rule__Pick__Group__1__Impl
+	rule__Pick__Group__2
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__SelectOption__Group__1__Impl
+rule__Pick__Group__1__Impl
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getSelectOptionAccess().getValueAssignment_1()); }
-(rule__SelectOption__ValueAssignment_1)
-{ after(grammarAccess.getSelectOptionAccess().getValueAssignment_1()); }
+{ before(grammarAccess.getPickAccess().getValueAssignment_1()); }
+(rule__Pick__ValueAssignment_1)
+{ after(grammarAccess.getPickAccess().getValueAssignment_1()); }
 )
 
 ;
@@ -1701,29 +1701,29 @@ finally {
 }
 
 
-rule__SelectOption__Group__2
+rule__Pick__Group__2
     @init {
 		int stackSize = keepStackSize();
     }
 :
-	rule__SelectOption__Group__2__Impl
-	rule__SelectOption__Group__3
+	rule__Pick__Group__2__Impl
+	rule__Pick__Group__3
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__SelectOption__Group__2__Impl
+rule__Pick__Group__2__Impl
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getSelectOptionAccess().getInKeyword_2()); }
+{ before(grammarAccess.getPickAccess().getInKeyword_2()); }
 
 	'in' 
 
-{ after(grammarAccess.getSelectOptionAccess().getInKeyword_2()); }
+{ after(grammarAccess.getPickAccess().getInKeyword_2()); }
 )
 
 ;
@@ -1732,27 +1732,27 @@ finally {
 }
 
 
-rule__SelectOption__Group__3
+rule__Pick__Group__3
     @init {
 		int stackSize = keepStackSize();
     }
 :
-	rule__SelectOption__Group__3__Impl
-	rule__SelectOption__Group__4
+	rule__Pick__Group__3__Impl
+	rule__Pick__Group__4
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__SelectOption__Group__3__Impl
+rule__Pick__Group__3__Impl
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getSelectOptionAccess().getSelectAssignment_3()); }
-(rule__SelectOption__SelectAssignment_3)
-{ after(grammarAccess.getSelectOptionAccess().getSelectAssignment_3()); }
+{ before(grammarAccess.getPickAccess().getSelectAssignment_3()); }
+(rule__Pick__SelectAssignment_3)
+{ after(grammarAccess.getPickAccess().getSelectAssignment_3()); }
 )
 
 ;
@@ -1761,28 +1761,28 @@ finally {
 }
 
 
-rule__SelectOption__Group__4
+rule__Pick__Group__4
     @init {
 		int stackSize = keepStackSize();
     }
 :
-	rule__SelectOption__Group__4__Impl
+	rule__Pick__Group__4__Impl
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__SelectOption__Group__4__Impl
+rule__Pick__Group__4__Impl
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getSelectOptionAccess().getSemicolonKeyword_4()); }
+{ before(grammarAccess.getPickAccess().getSemicolonKeyword_4()); }
 
 	';' 
 
-{ after(grammarAccess.getSelectOptionAccess().getSemicolonKeyword_4()); }
+{ after(grammarAccess.getPickAccess().getSemicolonKeyword_4()); }
 )
 
 ;
@@ -3625,14 +3625,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__SelectOption__ValueAssignment_1
+rule__Pick__ValueAssignment_1
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getSelectOptionAccess().getValueSTRINGTerminalRuleCall_1_0()); }
-	RULE_STRING{ after(grammarAccess.getSelectOptionAccess().getValueSTRINGTerminalRuleCall_1_0()); }
+{ before(grammarAccess.getPickAccess().getValueSTRINGTerminalRuleCall_1_0()); }
+	RULE_STRING{ after(grammarAccess.getPickAccess().getValueSTRINGTerminalRuleCall_1_0()); }
 )
 
 ;
@@ -3640,14 +3640,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__SelectOption__SelectAssignment_3
+rule__Pick__SelectAssignment_3
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getSelectOptionAccess().getSelectSelectorParserRuleCall_3_0()); }
-	ruleSelector{ after(grammarAccess.getSelectOptionAccess().getSelectSelectorParserRuleCall_3_0()); }
+{ before(grammarAccess.getPickAccess().getSelectSelectorParserRuleCall_3_0()); }
+	ruleSelector{ after(grammarAccess.getPickAccess().getSelectSelectorParserRuleCall_3_0()); }
 )
 
 ;

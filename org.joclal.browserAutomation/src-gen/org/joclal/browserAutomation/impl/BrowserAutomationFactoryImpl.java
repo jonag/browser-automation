@@ -73,7 +73,7 @@ public class BrowserAutomationFactoryImpl extends EFactoryImpl implements Browse
       case BrowserAutomationPackage.FILL: return createFill();
       case BrowserAutomationPackage.CHECK: return createCheck();
       case BrowserAutomationPackage.UNCHECK: return createUncheck();
-      case BrowserAutomationPackage.SELECT_OPTION: return createSelectOption();
+      case BrowserAutomationPackage.PICK: return createPick();
       case BrowserAutomationPackage.LET: return createLet();
       case BrowserAutomationPackage.LET_VALUE: return createLetValue();
       case BrowserAutomationPackage.VALUE: return createValue();
@@ -219,10 +219,10 @@ public class BrowserAutomationFactoryImpl extends EFactoryImpl implements Browse
    * <!-- end-user-doc -->
    * @generated
    */
-  public SelectOption createSelectOption()
+  public Pick createPick()
   {
-    SelectOptionImpl selectOption = new SelectOptionImpl();
-    return selectOption;
+    PickImpl pick = new PickImpl();
+    return pick;
   }
 
   /**
