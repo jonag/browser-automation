@@ -11,6 +11,8 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.joclal.browserAutomation.Action;
+import org.joclal.browserAutomation.Arithmetic;
+import org.joclal.browserAutomation.ArithmeticExp;
 import org.joclal.browserAutomation.BooleanExp;
 import org.joclal.browserAutomation.Browser;
 import org.joclal.browserAutomation.BrowserAutomation;
@@ -24,6 +26,7 @@ import org.joclal.browserAutomation.Goto;
 import org.joclal.browserAutomation.IfThen;
 import org.joclal.browserAutomation.Let;
 import org.joclal.browserAutomation.LetValue;
+import org.joclal.browserAutomation.Operation;
 import org.joclal.browserAutomation.Operator;
 import org.joclal.browserAutomation.SelectOption;
 import org.joclal.browserAutomation.Selector;
@@ -144,6 +147,20 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass operationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass arithmeticExpEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass ifThenEClass = null;
 
   /**
@@ -180,6 +197,13 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
    * @generated
    */
   private EEnum operatorEEnum = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EEnum arithmeticEEnum = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -639,6 +663,76 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getOperation()
+  {
+    return operationEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getOperation_LeftValue()
+  {
+    return (EReference)operationEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getOperation_Operation()
+  {
+    return (EReference)operationEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getArithmeticExp()
+  {
+    return arithmeticExpEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getArithmeticExp_LeftMember()
+  {
+    return (EReference)arithmeticExpEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getArithmeticExp_Arithmetic()
+  {
+    return (EAttribute)arithmeticExpEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getArithmeticExp_RightMember()
+  {
+    return (EReference)arithmeticExpEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getIfThen()
   {
     return ifThenEClass;
@@ -789,6 +883,16 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
    * <!-- end-user-doc -->
    * @generated
    */
+  public EEnum getArithmetic()
+  {
+    return arithmeticEEnum;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public BrowserAutomationFactory getBrowserAutomationFactory()
   {
     return (BrowserAutomationFactory)getEFactoryInstance();
@@ -867,6 +971,15 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
     createEAttribute(booleanExpEClass, BOOLEAN_EXP__OPERATOR);
     createEReference(booleanExpEClass, BOOLEAN_EXP__RIGHT_MEMBER);
 
+    operationEClass = createEClass(OPERATION);
+    createEReference(operationEClass, OPERATION__LEFT_VALUE);
+    createEReference(operationEClass, OPERATION__OPERATION);
+
+    arithmeticExpEClass = createEClass(ARITHMETIC_EXP);
+    createEReference(arithmeticExpEClass, ARITHMETIC_EXP__LEFT_MEMBER);
+    createEAttribute(arithmeticExpEClass, ARITHMETIC_EXP__ARITHMETIC);
+    createEReference(arithmeticExpEClass, ARITHMETIC_EXP__RIGHT_MEMBER);
+
     ifThenEClass = createEClass(IF_THEN);
     createEReference(ifThenEClass, IF_THEN__CONDITION);
     createEReference(ifThenEClass, IF_THEN__THEN_ACTIONS);
@@ -887,6 +1000,7 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
     // Create enums
     browserEEnum = createEEnum(BROWSER);
     operatorEEnum = createEEnum(OPERATOR);
+    arithmeticEEnum = createEEnum(ARITHMETIC);
   }
 
   /**
@@ -926,6 +1040,7 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
     selectOptionEClass.getESuperTypes().add(this.getAction());
     letEClass.getESuperTypes().add(this.getAction());
     doWhileEClass.getESuperTypes().add(this.getAction());
+    operationEClass.getESuperTypes().add(this.getAction());
     ifThenEClass.getESuperTypes().add(this.getAction());
     subroutineCallEClass.getESuperTypes().add(this.getAction());
 
@@ -983,6 +1098,15 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
     initEAttribute(getBooleanExp_Operator(), this.getOperator(), "operator", null, 0, 1, BooleanExp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getBooleanExp_RightMember(), this.getValue(), null, "rightMember", null, 0, 1, BooleanExp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+    initEClass(operationEClass, Operation.class, "Operation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getOperation_LeftValue(), this.getValue(), null, "leftValue", null, 0, 1, Operation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getOperation_Operation(), this.getArithmeticExp(), null, "operation", null, 0, 1, Operation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(arithmeticExpEClass, ArithmeticExp.class, "ArithmeticExp", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getArithmeticExp_LeftMember(), this.getValue(), null, "leftMember", null, 0, 1, ArithmeticExp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getArithmeticExp_Arithmetic(), this.getArithmetic(), "arithmetic", null, 0, 1, ArithmeticExp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getArithmeticExp_RightMember(), this.getValue(), null, "rightMember", null, 0, 1, ArithmeticExp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     initEClass(ifThenEClass, IfThen.class, "IfThen", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getIfThen_Condition(), this.getBooleanExp(), null, "condition", null, 0, 1, IfThen.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getIfThen_ThenActions(), this.getAction(), null, "thenActions", null, 0, -1, IfThen.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1015,6 +1139,10 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
     addEEnumLiteral(operatorEEnum, Operator.LT);
     addEEnumLiteral(operatorEEnum, Operator.GTE);
     addEEnumLiteral(operatorEEnum, Operator.LTE);
+
+    initEEnum(arithmeticEEnum, Arithmetic.class, "Arithmetic");
+    addEEnumLiteral(arithmeticEEnum, Arithmetic.SUM);
+    addEEnumLiteral(arithmeticEEnum, Arithmetic.SUB);
 
     // Create resource
     createResource(eNS_URI);

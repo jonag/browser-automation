@@ -145,6 +145,16 @@ public class BrowserAutomationAdapterFactory extends AdapterFactoryImpl
         return createBooleanExpAdapter();
       }
       @Override
+      public Adapter caseOperation(Operation object)
+      {
+        return createOperationAdapter();
+      }
+      @Override
+      public Adapter caseArithmeticExp(ArithmeticExp object)
+      {
+        return createArithmeticExpAdapter();
+      }
+      @Override
       public Adapter caseIfThen(IfThen object)
       {
         return createIfThenAdapter();
@@ -392,6 +402,36 @@ public class BrowserAutomationAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createBooleanExpAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.joclal.browserAutomation.Operation <em>Operation</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.joclal.browserAutomation.Operation
+   * @generated
+   */
+  public Adapter createOperationAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.joclal.browserAutomation.ArithmeticExp <em>Arithmetic Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.joclal.browserAutomation.ArithmeticExp
+   * @generated
+   */
+  public Adapter createArithmeticExpAdapter()
   {
     return null;
   }

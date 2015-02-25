@@ -79,6 +79,8 @@ public class BrowserAutomationFactoryImpl extends EFactoryImpl implements Browse
       case BrowserAutomationPackage.VALUE: return createValue();
       case BrowserAutomationPackage.DO_WHILE: return createDoWhile();
       case BrowserAutomationPackage.BOOLEAN_EXP: return createBooleanExp();
+      case BrowserAutomationPackage.OPERATION: return createOperation();
+      case BrowserAutomationPackage.ARITHMETIC_EXP: return createArithmeticExp();
       case BrowserAutomationPackage.IF_THEN: return createIfThen();
       case BrowserAutomationPackage.SUBROUTINE: return createSubroutine();
       case BrowserAutomationPackage.SUBROUTINE_CALL: return createSubroutineCall();
@@ -102,6 +104,8 @@ public class BrowserAutomationFactoryImpl extends EFactoryImpl implements Browse
         return createBrowserFromString(eDataType, initialValue);
       case BrowserAutomationPackage.OPERATOR:
         return createOperatorFromString(eDataType, initialValue);
+      case BrowserAutomationPackage.ARITHMETIC:
+        return createArithmeticFromString(eDataType, initialValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -121,6 +125,8 @@ public class BrowserAutomationFactoryImpl extends EFactoryImpl implements Browse
         return convertBrowserToString(eDataType, instanceValue);
       case BrowserAutomationPackage.OPERATOR:
         return convertOperatorToString(eDataType, instanceValue);
+      case BrowserAutomationPackage.ARITHMETIC:
+        return convertArithmeticToString(eDataType, instanceValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -285,6 +291,28 @@ public class BrowserAutomationFactoryImpl extends EFactoryImpl implements Browse
    * <!-- end-user-doc -->
    * @generated
    */
+  public Operation createOperation()
+  {
+    OperationImpl operation = new OperationImpl();
+    return operation;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ArithmeticExp createArithmeticExp()
+  {
+    ArithmeticExpImpl arithmeticExp = new ArithmeticExpImpl();
+    return arithmeticExp;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public IfThen createIfThen()
   {
     IfThenImpl ifThen = new IfThenImpl();
@@ -364,6 +392,28 @@ public class BrowserAutomationFactoryImpl extends EFactoryImpl implements Browse
    * @generated
    */
   public String convertOperatorToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Arithmetic createArithmeticFromString(EDataType eDataType, String initialValue)
+  {
+    Arithmetic result = Arithmetic.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertArithmeticToString(EDataType eDataType, Object instanceValue)
   {
     return instanceValue == null ? null : instanceValue.toString();
   }

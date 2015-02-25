@@ -56,6 +56,8 @@ public class Interpreter {
 			processIfThen((IfThen) a);
 		}else if(a instanceof SubroutineCall){
 			processSubroutineCall((SubroutineCall) a);
+		}else if(a instanceof Operation){
+			processOperation((Operation) a);
 		}
 	}
 	
@@ -176,6 +178,12 @@ public class Interpreter {
 			select.selectByValue(value);
 			if(DriverFacade.hasUrlChanged()) break;
 		}
+	}
+	
+	private void processOperation(Operation o){
+		Value val = o.getLeftValue();
+		ArithmeticExp operation = o.getOperation();
+		InterpreterUtils.setValue(val, InterpreterUtils.processArithmeticExp(operation));
 	}
 	
 }

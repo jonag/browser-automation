@@ -83,12 +83,13 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 		private final RuleCall cDoWhileParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
 		private final RuleCall cIfThenParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
 		private final RuleCall cSubroutineCallParserRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
+		private final RuleCall cOperationParserRuleCall_10 = (RuleCall)cAlternatives.eContents().get(10);
 		
 		//Action:
-		//	Goto | ClickOn | Fill | Check | Uncheck | SelectOption | Let | DoWhile | IfThen | SubroutineCall;
+		//	Goto | ClickOn | Fill | Check | Uncheck | SelectOption | Let | DoWhile | IfThen | SubroutineCall | Operation;
 		public ParserRule getRule() { return rule; }
 
-		//Goto | ClickOn | Fill | Check | Uncheck | SelectOption | Let | DoWhile | IfThen | SubroutineCall
+		//Goto | ClickOn | Fill | Check | Uncheck | SelectOption | Let | DoWhile | IfThen | SubroutineCall | Operation
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//Goto
@@ -120,6 +121,9 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 
 		//SubroutineCall
 		public RuleCall getSubroutineCallParserRuleCall_9() { return cSubroutineCallParserRuleCall_9; }
+
+		//Operation
+		public RuleCall getOperationParserRuleCall_10() { return cOperationParserRuleCall_10; }
 	}
 
 	public class GotoElements extends AbstractParserRuleElementFinder {
@@ -538,6 +542,78 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 		public RuleCall getRightMemberValueParserRuleCall_2_0() { return cRightMemberValueParserRuleCall_2_0; }
 	}
 
+	public class OperationElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Operation");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cLeftValueAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cLeftValueValueParserRuleCall_0_0 = (RuleCall)cLeftValueAssignment_0.eContents().get(0);
+		private final Keyword cEqualsSignKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cOperationAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cOperationArithmeticExpParserRuleCall_2_0 = (RuleCall)cOperationAssignment_2.eContents().get(0);
+		
+		//Operation:
+		//	leftValue=Value "=" operation=ArithmeticExp;
+		public ParserRule getRule() { return rule; }
+
+		//leftValue=Value "=" operation=ArithmeticExp
+		public Group getGroup() { return cGroup; }
+
+		//leftValue=Value
+		public Assignment getLeftValueAssignment_0() { return cLeftValueAssignment_0; }
+
+		//Value
+		public RuleCall getLeftValueValueParserRuleCall_0_0() { return cLeftValueValueParserRuleCall_0_0; }
+
+		//"="
+		public Keyword getEqualsSignKeyword_1() { return cEqualsSignKeyword_1; }
+
+		//operation=ArithmeticExp
+		public Assignment getOperationAssignment_2() { return cOperationAssignment_2; }
+
+		//ArithmeticExp
+		public RuleCall getOperationArithmeticExpParserRuleCall_2_0() { return cOperationArithmeticExpParserRuleCall_2_0; }
+	}
+
+	public class ArithmeticExpElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ArithmeticExp");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cLeftMemberAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cLeftMemberValueParserRuleCall_0_0 = (RuleCall)cLeftMemberAssignment_0.eContents().get(0);
+		private final Assignment cArithmeticAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cArithmeticArithmeticEnumRuleCall_1_0 = (RuleCall)cArithmeticAssignment_1.eContents().get(0);
+		private final Assignment cRightMemberAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cRightMemberValueParserRuleCall_2_0 = (RuleCall)cRightMemberAssignment_2.eContents().get(0);
+		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		
+		//ArithmeticExp:
+		//	leftMember=Value arithmetic=Arithmetic rightMember=Value ";";
+		public ParserRule getRule() { return rule; }
+
+		//leftMember=Value arithmetic=Arithmetic rightMember=Value ";"
+		public Group getGroup() { return cGroup; }
+
+		//leftMember=Value
+		public Assignment getLeftMemberAssignment_0() { return cLeftMemberAssignment_0; }
+
+		//Value
+		public RuleCall getLeftMemberValueParserRuleCall_0_0() { return cLeftMemberValueParserRuleCall_0_0; }
+
+		//arithmetic=Arithmetic
+		public Assignment getArithmeticAssignment_1() { return cArithmeticAssignment_1; }
+
+		//Arithmetic
+		public RuleCall getArithmeticArithmeticEnumRuleCall_1_0() { return cArithmeticArithmeticEnumRuleCall_1_0; }
+
+		//rightMember=Value
+		public Assignment getRightMemberAssignment_2() { return cRightMemberAssignment_2; }
+
+		//Value
+		public RuleCall getRightMemberValueParserRuleCall_2_0() { return cRightMemberValueParserRuleCall_2_0; }
+
+		//";"
+		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
+	}
+
 	public class IfThenElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "IfThen");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -890,6 +966,34 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 		//"<="
 		public Keyword getLteLessThanSignEqualsSignKeyword_5_0() { return cLteLessThanSignEqualsSignKeyword_5_0; }
 	}
+
+	public class ArithmeticElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "Arithmetic");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final EnumLiteralDeclaration cSumEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cSumPlusSignKeyword_0_0 = (Keyword)cSumEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cSubEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cSubHyphenMinusKeyword_1_0 = (Keyword)cSubEnumLiteralDeclaration_1.eContents().get(0);
+		
+		//enum Arithmetic:
+		//	sum="+" | sub="-";
+		public EnumRule getRule() { return rule; }
+
+		//sum="+" | sub="-"
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//sum="+"
+		public EnumLiteralDeclaration getSumEnumLiteralDeclaration_0() { return cSumEnumLiteralDeclaration_0; }
+
+		//"+"
+		public Keyword getSumPlusSignKeyword_0_0() { return cSumPlusSignKeyword_0_0; }
+
+		//sub="-"
+		public EnumLiteralDeclaration getSubEnumLiteralDeclaration_1() { return cSubEnumLiteralDeclaration_1; }
+
+		//"-"
+		public Keyword getSubHyphenMinusKeyword_1_0() { return cSubHyphenMinusKeyword_1_0; }
+	}
 	
 	private final BrowserAutomationElements pBrowserAutomation;
 	private final BrowserElements unknownRuleBrowser;
@@ -907,6 +1011,9 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 	private final DoWhileElements pDoWhile;
 	private final BooleanExpElements pBooleanExp;
 	private final OperatorElements unknownRuleOperator;
+	private final OperationElements pOperation;
+	private final ArithmeticExpElements pArithmeticExp;
+	private final ArithmeticElements unknownRuleArithmetic;
 	private final IfThenElements pIfThen;
 	private final SubroutineElements pSubroutine;
 	private final SubroutineCallElements pSubroutineCall;
@@ -937,6 +1044,9 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 		this.pDoWhile = new DoWhileElements();
 		this.pBooleanExp = new BooleanExpElements();
 		this.unknownRuleOperator = new OperatorElements();
+		this.pOperation = new OperationElements();
+		this.pArithmeticExp = new ArithmeticExpElements();
+		this.unknownRuleArithmetic = new ArithmeticElements();
 		this.pIfThen = new IfThenElements();
 		this.pSubroutine = new SubroutineElements();
 		this.pSubroutineCall = new SubroutineCallElements();
@@ -991,7 +1101,7 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 	}
 
 	//Action:
-	//	Goto | ClickOn | Fill | Check | Uncheck | SelectOption | Let | DoWhile | IfThen | SubroutineCall;
+	//	Goto | ClickOn | Fill | Check | Uncheck | SelectOption | Let | DoWhile | IfThen | SubroutineCall | Operation;
 	public ActionElements getActionAccess() {
 		return pAction;
 	}
@@ -1128,6 +1238,36 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 	
 	public EnumRule getOperatorRule() {
 		return getOperatorAccess().getRule();
+	}
+
+	//Operation:
+	//	leftValue=Value "=" operation=ArithmeticExp;
+	public OperationElements getOperationAccess() {
+		return pOperation;
+	}
+	
+	public ParserRule getOperationRule() {
+		return getOperationAccess().getRule();
+	}
+
+	//ArithmeticExp:
+	//	leftMember=Value arithmetic=Arithmetic rightMember=Value ";";
+	public ArithmeticExpElements getArithmeticExpAccess() {
+		return pArithmeticExp;
+	}
+	
+	public ParserRule getArithmeticExpRule() {
+		return getArithmeticExpAccess().getRule();
+	}
+
+	//enum Arithmetic:
+	//	sum="+" | sub="-";
+	public ArithmeticElements getArithmeticAccess() {
+		return unknownRuleArithmetic;
+	}
+	
+	public EnumRule getArithmeticRule() {
+		return getArithmeticAccess().getRule();
 	}
 
 	//IfThen:

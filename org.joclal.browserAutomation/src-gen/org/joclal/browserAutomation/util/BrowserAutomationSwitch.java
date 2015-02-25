@@ -178,6 +178,21 @@ public class BrowserAutomationSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case BrowserAutomationPackage.OPERATION:
+      {
+        Operation operation = (Operation)theEObject;
+        T result = caseOperation(operation);
+        if (result == null) result = caseAction(operation);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BrowserAutomationPackage.ARITHMETIC_EXP:
+      {
+        ArithmeticExp arithmeticExp = (ArithmeticExp)theEObject;
+        T result = caseArithmeticExp(arithmeticExp);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case BrowserAutomationPackage.IF_THEN:
       {
         IfThen ifThen = (IfThen)theEObject;
@@ -432,6 +447,38 @@ public class BrowserAutomationSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseBooleanExp(BooleanExp object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Operation</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Operation</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseOperation(Operation object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Arithmetic Exp</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Arithmetic Exp</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseArithmeticExp(ArithmeticExp object)
   {
     return null;
   }

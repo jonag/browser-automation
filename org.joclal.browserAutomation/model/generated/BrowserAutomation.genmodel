@@ -22,6 +22,10 @@
       <genEnumLiterals ecoreEnumLiteral="BrowserAutomation.ecore#//Operator/gte"/>
       <genEnumLiterals ecoreEnumLiteral="BrowserAutomation.ecore#//Operator/lte"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="BrowserAutomation.ecore#//Arithmetic">
+      <genEnumLiterals ecoreEnumLiteral="BrowserAutomation.ecore#//Arithmetic/sum"/>
+      <genEnumLiterals ecoreEnumLiteral="BrowserAutomation.ecore#//Arithmetic/sub"/>
+    </genEnums>
     <genClasses ecoreClass="BrowserAutomation.ecore#//BrowserAutomation">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//BrowserAutomation/subroutines"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserAutomation.ecore#//BrowserAutomation/browser"/>
@@ -73,6 +77,15 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//BooleanExp/leftMember"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserAutomation.ecore#//BooleanExp/operator"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//BooleanExp/rightMember"/>
+    </genClasses>
+    <genClasses ecoreClass="BrowserAutomation.ecore#//Operation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//Operation/leftValue"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//Operation/operation"/>
+    </genClasses>
+    <genClasses ecoreClass="BrowserAutomation.ecore#//ArithmeticExp">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//ArithmeticExp/leftMember"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserAutomation.ecore#//ArithmeticExp/arithmetic"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//ArithmeticExp/rightMember"/>
     </genClasses>
     <genClasses ecoreClass="BrowserAutomation.ecore#//IfThen">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//IfThen/condition"/>

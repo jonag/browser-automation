@@ -278,6 +278,16 @@ ruleAction returns [EObject current=null]
         $current = $this_SubroutineCall_9.current; 
         afterParserOrEnumRuleCall();
     }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getActionAccess().getOperationParserRuleCall_10()); 
+    }
+    this_Operation_10=ruleOperation
+    { 
+        $current = $this_Operation_10.current; 
+        afterParserOrEnumRuleCall();
+    }
 )
 ;
 
@@ -1013,6 +1023,146 @@ ruleBooleanExp returns [EObject current=null]
 
 
 
+// Entry rule entryRuleOperation
+entryRuleOperation returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getOperationRule()); }
+	 iv_ruleOperation=ruleOperation 
+	 { $current=$iv_ruleOperation.current; } 
+	 EOF 
+;
+
+// Rule Operation
+ruleOperation returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+((
+(
+		{ 
+	        newCompositeNode(grammarAccess.getOperationAccess().getLeftValueValueParserRuleCall_0_0()); 
+	    }
+		lv_leftValue_0_0=ruleValue		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getOperationRule());
+	        }
+       		set(
+       			$current, 
+       			"leftValue",
+        		lv_leftValue_0_0, 
+        		"Value");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)	otherlv_1='=' 
+    {
+    	newLeafNode(otherlv_1, grammarAccess.getOperationAccess().getEqualsSignKeyword_1());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getOperationAccess().getOperationArithmeticExpParserRuleCall_2_0()); 
+	    }
+		lv_operation_2_0=ruleArithmeticExp		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getOperationRule());
+	        }
+       		set(
+       			$current, 
+       			"operation",
+        		lv_operation_2_0, 
+        		"ArithmeticExp");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))
+;
+
+
+
+
+
+// Entry rule entryRuleArithmeticExp
+entryRuleArithmeticExp returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getArithmeticExpRule()); }
+	 iv_ruleArithmeticExp=ruleArithmeticExp 
+	 { $current=$iv_ruleArithmeticExp.current; } 
+	 EOF 
+;
+
+// Rule ArithmeticExp
+ruleArithmeticExp returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+((
+(
+		{ 
+	        newCompositeNode(grammarAccess.getArithmeticExpAccess().getLeftMemberValueParserRuleCall_0_0()); 
+	    }
+		lv_leftMember_0_0=ruleValue		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getArithmeticExpRule());
+	        }
+       		set(
+       			$current, 
+       			"leftMember",
+        		lv_leftMember_0_0, 
+        		"Value");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getArithmeticExpAccess().getArithmeticArithmeticEnumRuleCall_1_0()); 
+	    }
+		lv_arithmetic_1_0=ruleArithmetic		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getArithmeticExpRule());
+	        }
+       		set(
+       			$current, 
+       			"arithmetic",
+        		lv_arithmetic_1_0, 
+        		"Arithmetic");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getArithmeticExpAccess().getRightMemberValueParserRuleCall_2_0()); 
+	    }
+		lv_rightMember_2_0=ruleValue		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getArithmeticExpRule());
+	        }
+       		set(
+       			$current, 
+       			"rightMember",
+        		lv_rightMember_2_0, 
+        		"Value");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)	otherlv_3=';' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getArithmeticExpAccess().getSemicolonKeyword_3());
+    }
+)
+;
+
+
+
+
+
 // Entry rule entryRuleIfThen
 entryRuleIfThen returns [EObject current=null] 
 	:
@@ -1445,6 +1595,25 @@ ruleOperator returns [Enumerator current=null]
 	{
         $current = grammarAccess.getOperatorAccess().getLteEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
         newLeafNode(enumLiteral_5, grammarAccess.getOperatorAccess().getLteEnumLiteralDeclaration_5()); 
+    }
+));
+
+
+
+// Rule Arithmetic
+ruleArithmetic returns [Enumerator current=null] 
+    @init { enterRule(); }
+    @after { leaveRule(); }:
+((	enumLiteral_0='+' 
+	{
+        $current = grammarAccess.getArithmeticAccess().getSumEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_0, grammarAccess.getArithmeticAccess().getSumEnumLiteralDeclaration_0()); 
+    }
+)
+    |(	enumLiteral_1='-' 
+	{
+        $current = grammarAccess.getArithmeticAccess().getSubEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_1, grammarAccess.getArithmeticAccess().getSubEnumLiteralDeclaration_1()); 
     }
 ));
 

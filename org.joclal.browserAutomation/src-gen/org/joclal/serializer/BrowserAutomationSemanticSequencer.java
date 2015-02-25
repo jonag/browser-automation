@@ -13,6 +13,7 @@ import org.eclipse.xtext.serializer.sequencer.ISemanticNodeProvider.INodesForEOb
 import org.eclipse.xtext.serializer.sequencer.ISemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
+import org.joclal.browserAutomation.ArithmeticExp;
 import org.joclal.browserAutomation.BooleanExp;
 import org.joclal.browserAutomation.BrowserAutomation;
 import org.joclal.browserAutomation.BrowserAutomationPackage;
@@ -24,6 +25,7 @@ import org.joclal.browserAutomation.Goto;
 import org.joclal.browserAutomation.IfThen;
 import org.joclal.browserAutomation.Let;
 import org.joclal.browserAutomation.LetValue;
+import org.joclal.browserAutomation.Operation;
 import org.joclal.browserAutomation.SelectOption;
 import org.joclal.browserAutomation.Selector;
 import org.joclal.browserAutomation.Subroutine;
@@ -41,6 +43,12 @@ public class BrowserAutomationSemanticSequencer extends AbstractDelegatingSemant
 	
 	public void createSequence(EObject context, EObject semanticObject) {
 		if(semanticObject.eClass().getEPackage() == BrowserAutomationPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
+			case BrowserAutomationPackage.ARITHMETIC_EXP:
+				if(context == grammarAccess.getArithmeticExpRule()) {
+					sequence_ArithmeticExp(context, (ArithmeticExp) semanticObject); 
+					return; 
+				}
+				else break;
 			case BrowserAutomationPackage.BOOLEAN_EXP:
 				if(context == grammarAccess.getBooleanExpRule()) {
 					sequence_BooleanExp(context, (BooleanExp) semanticObject); 
@@ -108,6 +116,13 @@ public class BrowserAutomationSemanticSequencer extends AbstractDelegatingSemant
 					return; 
 				}
 				else break;
+			case BrowserAutomationPackage.OPERATION:
+				if(context == grammarAccess.getActionRule() ||
+				   context == grammarAccess.getOperationRule()) {
+					sequence_Operation(context, (Operation) semanticObject); 
+					return; 
+				}
+				else break;
 			case BrowserAutomationPackage.SELECT_OPTION:
 				if(context == grammarAccess.getActionRule() ||
 				   context == grammarAccess.getSelectOptionRule()) {
@@ -156,6 +171,28 @@ public class BrowserAutomationSemanticSequencer extends AbstractDelegatingSemant
 			}
 		if (errorAcceptor != null) errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
 	}
+	
+	/**
+	 * Constraint:
+	 *     (leftMember=Value arithmetic=Arithmetic rightMember=Value)
+	 */
+	protected void sequence_ArithmeticExp(EObject context, ArithmeticExp semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, BrowserAutomationPackage.Literals.ARITHMETIC_EXP__LEFT_MEMBER) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BrowserAutomationPackage.Literals.ARITHMETIC_EXP__LEFT_MEMBER));
+			if(transientValues.isValueTransient(semanticObject, BrowserAutomationPackage.Literals.ARITHMETIC_EXP__ARITHMETIC) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BrowserAutomationPackage.Literals.ARITHMETIC_EXP__ARITHMETIC));
+			if(transientValues.isValueTransient(semanticObject, BrowserAutomationPackage.Literals.ARITHMETIC_EXP__RIGHT_MEMBER) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BrowserAutomationPackage.Literals.ARITHMETIC_EXP__RIGHT_MEMBER));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getArithmeticExpAccess().getLeftMemberValueParserRuleCall_0_0(), semanticObject.getLeftMember());
+		feeder.accept(grammarAccess.getArithmeticExpAccess().getArithmeticArithmeticEnumRuleCall_1_0(), semanticObject.getArithmetic());
+		feeder.accept(grammarAccess.getArithmeticExpAccess().getRightMemberValueParserRuleCall_2_0(), semanticObject.getRightMember());
+		feeder.finish();
+	}
+	
 	
 	/**
 	 * Constraint:
@@ -297,6 +334,25 @@ public class BrowserAutomationSemanticSequencer extends AbstractDelegatingSemant
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getLetAccess().getIdVariableIdParserRuleCall_1_0(), semanticObject.getId());
 		feeder.accept(grammarAccess.getLetAccess().getValueLetValueParserRuleCall_3_0(), semanticObject.getValue());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (leftValue=Value operation=ArithmeticExp)
+	 */
+	protected void sequence_Operation(EObject context, Operation semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, BrowserAutomationPackage.Literals.OPERATION__LEFT_VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BrowserAutomationPackage.Literals.OPERATION__LEFT_VALUE));
+			if(transientValues.isValueTransient(semanticObject, BrowserAutomationPackage.Literals.OPERATION__OPERATION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BrowserAutomationPackage.Literals.OPERATION__OPERATION));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getOperationAccess().getLeftValueValueParserRuleCall_0_0(), semanticObject.getLeftValue());
+		feeder.accept(grammarAccess.getOperationAccess().getOperationArithmeticExpParserRuleCall_2_0(), semanticObject.getOperation());
 		feeder.finish();
 	}
 	

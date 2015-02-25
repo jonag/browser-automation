@@ -149,6 +149,24 @@ public interface BrowserAutomationFactory extends EFactory
   BooleanExp createBooleanExp();
 
   /**
+   * Returns a new object of class '<em>Operation</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Operation</em>'.
+   * @generated
+   */
+  Operation createOperation();
+
+  /**
+   * Returns a new object of class '<em>Arithmetic Exp</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Arithmetic Exp</em>'.
+   * @generated
+   */
+  ArithmeticExp createArithmeticExp();
+
+  /**
    * Returns a new object of class '<em>If Then</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

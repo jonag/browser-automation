@@ -86,6 +86,23 @@
     <eLiterals name="gte" value="4" literal=">="/>
     <eLiterals name="lte" value="5" literal="&lt;="/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Operation" eSuperTypes="#//Action">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="leftValue" eType="#//Value"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operation" eType="#//ArithmeticExp"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ArithmeticExp">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="leftMember" eType="#//Value"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="arithmetic" eType="#//Arithmetic"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rightMember" eType="#//Value"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Arithmetic">
+    <eLiterals name="sum" literal="+"/>
+    <eLiterals name="sub" value="1" literal="-"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IfThen" eSuperTypes="#//Action">
     <eStructuralFeatures xsi:type="ecore:EReference" name="condition" eType="#//BooleanExp"
         containment="true"/>

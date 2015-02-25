@@ -549,6 +549,89 @@ public interface BrowserAutomationPackage extends EPackage
   int BOOLEAN_EXP_FEATURE_COUNT = 3;
 
   /**
+   * The meta object id for the '{@link org.joclal.browserAutomation.impl.OperationImpl <em>Operation</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.joclal.browserAutomation.impl.OperationImpl
+   * @see org.joclal.browserAutomation.impl.BrowserAutomationPackageImpl#getOperation()
+   * @generated
+   */
+  int OPERATION = 14;
+
+  /**
+   * The feature id for the '<em><b>Left Value</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OPERATION__LEFT_VALUE = ACTION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Operation</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OPERATION__OPERATION = ACTION_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Operation</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OPERATION_FEATURE_COUNT = ACTION_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.joclal.browserAutomation.impl.ArithmeticExpImpl <em>Arithmetic Exp</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.joclal.browserAutomation.impl.ArithmeticExpImpl
+   * @see org.joclal.browserAutomation.impl.BrowserAutomationPackageImpl#getArithmeticExp()
+   * @generated
+   */
+  int ARITHMETIC_EXP = 15;
+
+  /**
+   * The feature id for the '<em><b>Left Member</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ARITHMETIC_EXP__LEFT_MEMBER = 0;
+
+  /**
+   * The feature id for the '<em><b>Arithmetic</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ARITHMETIC_EXP__ARITHMETIC = 1;
+
+  /**
+   * The feature id for the '<em><b>Right Member</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ARITHMETIC_EXP__RIGHT_MEMBER = 2;
+
+  /**
+   * The number of structural features of the '<em>Arithmetic Exp</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ARITHMETIC_EXP_FEATURE_COUNT = 3;
+
+  /**
    * The meta object id for the '{@link org.joclal.browserAutomation.impl.IfThenImpl <em>If Then</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -556,7 +639,7 @@ public interface BrowserAutomationPackage extends EPackage
    * @see org.joclal.browserAutomation.impl.BrowserAutomationPackageImpl#getIfThen()
    * @generated
    */
-  int IF_THEN = 14;
+  int IF_THEN = 16;
 
   /**
    * The feature id for the '<em><b>Condition</b></em>' containment reference.
@@ -602,7 +685,7 @@ public interface BrowserAutomationPackage extends EPackage
    * @see org.joclal.browserAutomation.impl.BrowserAutomationPackageImpl#getSubroutine()
    * @generated
    */
-  int SUBROUTINE = 15;
+  int SUBROUTINE = 17;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -648,7 +731,7 @@ public interface BrowserAutomationPackage extends EPackage
    * @see org.joclal.browserAutomation.impl.BrowserAutomationPackageImpl#getSubroutineCall()
    * @generated
    */
-  int SUBROUTINE_CALL = 16;
+  int SUBROUTINE_CALL = 18;
 
   /**
    * The feature id for the '<em><b>Subroutine</b></em>' reference.
@@ -685,7 +768,7 @@ public interface BrowserAutomationPackage extends EPackage
    * @see org.joclal.browserAutomation.impl.BrowserAutomationPackageImpl#getVariableId()
    * @generated
    */
-  int VARIABLE_ID = 17;
+  int VARIABLE_ID = 19;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -713,7 +796,7 @@ public interface BrowserAutomationPackage extends EPackage
    * @see org.joclal.browserAutomation.impl.BrowserAutomationPackageImpl#getBrowser()
    * @generated
    */
-  int BROWSER = 18;
+  int BROWSER = 20;
 
   /**
    * The meta object id for the '{@link org.joclal.browserAutomation.Operator <em>Operator</em>}' enum.
@@ -723,7 +806,17 @@ public interface BrowserAutomationPackage extends EPackage
    * @see org.joclal.browserAutomation.impl.BrowserAutomationPackageImpl#getOperator()
    * @generated
    */
-  int OPERATOR = 19;
+  int OPERATOR = 21;
+
+  /**
+   * The meta object id for the '{@link org.joclal.browserAutomation.Arithmetic <em>Arithmetic</em>}' enum.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.joclal.browserAutomation.Arithmetic
+   * @see org.joclal.browserAutomation.impl.BrowserAutomationPackageImpl#getArithmetic()
+   * @generated
+   */
+  int ARITHMETIC = 22;
 
 
   /**
@@ -1142,6 +1235,81 @@ public interface BrowserAutomationPackage extends EPackage
   EReference getBooleanExp_RightMember();
 
   /**
+   * Returns the meta object for class '{@link org.joclal.browserAutomation.Operation <em>Operation</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Operation</em>'.
+   * @see org.joclal.browserAutomation.Operation
+   * @generated
+   */
+  EClass getOperation();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.joclal.browserAutomation.Operation#getLeftValue <em>Left Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Left Value</em>'.
+   * @see org.joclal.browserAutomation.Operation#getLeftValue()
+   * @see #getOperation()
+   * @generated
+   */
+  EReference getOperation_LeftValue();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.joclal.browserAutomation.Operation#getOperation <em>Operation</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Operation</em>'.
+   * @see org.joclal.browserAutomation.Operation#getOperation()
+   * @see #getOperation()
+   * @generated
+   */
+  EReference getOperation_Operation();
+
+  /**
+   * Returns the meta object for class '{@link org.joclal.browserAutomation.ArithmeticExp <em>Arithmetic Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Arithmetic Exp</em>'.
+   * @see org.joclal.browserAutomation.ArithmeticExp
+   * @generated
+   */
+  EClass getArithmeticExp();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.joclal.browserAutomation.ArithmeticExp#getLeftMember <em>Left Member</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Left Member</em>'.
+   * @see org.joclal.browserAutomation.ArithmeticExp#getLeftMember()
+   * @see #getArithmeticExp()
+   * @generated
+   */
+  EReference getArithmeticExp_LeftMember();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.joclal.browserAutomation.ArithmeticExp#getArithmetic <em>Arithmetic</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Arithmetic</em>'.
+   * @see org.joclal.browserAutomation.ArithmeticExp#getArithmetic()
+   * @see #getArithmeticExp()
+   * @generated
+   */
+  EAttribute getArithmeticExp_Arithmetic();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.joclal.browserAutomation.ArithmeticExp#getRightMember <em>Right Member</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Right Member</em>'.
+   * @see org.joclal.browserAutomation.ArithmeticExp#getRightMember()
+   * @see #getArithmeticExp()
+   * @generated
+   */
+  EReference getArithmeticExp_RightMember();
+
+  /**
    * Returns the meta object for class '{@link org.joclal.browserAutomation.IfThen <em>If Then</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1299,6 +1467,16 @@ public interface BrowserAutomationPackage extends EPackage
    * @generated
    */
   EEnum getOperator();
+
+  /**
+   * Returns the meta object for enum '{@link org.joclal.browserAutomation.Arithmetic <em>Arithmetic</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for enum '<em>Arithmetic</em>'.
+   * @see org.joclal.browserAutomation.Arithmetic
+   * @generated
+   */
+  EEnum getArithmetic();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -1664,6 +1842,66 @@ public interface BrowserAutomationPackage extends EPackage
     EReference BOOLEAN_EXP__RIGHT_MEMBER = eINSTANCE.getBooleanExp_RightMember();
 
     /**
+     * The meta object literal for the '{@link org.joclal.browserAutomation.impl.OperationImpl <em>Operation</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.joclal.browserAutomation.impl.OperationImpl
+     * @see org.joclal.browserAutomation.impl.BrowserAutomationPackageImpl#getOperation()
+     * @generated
+     */
+    EClass OPERATION = eINSTANCE.getOperation();
+
+    /**
+     * The meta object literal for the '<em><b>Left Value</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference OPERATION__LEFT_VALUE = eINSTANCE.getOperation_LeftValue();
+
+    /**
+     * The meta object literal for the '<em><b>Operation</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference OPERATION__OPERATION = eINSTANCE.getOperation_Operation();
+
+    /**
+     * The meta object literal for the '{@link org.joclal.browserAutomation.impl.ArithmeticExpImpl <em>Arithmetic Exp</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.joclal.browserAutomation.impl.ArithmeticExpImpl
+     * @see org.joclal.browserAutomation.impl.BrowserAutomationPackageImpl#getArithmeticExp()
+     * @generated
+     */
+    EClass ARITHMETIC_EXP = eINSTANCE.getArithmeticExp();
+
+    /**
+     * The meta object literal for the '<em><b>Left Member</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ARITHMETIC_EXP__LEFT_MEMBER = eINSTANCE.getArithmeticExp_LeftMember();
+
+    /**
+     * The meta object literal for the '<em><b>Arithmetic</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ARITHMETIC_EXP__ARITHMETIC = eINSTANCE.getArithmeticExp_Arithmetic();
+
+    /**
+     * The meta object literal for the '<em><b>Right Member</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ARITHMETIC_EXP__RIGHT_MEMBER = eINSTANCE.getArithmeticExp_RightMember();
+
+    /**
      * The meta object literal for the '{@link org.joclal.browserAutomation.impl.IfThenImpl <em>If Then</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1794,6 +2032,16 @@ public interface BrowserAutomationPackage extends EPackage
      * @generated
      */
     EEnum OPERATOR = eINSTANCE.getOperator();
+
+    /**
+     * The meta object literal for the '{@link org.joclal.browserAutomation.Arithmetic <em>Arithmetic</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.joclal.browserAutomation.Arithmetic
+     * @see org.joclal.browserAutomation.impl.BrowserAutomationPackageImpl#getArithmetic()
+     * @generated
+     */
+    EEnum ARITHMETIC = eINSTANCE.getArithmetic();
 
   }
 

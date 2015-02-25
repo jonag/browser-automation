@@ -42,6 +42,7 @@ public class BrowserAutomationParser extends AbstractContentAssistParser {
 					put(grammarAccess.getValueAccess().getAlternatives(), "rule__Value__Alternatives");
 					put(grammarAccess.getBrowserAccess().getAlternatives(), "rule__Browser__Alternatives");
 					put(grammarAccess.getOperatorAccess().getAlternatives(), "rule__Operator__Alternatives");
+					put(grammarAccess.getArithmeticAccess().getAlternatives(), "rule__Arithmetic__Alternatives");
 					put(grammarAccess.getBrowserAutomationAccess().getGroup(), "rule__BrowserAutomation__Group__0");
 					put(grammarAccess.getGotoAccess().getGroup(), "rule__Goto__Group__0");
 					put(grammarAccess.getClickOnAccess().getGroup(), "rule__ClickOn__Group__0");
@@ -53,6 +54,8 @@ public class BrowserAutomationParser extends AbstractContentAssistParser {
 					put(grammarAccess.getLetAccess().getGroup(), "rule__Let__Group__0");
 					put(grammarAccess.getDoWhileAccess().getGroup(), "rule__DoWhile__Group__0");
 					put(grammarAccess.getBooleanExpAccess().getGroup(), "rule__BooleanExp__Group__0");
+					put(grammarAccess.getOperationAccess().getGroup(), "rule__Operation__Group__0");
+					put(grammarAccess.getArithmeticExpAccess().getGroup(), "rule__ArithmeticExp__Group__0");
 					put(grammarAccess.getIfThenAccess().getGroup(), "rule__IfThen__Group__0");
 					put(grammarAccess.getIfThenAccess().getGroup_8(), "rule__IfThen__Group_8__0");
 					put(grammarAccess.getSubroutineAccess().getGroup(), "rule__Subroutine__Group__0");
@@ -87,6 +90,11 @@ public class BrowserAutomationParser extends AbstractContentAssistParser {
 					put(grammarAccess.getBooleanExpAccess().getLeftMemberAssignment_0(), "rule__BooleanExp__LeftMemberAssignment_0");
 					put(grammarAccess.getBooleanExpAccess().getOperatorAssignment_1(), "rule__BooleanExp__OperatorAssignment_1");
 					put(grammarAccess.getBooleanExpAccess().getRightMemberAssignment_2(), "rule__BooleanExp__RightMemberAssignment_2");
+					put(grammarAccess.getOperationAccess().getLeftValueAssignment_0(), "rule__Operation__LeftValueAssignment_0");
+					put(grammarAccess.getOperationAccess().getOperationAssignment_2(), "rule__Operation__OperationAssignment_2");
+					put(grammarAccess.getArithmeticExpAccess().getLeftMemberAssignment_0(), "rule__ArithmeticExp__LeftMemberAssignment_0");
+					put(grammarAccess.getArithmeticExpAccess().getArithmeticAssignment_1(), "rule__ArithmeticExp__ArithmeticAssignment_1");
+					put(grammarAccess.getArithmeticExpAccess().getRightMemberAssignment_2(), "rule__ArithmeticExp__RightMemberAssignment_2");
 					put(grammarAccess.getIfThenAccess().getConditionAssignment_2(), "rule__IfThen__ConditionAssignment_2");
 					put(grammarAccess.getIfThenAccess().getThenActionsAssignment_6(), "rule__IfThen__ThenActionsAssignment_6");
 					put(grammarAccess.getIfThenAccess().getElseActionsAssignment_8_2(), "rule__IfThen__ElseActionsAssignment_8_2");
