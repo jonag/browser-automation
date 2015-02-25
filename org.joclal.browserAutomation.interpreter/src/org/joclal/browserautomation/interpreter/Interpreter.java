@@ -39,7 +39,7 @@ public class Interpreter {
 
 		// first goto
 		Value urlValue = script.getFirstGoTo().getUrl();
-		String url = InterpreterUtils.getValue(urlValue);
+		String url = (String) InterpreterUtils.getValue(urlValue);
 		DriverFacade.goTo(url);
 		
 		// actions
@@ -160,7 +160,7 @@ public class Interpreter {
 		Selector s = a.getField();
 		List<WebElement> elements = DriverFacade.getWebElement(s.getId());
 		for(WebElement element : elements){
-			element.sendKeys(InterpreterUtils.getValue(a.getValue()));
+			element.sendKeys((String) InterpreterUtils.getValue(a.getValue()));
 			if(DriverFacade.hasUrlChanged()) break;
 		}
 		
@@ -177,7 +177,7 @@ public class Interpreter {
 
 	private void processGoto(Goto a){
 		Value urlValue = a.getUrl();
-		String url = InterpreterUtils.getValue(urlValue);
+		String url = (String) InterpreterUtils.getValue(urlValue);
 		DriverFacade.goTo(url);
 	}
 	
