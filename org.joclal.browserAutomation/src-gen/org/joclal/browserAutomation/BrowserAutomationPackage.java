@@ -430,13 +430,22 @@ public interface BrowserAutomationPackage extends EPackage
   int VALUE = 11;
 
   /**
+   * The feature id for the '<em><b>Int</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VALUE__INT = 0;
+
+  /**
    * The feature id for the '<em><b>String</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int VALUE__STRING = 0;
+  int VALUE__STRING = 1;
 
   /**
    * The feature id for the '<em><b>Variable</b></em>' reference.
@@ -445,7 +454,7 @@ public interface BrowserAutomationPackage extends EPackage
    * @generated
    * @ordered
    */
-  int VALUE__VARIABLE = 1;
+  int VALUE__VARIABLE = 2;
 
   /**
    * The number of structural features of the '<em>Value</em>' class.
@@ -454,7 +463,7 @@ public interface BrowserAutomationPackage extends EPackage
    * @generated
    * @ordered
    */
-  int VALUE_FEATURE_COUNT = 2;
+  int VALUE_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link org.joclal.browserAutomation.impl.DoWhileImpl <em>Do While</em>}' class.
@@ -1025,6 +1034,17 @@ public interface BrowserAutomationPackage extends EPackage
   EClass getValue();
 
   /**
+   * Returns the meta object for the attribute '{@link org.joclal.browserAutomation.Value#getInt <em>Int</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Int</em>'.
+   * @see org.joclal.browserAutomation.Value#getInt()
+   * @see #getValue()
+   * @generated
+   */
+  EAttribute getValue_Int();
+
+  /**
    * Returns the meta object for the attribute '{@link org.joclal.browserAutomation.Value#getString <em>String</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1558,6 +1578,14 @@ public interface BrowserAutomationPackage extends EPackage
      * @generated
      */
     EClass VALUE = eINSTANCE.getValue();
+
+    /**
+     * The meta object literal for the '<em><b>Int</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute VALUE__INT = eINSTANCE.getValue_Int();
 
     /**
      * The meta object literal for the '<em><b>String</b></em>' attribute feature.

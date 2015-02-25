@@ -11,17 +11,17 @@ public class InterpreterUtils {
 	private static Stack<Map<String, Value>> varStack = new Stack<>();
 	private static HashMap<String, Value> currentVars = new HashMap<>();
 
-	public static String getValue(Value v){
+	public static Object getValue(Value v){
 		if(v.getString() != null){
 			return v.getString();
 		}else if(v.getVariable() != null){
 			return getValue(v.getVariable());
 		}else{
-			return null;
+			return v.getInt();
 		}
 	}
 	
-	public static String getValue(VariableId v){
+	public static Object getValue(VariableId v){
 		return getValue(currentVars.get(v.getName()));
 	}
 

@@ -413,33 +413,41 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 	public class ValueElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Value");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Assignment cStringAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
-		private final RuleCall cStringSTRINGTerminalRuleCall_0_0 = (RuleCall)cStringAssignment_0.eContents().get(0);
-		private final Assignment cVariableAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
-		private final CrossReference cVariableVariableIdCrossReference_1_0 = (CrossReference)cVariableAssignment_1.eContents().get(0);
-		private final RuleCall cVariableVariableIdIDTerminalRuleCall_1_0_1 = (RuleCall)cVariableVariableIdCrossReference_1_0.eContents().get(1);
+		private final Assignment cIntAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
+		private final RuleCall cIntINTTerminalRuleCall_0_0 = (RuleCall)cIntAssignment_0.eContents().get(0);
+		private final Assignment cStringAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
+		private final RuleCall cStringSTRINGTerminalRuleCall_1_0 = (RuleCall)cStringAssignment_1.eContents().get(0);
+		private final Assignment cVariableAssignment_2 = (Assignment)cAlternatives.eContents().get(2);
+		private final CrossReference cVariableVariableIdCrossReference_2_0 = (CrossReference)cVariableAssignment_2.eContents().get(0);
+		private final RuleCall cVariableVariableIdIDTerminalRuleCall_2_0_1 = (RuleCall)cVariableVariableIdCrossReference_2_0.eContents().get(1);
 		
 		//Value:
-		//	string=STRING | variable=[VariableId];
+		//	int=INT | string=STRING | variable=[VariableId];
 		public ParserRule getRule() { return rule; }
 
-		//string=STRING | variable=[VariableId]
+		//int=INT | string=STRING | variable=[VariableId]
 		public Alternatives getAlternatives() { return cAlternatives; }
 
+		//int=INT
+		public Assignment getIntAssignment_0() { return cIntAssignment_0; }
+
+		//INT
+		public RuleCall getIntINTTerminalRuleCall_0_0() { return cIntINTTerminalRuleCall_0_0; }
+
 		//string=STRING
-		public Assignment getStringAssignment_0() { return cStringAssignment_0; }
+		public Assignment getStringAssignment_1() { return cStringAssignment_1; }
 
 		//STRING
-		public RuleCall getStringSTRINGTerminalRuleCall_0_0() { return cStringSTRINGTerminalRuleCall_0_0; }
+		public RuleCall getStringSTRINGTerminalRuleCall_1_0() { return cStringSTRINGTerminalRuleCall_1_0; }
 
 		//variable=[VariableId]
-		public Assignment getVariableAssignment_1() { return cVariableAssignment_1; }
+		public Assignment getVariableAssignment_2() { return cVariableAssignment_2; }
 
 		//[VariableId]
-		public CrossReference getVariableVariableIdCrossReference_1_0() { return cVariableVariableIdCrossReference_1_0; }
+		public CrossReference getVariableVariableIdCrossReference_2_0() { return cVariableVariableIdCrossReference_2_0; }
 
 		//ID
-		public RuleCall getVariableVariableIdIDTerminalRuleCall_1_0_1() { return cVariableVariableIdIDTerminalRuleCall_1_0_1; }
+		public RuleCall getVariableVariableIdIDTerminalRuleCall_2_0_1() { return cVariableVariableIdIDTerminalRuleCall_2_0_1; }
 	}
 
 	public class DoWhileElements extends AbstractParserRuleElementFinder {
@@ -1083,7 +1091,7 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 	}
 
 	//Value:
-	//	string=STRING | variable=[VariableId];
+	//	int=INT | string=STRING | variable=[VariableId];
 	public ValueElements getValueAccess() {
 		return pValue;
 	}

@@ -372,7 +372,7 @@ public class BrowserAutomationSemanticSequencer extends AbstractDelegatingSemant
 	
 	/**
 	 * Constraint:
-	 *     (string=STRING | variable=[VariableId|ID])
+	 *     (int=INT | string=STRING | variable=[VariableId|ID])
 	 */
 	protected void sequence_Value(EObject context, Value semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

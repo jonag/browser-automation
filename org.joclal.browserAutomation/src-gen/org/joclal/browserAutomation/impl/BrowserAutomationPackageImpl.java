@@ -539,7 +539,7 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getValue_String()
+  public EAttribute getValue_Int()
   {
     return (EAttribute)valueEClass.getEStructuralFeatures().get(0);
   }
@@ -549,9 +549,19 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getValue_String()
+  {
+    return (EAttribute)valueEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getValue_Variable()
   {
-    return (EReference)valueEClass.getEStructuralFeatures().get(1);
+    return (EReference)valueEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -844,6 +854,7 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
     createEReference(letValueEClass, LET_VALUE__VALUE);
 
     valueEClass = createEClass(VALUE);
+    createEAttribute(valueEClass, VALUE__INT);
     createEAttribute(valueEClass, VALUE__STRING);
     createEReference(valueEClass, VALUE__VARIABLE);
 
@@ -959,6 +970,7 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
     initEReference(getLetValue_Value(), this.getValue(), null, "value", null, 0, 1, LetValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(valueEClass, Value.class, "Value", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getValue_Int(), ecorePackage.getEInt(), "int", null, 0, 1, Value.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getValue_String(), ecorePackage.getEString(), "string", null, 0, 1, Value.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getValue_Variable(), this.getVariableId(), null, "variable", null, 0, 1, Value.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

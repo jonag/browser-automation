@@ -79,8 +79,9 @@ public class BrowserAutomationParser extends AbstractContentAssistParser {
 					put(grammarAccess.getLetAccess().getValueAssignment_3(), "rule__Let__ValueAssignment_3");
 					put(grammarAccess.getLetValueAccess().getSelectorAssignment_0(), "rule__LetValue__SelectorAssignment_0");
 					put(grammarAccess.getLetValueAccess().getValueAssignment_1(), "rule__LetValue__ValueAssignment_1");
-					put(grammarAccess.getValueAccess().getStringAssignment_0(), "rule__Value__StringAssignment_0");
-					put(grammarAccess.getValueAccess().getVariableAssignment_1(), "rule__Value__VariableAssignment_1");
+					put(grammarAccess.getValueAccess().getIntAssignment_0(), "rule__Value__IntAssignment_0");
+					put(grammarAccess.getValueAccess().getStringAssignment_1(), "rule__Value__StringAssignment_1");
+					put(grammarAccess.getValueAccess().getVariableAssignment_2(), "rule__Value__VariableAssignment_2");
 					put(grammarAccess.getDoWhileAccess().getActionsAssignment_2(), "rule__DoWhile__ActionsAssignment_2");
 					put(grammarAccess.getDoWhileAccess().getConditionAssignment_6(), "rule__DoWhile__ConditionAssignment_6");
 					put(grammarAccess.getBooleanExpAccess().getLeftMemberAssignment_0(), "rule__BooleanExp__LeftMemberAssignment_0");

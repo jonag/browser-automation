@@ -54,7 +54,7 @@ LetValue:
 ;
 
 Value:
-	string=STRING | variable=[VariableId]
+	int=INT | string=STRING | variable=[VariableId]
 ;
 
 DoWhile:

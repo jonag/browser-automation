@@ -801,9 +801,28 @@ ruleValue returns [EObject current=null]
     @after { leaveRule(); }:
 ((
 (
-		lv_string_0_0=RULE_STRING
+		lv_int_0_0=RULE_INT
 		{
-			newLeafNode(lv_string_0_0, grammarAccess.getValueAccess().getStringSTRINGTerminalRuleCall_0_0()); 
+			newLeafNode(lv_int_0_0, grammarAccess.getValueAccess().getIntINTTerminalRuleCall_0_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getValueRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"int",
+        		lv_int_0_0, 
+        		"INT");
+	    }
+
+)
+)
+    |(
+(
+		lv_string_1_0=RULE_STRING
+		{
+			newLeafNode(lv_string_1_0, grammarAccess.getValueAccess().getStringSTRINGTerminalRuleCall_1_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -812,7 +831,7 @@ ruleValue returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"string",
-        		lv_string_0_0, 
+        		lv_string_1_0, 
         		"STRING");
 	    }
 
@@ -825,9 +844,9 @@ ruleValue returns [EObject current=null]
 	            $current = createModelElement(grammarAccess.getValueRule());
 	        }
         }
-	otherlv_1=RULE_ID
+	otherlv_2=RULE_ID
 	{
-		newLeafNode(otherlv_1, grammarAccess.getValueAccess().getVariableVariableIdCrossReference_1_0()); 
+		newLeafNode(otherlv_2, grammarAccess.getValueAccess().getVariableVariableIdCrossReference_2_0()); 
 	}
 
 )

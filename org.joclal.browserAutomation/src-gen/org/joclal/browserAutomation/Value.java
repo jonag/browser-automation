@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link org.joclal.browserAutomation.Value#getInt <em>Int</em>}</li>
  *   <li>{@link org.joclal.browserAutomation.Value#getString <em>String</em>}</li>
  *   <li>{@link org.joclal.browserAutomation.Value#getVariable <em>Variable</em>}</li>
  * </ul>
@@ -23,6 +24,32 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Value extends EObject
 {
+  /**
+   * Returns the value of the '<em><b>Int</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Int</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Int</em>' attribute.
+   * @see #setInt(int)
+   * @see org.joclal.browserAutomation.BrowserAutomationPackage#getValue_Int()
+   * @model
+   * @generated
+   */
+  int getInt();
+
+  /**
+   * Sets the value of the '{@link org.joclal.browserAutomation.Value#getInt <em>Int</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Int</em>' attribute.
+   * @see #getInt()
+   * @generated
+   */
+  void setInt(int value);
+
   /**
    * Returns the value of the '<em><b>String</b></em>' attribute.
    * <!-- begin-user-doc -->
